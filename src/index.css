@@ -17,100 +17,691 @@ body::-webkit-scrollbar-thumb {
   border-radius: 5px;
 }
 
-#NavBarBG {
-  display: flex;
-  flex-direction: column;
-  row-gap: 20px;
-  padding: 30px 0px;
-  background: url('./images/DashboardBG.png') 0 0 no-repeat;
-  background-size: cover;
-  width: 100%;
-  color: white;
+@media (min-width: 1080px) {
+
+  #MenuToggle {
+    display: none;
+  }
+  #MenuToggle2 {
+    display: none;
+  }
+
+  #NavBarBG {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 30px 0px;
+    background: url('./images/DashboardBG.png') 0 0 no-repeat;
+    background-size: cover;
+    width: 100%;
+    color: white;
+  }
+
+  #NavBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 10px;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  #SubNav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: 30px;
+    padding-left: 50px;
+  }
+
+  /* General text styles with cursor and position for the "+" or "-" symbol */
+  #DepositText,
+  #SupportText,
+  #AccountText {
+    cursor: pointer;
+    color: white;
+    position: relative;
+  }
+
+  /* Default "+" sign after the text */
+  #DepositText::after,
+  #SupportText::after,
+  #AccountText::after {
+    content: " +";
+    position: absolute;
+    right: -15px;
+  }
+
+  /* Hover over the text to change "+" to "-" */
+  #DepositText:hover::after,
+  #SupportText:hover::after,
+  #AccountText:hover::after {
+    content: " -";
+  }
+
+  /* Keep "-" sign when hovering over the dropdown content */
+  .dropdown:hover #DepositText::after,
+  .dropdown:hover #SupportText::after,
+  .dropdown:hover #AccountText::after {
+    content: " -";
+  }
+
+  /* Dropdown specific styles */
+  .dropdown {
+    position: relative;
+    /* Positioning the dropdown relative to its container */
+  }
+
+  /* Dropdown content */
+  .dropdown-content {
+    display: none;
+    /* Initially hidden */
+    position: absolute;
+    /* Absolute positioning */
+    background-color: #132D39;
+    /* Background color */
+    min-width: 160px;
+    /* Minimum width */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    /* Shadow */
+    z-index: 1;
+    /* On top of other content */
+    top: 100%;
+    left: 0;
+    /* Align with the left edge of the dropdown */
+  }
+
+  /* Show dropdown when hovering over text or dropdown content */
+  .dropdown:hover .dropdown-content {
+    display: block;
+    /* Show the dropdown */
+  }
+
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px dotted #ccc;
+  }
+
+  /* Remove dotted divider for the last dropdown item */
+  .dropdown-content a:last-child {
+    border-bottom: none;
+    /* No border for the last item */
+  }
+
+  /* Hover styles for dropdown items */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+    /* Change background on hover */
+  }
+
+
+
+  /* Style for hover effects on Nav items */
+  #DashBoardText,
+  #DepositText,
+  #PackageText,
+  #SignalsText,
+  #ReferralsText,
+  #SupportText,
+  #AccountText {
+    cursor: pointer;
+  }
+
+  #DashBoardText {
+    font-family: 'GolosText', sans-serif;
+    color: #FCE74F;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+
+  /* Hover styles */
+  #DepositText:hover,
+  #PackageText:hover,
+  #SignalsText:hover,
+  #ReferralsText:hover,
+  #SupportText:hover,
+  #AccountText:hover {
+    color: #FCE74F;
+  }
+
+  /* Logout section */
+  #LogoutText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    padding: 10px;
+    background-color: #FCE74F;
+    color: #000000;
+    border-radius: 5px;
+    font-weight: bold;
+    width: 80px;
+  }
+
+  #LogoutText:hover {
+    cursor: pointer;
+    background-color: #0D222B;
+  }
+
+  #LogoutImg {
+    width: 25%;
+  }
+
+  #EnglishText {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    padding: 10px;
+    justify-content: center;
+    width: 80px;
+  }
+
+  #LanguageImg {
+    width: 20%;
+  }
+
+  #EnglishText:hover {
+    cursor: pointer;
+  }
+
+  #DropDownImg {
+    width: 20%;
+  }
+
+  #Divider {
+    width: 100%;
+  }
+
+  #DashBoardText2 {
+    color: #FCE74F;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  #CurrentNav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+  }
+
+  #CurrentNavText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+  }
+
+  #HomeImg {
+    width: 10%;
+  }
+
+  /* Dropdown specific styles */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+
+
+
+  #NotificationText {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  #NotificationImg {
+    width: 20px;
+  }
+
+  #DashContainer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    padding-top: 70px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  #NotificationBG {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    row-gap: 20px;
+    padding: 30px;
+    background-color: #0D222B;
+    border-radius: 5px;
+  }
+
+
+
+
+  #ReferralText {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  #ReferralCopy {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #314852;
+    border-radius: 5px;
+  }
+
+  #ReferralCopyText {
+    padding-left: 10px;
+    width: 100%;
+
+  }
+
+  #ReferralCopyImg {
+    width: 35px;
+    cursor: pointer;
+  }
+
+  #ReferralBG {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    row-gap: 20px;
+    padding-bottom: 50px;
+  }
+
+  #StatText {
+    font-size: 15px;
+  }
+
+  #StatText2 {
+    font-weight: bold;
+    font-size: 45px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 10ch;
+  }
+
+
+  #StatImg {
+    width: 20%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  #StatBG {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    row-gap: 20px;
+    padding-top: 10px;
+    background-color: #0D222B;
+    border-radius: 10px;
+    width: 360px;
+    position: relative;
+  }
+
+  #SubStatBG {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-bottom: 35px;
+    padding-top: 10px;
+  }
+
+  #StatView {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding-top: 20px;
+  }
+
+  #StatOrder {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 50px;
+    row-gap: 80px;
+    flex-wrap: wrap;
+  }
+
+  #StatForwardImgAligner {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+  }
+
+  #StatForwardImg {
+    width: 40%;
+  }
+
+  #StatDivider {
+    background-color: #FCE74F;
+    height: 100px;
+    width: 0px;
+    margin: 0 20px;
+    padding: 0;
+  }
+
+  #LatestTransactionText {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+  }
+
+  #LatestTransaction {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    padding-top: 50px;
+  }
+
+  #LatestTransactionViewTab {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-color: #FCE74F;
+    border-radius: 5px;
+  }
+
+  #LatestTransactionViewBG {
+    height: 500px;
+  }
+
+  #LatestTransactionViewBGText {
+    text-align: center;
+    padding: 100px;
+    color: white;
+    background-color: #0D222B;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  #TransactionSearchPadding {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+
+  #TransactionSearchBG {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #314852;
+    /* Parent background color */
+    border-radius: 5px;
+    /* Rounded corners for the parent */
+    width: 100%;
+  }
+
+  #TransactionSearch {
+    background-color: transparent;
+    /* Make the input background transparent */
+    border: none;
+    /* Remove the border */
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    /* Text color */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    outline: none;
+    /* Remove outline on focus */
+    padding-left: 20px;
+    /* Add padding to match the parent */
+  }
+
+  #TransactionSearch::placeholder {
+    color: white;
+    /* Placeholder text color */
+    font-family: 'Inconsolata', sans-serif;
+    /* Font family */
+  }
+
+  #TransactionSearchImg {
+    width: 35px;
+    cursor: pointer;
+  }
+
+
+  #LatestTransaction2Text {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+  }
+
+  #LatestTransaction2 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    padding-top: 50px;
+  }
+
+  #LatestTransaction2ViewTab {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-color: #FCE74F;
+    border-radius: 5px;
+  }
+
+  #LatestTransaction2ViewBG {
+    height: 500px;
+  }
+
+  #LatestTransaction2ViewBGText {
+    text-align: center;
+    padding: 100px;
+    color: white;
+    background-color: #0D222B;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  #DashContainer2 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    padding-top: 70px;
+  }
+
+  #PacakgesContainer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    padding-top: 70px;
+  }
+
+  #PackagesHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+  }
+
+  #PackagesHeaderText {
+    color: #FCE74F;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  #PackagesHeaderText2 {
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+  #PackagesOrder {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 50px;
+    row-gap: 80px;
+    flex-wrap: wrap;
+  }
+
+  #PackagesBG {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 35px;
+    padding-top: 20px;
+    border: 2px solid #4A5A60;
+    border-radius: 10px;
+    background-color: #0D222B;
+  }
+
+  #PackagesBGHeader {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+  }
+
+  #PackagesBGPrice {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+  }
+
+
+  #PackagesContentBG {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 10px;
+    padding-top: 25px;
+  }
+
+  #PackagesContentText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    color: white;
+  }
+
+  #TickImg {
+    width: 5%;
+  }
+
+  #PackagesButtonBG {
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  #PackagesButton {
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #4A5A60;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+  }
+
+  #PackagesButton:hover {
+    background-color: white;
+    color: black;
+  }
 }
 
-#NavBar {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  column-gap: 10px;
-  justify-content: space-between;
-  padding-left: 50px;
-  padding-right: 50px;
+@media (max-width: 1080px) {
+
+  /* #DepositText,
+  #PackageText,
+  #SignalsText,
+  #ReferralsText,
+  #SupportText,
+  #AccountText {
+    display: none;
+  } */
+
+  #MenuToggle {
+    display: block;
+    cursor: pointer;
+    z-index: 1;
+    transform: scale(2.2);
+    margin-right: 20px;
+  }
+
+
+  #MenuToggle2 {
+    display: block;
+    cursor: pointer;
+    z-index: 1;
+    transform: scale(5);
+  }
+
+
+  #Overlay {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 30px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #132D39;
+    animation-name: OverlaySlideIn;
+    animation-duration: 0.8s;
+    animation-iteration-count: 1;
+    backdrop-filter: blur(0.2em);
+    z-index: 1;
 }
 
-#SubNav {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-end;
-  column-gap: 30px;
+.submenu {
+    display: none; /* Initially hidden */
+    flex-direction: column; /* Stack submenu items vertically */
+    align-items: center;
+    row-gap: 10px; /* Space between submenu items */
+    background-color: #132D39;
+    /* Background color */
+    min-width: 160px;
+    /* Minimum width */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    /* On top of other content */
+    top: 100%;
+    left: 0;
 }
 
-/* General text styles with cursor and position for the "+" or "-" symbol */
-#DepositText,
-#SupportText,
-#AccountText {
-  cursor: pointer;
-  color: white;
-  position: relative;
-}
-
-/* Default "+" sign after the text */
-#DepositText::after,
-#SupportText::after,
-#AccountText::after {
-  content: " +";
-  position: absolute;
-  right: -15px;
-}
-
-/* Hover over the text to change "+" to "-" */
-#DepositText:hover::after,
-#SupportText:hover::after,
-#AccountText:hover::after {
-  content: " -";
-}
-
-/* Keep "-" sign when hovering over the dropdown content */
-.dropdown:hover #DepositText::after,
-.dropdown:hover #SupportText::after,
-.dropdown:hover #AccountText::after {
-  content: " -";
-}
-
-/* Dropdown specific styles */
-.dropdown {
-  position: relative;
-  /* Positioning the dropdown relative to its container */
-}
-
-/* Dropdown content */
-.dropdown-content {
-  display: none;
-  /* Initially hidden */
-  position: absolute;
-  /* Absolute positioning */
-  background-color: #132D39;
-  /* Background color */
-  min-width: 160px;
-  /* Minimum width */
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  /* Shadow */
-  z-index: 1;
-  /* On top of other content */
-  top: 100%;
-  left: 0;
-  /* Align with the left edge of the dropdown */
-}
-
-/* Show dropdown when hovering over text or dropdown content */
-.dropdown:hover .dropdown-content {
-  display: block;
-  /* Show the dropdown */
-}
-
-
-.dropdown-content a {
+.submenu a {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
@@ -119,497 +710,654 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* Remove dotted divider for the last dropdown item */
-.dropdown-content a:last-child {
+.submenu a:last-child {
   border-bottom: none;
   /* No border for the last item */
 }
 
 /* Hover styles for dropdown items */
-.dropdown-content a:hover {
+.submenu a:hover {
   background-color: #ddd;
   /* Change background on hover */
 }
 
-
-
-/* Style for hover effects on Nav items */
-#DashBoardText,
-#DepositText,
-#PackageText,
-#SignalsText,
-#ReferralsText,
-#SupportText,
-#AccountText {
-  cursor: pointer;
-}
-
-#DashBoardText {
-  font-family: 'GolosText', sans-serif;
-  color: #FCE74F;
-  font-size: 30px;
-  font-weight: bold;
-}
-
-
-/* Hover styles */
-#DepositText:hover,
-#PackageText:hover,
-#SignalsText:hover,
-#ReferralsText:hover,
-#SupportText:hover,
-#AccountText:hover {
-  color: #FCE74F;
-}
-
-/* Logout section */
-#LogoutText {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  column-gap: 10px;
-  padding: 10px;
-  background-color: #FCE74F;
-  color: #000000;
-  border-radius: 5px;
-  font-weight: bold;
-  width: 20%;
-}
-
-#LogoutText:hover {
-  cursor: pointer;
-  background-color: #0D222B;
-}
-
-#LogoutImg {
-  width: 25%;
-}
-
-#EnglishText {
-  display: flex;
-  align-items: center;
-  column-gap: 10px;
-  padding: 10px;
-  justify-content: center;
-  width: 20%;
-}
-
-#LanguageImg {
-  width: 20%;
-}
-
-#EnglishText:hover {
-  cursor: pointer;
-}
-
-#DropDownImg {
-  width: 20%;
-}
-
-#Divider {
-  width: 100%;
-}
-
-#DashBoardText2 {
-  color: #FCE74F;
-  font-size: 30px;
-  font-weight: bold;
-}
-
-#CurrentNav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 10px;
-}
-
-#CurrentNavText {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  column-gap: 10px;
-}
-
-#HomeImg {
-  width: 10%;
-}
-
-/* Dropdown specific styles */
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-
-
-
-#NotificationText {
-  display: flex;
-  align-items: center;
-  column-gap: 10px;
-  padding-left: 10px;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-#NotificationImg {
-  width: 1.5%;
-}
-
-#DashContainer {
-  display: flex;
-  flex-direction: column;
-  row-gap: 40px;
-  padding-top: 70px;
-  padding-left: 50px;
-  padding-right: 50px;
-}
-
-#NotificationBG {
-  display: flex;
-  flex-direction: column;
-  color: white;
-  row-gap: 20px;
-  padding: 30px;
-  background-color: #0D222B;
-  border-radius: 5px;
-}
-
-
-
-
-#ReferralText {
-  font-weight: bold;
-  font-size: 20px;
-}
-
-#ReferralCopy {
-  display: flex;
-  align-items: center;
-  column-gap: 10px;
-  font-weight: bold;
-  font-size: 20px;
-  background-color: #314852;
-  border-radius: 5px;
-}
-
-#ReferralCopyText {
-  padding-left: 10px;
-  width: 100%;
-
-}
-
-#ReferralCopyImg {
-  width: 3%;
-  cursor: pointer;
-}
-
-#ReferralBG {
-  display: flex;
-  flex-direction: column;
-  color: white;
-  row-gap: 20px;
-  padding-bottom: 50px;
-}
-
-#StatText {
-  font-size: 15px;
-}
-
-#StatText2 {
-  font-weight: bold;
-  font-size: 45px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 10ch;
-}
-
-
-#StatImg {
-  width: 20%;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-#StatBG {
-  display: flex;
-  flex-direction: column;
-  color: white;
-  row-gap: 20px;
-  padding-top: 10px;
-  background-color: #0D222B;
-  border-radius: 10px;
-  width: 30%;
-  position: relative;
-}
-
-#SubStatBG {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding-left: 20px;
-  padding-right: 10px;
-  padding-bottom: 35px;
-  padding-top: 10px;
-}
-
-#StatView {
-  display: flex;
-  flex-direction: column;
-  row-gap: 20px;
-  padding-top: 20px;
-}
-
-#StatOrder {
-  display: flex;
-  flex-direction: row;
-  column-gap: 50px;
-}
-
-#StatForwardImgAligner {
-  display: flex;
-  justify-content: flex-end;
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-}
-
-#StatForwardImg {
-  width: 40%;
-}
-
-#StatDivider {
-  background-color: #FCE74F;
-  height: 100px;
-  width: 0px;
-  margin: 0 20px;
-  padding: 0;
-}
-
-#LatestTransactionText {
-  text-align: center;
-  color: white;
-  font-size: 20px;
-}
-
-#LatestTransaction {
-  display: flex;
-  flex-direction: column;
-  row-gap: 30px;
-  padding-top: 50px;
-}
-
-#LatestTransactionViewTab {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-weight: bold;
-  font-size: 20px;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  background-color: #FCE74F;
-  border-radius: 5px;
-}
-
-#LatestTransactionViewBG {
-  height: 500px;
-}
-
-#LatestTransactionViewBGText {
-  text-align: center;
-  padding: 100px;
-  color: white;
-  background-color: #0D222B;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
-#TransactionSearchPadding{
-  padding-left: 50px;
-  padding-right: 50px;
-}
-
-
-#TransactionSearchBG {
-  display: flex;
-  align-items: center;
-  column-gap: 10px;
-  font-weight: bold;
-  font-size: 20px;
-  background-color: #314852; /* Parent background color */
-  border-radius: 5px; /* Rounded corners for the parent */
-  width: 100%; 
-}
-
-#TransactionSearch {
-  background-color: transparent; /* Make the input background transparent */
-  border: none; /* Remove the border */
-  font-weight: bold;
-  font-size: 20px;
-  color: white; /* Text color */
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  outline: none; /* Remove outline on focus */
-  padding-left: 20px; /* Add padding to match the parent */
-}
-
-#TransactionSearch::placeholder {
-  color: white; /* Placeholder text color */
-  font-family: 'Inconsolata', sans-serif; /* Font family */
-}
-
-#TransactionSearchImg {
-  width: 3%; 
-  cursor: pointer;
-}
-
-
-#LatestTransaction2Text {
-  text-align: center;
-  color: white;
-  font-size: 20px;
-}
-
-#LatestTransaction2 {
-  display: flex;
-  flex-direction: column;
-  row-gap: 30px;
-  padding-top: 50px;
-}
-
-#LatestTransaction2ViewTab {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-weight: bold;
-  font-size: 20px;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  background-color: #FCE74F;
-  border-radius: 5px;
-}
-
-#LatestTransaction2ViewBG {
-  height: 500px;
-}
-
-#LatestTransaction2ViewBGText {
-  text-align: center;
-  padding: 100px;
-  color: white;
-  background-color: #0D222B;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
-#DashContainer2 {
-  display: flex;
-  flex-direction: column;
-  row-gap: 40px;
-  padding-top: 70px;
-}
-
-#PacakgesContainer {
-  display: flex;
-  flex-direction: column;
-  row-gap: 40px;
-  padding-top: 70px;
-}
-
-#PackagesHeader {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 10px;
-}
-
-#PackagesHeaderText {
-  color: #FCE74F;
-  font-size: 25px;
-  font-weight: bold;
-}
-
-#PackagesHeaderText2 {
-  color: white;
-  font-size: 35px;
-  font-weight: bold;
-}
-
-#PackagesOrder {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  column-gap: 50px;
-  row-gap: 80px;
-  flex-wrap: wrap;
-}
-
-#PackagesBG {
-  display: flex;
-  flex-direction: column;
-  row-gap: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 35px;
-  padding-top: 20px;
-  border: 2px solid #4A5A60;
-  border-radius: 10px;
-  background-color: #0D222B;
-}
-
-#PackagesBGHeader{
-  text-align: center;
-  color: white;
-  font-weight: bold;
-}
-
-#PackagesBGPrice{
-  text-align: center;
-  color: white;
-  font-weight: bold;
-  font-size: 50px;
-}
-
-
-#PackagesContentBG {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  column-gap: 10px;
-  padding-top: 25px;
-}
-
-#PackagesContentText {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  column-gap: 10px;
-  color: white;
-}
-
-#TickImg {
-  width: 5%;
-}
-
-#PackagesButtonBG{
-  padding-top: 40px;
-  padding-left: 40px;
-  padding-right: 40px;
-}
-
-#PackagesButton{
-  cursor: pointer;
-  text-align: center;
-  padding: 10px;
-  border: 2px solid #4A5A60;
-  border-radius: 10px;
-  color: white;
-  font-weight: bold;
-}
-
-#PackagesButton:hover{
-  background-color: white;
-  color: black;
+.menu-item {
+    position: relative; /* Positioning the menu item relative to its container */
+}
+
+.menu-item:hover .submenu {
+    display: flex; /* Show the submenu on hover */
+}
+
+@keyframes OverlaySlideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes OverlaySlideOut {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+  #NavBarBG {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 30px 0px;
+    background: url('./images/DashboardBG.png') 0 0 no-repeat;
+    background-size: cover;
+    width: 100%;
+    color: white;
+  }
+
+  #NavBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 10px;
+    justify-content: left;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  #SubNav {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: 30px;
+    padding-left: 50px;
+  }
+
+  /* General text styles with cursor and position for the "+" or "-" symbol */
+  #DepositText,
+  #SupportText,
+  #AccountText {
+    cursor: pointer;
+    color: white;
+    position: relative;
+  }
+
+  /* Default "+" sign after the text */
+  #DepositText::after,
+  #SupportText::after,
+  #AccountText::after {
+    content: " +";
+    position: absolute;
+    right: -15px;
+  }
+
+  /* Hover over the text to change "+" to "-" */
+  #DepositText:hover::after,
+  #SupportText:hover::after,
+  #AccountText:hover::after {
+    content: " -";
+  }
+
+  /* Keep "-" sign when hovering over the dropdown content */
+  .dropdown:hover #DepositText::after,
+  .dropdown:hover #SupportText::after,
+  .dropdown:hover #AccountText::after {
+    content: " -";
+  }
+
+  /* Dropdown specific styles */
+  .dropdown {
+    position: relative;
+    /* Positioning the dropdown relative to its container */
+  }
+
+  /* Dropdown content */
+  .dropdown-content {
+    display: none;
+    /* Initially hidden */
+    position: absolute;
+    /* Absolute positioning */
+    background-color: #132D39;
+    /* Background color */
+    min-width: 160px;
+    /* Minimum width */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    /* Shadow */
+    z-index: 1;
+    /* On top of other content */
+    top: 100%;
+    left: 0;
+    /* Align with the left edge of the dropdown */
+  }
+
+  /* Show dropdown when hovering over text or dropdown content */
+  .dropdown:hover .dropdown-content {
+    display: block;
+    /* Show the dropdown */
+  }
+
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px dotted #ccc;
+  }
+
+  /* Remove dotted divider for the last dropdown item */
+  .dropdown-content a:last-child {
+    border-bottom: none;
+    /* No border for the last item */
+  }
+
+  /* Hover styles for dropdown items */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+    /* Change background on hover */
+  }
+
+
+
+  /* Style for hover effects on Nav items */
+  #DashBoardText,
+  #DepositText,
+  #PackageText,
+  #SignalsText,
+  #ReferralsText,
+  #SupportText,
+  #AccountText {
+    cursor: pointer;
+  }
+
+  #DashBoardText {
+    font-family: 'GolosText', sans-serif;
+    color: #FCE74F;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+
+  /* Hover styles */
+  #DepositText:hover,
+  #PackageText:hover,
+  #SignalsText:hover,
+  #ReferralsText:hover,
+  #SupportText:hover,
+  #AccountText:hover {
+    color: #FCE74F;
+  }
+
+  /* Logout section */
+  #LogoutText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    padding: 10px;
+    background-color: #FCE74F;
+    color: #000000;
+    border-radius: 5px;
+    font-weight: bold;
+    width: 80px;
+  }
+
+  #LogoutText:hover {
+    cursor: pointer;
+    background-color: #0D222B;
+  }
+
+  #LogoutImg {
+    width: 25%;
+  }
+
+  #EnglishText {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    padding: 10px;
+    justify-content: center;
+    width: 80px;
+  }
+
+  #LanguageImg {
+    width: 20%;
+  }
+
+  #EnglishText:hover {
+    cursor: pointer;
+  }
+
+  #DropDownImg {
+    width: 20%;
+  }
+
+  #Divider {
+    width: 100%;
+  }
+
+  #DashBoardText2 {
+    color: #FCE74F;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  #CurrentNav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+  }
+
+  #CurrentNavText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+  }
+
+  #HomeImg {
+    width: 10%;
+  }
+
+  /* Dropdown specific styles */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+
+
+
+  #NotificationText {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  #NotificationImg {
+    width: 20px;
+  }
+
+  #DashContainer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    padding-top: 70px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  #NotificationBG {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    row-gap: 20px;
+    padding: 30px;
+    background-color: #0D222B;
+    border-radius: 5px;
+  }
+
+
+
+
+  #ReferralText {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  #ReferralCopy {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #314852;
+    border-radius: 5px;
+  }
+
+  #ReferralCopyText {
+    padding-left: 10px;
+    width: 100%;
+
+  }
+
+  #ReferralCopyImg {
+    width: 35px;
+    cursor: pointer;
+  }
+
+  #ReferralBG {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    row-gap: 20px;
+    padding-bottom: 50px;
+  }
+
+  #StatText {
+    font-size: 15px;
+  }
+
+  #StatText2 {
+    font-weight: bold;
+    font-size: 45px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 10ch;
+  }
+
+
+  #StatImg {
+    width: 20%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  #StatBG {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    row-gap: 20px;
+    padding-top: 10px;
+    background-color: #0D222B;
+    border-radius: 10px;
+    width: 360px;
+    position: relative;
+  }
+
+  #SubStatBG {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-bottom: 35px;
+    padding-top: 10px;
+  }
+
+  #StatView {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding-top: 20px;
+  }
+
+  #StatOrder {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 50px;
+    row-gap: 80px;
+    flex-wrap: wrap;
+  }
+
+  #StatForwardImgAligner {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+  }
+
+  #StatForwardImg {
+    width: 40%;
+  }
+
+  #StatDivider {
+    background-color: #FCE74F;
+    height: 100px;
+    width: 0px;
+    margin: 0 20px;
+    padding: 0;
+  }
+
+  #LatestTransactionText {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+  }
+
+  #LatestTransaction {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    padding-top: 50px;
+  }
+
+  #LatestTransactionViewTab {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-color: #FCE74F;
+    border-radius: 5px;
+  }
+
+  #LatestTransactionViewBG {
+    height: 500px;
+  }
+
+  #LatestTransactionViewBGText {
+    text-align: center;
+    padding: 100px;
+    color: white;
+    background-color: #0D222B;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  #TransactionSearchPadding {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+
+  #TransactionSearchBG {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #314852;
+    /* Parent background color */
+    border-radius: 5px;
+    /* Rounded corners for the parent */
+    width: 100%;
+  }
+
+  #TransactionSearch {
+    background-color: transparent;
+    /* Make the input background transparent */
+    border: none;
+    /* Remove the border */
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    /* Text color */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    outline: none;
+    /* Remove outline on focus */
+    padding-left: 20px;
+    /* Add padding to match the parent */
+  }
+
+  #TransactionSearch::placeholder {
+    color: white;
+    /* Placeholder text color */
+    font-family: 'Inconsolata', sans-serif;
+    /* Font family */
+  }
+
+  #TransactionSearchImg {
+    width: 35px;
+    cursor: pointer;
+  }
+
+
+  #LatestTransaction2Text {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+  }
+
+  #LatestTransaction2 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    padding-top: 50px;
+  }
+
+  #LatestTransaction2ViewTab {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-color: #FCE74F;
+    border-radius: 5px;
+  }
+
+  #LatestTransaction2ViewBG {
+    height: 500px;
+  }
+
+  #LatestTransaction2ViewBGText {
+    text-align: center;
+    padding: 100px;
+    color: white;
+    background-color: #0D222B;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  #DashContainer2 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    padding-top: 70px;
+  }
+
+  #PacakgesContainer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    padding-top: 70px;
+  }
+
+  #PackagesHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+  }
+
+  #PackagesHeaderText {
+    color: #FCE74F;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  #PackagesHeaderText2 {
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+  #PackagesOrder {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 50px;
+    row-gap: 80px;
+    flex-wrap: wrap;
+  }
+
+  #PackagesBG {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 35px;
+    padding-top: 20px;
+    border: 2px solid #4A5A60;
+    border-radius: 10px;
+    background-color: #0D222B;
+  }
+
+  #PackagesBGHeader {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+  }
+
+  #PackagesBGPrice {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+  }
+
+
+  #PackagesContentBG {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 10px;
+    padding-top: 25px;
+  }
+
+  #PackagesContentText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    color: white;
+  }
+
+  #TickImg {
+    width: 5%;
+  }
+
+  #PackagesButtonBG {
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  #PackagesButton {
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #4A5A60;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+  }
+
+  #PackagesButton:hover {
+    background-color: white;
+    color: black;
+  }
 }

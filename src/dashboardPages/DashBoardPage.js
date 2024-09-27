@@ -25,8 +25,6 @@ export default function DashBoardPage() {
                     <StatCard img={StatImg} title="Total Balance" content="$0.00" />
                     <StatCard img={StatImg2} title="Package" content="N/A (Validity)" />
                     <StatCard img={StatImg3} title="Total Deposit" content="$0.00" />
-                </div>
-                <div id="StatOrder">
                     <StatCard img={StatImg4} title="Total Signals" content="0" />
                     <StatCard img={StatImg5} title="Total Transaction" content="0" />
                     <StatCard img={StatImg6} title="Total Referral" content="0" />
