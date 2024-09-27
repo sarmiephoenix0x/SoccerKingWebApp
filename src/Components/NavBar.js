@@ -4,21 +4,24 @@ import DropDownImg from '../images/gravity-ui_chevron-down.png';
 import HomeImg from '../images/tabler_home-filled.png';
 import { useNavigate, useLocation } from 'react-router-dom';
 
-export default function NavBar() {
+export default function NavBar({ onTabChange }) {
     const navigate = useNavigate();
     const location = useLocation();
 
     const GoToDepositHistory = () => {
+        onTabChange(); // Call the loader on tab change
         navigate("/DashBoard/DepositHistory");
         document.getElementById("CurrentNavText2").innerHTML = "Home - Deposit History";
     };
 
     const GoToPackage = () => {
+        onTabChange(); // Call the loader on tab change
         navigate("/DashBoard/Packages");
         document.getElementById("CurrentNavText2").innerHTML = "Home - Packages";
     };
 
     const GoToDashBoard = () => {
+        onTabChange(); // Call the loader on tab change
         navigate("/");
         document.getElementById("CurrentNavText2").innerHTML = "Home - Dashboard";
     };

@@ -1,0 +1,44 @@
+/* SplashScreen.css */
+
+.splash-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F2F2F2; /* Background color */
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    position: fixed; /* Positioning the splash screen */
+    top: 0;
+    left: 0;
+    z-index: 9999; /* On top of other content */
+    transition: opacity 0.5s ease; /* Smooth transition for hiding */
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none; /* Prevent interaction when hidden */
+}
+
+.logo {
+    width: 40vw; /* 40% of the viewport width */
+    max-width: 1024px; /* Maximum width */
+    min-width: 256px; /* Minimum width */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Space below logo */
+}
+
+.loader {
+    border: 8px solid rgba(0, 0, 0, 0.1);
+    border-top: 8px solid black;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite; /* Spinning effect */
+}
+
+/* Keyframes for spinning animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
