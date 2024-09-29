@@ -707,6 +707,8 @@ body::-webkit-scrollbar-thumb {
   text-decoration: none;
   display: block;
   border-bottom: 1px dotted #ccc;
+  width: 80%;
+  text-align: center;
 }
 
 /* Remove dotted divider for the last dropdown item */
@@ -1359,5 +1361,86 @@ body::-webkit-scrollbar-thumb {
   #PackagesButton:hover {
     background-color: white;
     color: black;
+  }
+}
+
+@media (max-width: 670px) {
+#LatestTransactionViewTab{
+  font-size: 3vw;
+  padding-left: 10px;
+    padding-right: 10px;
+}
+
+#LatestTransactionViewBGText{
+  font-size: 3vw;
+}
+
+#LatestTransaction2ViewTab{
+  font-size: 3vw;
+  padding-left: 10px;
+    padding-right: 10px;
+}
+
+#LatestTransaction2ViewBGText{
+  font-size: 3vw;
+}
+}
+
+@media (max-width: 500px) {
+#NotificationText{
+  font-size: 5vw;
+}
+
+#NotificationText2{
+  font-size: 4vw;
+}
+
+  #StatText{
+    font-size: 4vw;
+  }
+  #StatText2 {
+    font-size: 8vw;
+  }
+
+  #ReferralText {
+    font-size: 5vw;
+  }
+
+  #ReferralCopyText{
+    font-size: 4vw;
+  }
+
+  #DashBoardText {
+    font-size: 6vw;
+  }
+
+  #DepositText,
+  #PackageText,
+  #SignalsText,
+  #ReferralsText,
+  #SupportText,
+  #AccountText {
+    font-size: 4vw;
+  }
+
+  #Overlay{
+    overflow-y: scroll;
+  }
+
+  #PackagesHeaderText2{
+    text-align: center;
+    font-size: 7vw;
+  }
+
+  #DashBoardText2{
+    font-size: 6vw;
+  }
+
+  #CurrentNavText2{
+    font-size: 4vw;
+  }
+
+  #TransactionSearch::placeholder {
+    font-size: 4vw;
   }
 }
