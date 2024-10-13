@@ -19,6 +19,184 @@ body::-webkit-scrollbar-thumb {
 
 @media (min-width: 1080px) {
 
+  #AuthPageBG{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #LoginBG {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 90px;
+    padding-top: 90px;
+    background-color: #0D222B;
+  }
+
+  #AltAuthBut{
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+  }
+
+  #FbBut{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    column-gap: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border: 1px solid #4A5A60;
+    border-radius: 10px;
+  }
+
+  #FbBut:hover{
+    background-color: white;
+    color: #0D222B;
+  }
+
+  #FbImg{
+    width: 15%;
+  }
+
+
+  #GoogleBut{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    column-gap: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border: 1px solid #4A5A60;
+    border-radius: 10px;
+  }
+
+  #GoogleBut:hover{
+    background-color: white;
+    color: #0D222B;
+  }
+
+
+  #GoogleImg{
+    width: 15%;
+  }
+
+  #ORText{
+    color:white;
+  }
+
+  #InputFieldLabel{
+    color:white;
+  }
+
+  #InputFieldBG{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: center;
+    width: 100%;
+  }
+
+  #InputField{
+    height: 40px;
+    width: 92%;
+    border: 1px solid #4A5A60;
+    border-radius: 5px;
+    background-color: #0D222B;
+    padding-left: 15px;
+    padding-right: 15px;
+    outline-color: white;
+    color:white;
+  }
+
+  #InputFieldLabel{
+    display: flex;
+    align-self: flex-start;
+  }
+
+  #InputField::placeholder {
+    font-family: 'Inconsolata', sans-serif;
+  }
+
+  #RememberAndForget{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .remember-me {
+    display: flex;
+    align-self: flex-start;
+    margin-bottom: 10px; 
+    color:white;
+  }
+  
+  .remember-me input {
+    margin-right: 5px; /* Add space between the checkbox and the text */
+  }
+  
+  .remember-me label {
+    cursor: pointer; /* Allows clicking on the label to check the box */
+  }
+
+  #ForgotPassword{
+    color: #FCE74F;
+    cursor: pointer;
+  }
+
+  #CreateAccount{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 10px;
+    width: 100%;
+    color:white;
+  }
+
+  #CreateAccountText{
+    color: #FCE74F;
+    cursor: pointer;
+  }
+
+  #LogInText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    padding: 10px;
+    background-color: #FCE74F;
+    color: #000000;
+    border-radius: 5px;
+    font-weight: bold;
+    height: 25px;
+    width: 94%;
+  }
+
+  #LogInText:hover {
+    cursor: pointer;
+    background-color: #fce84f88;
+  }
+  
+
   #MenuToggle {
     display: none;
   }

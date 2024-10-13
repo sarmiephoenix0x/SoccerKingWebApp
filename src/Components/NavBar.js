@@ -78,8 +78,12 @@ export default function NavBar({ onTabChange }) {
 
     const GoToDashBoard = () => {
         onTabChange(); // Call the loader on tab change
-        navigate("/");
+        navigate("/DashBoard");
         document.getElementById("CurrentNavText2").innerHTML = "Home - Dashboard";
+    };
+
+    const GoToLogin = () => {
+        navigate("/");
     };
 
     const isActive = (path) => location.pathname === path;
@@ -136,7 +140,7 @@ export default function NavBar({ onTabChange }) {
                         </div>
 
                         <div id="SubNav">
-                            <div id="LogoutText">
+                            <div id="LogoutText" onClick={GoToLogin}>
                                 <img id="LogoutImg" src={LogoutImg} alt="Logout" />
                                 <span>Logout</span>
                             </div>
@@ -220,7 +224,7 @@ export default function NavBar({ onTabChange }) {
                             </div>
 
                             <div id="SubNav">
-                                <div id="LogoutText">
+                                <div id="LogoutText" onClick={GoToLogin}>
                                     <img id="LogoutImg" src={LogoutImg} alt="Logout" />
                                     <span>Logout</span>
                                 </div>

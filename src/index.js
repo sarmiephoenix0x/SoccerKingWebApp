@@ -3,6 +3,9 @@ import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import DashBoard from './Pages/DashBoard.js';
+import AuthenticationPage from './Pages/AuthenticationPage';
+import LogIn from './authenticationPages/LogIn.js';
+import Register from './authenticationPages/Register';
 import DashBoardPage from './dashboardPages/DashBoardPage';
 import Packages from './Pages/Packages.js';
 import DepositHistory from './Pages/DepositHistory.js';
@@ -57,8 +60,12 @@ function START() {
             ) : (
                 <BrowserRouter>
                     <Routes>
-                        <Route path="/" element={<DashBoard />} >
-                            <Route index element={<DashBoardPage />} />
+                        <Route path="/" element={<AuthenticationPage />}>
+                            <Route index element={<LogIn />} />
+                            <Route path="/Register" element={<Register />} />
+                        </Route>
+                        <Route path="/DashBoard" element={<DashBoard />} >
+                            <Route path="/DashBoard" element={<DashBoardPage />} />
                             <Route path="/DashBoard/Packages" element={<Packages />} />
                             <Route path="/DashBoard/DepositHistory" element={<DepositHistory />} />
                         </Route>
