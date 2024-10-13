@@ -63,22 +63,56 @@ export default function NavBar({ onTabChange }) {
 
 
     const GoToDepositHistory = () => {
+        document.body.style.overflowY = 'auto';
         toggleMenu();
         onTabChange(); // Call the loader on tab change
         navigate("/DashBoard/DepositHistory");
+        document.getElementById("DashBoardText2").innerHTML = "Deposit History";
         document.getElementById("CurrentNavText2").innerHTML = "Home - Deposit History";
     };
 
     const GoToPackage = () => {
+        document.body.style.overflowY = 'auto';
         toggleMenu();
         onTabChange(); // Call the loader on tab change
         navigate("/DashBoard/Packages");
+        document.getElementById("DashBoardText2").innerHTML = "Packages";
         document.getElementById("CurrentNavText2").innerHTML = "Home - Packages";
     };
 
+    const GoToReferral = () => {
+        document.body.style.overflowY = 'auto';
+        toggleMenu();
+        onTabChange(); // Call the loader on tab change
+        navigate("/DashBoard/Referral");
+        document.getElementById("DashBoardText2").innerHTML = "Referrals";
+        document.getElementById("CurrentNavText2").innerHTML = "Home - Referrals";
+    };
+
+    const GoToProfileSettings = () => {
+        document.body.style.overflowY = 'auto';
+        toggleMenu();
+        onTabChange(); // Call the loader on tab change
+        navigate("/DashBoard/ProfileSettings");
+        document.getElementById("DashBoardText2").innerHTML = "Profile Settings";
+        document.getElementById("CurrentNavText2").innerHTML = "Home - Profile Settings";
+    };
+
+
+    const GoToChangePassword = () => {
+        document.body.style.overflowY = 'auto';
+        toggleMenu();
+        onTabChange(); // Call the loader on tab change
+        navigate("/DashBoard/ChangePassword");
+        document.getElementById("DashBoardText2").innerHTML = "Change Password";
+        document.getElementById("CurrentNavText2").innerHTML = "Home - Change Password";
+    };
+
     const GoToDashBoard = () => {
+        document.body.style.overflowY = 'auto';
         onTabChange(); // Call the loader on tab change
         navigate("/DashBoard");
+        document.getElementById("DashBoardText2").innerHTML = "Dashboard";
         document.getElementById("CurrentNavText2").innerHTML = "Home - Dashboard";
     };
 
@@ -113,7 +147,7 @@ export default function NavBar({ onTabChange }) {
                         <div className="menu-item">
                             <div id="SignalsText" style={{ color: isActive('/DashBoard/Signals') ? '#FCE74F' : 'white' }}>Signals</div>
                         </div>
-                        <div className="menu-item">
+                        <div className="menu-item" onClick={GoToReferral}>
                             <div id="ReferralsText" style={{ color: isActive('/DashBoard/Referrals') ? '#FCE74F' : 'white' }}>Referrals</div>
                         </div>
 
@@ -128,14 +162,14 @@ export default function NavBar({ onTabChange }) {
                         </div>
 
                         <div className="menu-item" onClick={toggleAccountMenu}>
-                            <div id="AccountText" style={{ color: isActive('/DashBoard/Account') ? '#FCE74F' : 'white' }}>
+                            <div id="AccountText" style={{ color: isActive('/DashBoard/ProfileSettings') || isActive('/DashBoard/ChangePassword') || isActive('/DashBoard/Transaction') || isActive('/DashBoard/Logout') ? '#FCE74F' : 'white' }}>
                                 Account
                             </div>
                             <div className="submenu" style={{ display: accountMenuOpen ? 'flex' : 'none' }}>
-                                <a href="#" style={{ color: isActive('/DashBoard/Profile') ? '#FCE74F' : 'black' }}>Profile</a>
-                                <a href="#" style={{ color: isActive('/DashBoard/ChangePassword') ? '#FCE74F' : 'black' }}>Change Password</a>
+                                <a href="#" style={{ color: isActive('/DashBoard/ProfileSettings') ? '#FCE74F' : 'black' }} onClick={GoToProfileSettings}>Profile</a>
+                                <a href="#" style={{ color: isActive('/DashBoard/ChangePassword') ? '#FCE74F' : 'black' }} onClick={GoToChangePassword}>Change Password</a>
                                 <a href="#" style={{ color: isActive('/DashBoard/Transaction') ? '#FCE74F' : 'black' }}>Transaction</a>
-                                <a href="#" style={{ color: isActive('/DashBoard/Logout') ? '#FCE74F' : 'black' }}>Log Out</a>
+                                <a href="#" style={{ color: isActive('/DashBoard/Logout') ? '#FCE74F' : 'black' }} onClick={GoToLogin}>Log Out</a>
                             </div>
                         </div>
 
@@ -199,7 +233,7 @@ export default function NavBar({ onTabChange }) {
 
                             <div id="PackageText" style={{ color: isActive('/DashBoard/Packages') ? '#FCE74F' : 'white' }} onClick={GoToPackage}>Package</div>
                             <div id="SignalsText" style={{ color: isActive('/DashBoard/Signals') ? '#FCE74F' : 'white' }}>Signals</div>
-                            <div id="ReferralsText" style={{ color: isActive('/DashBoard/Referrals') ? '#FCE74F' : 'white' }}>Referrals</div>
+                            <div id="ReferralsText" style={{ color: isActive('/DashBoard/Referral') ? '#FCE74F' : 'white' }} onClick={GoToReferral}>Referrals</div>
 
                             <div className="dropdown">
                                 <div id="SupportText" style={{ color: isActive('/DashBoard/Support') ? '#FCE74F' : 'white' }}>
@@ -212,14 +246,14 @@ export default function NavBar({ onTabChange }) {
                             </div>
 
                             <div className="dropdown">
-                                <div id="AccountText" style={{ color: isActive('/DashBoard/Account') ? '#FCE74F' : 'white' }}>
+                            <div id="AccountText" style={{ color: isActive('/DashBoard/ProfileSettings') || isActive('/DashBoard/ChangePassword') || isActive('/DashBoard/Transaction') || isActive('/DashBoard/Logout') ? '#FCE74F' : 'white' }}>
                                     Account
                                 </div>
                                 <div className="dropdown-content">
-                                    <a href="#" style={{ color: isActive('/DashBoard/Profile') ? '#FCE74F' : 'black' }}>Profile</a>
-                                    <a href="#" style={{ color: isActive('/DashBoard/ChangePassword') ? '#FCE74F' : 'black' }}>Change Password</a>
+                                    <a href="#" style={{ color: isActive('/DashBoard/ProfileSettings') ? '#FCE74F' : 'black' }} onClick={GoToProfileSettings}>Profile</a>
+                                    <a href="#" style={{ color: isActive('/DashBoard/ChangePassword') ? '#FCE74F' : 'black' }} onClick={GoToChangePassword}>Change Password</a>
                                     <a href="#" style={{ color: isActive('/DashBoard/Transaction') ? '#FCE74F' : 'black' }}>Transaction</a>
-                                    <a href="#" style={{ color: isActive('/DashBoard/Logout') ? '#FCE74F' : 'black' }}>Log Out</a>
+                                    <a href="#" style={{ color: isActive('/DashBoard/Logout') ? '#FCE74F' : 'black' }} onClick={GoToLogin}>Log Out</a>
                                 </div>
                             </div>
 

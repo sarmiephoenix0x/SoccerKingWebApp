@@ -1,6 +1,6 @@
 import FbImg from "../images/FacebookIcon.png"
 import GoogleImg from "../images/GoogleIcon.png"
-import { useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function Register() {
 
@@ -10,9 +10,13 @@ export default function Register() {
         navigate("/DashBoard");
     };
 
+    const GoToLogin = () => {
+        navigate("/");
+    };
+
     return (
         <>
-            <div id="LoginBG">
+            <div id="RegisterBG">
                 <div id="AltAuthBut">
                     <div id="FbBut">
                         <img id="FbImg" src={FbImg} alt="Facebook" />
@@ -32,9 +36,23 @@ export default function Register() {
                 </div>
                 <div id="InputFieldBG">
                     <div id="InputFieldLabel">
-                        Username or Email
+                        First Name
                     </div>
-                    <input id="InputField" type="text" placeholder="Enter username" />
+                    <input id="InputField" type="text" placeholder="Enter first name" />
+                </div>
+
+                <div id="InputFieldBG">
+                    <div id="InputFieldLabel">
+                        Last Name
+                    </div>
+                    <input id="InputField" type="text" placeholder="Enter first name" />
+                </div>
+
+                <div id="InputFieldBG">
+                    <div id="InputFieldLabel">
+                        Email Address
+                    </div>
+                    <input id="InputField" type="email" placeholder="Enter first name" />
                 </div>
 
                 <div id="InputFieldBG">
@@ -43,14 +61,21 @@ export default function Register() {
                     </div>
                     <input id="InputField" type="password" placeholder="Enter password" />
                 </div>
-                
-                <div id="LogInText" onClick={GoToDashBoard}>
+
+                <div id="InputFieldBG">
+                    <div id="InputFieldLabel">
+                        Confirm Password
+                    </div>
+                    <input id="InputField" type="password" placeholder="Enter password confirmation" />
+                </div>
+
+                <div id="SubmitText" onClick={GoToDashBoard}>
                     <span>Submit</span>
                 </div>
                 <div id="CreateAccount">
-                        Already have an account?
-                    <div id="CreateAccountText">
-                    Login Here
+                    Already have an account?
+                    <div id="CreateAccountText" onClick={GoToLogin}>
+                        Login Here
                     </div>
                 </div>
             </div>

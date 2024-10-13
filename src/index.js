@@ -9,7 +9,10 @@ import Register from './authenticationPages/Register';
 import DashBoardPage from './dashboardPages/DashBoardPage';
 import Packages from './Pages/Packages.js';
 import DepositHistory from './Pages/DepositHistory.js';
-import SplashScreen from './Components/SplashScreen.js'; // Import SplashScreen
+import Referral from './Pages/Referral.js'
+import ProfileSettings from './Pages/ProfileSettings.js'
+import ChangePassword from './Pages/ChangePassword.js'
+import SplashScreen from './Components/SplashScreen.js';
 import './index.css';
 import './fonts/fonts.css';
 import swDev from './swDev.js';
@@ -68,6 +71,9 @@ function START() {
                             <Route path="/DashBoard" element={<DashBoardPage />} />
                             <Route path="/DashBoard/Packages" element={<Packages />} />
                             <Route path="/DashBoard/DepositHistory" element={<DepositHistory />} />
+                            <Route path="/DashBoard/Referral" element={<Referral />} />
+                            <Route path="/DashBoard/ProfileSettings" element={<ProfileSettings />} />
+                            <Route path="/DashBoard/ChangePassword" element={<ChangePassword />} />
                         </Route>
                     </Routes>
                 </BrowserRouter>

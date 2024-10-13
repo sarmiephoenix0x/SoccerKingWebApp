@@ -10,6 +10,10 @@ export default function LogIn() {
         navigate("/DashBoard");
     };
 
+    const GoToRegister = () => {
+        navigate("/Register");
+    };
+
     return (
         <>
             <div id="LoginBG">
@@ -57,7 +61,7 @@ export default function LogIn() {
                 </div>
                 <div id="CreateAccount">
                         Don't have an account?
-                    <div id="CreateAccountText">
+                    <div id="CreateAccountText" onClick={GoToRegister}>
                     Create Account
                     </div>
                 </div>
