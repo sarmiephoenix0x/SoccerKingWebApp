@@ -1,0 +1,709 @@
+body {
+  background: #271E44;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 95%;
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #F4B400;
+  border-radius: 8px;
+}
+
+@media only screen and (min-width:974px) {
+
+  #ModalContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 650px;
+  }
+
+  #Modal {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    width: 35%;
+    border-radius: 24px;
+    background: #1E192F;
+  }
+
+  #PhoneLockImgDiv {
+    align-self: center;
+    position: relative;
+    top: 30px;
+  }
+
+  #PhoneLockImg {
+    height: 70px;
+    width: 70px;
+  }
+
+  #Credentials {
+    display: flex;
+    position: relative;
+    top: 100px;
+    align-self: center;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 80%;
+  }
+
+  #Credentials2 {
+    display: flex;
+    position: relative;
+    top: 30px;
+    align-self: center;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 80%;
+  }
+
+  #LogInText {
+    color: #FFF;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+  }
+
+  #InstructionText {
+    color: #FFF;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+
+
+  #FullNameID {
+    height: 60px;
+    width: 85%;
+    padding-left: 15%;
+    border-radius: 10px;
+    background: url('./images/Group.png') 20px 20px no-repeat #1E192F;
+    background-size: 20px;
+    border: 0px;
+    outline: none;
+  }
+
+  #FullNameID:focus {
+    background-color: #3A2F4D;
+  }
+
+  #FullNameID::placeholder {
+    transition: 0.2s ease-out;
+  }
+
+  #FullNameID:focus::placeholder,
+  #EmailID:not(:placeholder-shown)::placeholder {
+    transform: translateY(-100%);
+    font-size: 12px;
+  }
+
+
+
+  #PhoneID {
+    height: 60px;
+    width: 85%;
+    padding-left: 15%;
+    border-radius: 10px;
+    background: url('./images/Vector.png') 20px 16px no-repeat #1E192F;
+    background-size: 20px;
+    border: 0px;
+    outline: none;
+  }
+
+  #PhoneID:focus {
+    background-color: #3A2F4D;
+  }
+
+  #PhoneID::placeholder {
+    transition: 0.2s ease-out;
+  }
+
+  #PhoneID:focus::placeholder,
+  #PhoneID:not(:placeholder-shown)::placeholder {
+    transform: translateY(-100%);
+    font-size: 12px;
+  }
+
+  #EmailID {
+    height: 60px;
+    width: 85%;
+    padding-left: 15%;
+    border-radius: 10px;
+    background: url('./images/ic_outline-email.png') 20px 20px no-repeat #1E192F;
+    background-size: 20px;
+    border: 0px;
+    outline: none;
+  }
+
+  #EmailID:focus {
+    background-color: #3A2F4D;
+  }
+
+  #EmailID::placeholder {
+    transition: 0.2s ease-out;
+  }
+
+  #EmailID:focus::placeholder,
+  #EmailID:not(:placeholder-shown)::placeholder {
+    transform: translateY(-100%);
+    font-size: 12px;
+  }
+
+
+  #PassWordID {
+    height: 60px;
+    width: 85%;
+    padding-left: 15%;
+    border-radius: 10px;
+    background: url('./images/Group\ 32.png') 20px 20px no-repeat #1E192F;
+    background-size: 17px;
+    border: 0px;
+    outline: none;
+  }
+
+  #PassWordID:focus {
+    background-color: #3A2F4D;
+  }
+
+  #PassWordID::placeholder {
+    transition: 0.2s ease-out;
+  }
+
+  #PassWordID:focus::placeholder,
+  #PassWordID:not(:placeholder-shown)::placeholder {
+    transform: translateY(-100%);
+    font-size: 12px;
+  }
+
+
+  #ConfirmPassWordID {
+    height: 60px;
+    width: 85%;
+    padding-left: 15%;
+    border-radius: 10px;
+    background: url('./images/Group\ 32.png') 20px 20px no-repeat #1E192F;
+    background-size: 17px;
+    border: 0px;
+    outline: none;
+  }
+
+  #ConfirmPassWordID:focus {
+    background-color: #3A2F4D;
+  }
+
+  #ConfirmPassWordID::placeholder {
+    transition: 0.2s ease-out;
+  }
+
+  #ConfirmPassWordID:focus::placeholder,
+  #ConfirmPassWordID:not(:placeholder-shown)::placeholder {
+    transform: translateY(-100%);
+    font-size: 12px;
+  }
+
+
+  #Login-ForgotPassword {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    row-gap: 10px;
+    position: relative;
+    top: 120px;
+  }
+
+  #LogInBut {
+    cursor: pointer;
+    padding: 10px;
+    width: 150px;
+    color: rgba(0, 0, 0, 0.70);
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border-radius: 100px;
+    background: #F4B400;
+    border: 0px;
+  }
+
+  #ForgotText {
+    cursor: pointer;
+    color: #F4B400;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+
+  #Question-SignIn {
+    display: flex;
+    align-self: center;
+    flex-direction: row;
+    column-gap: 5px;
+    position: relative;
+    top: 210px;
+    color: #FFF;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  #SignUp {
+    cursor: pointer;
+    color: #F4B400;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+
+
+  #Login-ForgotPassword2 {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    row-gap: 10px;
+    position: relative;
+    top: 50px;
+  }
+
+
+  #Question-SignIn2 {
+    display: flex;
+    align-self: center;
+    flex-direction: row;
+    column-gap: 5px;
+    position: relative;
+    top: 70px;
+    color: #FFF;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  #Elilipse {
+    transform: rotate(-10deg);
+    position: fixed;
+    left: 55%;
+    top: -400px;
+    border-radius: 1187px;
+    border: 60px solid #F4B400;
+    width: 666px;
+    height: 666px;
+    z-index: -1;
+  }
+
+  #EllipseImg {
+    position: fixed;
+    top: 400px;
+    left: 60%;
+  }
+
+  #Elilipse2 {
+    transform: rotate(-10deg);
+    position: fixed;
+    right: 55%;
+    top: 350px;
+    border-radius: 1187px;
+    border: 60px solid #000;
+    width: 666px;
+    height: 666px;
+    z-index: -1;
+  }
+
+  #EllipseImg2 {
+    position: fixed;
+    top: 50px;
+    left: 60%;
+  }
+
+  #CAText {
+    color: #FFF;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-wrap: nowrap;
+  }
+
+  #BackImgDiv {
+    display: flex;
+    position: relative;
+    top: 20px;
+    align-self: center;
+    width: 80%;
+  }
+
+  #BackImg {
+    cursor: pointer;
+    height: 20px;
+    width: 40px;
+  }
+
+}
+
+
+
+@media only screen and (max-width:974px) {
+
+  #ModalContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 650px;
+  }
+
+  #Modal {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    width: 400px;
+    border-radius: 24px;
+    background: #1E192F;
+  }
+
+  #PhoneLockImgDiv {
+    align-self: center;
+    position: relative;
+    top: 30px;
+  }
+
+  #PhoneLockImg {
+    height: 70px;
+    width: 70px;
+  }
+
+  #Credentials {
+    display: flex;
+    position: relative;
+    top: 100px;
+    align-self: center;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 80%;
+  }
+
+  #Credentials2 {
+    display: flex;
+    position: relative;
+    top: 30px;
+    align-self: center;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 80%;
+  }
+
+  #LogInText {
+    color: #FFF;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+  }
+
+  #InstructionText {
+    color: #FFF;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+
+
+  #FullNameID {
+    height: 60px;
+    width: 85%;
+    padding-left: 15%;
+    border-radius: 10px;
+    background: url('./images/Group.png') 20px 20px no-repeat #1E192F;
+    background-size: 20px;
+    border: 0px;
+    outline: none;
+  }
+
+  #FullNameID:focus {
+    background-color: #3A2F4D;
+  }
+
+  #FullNameID::placeholder {
+    transition: 0.2s ease-out;
+  }
+
+  #FullNameID:focus::placeholder,
+  #EmailID:not(:placeholder-shown)::placeholder {
+    transform: translateY(-100%);
+    font-size: 12px;
+  }
+
+
+
+  #PhoneID {
+    height: 60px;
+    width: 85%;
+    padding-left: 15%;
+    border-radius: 10px;
+    background: url('./images/Vector.png') 20px 16px no-repeat #1E192F;
+    background-size: 20px;
+    border: 0px;
+    outline: none;
+  }
+
+  #PhoneID:focus {
+    background-color: #3A2F4D;
+  }
+
+  #PhoneID::placeholder {
+    transition: 0.2s ease-out;
+  }
+
+  #PhoneID:focus::placeholder,
+  #PhoneID:not(:placeholder-shown)::placeholder {
+    transform: translateY(-100%);
+    font-size: 12px;
+  }
+
+  #EmailID {
+    height: 60px;
+    width: 85%;
+    padding-left: 15%;
+    border-radius: 10px;
+    background: url('./images/ic_outline-email.png') 20px 20px no-repeat #1E192F;
+    background-size: 20px;
+    border: 0px;
+    outline: none;
+  }
+
+  #EmailID:focus {
+    background-color: #3A2F4D;
+  }
+
+  #EmailID::placeholder {
+    transition: 0.2s ease-out;
+  }
+
+  #EmailID:focus::placeholder,
+  #EmailID:not(:placeholder-shown)::placeholder {
+    transform: translateY(-100%);
+    font-size: 12px;
+  }
+
+
+  #PassWordID {
+    height: 60px;
+    width: 85%;
+    padding-left: 15%;
+    border-radius: 10px;
+    background: url('./images/Group\ 32.png') 20px 20px no-repeat #1E192F;
+    background-size: 17px;
+    border: 0px;
+    outline: none;
+  }
+
+  #PassWordID:focus {
+    background-color: #3A2F4D;
+  }
+
+  #PassWordID::placeholder {
+    transition: 0.2s ease-out;
+  }
+
+  #PassWordID:focus::placeholder,
+  #PassWordID:not(:placeholder-shown)::placeholder {
+    transform: translateY(-100%);
+    font-size: 12px;
+  }
+
+
+  #ConfirmPassWordID {
+    height: 60px;
+    width: 85%;
+    padding-left: 15%;
+    border-radius: 10px;
+    background: url('./images/Group\ 32.png') 20px 20px no-repeat #1E192F;
+    background-size: 17px;
+    border: 0px;
+    outline: none;
+  }
+
+  #ConfirmPassWordID:focus {
+    background-color: #3A2F4D;
+  }
+
+  #ConfirmPassWordID::placeholder {
+    transition: 0.2s ease-out;
+  }
+
+  #ConfirmPassWordID:focus::placeholder,
+  #ConfirmPassWordID:not(:placeholder-shown)::placeholder {
+    transform: translateY(-100%);
+    font-size: 12px;
+  }
+
+
+  #Login-ForgotPassword {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    row-gap: 10px;
+    position: relative;
+    top: 120px;
+  }
+
+  #LogInBut {
+    cursor: pointer;
+    padding: 10px;
+    width: 150px;
+    color: rgba(0, 0, 0, 0.70);
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border-radius: 100px;
+    background: #F4B400;
+    border: 0px;
+  }
+
+  #ForgotText {
+    cursor: pointer;
+    color: #F4B400;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+
+  #Question-SignIn {
+    display: flex;
+    align-self: center;
+    flex-direction: row;
+    column-gap: 5px;
+    position: relative;
+    top: 210px;
+    color: #FFF;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  #SignUp {
+    cursor: pointer;
+    color: #F4B400;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+
+
+  #Login-ForgotPassword2 {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    row-gap: 10px;
+    position: relative;
+    top: 50px;
+  }
+
+
+  #Question-SignIn2 {
+    display: flex;
+    align-self: center;
+    flex-direction: row;
+    column-gap: 5px;
+    position: relative;
+    top: 70px;
+    color: #FFF;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  #Elilipse {
+    transform: rotate(-10deg);
+    position: fixed;
+    left: 55%;
+    top: -400px;
+    border-radius: 1187px;
+    border: 60px solid #F4B400;
+    width: 666px;
+    height: 666px;
+    z-index: -1;
+  }
+
+  #EllipseImg {
+    position: fixed;
+    top: 400px;
+    left: 60%;
+  }
+
+  #Elilipse2 {
+    transform: rotate(-10deg);
+    position: fixed;
+    right: 55%;
+    top: 350px;
+    border-radius: 1187px;
+    border: 60px solid #000;
+    width: 666px;
+    height: 666px;
+    z-index: -1;
+  }
+
+  #EllipseImg2 {
+    position: fixed;
+    top: 50px;
+    left: 60%;
+  }
+
+  #CAText {
+    color: #FFF;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-wrap: nowrap;
+  }
+
+  #BackImgDiv {
+    display: flex;
+    position: relative;
+    top: 20px;
+    align-self: center;
+    width: 80%;
+  }
+
+  #BackImg {
+    cursor: pointer;
+    height: 20px;
+    width: 40px;
+  }
+
+}
+
+@media only screen and (max-width:375px) {
+  #Modal {
+    width: 95%;
+  }
+}
