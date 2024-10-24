@@ -31,48 +31,51 @@ export default function SideBar() {
                 <div className='SideBarSub'>
                     GENERAL
                     <div className="SideBarSubBut">
-                        <img className="SideBarSubButImg" src={CalendarImg} alt="Profile" />
+                        <img className="SideBarSubButImg" src={CalendarImg} alt="Calendar" />
                         Calendar
                     </div>
                     <div className="SideBarSubBut">
-                        <img className="SideBarSubButImg" src={NewsImg} alt="Profile" />
+                        <img className="SideBarSubButImg" src={NewsImg} alt="News" />
                         News
                     </div>
                 </div>
                 <div className='SideBarSub'>
                     LISTS
                     <div className="SideBarSubBut">
-                        <img className="SideBarSubButImg" src={ProductsImg} alt="Profile" />
+                        <img className="SideBarSubButImg" src={ProductsImg} alt="Products" />
                         Products
                     </div>
                     <div className="SideBarSubBut">
-                        <img className="SideBarSubButImg" src={OrdersImg} alt="Profile" />
+                        <img className="SideBarSubButImg" src={OrdersImg} alt="Orders" />
                         Orders
                     </div>
                     <div className="SideBarSubBut">
-                        <img className="SideBarSubButImg" src={PostsImg} alt="Profile" />
+                        <img className="SideBarSubButImg" src={PostsImg} alt="Posts" />
                         Posts
                     </div>
                 </div>
                 <div className='SideBarSub'>
                     MAINTENANCE
                     <div className="SideBarSubBut">
-                        <img className="SideBarSubButImg" src={SettingsImg} alt="Profile" />
+                        <img className="SideBarSubButImg" src={SettingsImg} alt="Settings" />
                         Settings
                     </div>
                     <div className="SideBarSubBut">
-                        <img className="SideBarSubButImg" src={BackupsImg} alt="Profile" />
+                        <img className="SideBarSubButImg" src={BackupsImg} alt="Backups" />
                         Backups
                     </div>
                 </div>
                 <div className='SideBarSub'>
                     ANALYTICS
                     <div className="SideBarSubBut">
-                        <img className="SideBarSubButImg" src={LogsImg} alt="Profile" />
+                        <img className="SideBarSubButImg" src={LogsImg} alt="Logs" />
                         Logs
                     </div>
                 </div>
-                Log Out
+                <div className="LogOutSideBarSubBut">
+                        <img className="SideBarSubButImg" src={LogoutImg} alt="Log Out" />
+                    Log Out
+                    </div>
             </div>
         </>
     )

@@ -901,25 +901,39 @@ body {
   }
 
 
-  #SideBarBG{
-    overflow-y: scroll;
-    position: fixed;
+  #SideBarBG {
+    top: 0; /* Align to the top */
+    overflow-y: auto; /* Allow vertical scrolling */
+    position: fixed; /* Keep the sidebar fixed in place */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start; /* Align content to the left */
     background: url('./images/SideBarBG.png') 0 0 no-repeat;
+    background-size: 100%;
     padding: 20px;
-    width:10%;
+    width: 10%;
+    height: 100vh; /* Full viewport height */
     row-gap: 30px;
     color: #FFF;
     font-weight: bold;
-  }
+}
+
 
   .SideBarSub{
     display: flex;
     flex-direction: column;
     font-size: 0.95vw;
     row-gap: 10px;
+    flex-grow: 1; /* Make the content take up available space */
+    width: 100%; /* Ensure full width */
+  }
+
+  .LogOutSideBarSubBut{
+    display: flex;
+    flex-direction: row;
+    font-size: 0.95vw;
+    column-gap: 10px;
+    margin-top: auto;
   }
 
   .SideBarSubBut{
