@@ -1,9 +1,13 @@
 import { useNavigate } from 'react-router-dom';
 import PhoneLockImg from '../images/Phonelink Lock.png';
+import { useEffect} from 'react';
 
 export default function LogIn() {
 
     const Navigate = useNavigate();
+    useEffect(() => {
+        document.body.style.overflowY = 'auto';
+    }, []);
 
     const GoToDashboard = () => {
         Navigate("/DashBoard")

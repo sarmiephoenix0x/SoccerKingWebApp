@@ -1,9 +1,13 @@
 import { useNavigate } from 'react-router-dom';
 import BackImg from '../images/Group 21.png';
+import { useEffect} from 'react';
 
 export default function CreateAccount() {
 
     const Navigate = useNavigate();
+    useEffect(() => {
+        document.body.style.overflowY = 'auto';
+    }, []);
 
     const GoToDashboard = () => {
         Navigate("/DashBoard")
