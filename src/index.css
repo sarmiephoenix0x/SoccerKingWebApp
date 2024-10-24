@@ -436,6 +436,10 @@ body {
     cursor: pointer;
   }
 
+  #LandingPageBG{
+    background: #FFF;
+  }
+
   #Sec1Main {
     display: flex;
     flex-direction: row;
@@ -466,6 +470,7 @@ body {
   }
 
   #Sec1MainText2 {
+    line-height: 2.5;
     width: 50%;
     padding-bottom: 20px;
   }
@@ -516,8 +521,9 @@ body {
   #Sec2MainSub {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    row-gap: 10px;
+    flex-wrap: wrap;
+    column-gap: 50px;
+    row-gap: 50px;
   }
 
   #Sec2MainText1 {
@@ -527,7 +533,8 @@ body {
   }
 
   #ServicesCard {
-    position: relative; /* Make the card a reference point for absolute positioning */
+    position: relative;
+    /* Make the card a reference point for absolute positioning */
     display: flex;
     flex-direction: column;
     row-gap: 20px;
@@ -537,29 +544,361 @@ body {
     border: 5px solid #000000;
     opacity: 0px;
   }
-  
+
   #ServicesCardImg {
-    position: absolute; /* Absolute positioning to place it over the border */
-    left: -30px; /* Stick to the left border */
-    top: 50%; /* Adjust vertical positioning */
-    transform: translateY(-50%); /* Center the image vertically */
-    width: auto; /* Adjust width as needed */
-    height: 50px; /* Example height, adjust as needed */
+    position: absolute;
+    left: -32px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14%;
     background: #000;
     border-radius: 50px;
     padding: 10px;
   }
-  
+
   #ServicesCardHeaderText {
     font-weight: bold;
   }
-  
+
   #ServicesCardBody {
     font-size: 1vw;
     width: 200px;
   }
-  
 
+  #Sec3Main {
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(180deg, #241E20 18.5%, #4B3F1B 61%, #F1CD05 100%);
+    color: #FFF;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    column-gap: 30px;
+  }
+
+  #Sec3MainSub {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+  }
+
+  #PlayerImg2 {
+    width: 40%;
+  }
+
+  #Sec3MainText1 {
+    font-size: 4vw;
+    font-weight: bold;
+    width: 70%;
+  }
+
+  #SoccerKingdomText {
+    color: #F1CD05;
+  }
+
+  #Sec3MainText2 {
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+    align-items: center;
+  }
+
+  #Number1 {
+    height: 40px;
+    width: 7%;
+  }
+
+  #Spacer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+  }
+
+  #Sec3MainText2Sub {
+    font-size: 1.8vw;
+    font-weight: bold;
+  }
+
+  #Sec3MainText2Sub2 {
+    font-size: 1vw;
+    line-height: 2;
+  }
+
+
+
+
+  #Sec3MainText3 {
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+    align-items: center;
+  }
+
+  #Number2 {
+    height: 40px;
+    width: 7%;
+  }
+
+
+  #Sec3MainText3Sub {
+    font-size: 1.8vw;
+    font-weight: bold;
+  }
+
+  #Sec3MainText3Sub2 {
+    font-size: 1vw;
+    line-height: 2;
+  }
+
+
+  #GetTheAppText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #000000;
+    color: #FFF;
+    border-radius: 20px;
+    font-weight: bold;
+    width: 100px;
+  }
+
+  #GetTheAppText:hover {
+    cursor: pointer;
+  }
+
+  #Sec4Main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #FFF;
+    color: #000;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    row-gap: 30px;
+  }
+
+
+  #Sec4MainSub {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 50px;
+    row-gap: 50px;
+  }
+
+  #Sec4MainText1 {
+    font-size: 4vw;
+    font-weight: bold;
+    color: #000;
+  }
+
+  #FAQText{
+    color: #F1CD05; 
+  }
+
+  #Sec4MainText2 {
+    text-align: center;
+    font-size: 1.1vw;
+  }
+
+  #Sec4MainSub{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 45px 50px;
+    border-radius: 24px;
+    border: 5px solid #000000;
+    opacity: 0px;
+  }
+
+  #QuestionsCard{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 20px;
+    padding: 10px 20px;
+    border-radius: 24px;
+    border: 5px solid #000000;
+    opacity: 0px;
+  }
+
+  #QuestionsCardImg {
+    width: 13%;
+    background: #000;
+    border-radius: 50px;
+    padding: 10px;
+  }
+
+  #QuestionsCardBody {
+    font-size: 1vw;
+    width: 200px;
+  }
+
+
+  #MoreQuestionsCard{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 20px;
+    padding: 10px 20px;
+    border-radius: 24px;
+    border: 5px solid #000000;
+    background: #000;
+  }
+
+  #MoreQuestionsCardImg {
+    width: 13%;
+  }
+
+  #MoreQuestionsCardBody {
+    color:#FFF;
+    font-size: 1vw;
+    width: 200px;
+  }
+
+
+
+  #FAQCard{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 20px;
+    padding: 10px 20px;
+    border-radius: 24px;
+    opacity: 0px;
+  }
+
+  #FAQCardImg {
+    width: 13%;
+  }
+
+  #FAQCardBody {
+    font-size: 1vw;
+    width: 200px;
+  }
+
+  #QuestionsAlign{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 160px;
+  }
+
+  #FAQAlign{
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  #Sec5Main {
+    display: flex;
+    flex-direction: column;
+    background: #000;
+    color: #FFF;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    row-gap: 70px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+  }
+
+  #FooterAlign{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+  }
+
+  #Sec5Sub{
+    display: flex;
+    flex-direction: column; 
+    font-size: 1vw;
+    row-gap: 20px;
+  }
+
+  #Sec5Sub2{
+    display: flex;
+    flex-direction: column; 
+    font-size: 1vw;
+    row-gap: 20px;
+  }
+
+
+  #Sec5Sub3{
+    display: flex;
+    flex-direction: column; 
+    font-size: 1vw;
+    row-gap: 20px;
+  }
+
+  #Sec5SubHeader{
+    font-size: 1.4vw;
+    color:#F1CD05;
+  }
+  
+  #Sec5Sub2Header{
+    font-size: 1.4vw;
+    color:#F1CD05;
+  }
+  #Sec5Sub3Header{
+    font-size: 1.4vw;
+    color:#F1CD05;
+  }
+
+  #SocialIcons{
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+  }
+
+  #FbImg{
+    height: 30px;
+  }
+
+  #InstaImg{
+    height: 30px;
+  }
+
+  #SubscribeInputBG{
+    display: flex;
+    flex-direction: row;
+    background: #FFF;
+    border-radius: 10px;
+  }
+
+  #SubscribeInput{
+  font-family: 'Inter', sans-serif;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+  }
+
+  #SubscribeBut{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #F4B400;
+    color: #FFF;
+    border-radius: 5px;
+    font-weight: bold;
+    white-space: nowrap;
+  }
 
 }
 

@@ -10,7 +10,7 @@ export default function LogIn() {
     }
 
     const GoToSignUp = () => {
-        Navigate("/CreateAccount");
+        Navigate("/Authentication/CreateAccount");
     }
 
     return (

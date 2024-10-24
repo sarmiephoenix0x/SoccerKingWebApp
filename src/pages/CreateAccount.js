@@ -10,12 +10,12 @@ export default function CreateAccount() {
     }
 
     const GoToSignIn = () => {
-        Navigate("/");
+        Navigate("/Authentication");
     }
 
-    document.getElementById("LogInBut").addEventListener("submit", () => {
-        GoToDashboard();
-    });
+    // document.getElementById("LogInBut").addEventListener("submit", () => {
+    //     GoToDashboard();
+    // });
 
     return (
         <>
@@ -34,7 +34,7 @@ export default function CreateAccount() {
             </div>
 
             <div id="Login-ForgotPassword2">
-                <input id="LogInBut" type="submit" value="SIGN UP"/>
+                <input id="LogInBut" type="submit" value="SIGN UP" onClick={GoToDashboard}/>
             </div>
 
             <div id="Question-SignIn2">Already haven an account?<span id="SignUp" onClick={GoToSignIn}>Sign in</span></div>

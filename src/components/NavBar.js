@@ -1,6 +1,16 @@
 import AppLogo from '../images/Logo.png';
+import { useNavigate } from 'react-router-dom';
 
 export default function NavBar() {
+    const Navigate = useNavigate();
+
+    const GoToLoginIn = () => {
+        Navigate("/Authentication");
+    }
+
+    const GoToSignUp = () => {
+        Navigate("/Authentication/CreateAccount");
+    }
     return (
         <>
             <div id="NavBarMain">
@@ -19,10 +29,10 @@ export default function NavBar() {
                         Contact US
                     </div>
                     <div id="NavBarAuthButs">
-                        <div id="LogINText">
+                        <div id="LogINText" onClick={GoToLoginIn}>
                             Log In
                         </div>
-                        <div id="CreateNewAccountText">
+                        <div id="CreateNewAccountText" onClick={GoToSignUp}>
                             Create New Account
                         </div>
                     </div>
