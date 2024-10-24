@@ -9,6 +9,7 @@ export default function NavBar() {
     const [overlayAnimation, setOverlayAnimation] = useState('');
 
     useEffect(() => {
+        document.body.style.overflowY = 'auto';
         window.addEventListener('resize', updateScreenWidth);
 
         // Clean up the event listener on component unmount

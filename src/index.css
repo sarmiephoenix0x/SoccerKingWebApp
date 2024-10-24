@@ -2143,7 +2143,7 @@ body {
   #SideBarBG {
     display: none;
     width: 200px;
-    height: 100vh;
+    height: 100%;
     row-gap: 30px;
     color: #FFF;
     font-weight: bold;
