@@ -11,6 +11,15 @@ import DashBoard from './pages/DashBoard.js';
 import DashBoardPage from './dashboardPages/DashBoardPage';
 import SplashScreen from './components/SplashScreen.js';
 import './fonts/fonts.css';
+import Profile from './dashboardPages/Profile.js';
+import Calendar from './dashboardPages/Calendar.js';
+import News from './dashboardPages/News.js';
+import Products from './dashboardPages/Products.js';
+import Orders from './dashboardPages/Orders.js';
+import Posts from './dashboardPages/Posts.js';
+import Settings from './dashboardPages/Settings.js';
+import Backups from './dashboardPages/Backups.js';
+import Logs from './dashboardPages/Logs.js';
 
 
 function START() {
@@ -66,7 +75,16 @@ function START() {
             <Route path="/Authentication/CreateAccount" element={<CreateAccount />} />
           </Route>
           <Route path="/DashBoard" element={<DashBoard />} >
-            <Route path="/DashBoard" element={<DashBoardPage />} />
+                <Route path="/DashBoard" element={<DashBoardPage />} />
+                <Route path="/DashBoard/Profile" element={<Profile />} />
+                <Route path="/DashBoard/Calendar" element={<Calendar />} />
+                <Route path="/DashBoard/News" element={<News />} />
+                <Route path="/DashBoard/Products" element={<Products />} />
+                <Route path="/DashBoard/Orders" element={<Orders />} />
+                <Route path="/DashBoard/Posts" element={<Posts />} />
+                <Route path="/DashBoard/Settings" element={<Settings />} />
+                <Route path="/DashBoard/Backups" element={<Backups />} />
+                <Route path="/DashBoard/Logs" element={<Logs />} />
           </Route>
         </Routes>
           </BrowserRouter>

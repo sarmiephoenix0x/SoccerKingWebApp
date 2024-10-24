@@ -18,6 +18,10 @@ body {
   border-radius: 8px;
 }
 
+#OverlayNavBarContent{
+  display: none;
+}
+
 @media only screen and (min-width:974px) {
 
   #ModalContainer {
@@ -902,17 +906,16 @@ body {
 
 
   #SideBarBG {
-    top: 0; /* Align to the top */
-    overflow-y: auto; /* Allow vertical scrolling */
+    overflow-y: scroll; /* Allow vertical scrolling */
     position: fixed; /* Keep the sidebar fixed in place */
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align content to the left */
+    align-items: center;
     background: url('./images/SideBarBG.png') 0 0 no-repeat;
     background-size: 100%;
     padding: 20px;
     width: 10%;
-    height: 100vh; /* Full viewport height */
+    height: 100vh; /* Set the height to the full viewport height */
     row-gap: 30px;
     color: #FFF;
     font-weight: bold;
@@ -922,18 +925,26 @@ body {
   .SideBarSub{
     display: flex;
     flex-direction: column;
+    /* align-items: center; */
     font-size: 0.95vw;
     row-gap: 10px;
-    flex-grow: 1; /* Make the content take up available space */
-    width: 100%; /* Ensure full width */
+  }
+
+  .SideBarSubButText{
+    display: none;
+  }
+
+  .SideBarSubButText{
+    display: block;
   }
 
   .LogOutSideBarSubBut{
+    cursor: pointer;
     display: flex;
     flex-direction: row;
     font-size: 0.95vw;
     column-gap: 10px;
-    margin-top: auto;
+    margin-top: 100px;
   }
 
   .SideBarSubBut{
@@ -962,6 +973,70 @@ body {
 
   #SoccerKingdomImg{
     width: 70%;
+  }
+
+  #Dashboard{
+    background-color: #FFF;
+  }
+
+  #DashboardTab{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 220px;
+  }
+
+  #DashboardTabHeader{
+    color: #00000080;
+    font-weight: bold;
+    font-size: 2vw;
+  }
+
+  #DashboardTabSub{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 20px;
+  }
+
+  #Search{
+    cursor: pointer;
+    height: 30px;
+  }
+
+  #Notification{
+    cursor: pointer;
+    height: 30px;
+  }
+
+  #ProfileBG{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 10px;
+  }
+
+  #ProfileName{
+    font-size: 1.3vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 10ch;
+  }
+
+  #ProfileRole{
+    font-size: 0.98vw; 
+  }
+
+
+  #ProfileImg{
+    cursor: pointer;
+    height: 30px;
+    border-radius: 50px;
   }
 
 }
@@ -1308,6 +1383,708 @@ body {
     width: 40px;
   }
 
+
+
+  #NavBarMain {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #241E20;
+    color: white;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  #NavBarContent {
+    display: flex;
+    flex-direction: row;
+    column-gap: 40px;
+    align-items: center;
+  }
+
+  #NavBarAuthButs {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    align-items: center;
+  }
+
+  #AppLogo {
+    width: 5%;
+  }
+
+  #HomeText,
+  #AboutText,
+  #FAQText,
+  #ContactUSText {
+    cursor: pointer;
+  }
+
+  #LogINText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #000000;
+    color: #FFF;
+    border-radius: 15px;
+    font-weight: bold;
+  }
+
+  #LogINText:hover {
+    cursor: pointer;
+  }
+
+
+  #CreateNewAccountText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #F4B400;
+    color: #FFF;
+    border-radius: 25px;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  #CreateNewAccountText:hover {
+    cursor: pointer;
+  }
+
+  #LandingPageBG{
+    background: #FFF;
+  }
+
+  #Sec1Main {
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(180deg, #241E20 18.5%, #4B3F1B 61%, #F1CD05 100%);
+    color: #FFF;
+    padding-left: 50px;
+    padding-right: 170px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    row-gap: 10px;
+  }
+
+  #Sec1MainSub {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    row-gap: 10px;
+  }
+
+  #Sec1MainText1 {
+    font-size: 4vw;
+    font-weight: bold;
+    width: 50%;
+  }
+
+  #ScrabbleImg {
+    width: 48%;
+  }
+
+  #Sec1MainText2 {
+    line-height: 2.5;
+    width: 50%;
+    padding-bottom: 20px;
+  }
+
+  #LearnMoreText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #000000;
+    color: #FFF;
+    border-radius: 15px;
+    font-weight: bold;
+    width: 130px;
+  }
+
+  #LearnMoreText:hover {
+    cursor: pointer;
+  }
+
+  #LearnMoreImg {
+    width: 10%;
+  }
+
+  #PlayerImg {
+    width: 20%;
+  }
+
+
+
+  #Sec2Main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #FFF;
+    color: #000;
+    padding-left: 50px;
+    padding-right: 170px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    row-gap: 30px;
+  }
+
+  #Sec2MainSub {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 50px;
+    row-gap: 50px;
+  }
+
+  #Sec2MainText1 {
+    font-size: 4vw;
+    font-weight: bold;
+    color: #F1CD05;
+  }
+
+  #ServicesCard {
+    position: relative;
+    /* Make the card a reference point for absolute positioning */
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 45px 50px;
+    gap: 17px;
+    border-radius: 24px;
+    border: 5px solid #000000;
+    opacity: 0px;
+  }
+
+  #ServicesCardImg {
+    position: absolute;
+    left: -32px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14%;
+    background: #000;
+    border-radius: 50px;
+    padding: 10px;
+  }
+
+  #ServicesCardHeaderText {
+    font-weight: bold;
+  }
+
+  #ServicesCardBody {
+    font-size: 1vw;
+    width: 200px;
+  }
+
+  #Sec3Main {
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(180deg, #241E20 18.5%, #4B3F1B 61%, #F1CD05 100%);
+    color: #FFF;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    column-gap: 30px;
+  }
+
+  #Sec3MainSub {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+  }
+
+  #PlayerImg2 {
+    width: 40%;
+  }
+
+  #Sec3MainText1 {
+    font-size: 4vw;
+    font-weight: bold;
+    width: 70%;
+  }
+
+  #SoccerKingdomText {
+    color: #F1CD05;
+  }
+
+  #Sec3MainText2 {
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+    align-items: center;
+  }
+
+  #Number1 {
+    height: 40px;
+    width: 7%;
+  }
+
+  #Spacer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+  }
+
+  #Sec3MainText2Sub {
+    font-size: 1.8vw;
+    font-weight: bold;
+  }
+
+  #Sec3MainText2Sub2 {
+    font-size: 1vw;
+    line-height: 2;
+  }
+
+
+
+
+  #Sec3MainText3 {
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+    align-items: center;
+  }
+
+  #Number2 {
+    height: 40px;
+    width: 7%;
+  }
+
+
+  #Sec3MainText3Sub {
+    font-size: 1.8vw;
+    font-weight: bold;
+  }
+
+  #Sec3MainText3Sub2 {
+    font-size: 1vw;
+    line-height: 2;
+  }
+
+
+  #GetTheAppText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #000000;
+    color: #FFF;
+    border-radius: 20px;
+    font-weight: bold;
+    width: 100px;
+  }
+
+  #GetTheAppText:hover {
+    cursor: pointer;
+  }
+
+  #Sec4Main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #FFF;
+    color: #000;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    row-gap: 30px;
+  }
+
+
+  #Sec4MainSub {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 50px;
+    row-gap: 50px;
+  }
+
+  #Sec4MainText1 {
+    font-size: 4vw;
+    font-weight: bold;
+    color: #000;
+  }
+
+  #FAQText{
+    color: #F1CD05; 
+  }
+
+  #Sec4MainText2 {
+    text-align: center;
+    font-size: 1.1vw;
+  }
+
+  #Sec4MainSub{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 45px 50px;
+    border-radius: 24px;
+    border: 5px solid #000000;
+    opacity: 0px;
+  }
+
+  #QuestionsCard{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 20px;
+    padding: 10px 20px;
+    border-radius: 24px;
+    border: 5px solid #000000;
+    opacity: 0px;
+  }
+
+  #QuestionsCardImg {
+    width: 13%;
+    background: #000;
+    border-radius: 50px;
+    padding: 10px;
+  }
+
+  #QuestionsCardBody {
+    font-size: 1vw;
+    width: 200px;
+  }
+
+
+  #MoreQuestionsCard{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 20px;
+    padding: 10px 20px;
+    border-radius: 24px;
+    border: 5px solid #000000;
+    background: #000;
+  }
+
+  #MoreQuestionsCardImg {
+    width: 13%;
+  }
+
+  #MoreQuestionsCardBody {
+    color:#FFF;
+    font-size: 1vw;
+    width: 200px;
+  }
+
+
+
+  #FAQCard{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 20px;
+    padding: 10px 20px;
+    border-radius: 24px;
+    opacity: 0px;
+  }
+
+  #FAQCardImg {
+    width: 13%;
+  }
+
+  #FAQCardBody {
+    font-size: 1vw;
+    width: 200px;
+  }
+
+  #QuestionsAlign{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 160px;
+  }
+
+  #FAQAlign{
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  #Sec5Main {
+    display: flex;
+    flex-direction: column;
+    background: #000;
+    color: #FFF;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    row-gap: 70px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+  }
+
+  #FooterAlign{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+  }
+
+  #Sec5Sub{
+    display: flex;
+    flex-direction: column; 
+    font-size: 1vw;
+    row-gap: 20px;
+  }
+
+  #Sec5Sub2{
+    display: flex;
+    flex-direction: column; 
+    font-size: 1vw;
+    row-gap: 20px;
+  }
+
+
+  #Sec5Sub3{
+    display: flex;
+    flex-direction: column; 
+    font-size: 1vw;
+    row-gap: 20px;
+  }
+
+  #Sec5SubHeader{
+    font-size: 1.4vw;
+    color:#F1CD05;
+  }
+  
+  #Sec5Sub2Header{
+    font-size: 1.4vw;
+    color:#F1CD05;
+  }
+  #Sec5Sub3Header{
+    font-size: 1.4vw;
+    color:#F1CD05;
+  }
+
+  #SocialIcons{
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+  }
+
+  #FbImg{
+    height: 30px;
+  }
+
+  #InstaImg{
+    height: 30px;
+  }
+
+  #SubscribeInputBG{
+    display: flex;
+    flex-direction: row;
+    background: #FFF;
+    border-radius: 10px;
+  }
+
+  #SubscribeInput{
+  font-family: 'Inter', sans-serif;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+  }
+
+  #SubscribeBut{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #F4B400;
+    color: #FFF;
+    border-radius: 5px;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+
+  #SideBarBG {
+    overflow-y: scroll; /* Allow vertical scrolling */
+    position: fixed; /* Keep the sidebar fixed in place */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url('./images/SideBarBG.png') 0 0 no-repeat;
+    background-size: 100%;
+    padding: 20px;
+    width: 10%;
+    height: 100vh; /* Set the height to the full viewport height */
+    row-gap: 30px;
+    color: #FFF;
+    font-weight: bold;
+}
+
+
+  .SideBarSub{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    font-size: 0.95vw;
+    row-gap: 10px;
+  }
+
+  .SideBarSubButText{
+    display: none;
+  }
+
+  .SideBarSubButText{
+    display: block;
+  }
+
+  .LogOutSideBarSubBut{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    font-size: 0.95vw;
+    column-gap: 10px;
+    margin-top: 100px;
+  }
+
+  .SideBarSubBut{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 10px;
+    font-size: 0.8vw;
+    padding: 10px;
+    border-left: 2px solid #00000000;
+  }
+
+
+  .SideBarSubBut:hover{
+    cursor: pointer;
+    padding: 10px;
+    background: #F3BC1F;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-left: 2px solid #000;
+  }
+
+  .SideBarSubButImg{
+    height: 15px;
+  }
+
+  #SoccerKingdomImg{
+    width: 70%;
+  }
+
+  #Dashboard{
+    background-color: #FFF;
+  }
+
+  #DashboardTab{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 220px;
+  }
+
+  #DashboardTabHeader{
+    color: #00000080;
+    font-weight: bold;
+    font-size: 2vw;
+  }
+
+  #DashboardTabSub{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 20px;
+  }
+
+  #Search{
+    cursor: pointer;
+    height: 30px;
+  }
+
+  #Notification{
+    cursor: pointer;
+    height: 30px;
+  }
+
+  #ProfileBG{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 10px;
+  }
+
+  #ProfileName{
+    font-size: 1.3vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 10ch;
+  }
+
+  #ProfileRole{
+    font-size: 0.98vw; 
+  }
+
+
+  #ProfileImg{
+    cursor: pointer;
+    height: 30px;
+    border-radius: 50px;
+  }
+
+}
+
+@media only screen and (max-width:910px) {
+  #NavBarMain {
+    justify-content:start;
+    column-gap: 20px;
+  }
+
+  #MenuToggle {
+    display: block;
+    cursor: pointer;
+    z-index: 1;
+    transform: scale(2.2);
+    margin-right: 20px;
+  }
+
+
+  #MenuToggle2 {
+    display: block;
+    cursor: pointer;
+    z-index: 1;
+    transform: scale(2.2);
+  }
 }
 
 @media only screen and (max-width:375px) {
