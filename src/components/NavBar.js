@@ -6,7 +6,6 @@ export default function NavBar() {
     const Navigate = useNavigate();
     const [menuOpen, setMenuOpen] = useState(false);
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-    const [overlayAnimation, setOverlayAnimation] = useState('');
 
     useEffect(() => {
         document.body.style.overflowY = 'auto';
@@ -34,11 +33,8 @@ export default function NavBar() {
         if (!menuOpen) {
             // When opening the menu
             document.body.style.overflowY = 'hidden';
-            setOverlayAnimation('OverlaySlideIn');
             setMenuOpen(true);
         } else {
-            // When closing the menu
-            setOverlayAnimation('OverlaySlideOut');
             setTimeout(() => {
                 document.body.style.overflowY = 'auto';
                 setMenuOpen(false);
