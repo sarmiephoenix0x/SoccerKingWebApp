@@ -2121,6 +2121,7 @@ body {
     z-index: 1;
     transform: scale(2.2);
     margin-right: 20px;
+    user-select: none;
   }
 
 
@@ -2129,6 +2130,7 @@ body {
     cursor: pointer;
     z-index: 1;
     transform: scale(2.2);
+    user-select: none;
   }
 }
 
