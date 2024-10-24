@@ -1,11 +1,11 @@
 import { Outlet } from 'react-router-dom';
-import NavBar from '../components/NavBar.js';
+import SideBar from '../components/SideBar.js';
 
 export default function DashBoard() {
 
     return (
         <>
-            <NavBar/>
+            <SideBar/>
            <Outlet />
         </>
     );
