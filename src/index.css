@@ -19,7 +19,7 @@ body {
 }
 
 #OverlayNavBarContent{
-  display: none;
+  /*display: none;*/
 }
 
 @media only screen and (min-width:974px) {
@@ -516,7 +516,7 @@ body {
     background: #FFF;
     color: #000;
     padding-left: 50px;
-    padding-right: 170px;
+    padding-right: 50px;
     padding-top: 40px;
     padding-bottom: 40px;
     row-gap: 30px;
@@ -889,6 +889,7 @@ body {
   }
 
   #SubscribeBut{
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1473,7 +1474,7 @@ body {
     background: linear-gradient(180deg, #241E20 18.5%, #4B3F1B 61%, #F1CD05 100%);
     color: #FFF;
     padding-left: 50px;
-    padding-right: 170px;
+    padding-right: 150px;
     padding-top: 20px;
     padding-bottom: 20px;
     row-gap: 10px;
@@ -1489,16 +1490,17 @@ body {
   #Sec1MainText1 {
     font-size: 4vw;
     font-weight: bold;
-    width: 50%;
+    width: 90%;
+    white-space: nowrap;
   }
 
   #ScrabbleImg {
-    width: 48%;
+    width: 88%;
   }
 
   #Sec1MainText2 {
     line-height: 2.5;
-    width: 50%;
+    width: 80%;
     padding-bottom: 20px;
   }
 
@@ -1527,7 +1529,7 @@ body {
   }
 
   #PlayerImg {
-    width: 20%;
+    width: 150px;
   }
 
 
@@ -1539,7 +1541,7 @@ body {
     background: #FFF;
     color: #000;
     padding-left: 50px;
-    padding-right: 170px;
+    padding-right: 50px;
     padding-top: 40px;
     padding-bottom: 40px;
     row-gap: 30px;
@@ -1548,6 +1550,7 @@ body {
   #Sec2MainSub {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
     column-gap: 50px;
     row-gap: 50px;
@@ -1588,7 +1591,7 @@ body {
   }
 
   #ServicesCardBody {
-    font-size: 1vw;
+    font-size: 1.5vw;
     width: 200px;
   }
 
@@ -1648,7 +1651,7 @@ body {
   }
 
   #Sec3MainText2Sub2 {
-    font-size: 1vw;
+    font-size: 1.5vw;
     line-height: 2;
   }
 
@@ -1674,7 +1677,7 @@ body {
   }
 
   #Sec3MainText3Sub2 {
-    font-size: 1vw;
+    font-size: 1.5vw;
     line-height: 2;
   }
 
@@ -1733,7 +1736,7 @@ body {
 
   #Sec4MainText2 {
     text-align: center;
-    font-size: 1.1vw;
+    font-size: 1.5vw;
   }
 
   #Sec4MainSub{
@@ -1765,7 +1768,7 @@ body {
   }
 
   #QuestionsCardBody {
-    font-size: 1vw;
+    font-size: 1.5vw;
     width: 200px;
   }
 
@@ -1788,7 +1791,7 @@ body {
 
   #MoreQuestionsCardBody {
     color:#FFF;
-    font-size: 1vw;
+    font-size: 1.5vw;
     width: 200px;
   }
 
@@ -1809,15 +1812,15 @@ body {
   }
 
   #FAQCardBody {
-    font-size: 1vw;
+    font-size: 1.5vw;
     width: 200px;
   }
 
   #QuestionsAlign{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    column-gap: 160px;
+    row-gap: 100px;
   }
 
   #FAQAlign{
@@ -1849,14 +1852,14 @@ body {
   #Sec5Sub{
     display: flex;
     flex-direction: column; 
-    font-size: 1vw;
+    font-size: 1.9vw;
     row-gap: 20px;
   }
 
   #Sec5Sub2{
     display: flex;
     flex-direction: column; 
-    font-size: 1vw;
+    font-size: 1.9vw;
     row-gap: 20px;
   }
 
@@ -1864,21 +1867,21 @@ body {
   #Sec5Sub3{
     display: flex;
     flex-direction: column; 
-    font-size: 1vw;
+    font-size: 1.9vw;
     row-gap: 20px;
   }
 
   #Sec5SubHeader{
-    font-size: 1.4vw;
+    font-size: 1.9vw;
     color:#F1CD05;
   }
   
   #Sec5Sub2Header{
-    font-size: 1.4vw;
+    font-size: 1.9vw;
     color:#F1CD05;
   }
   #Sec5Sub3Header{
-    font-size: 1.4vw;
+    font-size: 1.9vw;
     color:#F1CD05;
   }
 
@@ -1912,6 +1915,7 @@ body {
   }
 
   #SubscribeBut{
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2065,6 +2069,47 @@ body {
 }
 
 @media only screen and (max-width:910px) {
+  
+  #OverlayNavBarContent{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 30px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #271E44;
+    animation-name: OverlaySlideIn;
+    animation-duration: 0.8s;
+    animation-iteration-count: 1;
+    backdrop-filter: blur(0.2em);
+    z-index: 1;
+    overflow-y: auto;
+  }
+
+
+
+  @keyframes OverlaySlideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes OverlaySlideOut {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
   #NavBarMain {
     justify-content:start;
     column-gap: 20px;
@@ -2086,6 +2131,368 @@ body {
     transform: scale(2.2);
   }
 }
+
+
+@media only screen and (max-width:600px) {
+
+  #AppLogo {
+    width: 10%;
+  }
+
+
+  #Sec1Main {
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(180deg, #241E20 18.5%, #4B3F1B 61%, #F1CD05 100%);
+    color: #FFF;
+    padding-left: 50px;
+    padding-right: 150px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    row-gap: 10px;
+  }
+
+  #Sec1MainSub {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    row-gap: 10px;
+  }
+
+  #Sec1MainText1 {
+    font-size: 4vw;
+    font-weight: bold;
+    width: 90%;
+    white-space: nowrap;
+  }
+
+  #ScrabbleImg {
+    width: 88%;
+  }
+
+  #Sec1MainText2 {
+    line-height: 2.5;
+    width: 80%;
+    padding-bottom: 20px;
+  }
+
+  #PlayerImg {
+    width: 150px;
+  }
+
+  #ServicesCardBody {
+    font-size: 2.2vw;
+  }
+
+  #Sec3Main {
+    align-items: center;
+  }
+
+  #PlayerImg2 {
+    width: 40%;
+  }
+
+  #Sec3MainText1 {
+    font-size: 4.5vw;
+  }
+
+
+  #Sec3MainText2Sub {
+    font-size: 3vw;
+  }
+
+  #Sec3MainText2Sub2 {
+    font-size: 2.2vw;
+  }
+
+
+  #Sec3MainText3Sub {
+    font-size: 3vw;
+    font-weight: bold;
+  }
+
+  #Sec3MainText3Sub2 {
+    font-size: 2.2vw;
+    line-height: 2;
+  }
+
+
+  #Number1 {
+    height: 35px;
+    width: 13%;
+  }
+
+
+  #Number2 {
+    height: 35px;
+    width: 13%;
+  }
+
+  #Sec4MainText1 {
+    font-size: 4.5vw;
+  }
+
+  #Sec4MainText2 {
+    font-size: 2.5vw;
+  }
+
+  #QuestionsCardBody {
+    font-size: 2.2vw;
+    width: 200px;
+  }
+
+  #MoreQuestionsCardBody {
+    font-size: 2.2vw;
+  }
+
+
+
+  #FAQCard{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 20px;
+    padding: 10px 20px;
+    border-radius: 24px;
+    opacity: 0px;
+  }
+
+  #FAQCardBody {
+    font-size: 2.2vw;
+  }
+  #Sec5Sub{
+    font-size: 3.2vw;
+  }
+
+  #Sec5Sub2{
+    font-size: 3.2vw;
+  }
+
+
+  #Sec5Sub3{
+    font-size: 3.2vw;
+  }
+
+  #Sec5SubHeader{
+    font-size: 3.2vw;
+  }
+  
+  #Sec5Sub2Header{
+    font-size: 3.2vw;
+  }
+  #Sec5Sub3Header{
+    font-size: 3.2vw;
+  }
+
+  #FooterAlign{
+    display: flex;
+    flex-direction: column; 
+    row-gap: 50px;
+    justify-content: space-between;
+  }
+
+
+  #SubscribeInputBG{
+    flex-direction: column;
+  }
+
+  #SubscribeInput{
+    padding: 10px;
+  }
+}
+
+
+
+
+
+@media only screen and (max-width:500px) {
+
+  #AppLogo {
+    width: 15%;
+  }
+
+
+  #Sec1Main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 50px;
+    row-gap: 30px;
+  }
+
+  #Sec1MainText1 {
+    font-size: 5.5vw;
+    width: 100%;
+  }
+
+  #ScrabbleImg {
+    width: 100%;
+  }
+
+  #Sec1MainText2 {
+    width: 100%;
+  }
+
+  #Sec2MainText1 {
+    font-size: 5.5vw;
+  }
+
+
+  /* #ServicesCard {
+    width: 90%;
+  } */
+
+  #ServicesCardBody {
+    font-size: 3.5vw;
+  }
+
+
+  #Sec3Main {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  #Sec3MainSub {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+  }
+
+  #PlayerImg2 {
+    width: 50%;
+  }
+
+
+  #Sec3MainText1 {
+    font-size: 5.5vw;
+    width: 100%;
+  }
+
+
+  #Sec3MainText2Sub {
+    font-size: 4vw;
+  }
+
+  #Sec3MainText2Sub2 {
+    font-size: 3.5vw;
+  }
+
+
+  #Sec3MainText3Sub {
+    font-size: 4vw;
+  }
+
+  #Sec3MainText3Sub2 {
+    font-size: 3.5vw;
+  }
+
+  #Sec4MainText1 {
+    font-size: 5.5vw;
+  }
+
+  #Sec4MainText2 {
+    font-size: 3.5vw;
+  }
+
+  #Sec4MainSub{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    width:90%;
+  }
+  
+
+  #QuestionsAlign{
+    width:100%;
+  }
+
+  #QuestionsCard{
+    width: 90%;
+  }
+
+  #QuestionsCardBody {
+    font-size: 3.2vw;
+    width: 100%;
+  }
+
+  #MoreQuestionsCard{
+    width: 90%;
+  }
+
+  #MoreQuestionsCardBody {
+    font-size: 3.2vw;
+  }
+
+
+
+  #FAQCard{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 20px;
+    padding: 10px 20px;
+    border-radius: 24px;
+    opacity: 0px;
+  }
+
+  #FAQCardBody {
+    font-size: 3.5vw;
+  }
+  #Sec5Sub{
+    font-size: 3.5vw;
+  }
+
+  #Sec5Sub2{
+    font-size: 3.5vw;
+  }
+
+
+  #Sec5Sub3{
+    font-size: 3.5vw;
+  }
+
+  #Sec5SubHeader{
+    font-size: 3.5vw;
+  }
+  
+  #Sec5Sub2Header{
+    font-size: 3.5vw;
+  }
+  #Sec5Sub3Header{
+    font-size: 3.5vw;
+  }
+
+  #FooterAlign{
+    display: flex;
+    flex-direction: column; 
+    row-gap: 50px;
+    justify-content: space-between;
+  }
+
+
+  #SubscribeInputBG{
+    flex-direction: column;
+  }
+
+  #SubscribeInput{
+    padding: 10px;
+  }
+
+
+  #Sec5Main {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+  }
+
+
+  
+}
+
+
+
+
 
 @media only screen and (max-width:375px) {
   #Modal {
