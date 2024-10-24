@@ -920,6 +920,7 @@ body {
     row-gap: 30px;
     color: #FFF;
     font-weight: bold;
+    backdrop-filter: blur(1em);
 }
 
 
@@ -1946,6 +1947,10 @@ body {
     row-gap: 30px;
     color: #FFF;
     font-weight: bold;
+    left: 0;
+    top:0;
+    bottom: 0;
+    backdrop-filter: blur(1em);
 }
 
 
@@ -1953,7 +1958,7 @@ body {
     display: flex;
     flex-direction: column;
     /* align-items: center; */
-    font-size: 0.95vw;
+    font-size: 1.5vw;
     row-gap: 10px;
   }
 
@@ -1969,7 +1974,7 @@ body {
     cursor: pointer;
     display: flex;
     flex-direction: row;
-    font-size: 0.95vw;
+    font-size: 1.5vw;
     column-gap: 10px;
     margin-top: 100px;
   }
@@ -1979,7 +1984,7 @@ body {
     flex-direction: row;
     align-items: center;
     column-gap: 10px;
-    font-size: 0.8vw;
+    font-size: 1.2vw;
     padding: 10px;
     border-left: 2px solid #00000000;
   }
@@ -2131,6 +2136,81 @@ body {
     z-index: 1;
     transform: scale(2.2);
     user-select: none;
+  }
+
+
+
+  #SideBarBG {
+    display: none;
+    width: 200px;
+    height: 100vh;
+    row-gap: 30px;
+    color: #FFF;
+    font-weight: bold;
+    animation-name: OverlaySlideIn;
+    animation-duration: 0.8s;
+    animation-iteration-count: 1;
+    z-index: 1;
+}
+
+
+  .SideBarSub{
+    font-size: 20px;
+  }
+
+  .LogOutSideBarSubBut{
+    align-items: center;
+    font-size: 15px;
+  }
+
+  .SideBarSubBut{
+    font-size: 15px;
+  }
+
+
+  .SideBarSubBut:hover{
+    cursor: pointer;
+    padding: 10px;
+    background: #F3BC1F;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-left: 2px solid #000;
+  }
+
+  .SideBarSubButImg{
+    height: 15px;
+  }
+
+  #SoccerKingdomImg{
+    width: 70%;
+  }
+
+  #Dashboard{
+    background-color: #FFF;
+  }
+
+  #DashboardTab{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  #DashboardTabHeader{
+    display: none;
+  }
+
+
+  #ProfileName{
+    font-size: 2vw;
+  }
+
+  #ProfileRole{
+    font-size: 1.5vw; 
   }
 }
 
@@ -2488,7 +2568,13 @@ body {
     border-top-right-radius: 50px;
   }
 
+  #ProfileName{
+    font-size: 2.5vw;
+  }
 
+  #ProfileRole{
+    font-size: 2vw; 
+  }
   
 }
 
