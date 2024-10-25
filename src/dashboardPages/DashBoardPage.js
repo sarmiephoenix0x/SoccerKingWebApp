@@ -5,6 +5,7 @@ import TopNewsImg from '../images/TopNewsImg.png'
 import TopNewsCard from '../components/TopNewsCard'
 import InfoImg from '../images/ep_info-filled.png'
 import BalanceImg from '../images/BalanceImg.png'
+import BottomInfo from '../components/BottomInfo'
 
 export default function DashBoardPage() {
     return (
@@ -33,12 +34,12 @@ export default function DashBoardPage() {
 
 
                     <div id="TopLeaders">
-                    <div id="TLMainSub">
-                        <div id="TLText">
-                            Top Leaders
-                            <img id="InfoImg" src={InfoImg} alt="InfoImg" />
+                        <div id="TLMainSub">
+                            <div id="TLText">
+                                Top Leaders
+                                <img id="InfoImg" src={InfoImg} alt="InfoImg" />
                             </div>
-                            </div>
+                        </div>
                         <div id="TLSubAlign">
                             <div id="TLSub">
                                 <div id="SubHeader">Rank</div>
@@ -69,6 +70,9 @@ export default function DashBoardPage() {
                                 <div>5</div>
                             </div>
                         </div>
+                        <div id="TLMainSub">
+                            <BottomInfo content="This Week" redarrow="none" />
+                        </div>
                     </div>
                 </div>
 
@@ -90,6 +94,7 @@ export default function DashBoardPage() {
                                 <div id="UsersText3">
                                     Your Rank
                                 </div>
+                                <BottomInfo content="This Week" redarrow="none" />
                             </div>
 
 
@@ -101,17 +106,18 @@ export default function DashBoardPage() {
                                 <div id="UsersText5">
                                     Players
                                 </div>
+                                <BottomInfo content="This Week"/>
                             </div>
                         </div>
                     </div>
 
                     <div id="TopNews">
-                    <div id="TopNewsMainSub">
-                        <div id="TopNewsText">
-                            Top News
-                            <img id="InfoImg" src={InfoImg} alt="InfoImg" />
+                        <div id="TopNewsMainSub">
+                            <div id="TopNewsText">
+                                Top News
+                                <img id="InfoImg" src={InfoImg} alt="InfoImg" />
                             </div>
-                            </div>
+                        </div>
                         <TopNewsCard
                             header="How to win effortlessly?"
                             content="Winning effortlessly is easy Soccer Kingdom, but are you prepared?"
@@ -153,6 +159,10 @@ export default function DashBoardPage() {
                                 Income
                             </div>
                         </div>
+
+                        <div id="BalanceMainSub">
+                            <BottomInfo content=" this week" content2="38.6%" redarrow="none" />
+                        </div>
                     </div>
 
 
@@ -168,6 +178,10 @@ export default function DashBoardPage() {
 
                         <div id="TriviaText2">
                             What award is given to the year’s best footballer by French news magazine France Football?
+                        </div>
+
+                        <div id="TriviaMainSub">
+                            <BottomInfo content="This Week" redarrow="none" />
                         </div>
                     </div>
                 </div>

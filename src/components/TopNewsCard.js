@@ -1,4 +1,4 @@
-export default function FAQCard(props) {
+export default function TopNewsCard(props) {
     return (
         <>
             <div id="TopNewsCard">
