@@ -65,7 +65,7 @@ export default function DashBoardTab() {
                     </>
                 )}
                 <div id="DashboardTabHeader">
-                    Homepage
+                    Dashboard
                 </div>
                 <div id="DashboardTabSub">
                     <img id="Search" src={SearchImg} alt="Search" />

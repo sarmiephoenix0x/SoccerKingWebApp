@@ -19,7 +19,7 @@ export default function SideBar() {
     const isActive = (path) => location.pathname === path;
     const GoToHomepage = () => {
         navigate("/DashBoard");
-        document.getElementById("DashboardTabHeader").innerHTML = "Homepage";
+        document.getElementById("DashboardTabHeader").innerHTML = "Dashboard";
     }
     const GoToProfile = () => {
         navigate("/DashBoard/Profile");
@@ -77,7 +77,7 @@ export default function SideBar() {
                     >
                         <img className="SideBarSubButImg" src={HomeImg} alt="Home" />
                         <div className='SideBarSubButText'>
-                            Homepage
+                            Dashboard
                         </div>
                     </div>
                     <div className="SideBarSubBut"
