@@ -13,6 +13,7 @@ export default function NewsCard(props) {
                         <div id="NewsTag">
                             {props.newstag}
                         </div>
+
                         <div id="Time">
                             <img id="ClockImg" src={ClockImg} alt="ClockImg" />
                             <div>{props.time}</div>
