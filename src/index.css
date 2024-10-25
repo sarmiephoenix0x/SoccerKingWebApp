@@ -18,7 +18,7 @@ body {
   border-radius: 8px;
 }
 
-#OverlayNavBarContent{
+#OverlayNavBarContent {
   /*display: none;*/
 }
 
@@ -442,7 +442,7 @@ body {
     cursor: pointer;
   }
 
-  #LandingPageBG{
+  #LandingPageBG {
     background: #FFF;
   }
 
@@ -706,8 +706,8 @@ body {
     color: #000;
   }
 
-  #FAQText{
-    color: #F1CD05; 
+  #FAQText {
+    color: #F1CD05;
   }
 
   #Sec4MainText2 {
@@ -715,7 +715,7 @@ body {
     font-size: 1.1vw;
   }
 
-  #Sec4MainSub{
+  #Sec4MainSub {
     display: flex;
     flex-direction: column;
     row-gap: 20px;
@@ -725,7 +725,7 @@ body {
     opacity: 0px;
   }
 
-  #QuestionsCard{
+  #QuestionsCard {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -749,7 +749,7 @@ body {
   }
 
 
-  #MoreQuestionsCard{
+  #MoreQuestionsCard {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -766,14 +766,14 @@ body {
   }
 
   #MoreQuestionsCardBody {
-    color:#FFF;
+    color: #FFF;
     font-size: 1vw;
     width: 200px;
   }
 
 
 
-  #FAQCard{
+  #FAQCard {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -792,14 +792,14 @@ body {
     width: 200px;
   }
 
-  #QuestionsAlign{
+  #QuestionsAlign {
     display: flex;
     flex-direction: row;
     align-items: center;
     column-gap: 160px;
   }
 
-  #FAQAlign{
+  #FAQAlign {
     display: flex;
     flex-direction: column;
   }
@@ -819,78 +819,79 @@ body {
     border-top-right-radius: 100px;
   }
 
-  #FooterAlign{
+  #FooterAlign {
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     justify-content: space-between;
   }
 
-  #Sec5Sub{
+  #Sec5Sub {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     font-size: 1vw;
     row-gap: 20px;
   }
 
-  #Sec5Sub2{
+  #Sec5Sub2 {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     font-size: 1vw;
     row-gap: 20px;
   }
 
 
-  #Sec5Sub3{
+  #Sec5Sub3 {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     font-size: 1vw;
     row-gap: 20px;
   }
 
-  #Sec5SubHeader{
+  #Sec5SubHeader {
     font-size: 1.4vw;
-    color:#F1CD05;
-  }
-  
-  #Sec5Sub2Header{
-    font-size: 1.4vw;
-    color:#F1CD05;
-  }
-  #Sec5Sub3Header{
-    font-size: 1.4vw;
-    color:#F1CD05;
+    color: #F1CD05;
   }
 
-  #SocialIcons{
+  #Sec5Sub2Header {
+    font-size: 1.4vw;
+    color: #F1CD05;
+  }
+
+  #Sec5Sub3Header {
+    font-size: 1.4vw;
+    color: #F1CD05;
+  }
+
+  #SocialIcons {
     display: flex;
     flex-direction: row;
     column-gap: 20px;
   }
 
-  #FbImg{
+  #FbImg {
     height: 30px;
   }
 
-  #InstaImg{
+  #InstaImg {
     height: 30px;
   }
 
-  #SubscribeInputBG{
+  #SubscribeInputBG {
     display: flex;
     flex-direction: row;
     background: #FFF;
     border-radius: 10px;
   }
 
-  #SubscribeInput{
-  font-family: 'Inter', sans-serif;
+  #SubscribeInput {
+    font-family: 'Inter', sans-serif;
     padding-left: 10px;
     border-radius: 5px;
     border: none;
     outline: none;
   }
 
-  #SubscribeBut{
+  #SubscribeBut {
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -909,8 +910,10 @@ body {
 
 
   #SideBarBG {
-    overflow-y: scroll; /* Allow vertical scrolling */
-    position: fixed; /* Keep the sidebar fixed in place */
+    overflow-y: scroll;
+    /* Allow vertical scrolling */
+    position: fixed;
+    /* Keep the sidebar fixed in place */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -918,16 +921,17 @@ body {
     background-size: 100%;
     padding: 20px;
     width: 10%;
-    height: 100vh; /* Set the height to the full viewport height */
+    height: 100vh;
+    /* Set the height to the full viewport height */
     row-gap: 30px;
     color: #FFF;
     font-weight: bold;
     backdrop-filter: blur(1em);
     z-index: 1;
-}
+  }
 
 
-  .SideBarSub{
+  .SideBarSub {
     display: flex;
     flex-direction: column;
     /* align-items: center; */
@@ -935,15 +939,15 @@ body {
     row-gap: 10px;
   }
 
-  .SideBarSubButText{
+  .SideBarSubButText {
     display: none;
   }
 
-  .SideBarSubButText{
+  .SideBarSubButText {
     display: block;
   }
 
-  .LogOutSideBarSubBut{
+  .LogOutSideBarSubBut {
     cursor: pointer;
     display: flex;
     flex-direction: row;
@@ -952,7 +956,7 @@ body {
     margin-top: 100px;
   }
 
-  .SideBarSubBut{
+  .SideBarSubBut {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -963,7 +967,7 @@ body {
   }
 
 
-  .SideBarSubBut:hover{
+  .SideBarSubBut:hover {
     cursor: pointer;
     padding: 10px;
     background: #F3BC1F;
@@ -972,19 +976,19 @@ body {
     border-left: 2px solid #000;
   }
 
-  .SideBarSubButImg{
+  .SideBarSubButImg {
     height: 15px;
   }
 
-  #SoccerKingdomImg{
+  #SoccerKingdomImg {
     width: 70%;
   }
 
-  #Dashboard{
+  #Dashboard {
     background-color: #FFF;
   }
 
-  #DashboardTab{
+  #DashboardTab {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -995,37 +999,37 @@ body {
     padding-left: 220px;
   }
 
-  #DashboardTabHeader{
+  #DashboardTabHeader {
     color: #00000080;
     font-weight: bold;
     font-size: 2vw;
   }
 
-  #DashboardTabSub{
+  #DashboardTabSub {
     display: flex;
     flex-direction: row;
     justify-content: center;
     column-gap: 20px;
   }
 
-  #Search{
+  #Search {
     cursor: pointer;
     height: 30px;
   }
 
-  #Notification{
+  #Notification {
     cursor: pointer;
     height: 30px;
   }
 
-  #ProfileBG{
+  #ProfileBG {
     display: flex;
     flex-direction: row;
     align-items: center;
     column-gap: 10px;
   }
 
-  #ProfileName{
+  #ProfileName {
     font-size: 1.3vw;
     white-space: nowrap;
     overflow: hidden;
@@ -1033,18 +1037,18 @@ body {
     width: 10ch;
   }
 
-  #ProfileRole{
-    font-size: 0.98vw; 
+  #ProfileRole {
+    font-size: 0.98vw;
   }
 
 
-  #ProfileImg{
+  #ProfileImg {
     cursor: pointer;
     height: 30px;
     border-radius: 50px;
   }
 
-  #DashboardMain{
+  #DashboardMain {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1058,14 +1062,14 @@ body {
     padding-bottom: 20px;
   }
 
-  #DashboardMainSub{
+  #DashboardMainSub {
     display: flex;
     flex-direction: column;
     row-gap: 40px;
   }
 
 
-  #PlayerOfTheWeek{
+  #PlayerOfTheWeek {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1081,26 +1085,26 @@ body {
     border-radius: 25px;
   }
 
-  #PlayerProfileImg{
+  #PlayerProfileImg {
     width: 30%;
   }
 
-  #StarImg{
+  #StarImg {
     width: 15%;
   }
 
 
-  #POWText{
+  #POWText {
     font-weight: bold;
     font-size: 1.5vw;
   }
 
-  #POWText2{
+  #POWText2 {
     color: #00000066;
   }
 
 
-  #Users{
+  #Users {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1115,21 +1119,21 @@ body {
     border-radius: 25px;
   }
 
-  #UsersMain{
+  #UsersMain {
     display: flex;
     flex-direction: row;
     column-gap: 70px;
   }
 
 
-  #UsersMainSub1{
+  #UsersMainSub1 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
 
-  #UsersMainSub{
+  #UsersMainSub {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1138,16 +1142,16 @@ body {
 
 
 
-  #UsersImg{
+  #UsersImg {
     width: 20%;
   }
 
-  #InfoImg{
+  #InfoImg {
     height: 15px;
     width: 16%;
   }
 
-  #UsersText{
+  #UsersText {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1156,31 +1160,31 @@ body {
     font-size: 1.5vw;
   }
 
-  #UsersText2{
+  #UsersText2 {
     font-weight: bold;
     font-size: 1.7vw;
   }
 
 
-  #UsersText3{
+  #UsersText3 {
     color: #00000066;
     font-size: 1.5vw;
   }
 
 
-  #UsersText4{
+  #UsersText4 {
     font-weight: bold;
     font-size: 1.7vw;
   }
 
 
-  #UsersText5{
+  #UsersText5 {
     color: #00000066;
     font-size: 1.5vw;
   }
 
 
-  #Balance{
+  #Balance {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1196,11 +1200,11 @@ body {
     border-radius: 25px;
   }
 
-  #BalanceImg{
+  #BalanceImg {
     width: 20%;
   }
 
-  #BalanceMainSub1{
+  #BalanceMainSub1 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -1208,7 +1212,7 @@ body {
   }
 
 
-  #BalanceText{
+  #BalanceText {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1218,24 +1222,24 @@ body {
   }
 
 
-  #BalanceText2{
+  #BalanceText2 {
     font-weight: bold;
     font-size: 1.7vw;
   }
 
-  #BalanceText3{
+  #BalanceText3 {
     color: #00000066;
     font-size: 1.5vw;
   }
 
-  #BalanceMainSub{
+  #BalanceMainSub {
     display: flex;
     align-self: flex-start;
     flex-direction: column;
   }
 
 
-  #TopLeaders{
+  #TopLeaders {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1251,7 +1255,7 @@ body {
     border-radius: 25px;
   }
 
-  #TLMainSub{
+  #TLMainSub {
     display: flex;
     align-self: flex-start;
     flex-direction: column;
@@ -1259,7 +1263,7 @@ body {
   }
 
 
-  #TLText{
+  #TLText {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1268,40 +1272,40 @@ body {
     font-size: 1.5vw;
   }
 
-  #TLSubAlign{
+  #TLSubAlign {
     display: flex;
     flex-direction: row;
     column-gap: 30px;
   }
 
 
-  #TLSub{
+  #TLSub {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  #TLSub2{
+  #TLSub2 {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  #TLSub3{
+  #TLSub3 {
     display: flex;
     flex-direction: column;
     align-items: center;
     color: #008000;
   }
 
-  #SubHeader{
+  #SubHeader {
     font-weight: bold;
     font-size: 1.3vw;
     color: #000;
   }
 
 
-  #Welcome{
+  #Welcome {
     display: flex;
     flex-direction: column;
     row-gap: 10px;
@@ -1309,20 +1313,20 @@ body {
     padding-left: 220px;
   }
 
-  #WelcomeText{
+  #WelcomeText {
     font-weight: bold;
     font-size: 1.5vw;
     color: #F3BC1F;
   }
 
 
-  #Greetings{
+  #Greetings {
     font-weight: bold;
     font-size: 1.5vw;
     color: #000;
   }
 
-  #TopNews{
+  #TopNews {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1338,14 +1342,14 @@ body {
     border-radius: 25px;
   }
 
-  #TopNewsMainSub{
+  #TopNewsMainSub {
     display: flex;
     align-self: flex-start;
     flex-direction: column;
     white-space: nowrap;
   }
 
-  #TopNewsText{
+  #TopNewsText {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1354,35 +1358,35 @@ body {
     font-size: 1.5vw;
   }
 
-  #TopNewsImg{
+  #TopNewsImg {
     height: 130px;
-    width:40%;
+    width: 40%;
   }
 
 
-  #TopNewsCard{
+  #TopNewsCard {
     display: flex;
     flex-direction: row;
     column-gap: 20px;
   }
 
-  #TNCardText{
+  #TNCardText {
     font-weight: bold;
     font-size: 1vw;
   }
 
-  #TNCardText2{
+  #TNCardText2 {
     font-size: 0.9vw;
   }
 
-  #TNCardSub{
+  #TNCardSub {
     display: flex;
     flex-direction: column;
     row-gap: 10px;
   }
 
 
-  #Trivia{
+  #Trivia {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1398,14 +1402,14 @@ body {
   }
 
 
-  #TriviaMainSub{
+  #TriviaMainSub {
     display: flex;
     align-self: flex-start;
     flex-direction: column;
   }
 
 
-  #TriviaText{
+  #TriviaText {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1415,13 +1419,13 @@ body {
   }
 
 
-  #TriviaText2{
+  #TriviaText2 {
     font-weight: bold;
     font-size: 1.2vw;
   }
 
 
-  #BottomInfo{
+  #BottomInfo {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -1437,13 +1441,93 @@ body {
     font-weight: bold;
   }
 
-  #greencontent{
+  #greencontent {
     color: #008000;
   }
-  
 
-  #ArrowImg{
-    width:8%;
+
+  #ArrowImg {
+    width: 8%;
+  }
+
+
+  #NewsMain {
+    display: flex;
+    flex-direction: row;
+    column-gap: 50px;
+    background: #FFF;
+    height: 100%;
+    padding-right: 20px;
+    padding-left: 220px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  #NewsCard{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+
+  #NewsCardText {
+    font-weight: bold;
+    font-size: 1.2vw;
+  }
+
+  #NewsMainSub {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  #NewsMainSubText {
+    font-weight: bold;
+    font-size: 1.5vw;
+  }
+
+  #NewsCardSub{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+  }
+
+  #NewsCardSub2{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+
+  #NewsImg {
+    width: 30%;
+    border-radius: 5px;
+  }
+
+  #NewsTag{
+    color: #FFF;
+    text-align: center;
+    padding: 5px;
+    background: #FF0000C4;
+    border-radius: 8px;
+    white-space: nowrap;
+    font-size: 1vw;
+    font-weight: bold;
+  }
+
+  #Time {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 5px;
+    font-weight: bold;
+    font-size: 1vw;
+    white-space: nowrap;
+  }
+
+  #ClockImg {
+    width: 20%;
   }
 
 }
@@ -1870,7 +1954,7 @@ body {
     cursor: pointer;
   }
 
-  #LandingPageBG{
+  #LandingPageBG {
     background: #FFF;
   }
 
@@ -2136,8 +2220,8 @@ body {
     color: #000;
   }
 
-  #FAQText{
-    color: #F1CD05; 
+  #FAQText {
+    color: #F1CD05;
   }
 
   #Sec4MainText2 {
@@ -2145,7 +2229,7 @@ body {
     font-size: 1.5vw;
   }
 
-  #Sec4MainSub{
+  #Sec4MainSub {
     display: flex;
     flex-direction: column;
     row-gap: 20px;
@@ -2155,7 +2239,7 @@ body {
     opacity: 0px;
   }
 
-  #QuestionsCard{
+  #QuestionsCard {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -2179,7 +2263,7 @@ body {
   }
 
 
-  #MoreQuestionsCard{
+  #MoreQuestionsCard {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -2196,14 +2280,14 @@ body {
   }
 
   #MoreQuestionsCardBody {
-    color:#FFF;
+    color: #FFF;
     font-size: 1.5vw;
     width: 200px;
   }
 
 
 
-  #FAQCard{
+  #FAQCard {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -2222,14 +2306,14 @@ body {
     width: 200px;
   }
 
-  #QuestionsAlign{
+  #QuestionsAlign {
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 100px;
   }
 
-  #FAQAlign{
+  #FAQAlign {
     display: flex;
     flex-direction: column;
   }
@@ -2249,78 +2333,79 @@ body {
     border-top-right-radius: 100px;
   }
 
-  #FooterAlign{
+  #FooterAlign {
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     justify-content: space-between;
   }
 
-  #Sec5Sub{
+  #Sec5Sub {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     font-size: 1.9vw;
     row-gap: 20px;
   }
 
-  #Sec5Sub2{
+  #Sec5Sub2 {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     font-size: 1.9vw;
     row-gap: 20px;
   }
 
 
-  #Sec5Sub3{
+  #Sec5Sub3 {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     font-size: 1.9vw;
     row-gap: 20px;
   }
 
-  #Sec5SubHeader{
+  #Sec5SubHeader {
     font-size: 1.9vw;
-    color:#F1CD05;
-  }
-  
-  #Sec5Sub2Header{
-    font-size: 1.9vw;
-    color:#F1CD05;
-  }
-  #Sec5Sub3Header{
-    font-size: 1.9vw;
-    color:#F1CD05;
+    color: #F1CD05;
   }
 
-  #SocialIcons{
+  #Sec5Sub2Header {
+    font-size: 1.9vw;
+    color: #F1CD05;
+  }
+
+  #Sec5Sub3Header {
+    font-size: 1.9vw;
+    color: #F1CD05;
+  }
+
+  #SocialIcons {
     display: flex;
     flex-direction: row;
     column-gap: 20px;
   }
 
-  #FbImg{
+  #FbImg {
     height: 30px;
   }
 
-  #InstaImg{
+  #InstaImg {
     height: 30px;
   }
 
-  #SubscribeInputBG{
+  #SubscribeInputBG {
     display: flex;
     flex-direction: row;
     background: #FFF;
     border-radius: 10px;
   }
 
-  #SubscribeInput{
-  font-family: 'Inter', sans-serif;
+  #SubscribeInput {
+    font-family: 'Inter', sans-serif;
     padding-left: 10px;
     border-radius: 5px;
     border: none;
     outline: none;
   }
 
-  #SubscribeBut{
+  #SubscribeBut {
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -2339,8 +2424,10 @@ body {
 
 
   #SideBarBG {
-    overflow-y: scroll; /* Allow vertical scrolling */
-    position: fixed; /* Keep the sidebar fixed in place */
+    overflow-y: scroll;
+    /* Allow vertical scrolling */
+    position: fixed;
+    /* Keep the sidebar fixed in place */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2348,18 +2435,19 @@ body {
     background-size: 100%;
     padding: 20px;
     width: 10%;
-    height: 100vh; /* Set the height to the full viewport height */
+    height: 100vh;
+    /* Set the height to the full viewport height */
     row-gap: 30px;
     color: #FFF;
     font-weight: bold;
     left: 0;
-    top:0;
+    top: 0;
     bottom: 0;
     backdrop-filter: blur(1em);
-}
+  }
 
 
-  .SideBarSub{
+  .SideBarSub {
     display: flex;
     flex-direction: column;
     /* align-items: center; */
@@ -2367,15 +2455,15 @@ body {
     row-gap: 10px;
   }
 
-  .SideBarSubButText{
+  .SideBarSubButText {
     display: none;
   }
 
-  .SideBarSubButText{
+  .SideBarSubButText {
     display: block;
   }
 
-  .LogOutSideBarSubBut{
+  .LogOutSideBarSubBut {
     cursor: pointer;
     display: flex;
     flex-direction: row;
@@ -2384,7 +2472,7 @@ body {
     margin-top: 100px;
   }
 
-  .SideBarSubBut{
+  .SideBarSubBut {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -2395,7 +2483,7 @@ body {
   }
 
 
-  .SideBarSubBut:hover{
+  .SideBarSubBut:hover {
     cursor: pointer;
     padding: 10px;
     background: #F3BC1F;
@@ -2404,19 +2492,19 @@ body {
     border-left: 2px solid #000;
   }
 
-  .SideBarSubButImg{
+  .SideBarSubButImg {
     height: 15px;
   }
 
-  #SoccerKingdomImg{
+  #SoccerKingdomImg {
     width: 70%;
   }
 
-  #Dashboard{
+  #Dashboard {
     background-color: #FFF;
   }
 
-  #DashboardTab{
+  #DashboardTab {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -2427,37 +2515,37 @@ body {
     padding-left: 220px;
   }
 
-  #DashboardTabHeader{
+  #DashboardTabHeader {
     color: #00000080;
     font-weight: bold;
     font-size: 2vw;
   }
 
-  #DashboardTabSub{
+  #DashboardTabSub {
     display: flex;
     flex-direction: row;
     justify-content: center;
     column-gap: 20px;
   }
 
-  #Search{
+  #Search {
     cursor: pointer;
     height: 30px;
   }
 
-  #Notification{
+  #Notification {
     cursor: pointer;
     height: 30px;
   }
 
-  #ProfileBG{
+  #ProfileBG {
     display: flex;
     flex-direction: row;
     align-items: center;
     column-gap: 10px;
   }
 
-  #ProfileName{
+  #ProfileName {
     font-size: 1.3vw;
     white-space: nowrap;
     overflow: hidden;
@@ -2465,12 +2553,12 @@ body {
     width: 10ch;
   }
 
-  #ProfileRole{
-    font-size: 0.98vw; 
+  #ProfileRole {
+    font-size: 0.98vw;
   }
 
 
-  #ProfileImg{
+  #ProfileImg {
     cursor: pointer;
     height: 30px;
     border-radius: 50px;
@@ -2479,8 +2567,8 @@ body {
 }
 
 @media only screen and (max-width:910px) {
-  
-  #OverlayNavBarContent{
+
+  #OverlayNavBarContent {
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -2503,25 +2591,27 @@ body {
 
   @keyframes OverlaySlideIn {
     0% {
-        transform: translateX(-100%);
+      transform: translateX(-100%);
     }
-    100% {
-        transform: translateX(0%);
-    }
-}
 
-@keyframes OverlaySlideOut {
-    0% {
-        transform: translateX(0%);
-    }
     100% {
-        transform: translateX(-100%);
+      transform: translateX(0%);
     }
-}
+  }
+
+  @keyframes OverlaySlideOut {
+    0% {
+      transform: translateX(0%);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
 
 
   #NavBarMain {
-    justify-content:start;
+    justify-content: start;
     column-gap: 20px;
   }
 
@@ -2556,24 +2646,24 @@ body {
     animation-duration: 0.8s;
     animation-iteration-count: 1;
     z-index: 1;
-}
+  }
 
 
-  .SideBarSub{
+  .SideBarSub {
     font-size: 20px;
   }
 
-  .LogOutSideBarSubBut{
+  .LogOutSideBarSubBut {
     align-items: center;
     font-size: 15px;
   }
 
-  .SideBarSubBut{
+  .SideBarSubBut {
     font-size: 15px;
   }
 
 
-  .SideBarSubBut:hover{
+  .SideBarSubBut:hover {
     cursor: pointer;
     padding: 10px;
     background: #F3BC1F;
@@ -2582,19 +2672,19 @@ body {
     border-left: 2px solid #000;
   }
 
-  .SideBarSubButImg{
+  .SideBarSubButImg {
     height: 15px;
   }
 
-  #SoccerKingdomImg{
+  #SoccerKingdomImg {
     width: 70%;
   }
 
-  #Dashboard{
+  #Dashboard {
     background-color: #FFF;
   }
 
-  #DashboardTab{
+  #DashboardTab {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -2605,17 +2695,17 @@ body {
     padding-left: 20px;
   }
 
-  #DashboardTabHeader{
+  #DashboardTabHeader {
     display: none;
   }
 
 
-  #ProfileName{
+  #ProfileName {
     font-size: 2vw;
   }
 
-  #ProfileRole{
-    font-size: 1.5vw; 
+  #ProfileRole {
+    font-size: 1.5vw;
   }
 }
 
@@ -2734,7 +2824,7 @@ body {
 
 
 
-  #FAQCard{
+  #FAQCard {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -2747,43 +2837,45 @@ body {
   #FAQCardBody {
     font-size: 2.2vw;
   }
-  #Sec5Sub{
+
+  #Sec5Sub {
     font-size: 3.2vw;
   }
 
-  #Sec5Sub2{
+  #Sec5Sub2 {
     font-size: 3.2vw;
   }
 
 
-  #Sec5Sub3{
+  #Sec5Sub3 {
     font-size: 3.2vw;
   }
 
-  #Sec5SubHeader{
-    font-size: 3.2vw;
-  }
-  
-  #Sec5Sub2Header{
-    font-size: 3.2vw;
-  }
-  #Sec5Sub3Header{
+  #Sec5SubHeader {
     font-size: 3.2vw;
   }
 
-  #FooterAlign{
+  #Sec5Sub2Header {
+    font-size: 3.2vw;
+  }
+
+  #Sec5Sub3Header {
+    font-size: 3.2vw;
+  }
+
+  #FooterAlign {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     row-gap: 50px;
     justify-content: space-between;
   }
 
 
-  #SubscribeInputBG{
+  #SubscribeInputBG {
     flex-direction: column;
   }
 
-  #SubscribeInput{
+  #SubscribeInput {
     padding: 10px;
   }
 }
@@ -2882,20 +2974,20 @@ body {
     font-size: 3.5vw;
   }
 
-  #Sec4MainSub{
+  #Sec4MainSub {
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 20px;
-    width:90%;
-  }
-  
-
-  #QuestionsAlign{
-    width:100%;
+    width: 90%;
   }
 
-  #QuestionsCard{
+
+  #QuestionsAlign {
+    width: 100%;
+  }
+
+  #QuestionsCard {
     width: 90%;
   }
 
@@ -2904,7 +2996,7 @@ body {
     width: 100%;
   }
 
-  #MoreQuestionsCard{
+  #MoreQuestionsCard {
     width: 90%;
   }
 
@@ -2914,7 +3006,7 @@ body {
 
 
 
-  #FAQCard{
+  #FAQCard {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -2927,43 +3019,45 @@ body {
   #FAQCardBody {
     font-size: 3.5vw;
   }
-  #Sec5Sub{
+
+  #Sec5Sub {
     font-size: 3.5vw;
   }
 
-  #Sec5Sub2{
+  #Sec5Sub2 {
     font-size: 3.5vw;
   }
 
 
-  #Sec5Sub3{
+  #Sec5Sub3 {
     font-size: 3.5vw;
   }
 
-  #Sec5SubHeader{
-    font-size: 3.5vw;
-  }
-  
-  #Sec5Sub2Header{
-    font-size: 3.5vw;
-  }
-  #Sec5Sub3Header{
+  #Sec5SubHeader {
     font-size: 3.5vw;
   }
 
-  #FooterAlign{
+  #Sec5Sub2Header {
+    font-size: 3.5vw;
+  }
+
+  #Sec5Sub3Header {
+    font-size: 3.5vw;
+  }
+
+  #FooterAlign {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     row-gap: 50px;
     justify-content: space-between;
   }
 
 
-  #SubscribeInputBG{
+  #SubscribeInputBG {
     flex-direction: column;
   }
 
-  #SubscribeInput{
+  #SubscribeInput {
     padding: 10px;
   }
 
@@ -2973,14 +3067,14 @@ body {
     border-top-right-radius: 50px;
   }
 
-  #ProfileName{
+  #ProfileName {
     font-size: 2.5vw;
   }
 
-  #ProfileRole{
-    font-size: 2vw; 
+  #ProfileRole {
+    font-size: 2vw;
   }
-  
+
 }
 
 
