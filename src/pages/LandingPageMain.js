@@ -186,7 +186,6 @@ export default function LandingPageMain() {
                         </div>
                         <div id="Sec5Sub2">
                             <div id="Sec5Sub2Header">Services</div>
-                            <div>Live Match Streaming</div>
                             <div>Soccer News & Updates</div>
                             <div>Membership & Fan Club</div>
                             <div>Interactive Challenges</div>
@@ -206,7 +205,7 @@ export default function LandingPageMain() {
                         </div>
                     </div>
                     <div id="Sec5MainText1">
-                        Figma | Abdul Algorithm  © 2024
+                        © 2024
                     </div>
 
                 </div>
