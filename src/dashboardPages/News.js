@@ -9,7 +9,26 @@ export default function News() {
                 <div id="NewsMainSubText">
                 Featured News
                     </div>
-                    <NewsCard img={NewsImg} />
+                    <div id="NewsMainSub2">
+                    <NewsCard
+                        content="This place here is the headline of the news related to SK."
+                        newstag="Fox News"
+                        time="2:00 PM"
+                        img={NewsImg}
+                    />
+                    <NewsCard
+                        content="This place here is the headline of the news related to SK."
+                        newstag="Fox News"
+                        time="2:00 PM"
+                        img={NewsImg}
+                    />
+                    <NewsCard
+                        content="This place here is the headline of the news related to SK."
+                        newstag="Fox News"
+                        time="2:00 PM"
+                        img={NewsImg}
+                        />
+                        </div>
                     </div>
             </div>
         </>

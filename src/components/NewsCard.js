@@ -7,15 +7,15 @@ export default function NewsCard(props) {
                 <img id="NewsImg" src={props.img} alt="NewsImg" />
                 <div id="NewsCardSub">
                     <div id="NewsCardText">
-                        This place here is the headline of the news related to SK.
+                        {props.content}
                     </div>
                     <div id="NewsCardSub2">
                         <div id="NewsTag">
-                            Fox News
+                            {props.newstag}
                         </div>
                         <div id="Time">
                             <img id="ClockImg" src={ClockImg} alt="ClockImg" />
-                            <div>2:00 PM</div>
+                            <div>{props.time}</div>
                         </div>
                     </div>
                 </div>
