@@ -75,6 +75,36 @@ export default function DashBoardPage() {
                     <div id="TLText">
                         Top Leaders
                     </div>
+                    <div id="TLSubAlign">
+                    <div id="TLSub">
+                        <div id="SubHeader">Rank</div>
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                        <div>5</div>
+                    </div>
+
+
+                    <div id="TLSub2">
+                    <div id="SubHeader">Name</div>
+                    <div>Abdul</div>
+                    <div>Philip</div>
+                    <div>Sarmie</div>
+                    <div>Ivy</div>
+                    <div>Vicks</div>
+                    </div>
+
+
+                    <div id="TLSub3">
+                    <div id="SubHeader">Points</div>
+                    <div>25</div>
+                    <div>20</div>
+                    <div>15</div>
+                    <div>10</div>
+                    <div>5</div>
+                        </div>
+                        </div>
                 </div>
             </div>
         </>
