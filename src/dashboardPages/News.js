@@ -18,13 +18,13 @@ export default function News() {
                     />
                     <NewsCard
                         content="This place here is the headline of the news related to SK."
-                        newstag="Fox News"
+                        newstag="CNN News"
                         time="2:00 PM"
                         img={NewsImg}
                     />
                     <NewsCard
                         content="This place here is the headline of the news related to SK."
-                        newstag="Fox News"
+                        newstag="BBC News"
                         time="2:00 PM"
                         img={NewsImg}
                         />
