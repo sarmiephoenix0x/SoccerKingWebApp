@@ -1047,15 +1047,21 @@ body {
   #DashboardMain{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    column-gap: 60px;
-    row-gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 50px;
     background: #DED4D4;
     height: 100%;
     padding-right: 20px;
     padding-left: 220px;
     padding-top: 20px;
     padding-bottom: 20px;
+  }
+
+  #DashboardMainSub{
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
   }
 
 
@@ -1065,11 +1071,13 @@ body {
     align-items: center;
     justify-content: center;
     row-gap: 20px;
-    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     background: white;
     color: #000;
-    width:25%;
-    height: 250px;
+    height: 100%;
     border-radius: 25px;
   }
 
@@ -1096,13 +1104,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     row-gap: 20px;
-    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     background: white;
     color: #000;
-    width:25%;
-    height: 220px;
+    height: 100%;
     border-radius: 25px;
   }
 
@@ -1166,11 +1175,13 @@ body {
     align-items: center;
     justify-content: center;
     row-gap: 20px;
-    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     background: white;
     color: #000;
-    width:25%;
-    height: 150px;
+    height: 100%;
     border-radius: 25px;
   }
 
@@ -1211,11 +1222,13 @@ body {
     align-items: center;
     justify-content: center;
     row-gap: 20px;
-    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     background: white;
     color: #000;
-    width:25%;
-    height: 220px;
+    height: 100%;
     border-radius: 25px;
   }
 
@@ -1285,11 +1298,13 @@ body {
     align-items: center;
     justify-content: center;
     row-gap: 20px;
-    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     background: white;
     color: #000;
-    width:50%;
-    height: 450px;
+    height: 100%;
     border-radius: 25px;
   }
 
@@ -1314,10 +1329,49 @@ body {
     font-size: 1.2vw;
   }
 
+  #TNCardText2{
+    font-size: 1vw;
+  }
+
   #TNCardSub{
     display: flex;
     flex-direction: column;
     row-gap: 20px;
+  }
+
+
+  #Trivia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: white;
+    color: #000;
+    height: 100%;
+    border-radius: 25px;
+  }
+
+
+  #TriviaMainSub{
+    display: flex;
+    align-self: flex-start;
+    flex-direction: column;
+  }
+
+
+  #TriviaText{
+    font-weight: bold;
+    font-size: 1.5vw;
+  }
+
+
+  #TriviaText2{
+    font-weight: bold;
+    font-size: 1.2vw;
   }
 
 }

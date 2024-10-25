@@ -17,7 +17,7 @@ export default function DashBoardPage() {
             </div>
             <div id="DashboardMain">
 
-
+            <div id="DashboardMainSub">
                 <div id="PlayerOfTheWeek">
                     <img id="PlayerProfileImg" src={PlayerProfileImg} alt="PlayerProfileImg" />
                     <img id="StarImg" src={StarImg} alt="StarImg" />
@@ -26,59 +26,6 @@ export default function DashBoardPage() {
                     </div>
                     <div id="POWText2">
                         Top Player of the Week
-                    </div>
-                </div>
-
-
-                <div id="Users">
-                    <div id="UsersMainSub1">
-                        <div id="UsersText">
-                            Users
-                        </div>
-                        <img id="UsersImg" src={UsersImg} alt="UsersImg" />
-                    </div>
-                    <div id="UsersMain">
-                        <div id="UsersMainSub">
-                            <div id="UsersText2">
-                                #1
-                            </div>
-
-                            <div id="UsersText3">
-                                Your Rank
-                            </div>
-                        </div>
-
-
-                        <div id="UsersMainSub">
-                            <div id="UsersText4">
-                                #100
-                            </div>
-
-                            <div id="UsersText5">
-                                Players
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-                <div id="Balance">
-                    <div id="BalanceMainSub1">
-                        <div id="BalanceText">
-                            Balance
-                        </div>
-                        <img id="UsersImg" src={UsersImg} alt="UsersImg" />
-                    </div>
-                    <div id="BalanceMainSub">
-                        <div id="BalanceText2">
-                            $500
-                        </div>
-
-                        <div id="BalanceText3">
-                            Income
-                        </div>
                     </div>
                 </div>
 
@@ -117,9 +64,40 @@ export default function DashBoardPage() {
                             <div>5</div>
                         </div>
                     </div>
+                    </div>
+                    </div>
+
+                    <div id="DashboardMainSub">
+                <div id="Users">
+                    <div id="UsersMainSub1">
+                        <div id="UsersText">
+                            Users
+                        </div>
+                        <img id="UsersImg" src={UsersImg} alt="UsersImg" />
+                    </div>
+                    <div id="UsersMain">
+                        <div id="UsersMainSub">
+                            <div id="UsersText2">
+                                #1
+                            </div>
+
+                            <div id="UsersText3">
+                                Your Rank
+                            </div>
+                        </div>
+
+
+                        <div id="UsersMainSub">
+                            <div id="UsersText4">
+                                #100
+                            </div>
+
+                            <div id="UsersText5">
+                                Players
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-
 
                 <div id="TopNews">
                     <div id="TopNewsText">
@@ -144,6 +122,44 @@ export default function DashBoardPage() {
                         img={TopNewsImg}
                     />
                 </div>
+                </div>
+
+
+
+                <div id="DashboardMainSub">
+                <div id="Balance">
+                    <div id="BalanceMainSub1">
+                        <div id="BalanceText">
+                            Balance
+                        </div>
+                        <img id="UsersImg" src={UsersImg} alt="UsersImg" />
+                    </div>
+                    <div id="BalanceMainSub">
+                        <div id="BalanceText2">
+                            $500
+                        </div>
+
+                        <div id="BalanceText3">
+                            Income
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div id="Trivia">
+                    
+                    <div id="TriviaMainSub">
+                    <div id="TriviaText">
+                            Trivia
+                            </div>
+                    </div>
+
+                    <div id="TriviaText2">
+                    What award is given to the year’s best footballer by French news magazine France Football?
+                            </div>
+                    </div>
+                    </div>
             </div>
         </>
     )
