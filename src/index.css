@@ -1158,6 +1158,51 @@ body {
     font-size: 1.5vw;
   }
 
+
+  #Balance{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+    padding: 10px;
+    background: white;
+    color: #000;
+    width:25%;
+    height: 220px;
+    border-radius: 25px;
+  }
+
+  #BalanceMainSub1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+  #BalanceText{
+    font-weight: bold;
+    font-size: 1.5vw;
+  }
+
+
+  #BalanceText2{
+    font-weight: bold;
+    font-size: 1.7vw;
+  }
+
+  #BalanceText3{
+    color: #00000066;
+    font-size: 1.5vw;
+  }
+
+  #BalanceMainSub{
+    display: flex;
+    align-self: flex-start;
+    flex-direction: column;
+  }
+
 }
 
 

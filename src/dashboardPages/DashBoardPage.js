@@ -48,6 +48,27 @@ export default function DashBoardPage() {
                         </div>
                     </div>
                 </div>
+
+
+
+
+                <div id="Balance">
+                <div id="BalanceMainSub1">
+                <div id="BalanceText">
+                        Balance
+                    </div>
+                        <img id="UsersImg" src={UsersImg} alt="UsersImg" />
+                        </div>
+                    <div id="BalanceMainSub">
+                    <div id="BalanceText2">
+                        $500
+                    </div>
+                    
+                    <div id="BalanceText3">
+                        Income
+                        </div>
+                        </div>
+                </div>
             </div>
         </>
     )
