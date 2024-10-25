@@ -3,6 +3,8 @@ import StarImg from '../images/Star.png'
 import UsersImg from '../images/UsersImg.png'
 import TopNewsImg from '../images/TopNewsImg.png'
 import TopNewsCard from '../components/TopNewsCard'
+import InfoImg from '../images/ep_info-filled.png'
+import BalanceImg from '../images/BalanceImg.png'
 
 export default function DashBoardPage() {
     return (
@@ -17,149 +19,158 @@ export default function DashBoardPage() {
             </div>
             <div id="DashboardMain">
 
-            <div id="DashboardMainSub">
-                <div id="PlayerOfTheWeek">
-                    <img id="PlayerProfileImg" src={PlayerProfileImg} alt="PlayerProfileImg" />
-                    <img id="StarImg" src={StarImg} alt="StarImg" />
-                    <div id="POWText">
-                        Soccer, Kingdom
-                    </div>
-                    <div id="POWText2">
-                        Top Player of the Week
-                    </div>
-                </div>
-
-
-                <div id="TopLeaders">
-                    <div id="TLText">
-                        Top Leaders
-                    </div>
-                    <div id="TLSubAlign">
-                        <div id="TLSub">
-                            <div id="SubHeader">Rank</div>
-                            <div>1</div>
-                            <div>2</div>
-                            <div>3</div>
-                            <div>4</div>
-                            <div>5</div>
+                <div id="DashboardMainSub">
+                    <div id="PlayerOfTheWeek">
+                        <img id="PlayerProfileImg" src={PlayerProfileImg} alt="PlayerProfileImg" />
+                        <img id="StarImg" src={StarImg} alt="StarImg" />
+                        <div id="POWText">
+                            Soccer, Kingdom
                         </div>
-
-
-                        <div id="TLSub2">
-                            <div id="SubHeader">Name</div>
-                            <div>Abdul</div>
-                            <div>Philip</div>
-                            <div>Sarmie</div>
-                            <div>Ivy</div>
-                            <div>Vicks</div>
-                        </div>
-
-
-                        <div id="TLSub3">
-                            <div id="SubHeader">Points</div>
-                            <div>25</div>
-                            <div>20</div>
-                            <div>15</div>
-                            <div>10</div>
-                            <div>5</div>
+                        <div id="POWText2">
+                            Top Player of the Week
                         </div>
                     </div>
-                    </div>
-                    </div>
 
-                    <div id="DashboardMainSub">
-                <div id="Users">
-                    <div id="UsersMainSub1">
-                        <div id="UsersText">
-                            Users
-                        </div>
-                        <img id="UsersImg" src={UsersImg} alt="UsersImg" />
-                    </div>
-                    <div id="UsersMain">
-                        <div id="UsersMainSub">
-                            <div id="UsersText2">
-                                #1
+
+                    <div id="TopLeaders">
+                    <div id="TLMainSub">
+                        <div id="TLText">
+                            Top Leaders
+                            <img id="InfoImg" src={InfoImg} alt="InfoImg" />
+                            </div>
+                            </div>
+                        <div id="TLSubAlign">
+                            <div id="TLSub">
+                                <div id="SubHeader">Rank</div>
+                                <div>1</div>
+                                <div>2</div>
+                                <div>3</div>
+                                <div>4</div>
+                                <div>5</div>
                             </div>
 
-                            <div id="UsersText3">
-                                Your Rank
+
+                            <div id="TLSub2">
+                                <div id="SubHeader">Name</div>
+                                <div>Abdul</div>
+                                <div>Philip</div>
+                                <div>Sarmie</div>
+                                <div>Ivy</div>
+                                <div>Vicks</div>
                             </div>
-                        </div>
 
 
-                        <div id="UsersMainSub">
-                            <div id="UsersText4">
-                                #100
-                            </div>
-
-                            <div id="UsersText5">
-                                Players
+                            <div id="TLSub3">
+                                <div id="SubHeader">Points</div>
+                                <div>25</div>
+                                <div>20</div>
+                                <div>15</div>
+                                <div>10</div>
+                                <div>5</div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div id="TopNews">
-                    <div id="TopNewsText">
-                        Top News
+                <div id="DashboardMainSub">
+                    <div id="Users">
+                        <div id="UsersMainSub1">
+                            <div id="UsersText">
+                                Users
+                                <img id="InfoImg" src={InfoImg} alt="InfoImg" />
+                            </div>
+                            <img id="UsersImg" src={UsersImg} alt="UsersImg" />
+                        </div>
+                        <div id="UsersMain">
+                            <div id="UsersMainSub">
+                                <div id="UsersText2">
+                                    #1
+                                </div>
+
+                                <div id="UsersText3">
+                                    Your Rank
+                                </div>
+                            </div>
+
+
+                            <div id="UsersMainSub">
+                                <div id="UsersText4">
+                                    #100
+                                </div>
+
+                                <div id="UsersText5">
+                                    Players
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <TopNewsCard
-                        header="How to win effortlessly?"
-                        content="Winning effortlessly is easy Soccer Kingdom, but are you prepared?"
-                        img={TopNewsImg}
-                    />
 
-                    <TopNewsCard
-                        header="What are our followers saying?"
-                        content="Have you been keeping tabs on what the Soccer Kingdom fans are saying?"
-                        img={TopNewsImg}
-                    />
+                    <div id="TopNews">
+                    <div id="TopNewsMainSub">
+                        <div id="TopNewsText">
+                            Top News
+                            <img id="InfoImg" src={InfoImg} alt="InfoImg" />
+                            </div>
+                            </div>
+                        <TopNewsCard
+                            header="How to win effortlessly?"
+                            content="Winning effortlessly is easy Soccer Kingdom, but are you prepared?"
+                            img={TopNewsImg}
+                        />
+
+                        <TopNewsCard
+                            header="What are our followers saying?"
+                            content="Have you been keeping tabs on what the Soccer Kingdom fans are saying?"
+                            img={TopNewsImg}
+                        />
 
 
-                    <TopNewsCard
-                        header="Here’s how to compete on Soccer Kingdom"
-                        content="A comprehensive guide on how to top teh table on Soccer Kingdom"
-                        img={TopNewsImg}
-                    />
-                </div>
+                        <TopNewsCard
+                            header="Here’s how to compete on Soccer Kingdom"
+                            content="A comprehensive guide on how to top teh table on Soccer Kingdom"
+                            img={TopNewsImg}
+                        />
+                    </div>
                 </div>
 
 
 
                 <div id="DashboardMainSub">
-                <div id="Balance">
-                    <div id="BalanceMainSub1">
-                        <div id="BalanceText">
-                            Balance
+                    <div id="Balance">
+                        <div id="BalanceMainSub1">
+                            <div id="BalanceText">
+                                Balance
+                                <img id="InfoImg" src={InfoImg} alt="InfoImg" />
+                            </div>
+                            <img id="BalanceImg" src={BalanceImg} alt="BalanceImg" />
                         </div>
-                        <img id="UsersImg" src={UsersImg} alt="UsersImg" />
+                        <div id="BalanceMainSub">
+                            <div id="BalanceText2">
+                                $500
+                            </div>
+
+                            <div id="BalanceText3">
+                                Income
+                            </div>
+                        </div>
                     </div>
-                    <div id="BalanceMainSub">
-                        <div id="BalanceText2">
-                            $500
+
+
+
+                    <div id="Trivia">
+
+                        <div id="TriviaMainSub">
+                            <div id="TriviaText">
+                                Trivia
+                                <img id="InfoImg" src={InfoImg} alt="InfoImg" />
+                            </div>
                         </div>
 
-                        <div id="BalanceText3">
-                            Income
+                        <div id="TriviaText2">
+                            What award is given to the year’s best footballer by French news magazine France Football?
                         </div>
                     </div>
                 </div>
-
-
-
-                <div id="Trivia">
-                    
-                    <div id="TriviaMainSub">
-                    <div id="TriviaText">
-                            Trivia
-                            </div>
-                    </div>
-
-                    <div id="TriviaText2">
-                    What award is given to the year’s best footballer by French news magazine France Football?
-                            </div>
-                    </div>
-                    </div>
             </div>
         </>
     )

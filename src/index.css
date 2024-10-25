@@ -1140,7 +1140,16 @@ body {
     width: 20%;
   }
 
+  #InfoImg{
+    height: 15px;
+    width: 16%;
+  }
+
   #UsersText{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 20px;
     font-weight: bold;
     font-size: 1.5vw;
   }
@@ -1185,6 +1194,10 @@ body {
     border-radius: 25px;
   }
 
+  #BalanceImg{
+    width: 20%;
+  }
+
   #BalanceMainSub1{
     display: flex;
     flex-direction: row;
@@ -1194,6 +1207,10 @@ body {
 
 
   #BalanceText{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 20px;
     font-weight: bold;
     font-size: 1.5vw;
   }
@@ -1232,8 +1249,19 @@ body {
     border-radius: 25px;
   }
 
+  #TLMainSub{
+    display: flex;
+    align-self: flex-start;
+    flex-direction: column;
+    white-space: nowrap;
+  }
+
 
   #TLText{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 20px;
     font-weight: bold;
     font-size: 1.5vw;
   }
@@ -1308,7 +1336,18 @@ body {
     border-radius: 25px;
   }
 
+  #TopNewsMainSub{
+    display: flex;
+    align-self: flex-start;
+    flex-direction: column;
+    white-space: nowrap;
+  }
+
   #TopNewsText{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 20px;
     font-weight: bold;
     font-size: 1.5vw;
   }
@@ -1364,6 +1403,10 @@ body {
 
 
   #TriviaText{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 20px;
     font-weight: bold;
     font-size: 1.5vw;
   }
