@@ -1169,7 +1169,7 @@ body {
     background: white;
     color: #000;
     width:25%;
-    height: 220px;
+    height: 150px;
     border-radius: 25px;
   }
 
@@ -1201,6 +1201,27 @@ body {
     display: flex;
     align-self: flex-start;
     flex-direction: column;
+  }
+
+
+  #TopLeaders{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+    padding: 10px;
+    background: white;
+    color: #000;
+    width:25%;
+    height: 220px;
+    border-radius: 25px;
+  }
+
+
+  #TLText{
+    font-weight: bold;
+    font-size: 1.5vw;
   }
 
 }

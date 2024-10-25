@@ -69,6 +69,13 @@ export default function DashBoardPage() {
                         </div>
                         </div>
                 </div>
+
+
+                <div id="TopLeaders">
+                    <div id="TLText">
+                        Top Leaders
+                    </div>
+                </div>
             </div>
         </>
     )
