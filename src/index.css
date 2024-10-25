@@ -1487,6 +1487,14 @@ body {
     column-gap: 30px;
   }
 
+  #NewsMainSub3{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 30px;
+  }
+
   #NewsMainSubText {
     font-weight: bold;
     font-size: 1.5vw;
@@ -1554,10 +1562,56 @@ body {
   #TopLeadersNews {
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
+    row-gap: 25px;
     color: #000;
-    height: 100%;
     border-radius: 25px;
+  }
+
+
+  #TLMainSubNews {
+    display: flex;
+    align-self: flex-start;
+    flex-direction: column;
+    white-space: nowrap;
+  }
+
+
+  #TLText {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 20px;
+    font-weight: bold;
+    font-size: 1.5vw;
+  }
+
+  #TLSubAlignNews {
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+  }
+
+
+  #TLSubNews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 50px;
+  }
+
+  #TLSub2News {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 50px;
+  }
+
+  #TLSub3News {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #008000;
+    row-gap: 50px;
   }
 
 

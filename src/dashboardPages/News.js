@@ -33,8 +33,8 @@ export default function News() {
                             img={NewsImg}
                         />
                     </div>
-                    </div>
-                    <div id="NewsSubAlign">
+                </div>
+                <div id="NewsSubAlign">
                     <div id="NewsSubAlign2">
                         <div id="NewsMainSubText">
                             Today’s Headlines
@@ -46,53 +46,71 @@ export default function News() {
                                 time="2:00 PM"
                                 img={NewsImg}
                             />
-                            </div>
-                            </div>
-                        <div id="TopLeadersNews">
-                            <div id="TLMainSub">
-                                <div id="TLText">
-                                    Top Leaders
-                                    <img id="FireImg" src={FireImg} alt="FireImg" />
-                                    <img id="InfoImg" src={InfoImg} alt="InfoImg" />
-                                </div>
-                            </div>
-                            <div id="TLSubAlign">
-                                <div id="TLSub">
-                                    <div id="SubHeader">Rank</div>
-                                    <div>1</div>
-                                    <div>2</div>
-                                    <div>3</div>
-                                    <div>4</div>
-                                    <div>5</div>
-                                </div>
-
-
-                                <div id="TLSub2">
-                                    <div id="SubHeader">Name</div>
-                                    <div>Abdul</div>
-                                    <div>Philip</div>
-                                    <div>Sarmie</div>
-                                    <div>Ivy</div>
-                                    <div>Vicks</div>
-                                </div>
-
-
-                                <div id="TLSub3">
-                                    <div id="SubHeader">Points</div>
-                                    <div>25</div>
-                                    <div>20</div>
-                                    <div>15</div>
-                                    <div>10</div>
-                                    <div>5</div>
-                                </div>
-                            </div>
-                            <div id="TLMainSub">
-                                <BottomInfo content="This Week" redarrow="none" />
+                            <HeadlineCard
+                                content="Another News Headline"
+                                Headlinetag="BBC News"
+                                time="2:00 PM"
+                                img={NewsImg}
+                            />
+                            <HeadlineCard
+                                content="Another News Headline"
+                                Headlinetag="BBC News"
+                                time="2:00 PM"
+                                img={NewsImg}
+                            />
+                            <HeadlineCard
+                                content="Another News Headline"
+                                Headlinetag="BBC News"
+                                time="2:00 PM"
+                                img={NewsImg}
+                            />
+                        </div>
+                    </div>
+                    <div id="TopLeadersNews">
+                        <div id="TLMainSubNews">
+                            <div id="TLText">
+                                Top Leaders
+                                <img id="FireImg" src={FireImg} alt="FireImg" />
+                                <img id="InfoImg" src={InfoImg} alt="InfoImg" />
                             </div>
                         </div>
+                        <div id="TLSubAlignNews">
+                            <div id="TLSubNews">
+                                <div id="SubHeader">Rank</div>
+                                <div>1</div>
+                                <div>2</div>
+                                <div>3</div>
+                                <div>4</div>
+                                <div>5</div>
+                            </div>
 
+
+                            <div id="TLSub2News">
+                                <div id="SubHeader">Name</div>
+                                <div>Abdul</div>
+                                <div>Philip</div>
+                                <div>Sarmie</div>
+                                <div>Ivy</div>
+                                <div>Vicks</div>
+                            </div>
+
+
+                            <div id="TLSub3News">
+                                <div id="SubHeader">Points</div>
+                                <div>25</div>
+                                <div>20</div>
+                                <div>15</div>
+                                <div>10</div>
+                                <div>5</div>
+                            </div>
+                        </div>
+                        <div id="TLMainSub">
+                            <BottomInfo content="This Week" redarrow="none" />
+                        </div>
                     </div>
-                
+
+                </div>
+
             </div>
         </>
     )
