@@ -16,13 +16,13 @@ export default function DashBoardTab() {
         };
     }, []);
 
-    useEffect(() => {
-        if (menuOpen) {
-            document.getElementById('SideBarBG').style.display = 'flex';
-        } else {
-            document.getElementById('SideBarBG').style.display = 'none';
-        }
-    }, [menuOpen]);
+    // useEffect(() => {
+    //     if (menuOpen) {
+    //         document.getElementById('SideBarBG').style.display = 'flex';
+    //     } else {
+    //         document.getElementById('SideBarBG').style.display = 'none';
+    //     }
+    // }, [menuOpen]);
 
     const updateScreenWidth = () => {
         setScreenWidth(window.innerWidth);
