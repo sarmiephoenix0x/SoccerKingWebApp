@@ -5,7 +5,17 @@ import UsersImg from '../images/UsersImg.png'
 export default function DashBoardPage() {
     return (
         <>
+            <div id="Welcome">
+                <div id="WelcomeText">
+                        <span id="Greetings">Welcome,</span> User 1
+                    </div>
+                    <div id="WelcomeText2">
+                    You can have a lot at the current stat
+                        </div>
+                </div>
             <div id="DashboardMain">
+
+                
                 <div id="PlayerOfTheWeek">
                     <img id="PlayerProfileImg" src={PlayerProfileImg} alt="PlayerProfileImg" />
                     <img id="StarImg" src={StarImg} alt="StarImg" />

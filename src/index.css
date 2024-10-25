@@ -1256,6 +1256,28 @@ body {
     color: #000;
   }
 
+
+  #Welcome{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding-right: 20px;
+    padding-left: 220px;
+  }
+
+  #WelcomeText{
+    font-weight: bold;
+    font-size: 1.5vw;
+    color: #F3BC1F;
+  }
+
+
+  #Greetings{
+    font-weight: bold;
+    font-size: 1.5vw;
+    color: #000;
+  }
+
 }
 
 
