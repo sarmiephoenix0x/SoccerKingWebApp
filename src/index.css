@@ -1062,6 +1062,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     row-gap: 20px;
     padding: 10px;
     background: white;
@@ -1094,13 +1095,67 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     row-gap: 20px;
     padding: 10px;
     background: white;
     color: #000;
     width:25%;
-    height: 250px;
+    height: 220px;
     border-radius: 25px;
+  }
+
+  #UsersMain{
+    display: flex;
+    flex-direction: row;
+    column-gap: 70px;
+  }
+
+
+  #UsersMainSub1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #UsersMainSub{
+    display: flex;
+    flex-direction: column;
+  }
+
+
+
+  #UsersImg{
+    width: 20%;
+  }
+
+  #UsersText{
+    font-weight: bold;
+    font-size: 1.5vw;
+  }
+
+  #UsersText2{
+    font-weight: bold;
+    font-size: 1.7vw;
+  }
+
+
+  #UsersText3{
+    color: #00000066;
+    font-size: 1.5vw;
+  }
+
+
+  #UsersText4{
+    font-weight: bold;
+    font-size: 1.7vw;
+  }
+
+
+  #UsersText5{
+    color: #00000066;
+    font-size: 1.5vw;
   }
 
 }
