@@ -1,3 +1,5 @@
+import BottomInfo from '../components/BottomInfo'
+
 export default function TopNewsCard(props) {
     return (
         <>
@@ -13,6 +15,7 @@ export default function TopNewsCard(props) {
                         {props.content}
 
                     </div>
+                    <BottomInfo content="Read More" redarrow="none" greenarrow="none"/>
                 </div>
             </div>
         </>

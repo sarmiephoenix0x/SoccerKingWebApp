@@ -181,7 +181,7 @@ export default function DashBoardPage() {
                         </div>
 
                         <div id="TriviaMainSub">
-                            <BottomInfo content="This Week" redarrow="none" />
+                            <BottomInfo content="Earn more points" redarrow="none" />
                         </div>
                     </div>
                 </div>

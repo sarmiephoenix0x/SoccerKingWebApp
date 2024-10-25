@@ -1355,7 +1355,8 @@ body {
   }
 
   #TopNewsImg{
-    width:30%;
+    height: 130px;
+    width:40%;
   }
 
 
@@ -1367,17 +1368,17 @@ body {
 
   #TNCardText{
     font-weight: bold;
-    font-size: 1.2vw;
+    font-size: 1vw;
   }
 
   #TNCardText2{
-    font-size: 1vw;
+    font-size: 0.9vw;
   }
 
   #TNCardSub{
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
+    row-gap: 10px;
   }
 
 

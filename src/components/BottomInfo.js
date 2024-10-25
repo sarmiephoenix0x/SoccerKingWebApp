@@ -6,7 +6,11 @@ export default function BottomInfo(props) {
         <><div id="BottomInfo">
             {props.img != "" && (
                 <>
-                    <img id="ArrowImg" src={UpArrowImg} alt="ArrowImg" />
+                    {props.greenarrow != "none" && (
+                        <>
+                            <img id="ArrowImg" src={UpArrowImg} alt="ArrowImg" />
+                        </>
+                    )}
                     {props.redarrow != "none" && (
                         <>
                             <img id="ArrowImg" src={DownArrowImg} alt="ArrowImg" />
