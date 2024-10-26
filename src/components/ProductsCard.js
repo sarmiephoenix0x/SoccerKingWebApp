@@ -4,17 +4,24 @@ export default function ProductsCard(props) {
     return (
         <>
             <div className="ProductsCard">
-                <img className="NewsImg" src={props.img} alt="NewsImg" />
+                <img className="ProductsCardImg" src={props.img} alt="Img" />
                 <div className="ProductsCardSub">
-                    <div className="ProductsCardText">
+                    <div className="ProductsCardContent">
                         {props.content}
+                        <div className="ProductsCardName">
+                            {props.name}
+                            <div className="ProductsCardRating">
+                                {props.rating} 
+                                <img className="StarImg" src={StarImg} alt="StarImg" />
+                            </div>
+                        </div>
                     </div>
                     <div className="ProductsCardSub2">
-                        <div className="ProductsTag">
+                        <div className="ProductsCardTag">
                             {props.pricetag}
                         </div>
 
-                        <img className="StarImg" src={StarImg} alt="StarImg" />
+                        
                     </div>
                 </div>
             </div>

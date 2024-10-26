@@ -7,7 +7,7 @@ export default function Products() {
         <div id="ProductsMain">
                 <div id="ProductsMainSub">
                     <div id="ProductsMainSubText">
-                        Featured News
+                    Popular This Week
                     </div>
                     <div id="ProductsMainSub2">
                         <ProductsCard

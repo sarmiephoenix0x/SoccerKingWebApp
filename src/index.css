@@ -1629,7 +1629,7 @@ body {
   }
 
 
-  #HeadlineImg {
+  .HeadlineImg {
     width: 20%;
     border-radius: 5px;
   }
@@ -1715,9 +1715,42 @@ body {
   }
 
 
-  .ProductsCardText {
+  .ProductsCardContent {
+    display: flex;
+    flex-direction: column;
     font-weight: bold;
     font-size: 1.2vw;
+    white-space: nowrap;
+  }
+
+  .ProductsCardName {
+    display: flex;
+    flex-direction: row;
+    column-gap: 40px;
+    align-items: center;
+    font-weight: lighter;
+    font-size: 1vw;
+    white-space: nowrap;
+  }
+
+  .ProductsCardRating{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .ProductsCardTag{
+    font-weight: bold;
+    font-size: 1.5vw;
+  }
+  
+  .ProductsCardImg {
+    width: 200px;
+    border-radius: 5px;
+  }
+
+  .StarImg{
+    width: 10%;
   }
 
   #ProductsMainSub {
@@ -1746,10 +1779,10 @@ body {
   }
 
   .ProductsCardSub {
-    width: 80%;
+    width: 200px;
     display: flex;
     flex-direction: row;
-    column-gap: 20px;
+    align-items: stretch;
   }
 
 
@@ -1772,7 +1805,7 @@ body {
     row-gap: 30px;
   }
 
-  .ProductsTag {
+  .ProductsCardViewItem {
     color: #FFF;
     text-align: center;
     padding: 5px;
