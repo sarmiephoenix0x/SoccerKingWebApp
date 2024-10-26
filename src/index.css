@@ -1172,6 +1172,7 @@ body::-webkit-scrollbar-thumb {
     z-index: 1;
     transform: scale(2.2);
     margin-right: 20px;
+    user-select: none;
   }
 
 
@@ -1180,6 +1181,7 @@ body::-webkit-scrollbar-thumb {
     cursor: pointer;
     z-index: 1;
     transform: scale(5);
+    user-select: none;
   }
 
 
