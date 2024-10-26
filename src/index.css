@@ -1877,8 +1877,11 @@ body {
     justify-content: center;
     align-items: center;
     background: #F4B40080;
-    border-radius: 15px;
-    padding: 10px;
+    border-radius: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   #ReduceSize{
