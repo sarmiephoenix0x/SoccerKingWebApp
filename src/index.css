@@ -1839,6 +1839,80 @@ body {
   }
 
 
+  #SettingsMain {
+    display: flex;
+    flex-direction: column;
+    row-gap: 70px;
+    background: #FFF;
+    height: 100%;
+    padding-right: 20px;
+    padding-left: 220px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+
+  #SettingsHeader{
+    font-weight: bold;
+    font-size: 1.5vw;
+  }
+
+
+  #SettingsBodyText{
+    font-weight: bold;
+    font-size: 1.2vw;
+  }
+
+
+  #SettingsAshText{
+    font-weight: bold;
+    font-size: 1.2vw;
+    color: #00000066;
+  }
+
+  #SettingsCurvedColoredItem{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #F4B40080;
+    border-radius: 15px;
+    padding: 10px;
+  }
+
+  #ReduceSize{
+    width:50px;
+  }
+
+  #SettingsCurvedTransparentItem{
+    cursor: pointer;
+    border: 1px solid #000;
+    border-radius: 15px;
+  }
+
+
+  #PlayerProfileImg2 {
+    width: 100px;
+  }
+
+  #EditImg{
+    height: 18px;
+  }
+
+  #SettingsSpacer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #SettingsColumnizer{
+    display: flex;
+    flex-direction: column;
+  }
+
+
 }
 
 
