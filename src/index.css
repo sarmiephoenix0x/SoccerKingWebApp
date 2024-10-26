@@ -1628,6 +1628,10 @@ body {
     width: 19%;
   }
 
+  #FireImg2 {
+    width: 19px;
+  }
+
 
   .HeadlineImg {
     width: 20%;
@@ -1774,6 +1778,9 @@ body {
   }
 
   #ProductsMainSubText {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
     font-weight: bold;
     font-size: 1.5vw;
   }

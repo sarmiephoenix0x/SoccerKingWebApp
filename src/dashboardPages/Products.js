@@ -1,5 +1,6 @@
 import NewsImg from '../images/NewsImg.png'
 import ProductsCard from '../components/ProductsCard'
+import FireImg from '../images/Fire.png'
 
 export default function Products() {
     return (
@@ -7,11 +8,12 @@ export default function Products() {
         <div id="ProductsMain">
                 <div id="ProductsMainSub">
                     <div id="ProductsMainSubText">
-                    Popular This Week
+                        Popular This Week
+                        <img id="FireImg2" src={FireImg} alt="FireImg" />
                     </div>
                     <div id="ProductsMainSub2">
                         <ProductsCard
-                            content="Soccer Kingdom Item"
+                            content="Item"
                             name="Random Name"
                             pricetag="$50"
                             rating="5.0"
