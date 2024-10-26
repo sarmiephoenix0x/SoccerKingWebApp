@@ -1754,19 +1754,33 @@ body {
   }
 
   .StarImg{
-    width: 10%;
+    width: 15px;
   }
 
-  #ProductsMainSub {
+  .ProductsMainSub {
     display: flex;
     flex-direction: column;
     row-gap: 30px;
   }
 
-  #ProductsMainSub2 {
+  #AllProducts{
     display: flex;
     flex-direction: row;
-    column-gap: 30px;
+    flex-wrap: wrap;
+    row-gap: 50px;
+    column-gap: 20px;
+  }
+
+  .ProductsMainSub2 {
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 20px;
+  }
+
+  .ProductsMainSub2::-webkit-scrollbar {
+    height: 5px;
   }
 
   #ProductsMainSub3 {
@@ -1813,6 +1827,7 @@ body {
   }
 
   .ProductsCardViewItem {
+    cursor: pointer;
     color: #FFF;
     text-align: center;
     padding: 5px;

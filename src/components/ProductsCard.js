@@ -24,6 +24,9 @@ export default function ProductsCard(props) {
                         
                     </div>
                 </div>
+                <div className='ProductsCardViewItem'>
+                    View Item
+                </div>
             </div>
         </>
     )
