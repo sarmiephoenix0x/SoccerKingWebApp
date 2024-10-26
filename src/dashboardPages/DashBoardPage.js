@@ -11,7 +11,7 @@ export default function DashBoardPage() {
     return (
         <>
             <div id="Welcome">
-                <div id="WelcomeText">
+                <div id="DashboardWelcomeText">
                     <span id="Greetings">Welcome,</span> User 1
                 </div>
                 <div id="WelcomeText2">

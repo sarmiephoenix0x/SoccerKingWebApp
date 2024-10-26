@@ -3,22 +3,22 @@ import DownArrowImg from '../images/DownArrow.png'
 
 export default function BottomInfo(props) {
     return (
-        <><div id="BottomInfo">
+        <><div className="BottomInfo">
             {props.img != "" && (
                 <>
                     {props.greenarrow != "none" && (
                         <>
-                            <img id="ArrowImg" src={UpArrowImg} alt="ArrowImg" />
+                            <img className="ArrowImg" src={UpArrowImg} alt="ArrowImg" />
                         </>
                     )}
                     {props.redarrow != "none" && (
                         <>
-                            <img id="ArrowImg" src={DownArrowImg} alt="ArrowImg" />
+                            <img className="ArrowImg" src={DownArrowImg} alt="ArrowImg" />
                         </>
                     )}
                 </>
             )}
-            <div><span id="greencontent">{props.content2}</span>{props.content}</div>
+            <div><span className="greencontent">{props.content2}</span>{props.content}</div>
         </div>
         </>
     )

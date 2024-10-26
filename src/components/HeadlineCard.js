@@ -5,28 +5,28 @@ import CommentImg from '../images/CommentImg.png'
 export default function HeadlineCard(props) {
     return (
         <>
-            <div id="HeadlineCard">
-                <img id="HeadlineImg" src={props.img} alt="HeadlineImg" />
-                <div id="HeadlineCardSub">
-                    <div id="HeadlineCardText">
+            <div className="HeadlineCard">
+                <img className="HeadlineImg" src={props.img} alt="HeadlineImg" />
+                <div className="HeadlineCardSub">
+                    <div className="HeadlineCardText">
                         {props.content}
                     </div>
-                    <div id="HeadlineCardSub3">
-                        <div id="IconsAlign">
-                            <img id="LikeImg" src={LikeImg} alt="LikeImg" />
+                    <div className="HeadlineCardSub3">
+                        <div className="IconsAlign">
+                            <img className="LikeImg" src={LikeImg} alt="LikeImg" />
                             12k
                         </div>
-                        <div id="IconsAlign">
-                            <img id="CommentImg" src={CommentImg} alt="CommentImg" />
+                        <div className="IconsAlign">
+                            <img className="CommentImg" src={CommentImg} alt="CommentImg" />
                             10.1k
                         </div>
                     </div>
-                    <div id="HeadlineCardSub2">
-                        <div id="HeadlineTag">
+                    <div className="HeadlineCardSub2">
+                        <div className="HeadlineTag">
                             {props.Headlinetag}
                         </div>
-                        <div id="Time">
-                            <img id="ClockImg" src={ClockImg} alt="ClockImg" />
+                        <div className="Time">
+                            <img className="ClockImg" src={ClockImg} alt="ClockImg" />
                             <div>{props.time}</div>
                         </div>
                     </div>

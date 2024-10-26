@@ -458,6 +458,13 @@ body {
     row-gap: 10px;
   }
 
+  #WelcomeText {
+    background-color: #F4B400;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+  }
+
   #Sec1MainSub {
     display: flex;
     flex-direction: column;
@@ -538,7 +545,7 @@ body {
     color: #F1CD05;
   }
 
-  #ServicesCard {
+  .ServicesCard {
     position: relative;
     /* Make the card a reference point for absolute positioning */
     display: flex;
@@ -551,7 +558,7 @@ body {
     opacity: 0px;
   }
 
-  #ServicesCardImg {
+  .ServicesCardImg {
     position: absolute;
     left: -32px;
     top: 50%;
@@ -562,11 +569,11 @@ body {
     padding: 10px;
   }
 
-  #ServicesCardHeaderText {
+  .ServicesCardHeaderText {
     font-weight: bold;
   }
 
-  #ServicesCardBody {
+  .ServicesCardBody {
     font-size: 1vw;
     width: 200px;
   }
@@ -725,7 +732,7 @@ body {
     opacity: 0px;
   }
 
-  #QuestionsCard {
+  .QuestionsCard {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -736,20 +743,20 @@ body {
     opacity: 0px;
   }
 
-  #QuestionsCardImg {
+  .QuestionsCardImg {
     width: 13%;
     background: #000;
     border-radius: 50px;
     padding: 10px;
   }
 
-  #QuestionsCardBody {
+  .QuestionsCardBody {
     font-size: 1vw;
     width: 200px;
   }
 
 
-  #MoreQuestionsCard {
+  .MoreQuestionsCard {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -761,11 +768,11 @@ body {
     background: #000;
   }
 
-  #MoreQuestionsCardImg {
+  .MoreQuestionsCardImg {
     width: 13%;
   }
 
-  #MoreQuestionsCardBody {
+  .MoreQuestionsCardBody {
     color: #FFF;
     font-size: 1vw;
     width: 200px;
@@ -773,7 +780,7 @@ body {
 
 
 
-  #FAQCard {
+  .FAQCard {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -783,11 +790,11 @@ body {
     opacity: 0px;
   }
 
-  #FAQCardImg {
+  .FAQCardImg {
     width: 13%;
   }
 
-  #FAQCardBody {
+  .FAQCardBody {
     font-size: 1vw;
     width: 200px;
   }
@@ -1313,7 +1320,7 @@ body {
     padding-left: 220px;
   }
 
-  #WelcomeText {
+  #DashboardWelcomeText {
     font-weight: bold;
     font-size: 1.5vw;
     color: #F3BC1F;
@@ -1358,28 +1365,28 @@ body {
     font-size: 1.5vw;
   }
 
-  #TopNewsImg {
+  .TopNewsImg {
     height: 130px;
     width: 40%;
   }
 
 
-  #TopNewsCard {
+  .TopNewsCard {
     display: flex;
     flex-direction: row;
     column-gap: 20px;
   }
 
-  #TNCardText {
+  .TNCardText {
     font-weight: bold;
     font-size: 1vw;
   }
 
-  #TNCardText2 {
+  .TNCardText2 {
     font-size: 0.9vw;
   }
 
-  #TNCardSub {
+  .TNCardSub {
     display: flex;
     flex-direction: column;
     row-gap: 10px;
@@ -1425,7 +1432,7 @@ body {
   }
 
 
-  #BottomInfo {
+  .BottomInfo {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -1439,15 +1446,15 @@ body {
     border-radius: 50px;
     font-size: 0.8vw;
     font-weight: bold;
-    white-space: nowrap; 
+    white-space: nowrap;
   }
 
-  #greencontent {
+  .greencontent {
     color: #008000;
   }
 
 
-  #ArrowImg {
+  .ArrowImg {
     width: 8%;
   }
 
@@ -1464,14 +1471,14 @@ body {
     padding-bottom: 20px;
   }
 
-  #NewsCard{
+  .NewsCard {
     display: flex;
     flex-direction: column;
     row-gap: 10px;
   }
 
 
-  #NewsCardText {
+  .NewsCardText {
     font-weight: bold;
     font-size: 1.2vw;
   }
@@ -1488,7 +1495,7 @@ body {
     column-gap: 30px;
   }
 
-  #NewsMainSub3{
+  #NewsMainSub3 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -1501,7 +1508,7 @@ body {
     font-size: 1.5vw;
   }
 
-  #NewsCardSub{
+  .NewsCardSub {
     width: 80%;
     display: flex;
     flex-direction: row;
@@ -1509,32 +1516,32 @@ body {
   }
 
 
-  #NewsCardSub2{
+  .NewsCardSub2 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     row-gap: 10px;
   }
 
-  #NewsSubAlign{
+  #NewsSubAlign {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
 
-  #NewsSubAlign2{
+  #NewsSubAlign2 {
     display: flex;
     flex-direction: column;
     row-gap: 30px;
   }
 
 
-  #NewsImg {
+  .NewsImg {
     width: 80%;
     border-radius: 5px;
   }
 
-  #NewsTag{
+  .NewsTag {
     color: #FFF;
     text-align: center;
     padding: 5px;
@@ -1545,7 +1552,7 @@ body {
     font-weight: bold;
   }
 
-  #Time {
+  .Time {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1555,7 +1562,7 @@ body {
     white-space: nowrap;
   }
 
-  #ClockImg {
+  .ClockImg {
     width: 20%;
   }
 
@@ -1627,18 +1634,18 @@ body {
     border-radius: 5px;
   }
 
-  #HeadlineCard{
+  .HeadlineCard {
     display: flex;
     flex-direction: row;
     column-gap: 10px;
   }
 
-  #HeadlineCardText {
+  .HeadlineCardText {
     font-weight: bold;
     font-size: 1.2vw;
   }
 
-  #HeadlineTag{
+  .HeadlineTag {
     color: #FFF;
     text-align: center;
     padding: 5px;
@@ -1649,7 +1656,7 @@ body {
     font-weight: bold;
   }
 
-  #HeadlineCardSub{
+  .HeadlineCardSub {
     width: 24%;
     display: flex;
     flex-direction: column;
@@ -1657,34 +1664,125 @@ body {
     row-gap: 20px;
   }
 
-  #HeadlineCardSub2{
+  .HeadlineCardSub2 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
 
-  #HeadlineCardSub3{
+  .HeadlineCardSub3 {
     display: flex;
     flex-direction: row;
     column-gap: 30px;
   }
 
-  #LikeImg{
+  .LikeImg {
     height: 20px;
     width: 35%;
   }
 
-  #CommentImg{
+  .CommentImg {
     height: 20px;
     width: 35%;
   }
 
-  #IconsAlign{
+  .IconsAlign {
     display: flex;
     flex-direction: row;
     column-gap: 10px;
   }
-  
+
+
+
+
+
+  #ProductsMain {
+    display: flex;
+    flex-direction: column;
+    row-gap: 70px;
+    background: #FFF;
+    height: 100%;
+    padding-right: 20px;
+    padding-left: 220px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .ProductsCard {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+
+  .ProductsCardText {
+    font-weight: bold;
+    font-size: 1.2vw;
+  }
+
+  #ProductsMainSub {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  #ProductsMainSub2 {
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+  }
+
+  #ProductsMainSub3 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 30px;
+  }
+
+  #ProductsMainSubText {
+    font-weight: bold;
+    font-size: 1.5vw;
+  }
+
+  .ProductsCardSub {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+  }
+
+
+  .ProductsCardSub2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+
+  #ProductsSubAlign {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #ProductsSubAlign2 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  .ProductsTag {
+    color: #FFF;
+    text-align: center;
+    padding: 5px;
+    background: #FF0000C4;
+    border-radius: 8px;
+    white-space: nowrap;
+    font-size: 1vw;
+    font-weight: bold;
+  }
+
 
 }
 
@@ -2126,6 +2224,13 @@ body {
     row-gap: 10px;
   }
 
+  #WelcomeText {
+    background-color: #F4B400;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+  }
+
   #Sec1MainSub {
     display: flex;
     flex-direction: column;
@@ -2208,7 +2313,7 @@ body {
     color: #F1CD05;
   }
 
-  #ServicesCard {
+  .ServicesCard {
     position: relative;
     /* Make the card a reference point for absolute positioning */
     display: flex;
@@ -2221,7 +2326,7 @@ body {
     opacity: 0px;
   }
 
-  #ServicesCardImg {
+  .ServicesCardImg {
     position: absolute;
     left: -32px;
     top: 50%;
@@ -2232,11 +2337,11 @@ body {
     padding: 10px;
   }
 
-  #ServicesCardHeaderText {
+  .ServicesCardHeaderText {
     font-weight: bold;
   }
 
-  #ServicesCardBody {
+  .ServicesCardBody {
     font-size: 1.5vw;
     width: 200px;
   }
@@ -2395,7 +2500,7 @@ body {
     opacity: 0px;
   }
 
-  #QuestionsCard {
+  .QuestionsCard {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -2406,20 +2511,20 @@ body {
     opacity: 0px;
   }
 
-  #QuestionsCardImg {
+  .QuestionsCardImg {
     width: 13%;
     background: #000;
     border-radius: 50px;
     padding: 10px;
   }
 
-  #QuestionsCardBody {
+  .QuestionsCardBody {
     font-size: 1.5vw;
     width: 200px;
   }
 
 
-  #MoreQuestionsCard {
+  .MoreQuestionsCard {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -2431,11 +2536,11 @@ body {
     background: #000;
   }
 
-  #MoreQuestionsCardImg {
+  .MoreQuestionsCardImg {
     width: 13%;
   }
 
-  #MoreQuestionsCardBody {
+  .MoreQuestionsCardBody {
     color: #FFF;
     font-size: 1.5vw;
     width: 200px;
@@ -2443,7 +2548,7 @@ body {
 
 
 
-  #FAQCard {
+  .FAQCard {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -2453,11 +2558,11 @@ body {
     opacity: 0px;
   }
 
-  #FAQCardImg {
+  .FAQCardImg {
     width: 13%;
   }
 
-  #FAQCardBody {
+  .FAQCardBody {
     font-size: 1.5vw;
     width: 200px;
   }
@@ -2913,7 +3018,7 @@ body {
     width: 150px;
   }
 
-  #ServicesCardBody {
+  .ServicesCardBody {
     font-size: 2.2vw;
   }
 
@@ -2969,18 +3074,18 @@ body {
     font-size: 2.5vw;
   }
 
-  #QuestionsCardBody {
+  .QuestionsCardBody {
     font-size: 2.2vw;
     width: 200px;
   }
 
-  #MoreQuestionsCardBody {
+  .MoreQuestionsCardBody {
     font-size: 2.2vw;
   }
 
 
 
-  #FAQCard {
+  .FAQCard {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -2990,7 +3095,7 @@ body {
     opacity: 0px;
   }
 
-  #FAQCardBody {
+  .FAQCardBody {
     font-size: 2.2vw;
   }
 
@@ -3073,11 +3178,11 @@ body {
   }
 
 
-  /* #ServicesCard {
+  /* .ServicesCard {
     width: 90%;
   } */
 
-  #ServicesCardBody {
+  .ServicesCardBody {
     font-size: 3.5vw;
   }
 
@@ -3143,26 +3248,26 @@ body {
     width: 100%;
   }
 
-  #QuestionsCard {
+  .QuestionsCard {
     width: 90%;
   }
 
-  #QuestionsCardBody {
+  .QuestionsCardBody {
     font-size: 3.2vw;
     width: 100%;
   }
 
-  #MoreQuestionsCard {
+  .MoreQuestionsCard {
     width: 90%;
   }
 
-  #MoreQuestionsCardBody {
+  .MoreQuestionsCardBody {
     font-size: 3.2vw;
   }
 
 
 
-  #FAQCard {
+  .FAQCard {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -3172,7 +3277,7 @@ body {
     opacity: 0px;
   }
 
-  #FAQCardBody {
+  .FAQCardBody {
     font-size: 3.5vw;
   }
 

@@ -3,15 +3,15 @@ import BottomInfo from '../components/BottomInfo'
 export default function TopNewsCard(props) {
     return (
         <>
-            <div id="TopNewsCard">
-                <img id="TopNewsImg" src={props.img} alt="TopNewsImg" />
-                <div id="TNCardSub">
-                    <div id="TNCardText">
+            <div className="TopNewsCard">
+                <img className="TopNewsImg" src={props.img} alt="TopNewsImg" />
+                <div className="TNCardSub">
+                    <div className="TNCardText">
                         {props.header}
 
                     </div>
 
-                    <div id="TNCardText2">
+                    <div className="TNCardText2">
                         {props.content}
 
                     </div>

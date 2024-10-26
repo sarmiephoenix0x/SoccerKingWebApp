@@ -3,19 +3,19 @@ import ClockImg from '../images/ClockImg.png'
 export default function NewsCard(props) {
     return (
         <>
-            <div id="NewsCard">
-                <img id="NewsImg" src={props.img} alt="NewsImg" />
-                <div id="NewsCardSub">
-                    <div id="NewsCardText">
+            <div className="NewsCard">
+                <img className="NewsImg" src={props.img} alt="NewsImg" />
+                <div className="NewsCardSub">
+                    <div className="NewsCardText">
                         {props.content}
                     </div>
-                    <div id="NewsCardSub2">
-                        <div id="NewsTag">
+                    <div className="NewsCardSub2">
+                        <div className="NewsTag">
                             {props.newstag}
                         </div>
 
-                        <div id="Time">
-                            <img id="ClockImg" src={ClockImg} alt="ClockImg" />
+                        <div className="Time">
+                            <img className="ClockImg" src={ClockImg} alt="ClockImg" />
                             <div>{props.time}</div>
                         </div>
                     </div>

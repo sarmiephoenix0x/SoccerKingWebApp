@@ -1,9 +1,9 @@
 export default function QuestionsCard(props) {
     return (
         <>
-            <div id="QuestionsCard">
-            <img id="QuestionsCardImg" src={props.img} alt="QuestionsCardImg" />
-                <div id="QuestionsCardBody">
+            <div className="QuestionsCard">
+            <img className="QuestionsCardImg" src={props.img} alt="QuestionsCardImg" />
+                <div className="QuestionsCardBody">
                     {props.content}
                 </div>
             </div>

@@ -1,12 +1,12 @@
 export default function ServicesCard(props) {
     return (
         <>
-            <div id="ServicesCard">
-                <div id="ServicesCardHeaderText">{props.header}</div>
-                <div id="ServicesCardBody">
+            <div className="ServicesCard">
+                <div className="ServicesCardHeaderText">{props.header}</div>
+                <div className="ServicesCardBody">
                     {props.content}
                 </div>
-                <img id="ServicesCardImg" src={props.img} alt="ServicesCardImg" />
+                <img className="ServicesCardImg" src={props.img} alt="ServicesCardImg" />
             </div>
         </>
     )
