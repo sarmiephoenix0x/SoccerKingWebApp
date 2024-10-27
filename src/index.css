@@ -2261,10 +2261,16 @@ body {
 }
 
 .MessageBoxEmoji,
-.MessageBoxPin,
-.MessageBoxSendImg {
+.MessageBoxPin{
   width: 22px;
   height: 22px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+
+.MessageBoxSendImg {
+  height: 25px;
   margin: 0 5px;
   cursor: pointer;
 }

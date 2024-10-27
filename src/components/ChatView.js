@@ -48,7 +48,7 @@ export default function ChatView(props) {
                 <input
                     className="MessageBoxField"
                     type="text"
-                    placeholder="Message"
+                    placeholder="Message..."
                     value={newMessage}
                     onChange={(e) => setNewMessage(e.target.value)}
                     onKeyDown={(e) => e.key === 'Enter' && handleSendMessage()} // Send on Enter key press
