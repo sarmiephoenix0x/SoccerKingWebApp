@@ -1997,6 +1997,97 @@ body {
     padding-bottom: 20px;
   }
 
+  .ChatsListsMain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .CLSearchInput {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px; /* Reduced gap for a more compact look */
+    color: #00000080;
+    border: 2px solid #00000080;
+    padding: 8px 12px; /* Adds internal spacing */
+    border-radius: 15px; /* Optional: Rounds the corners */
+    width: 100%; /* Limits width to container */
+    max-width: 500px; /* Prevents it from stretching too wide */
+    height: auto; /* Adjusts height to fit content */
+    background-color: white; /* Optional: Adds background */
+    box-sizing: border-box;
+}
+
+.CLTextField {
+    flex: 1; /* Fills remaining space in the container */
+    outline: none;
+    border: none;
+    font-size: 16px; /* Adjust font size if needed */
+    color: #000; /* Text color */
+}
+
+.CLTextField::placeholder {
+  text-align: center;
+}
+
+.CLSearchImg {
+    height: 18px;
+    width: auto; /* Keeps aspect ratio */
+}
+
+.CLPlusText {
+    font-size: 26px;
+    font-weight: 200;
+    line-height: 1; /* Matches the font size */
+}
+
+
+
+/* Main container styling */
+.tab-container {
+  width: 100%;
+  max-width: 600px; /* Optional: Set max-width to control the container's width */
+  margin: 0 auto; /* Centers the tab component */
+  font-family: Arial, sans-serif;
+}
+
+/* Tab header styling */
+.tab-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.tab-item {
+  flex: 1; /* Evenly distributes the tabs */
+  text-align: center;
+  padding: 10px 0;
+  cursor: pointer;
+  font-weight: bold;
+  color: #00000080;
+}
+
+.tab-item.active {
+  color: #000;
+  border-bottom: 2px solid #000;
+}
+
+/* Divider styling */
+.tab-divider {
+  height: 2px;
+  background-color: #ccc;
+}
+
+/* Content styling */
+.tab-content {
+  padding: 20px;
+  border-top: 1px solid #ccc;
+}
+
+
+
 
 }
 
