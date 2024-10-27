@@ -21,18 +21,22 @@ export default function SideBar() {
     const GoToHomepage = () => {
         navigate("/DashBoard");
         document.getElementById("DashboardTabHeader").innerHTML = "Dashboard";
+        document.body.style.overflowY = "auto";
     }
     const GoToProfile = () => {
         navigate("/DashBoard/Profile");
         document.getElementById("DashboardTabHeader").innerHTML = "Profile";
+        document.body.style.overflowY = "auto";
     }
     const GoToCalendar = () => {
         navigate("/DashBoard/Calendar");
         document.getElementById("DashboardTabHeader").innerHTML = "Calendar";
+        document.body.style.overflowY = "auto";
     }
     const GoToNews = () => {
         navigate("/DashBoard/News");
         document.getElementById("DashboardTabHeader").innerHTML = "News";
+        document.body.style.overflowY = "auto";
     }
     const GoToChats = () => {
         navigate("/DashBoard/Chats");
@@ -42,26 +46,32 @@ export default function SideBar() {
     const GoToProducts = () => {
         navigate("/DashBoard/Products");
         document.getElementById("DashboardTabHeader").innerHTML = "Products";
+        document.body.style.overflowY = "auto";
     }
     const GoToOrders = () => {
         navigate("/DashBoard/Orders");
         document.getElementById("DashboardTabHeader").innerHTML = "Orders";
+        document.body.style.overflowY = "auto";
     }
     const GoToPosts = () => {
         navigate("/DashBoard/Posts");
         document.getElementById("DashboardTabHeader").innerHTML = "Posts";
+        document.body.style.overflowY = "auto";
     }
     const GoToSettings = () => {
         navigate("/DashBoard/Settings");
         document.getElementById("DashboardTabHeader").innerHTML = "Settings";
+        document.body.style.overflowY = "auto";
     }
     const GoToBackups = () => {
         navigate("/DashBoard/Backups");
         document.getElementById("DashboardTabHeader").innerHTML = "Backups";
+        document.body.style.overflowY = "auto";
     }
     const GoToLogs = () => {
         navigate("/DashBoard/Logs");
         document.getElementById("DashboardTabHeader").innerHTML = "Logs";
+        document.body.style.overflowY = "auto";
     }
     const GoToLoginIn = () => {
         navigate("/Authentication");

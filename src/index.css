@@ -1003,7 +1003,7 @@ body {
     padding-top: 20px;
     padding-bottom: 20px;
     padding-right: 20px;
-    padding-left: 220px;
+    padding-left: 17vw;
   }
 
   #DashboardTabHeader {
@@ -1058,11 +1058,11 @@ body {
   #DashboardMain {
     display: flex;
     flex-direction: row;
-    column-gap: 50px;
+    column-gap: 4vw;
     background: #DED4D4;
     height: 100%;
     padding-right: 20px;
-    padding-left: 220px;
+    padding-left: 17vw;
     padding-top: 20px;
     padding-bottom: 20px;
   }
@@ -1105,6 +1105,7 @@ body {
 
   #POWText2 {
     color: #00000066;
+    font-size: 1.2vw;
   }
 
 
@@ -1308,7 +1309,7 @@ body {
     flex-direction: column;
     row-gap: 10px;
     padding-right: 20px;
-    padding-left: 220px;
+    padding-left: 17vw;
   }
 
   #DashboardWelcomeText {
