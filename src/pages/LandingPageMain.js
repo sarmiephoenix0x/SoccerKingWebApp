@@ -129,10 +129,10 @@ export default function LandingPageMain() {
                                 content="General Questions"
                                 img={GeneralQuestionImg}
                             />
-                            <QuestionsCard
+                            {/* <QuestionsCard
                                 content="Live Match Streaming Questions"
                                 img={ServicesCardImg}
-                            />
+                            /> */}
                             <QuestionsCard
                                 content="Membership & Fan Club Questions"
                                 img={ServicesCardImg2}
@@ -199,7 +199,7 @@ export default function LandingPageMain() {
                                 <img id="InstaImg" src={InstaImg} alt="Instagram" />
                             </div>
                             <div id="SubscribeInputBG">
-                                <input id="SubscribeInput" type="text" placeholder='Email Address'/>
+                                <input id="SubscribeInput" type="email" placeholder='Email Address'/>
                                 <div id="SubscribeBut">Subscibe</div>
                             </div>
                         </div>
