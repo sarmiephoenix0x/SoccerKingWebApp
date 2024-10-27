@@ -1,6 +1,6 @@
-export default function ChatTile({ img, name, content, timestamp, hasNewMessage }) {
+export default function ChatTile({ img, name, content, timestamp, hasNewMessage, onClick }) {
     return (
-        <div className="chat-tile-main">
+        <div className="chat-tile-main" onClick={onClick}>
             <div className="profile-img-container">
                 <img className="profile-img" src={img} alt="Profile" />
                 {hasNewMessage=="true" && <div className="new-message-dot" />}

@@ -2263,8 +2263,8 @@ body {
 .MessageBoxEmoji,
 .MessageBoxPin,
 .MessageBoxSendImg {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   margin: 0 5px;
   cursor: pointer;
 }

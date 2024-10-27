@@ -3,8 +3,14 @@ import React, { useState } from 'react';
 import ChatTile from './ChatTile';
 import ProfileImg from '../images/ProfileImg.png'
 
-export default function ChatsLists() {
+export default function ChatsLists({ onSelectChat }) {
     const [activeTab, setActiveTab] = useState('Team Chat');
+
+    const chatTiles = [
+        { name: "Abubakar Abdul", content: "Vacation details...", timestamp: "11:26", hasNewMessage: true, bio: "UI/UX Designer", img: ProfileImg, online: true },
+        { name: "Abiola Makinde", content: "Updates on project", timestamp: "09:45", hasNewMessage: false, bio: "Developer", img: ProfileImg, online: false },
+        // Add other chat tiles here with unique information
+    ];
     return (
         <>
             <div className="ChatsListsMain">
@@ -36,78 +42,19 @@ export default function ChatsLists() {
                     {/* Content Display Area */}
                     <div className="tab-content">
                         {activeTab === 'Team Chat' ? (
-                            <>
+                            chatTiles.map((chat, index) => (
                                 <ChatTile
-                                    img={ProfileImg}
-                                    name="Abubakar Abdul"
-                                    content="We have lake-front vacation"
-                                    timestamp="11:26"
-                                    hasNewMessage="true"
+                                    key={index}
+                                    img={chat.img}
+                                    name={chat.name}
+                                    content={chat.content}
+                                    timestamp={chat.timestamp}
+                                    hasNewMessage={chat.hasNewMessage}
+                                    onClick={() => onSelectChat(chat)}
                                 />
-                                <ChatTile
-                                    img={ProfileImg}
-                                    name="Abiola Makinde"
-                                    content="We have lake-front vacation"
-                                    timestamp="11:26"
-                                    hasNewMessage="true"
-                                />
-                                <ChatTile
-                                    img={ProfileImg}
-                                    name="Dede Wilson"
-                                    content="We have lake-front vacation"
-                                    timestamp="11:26"
-                                    hasNewMessage="true"
-                                />
-                                <ChatTile
-                                    img={ProfileImg}
-                                    name="Usman God’spower"
-                                    content="We have lake-front vacation"
-                                    timestamp="11:26"
-                                    hasNewMessage="true"
-                                />
-                                <ChatTile
-                                    img={ProfileImg}
-                                    name="Benedict Onwubalili"
-                                    content="We have lake-front vacation"
-                                    timestamp="11:26"
-                                    hasNewMessage="true"
-                                />
-                                <ChatTile
-                                    img={ProfileImg}
-                                    name="Emmanuel Strange"
-                                    content="We have lake-front vacation"
-                                    timestamp="11:26"
-                                    hasNewMessage="false"
-                                />
-
-                                <ChatTile
-                                    img={ProfileImg}
-                                    name="David Offset"
-                                    content="We have lake-front vacation"
-                                    timestamp="11:26"
-                                    hasNewMessage="false"
-                                />
-
-                                <ChatTile
-                                    img={ProfileImg}
-                                    name="Isaiah Takeoff"
-                                    content="We have lake-front vacation"
-                                    timestamp="11:26"
-                                    hasNewMessage="false"
-                                />
-
-                                <ChatTile
-                                    img={ProfileImg}
-                                    name="Philip Nzube"
-                                    content="We have lake-front vacation"
-                                    timestamp="11:26"
-                                    hasNewMessage="false"
-                                />
-                            </>
+                            ))
                         ) : (
-                            <>
-                                <p>No Archived Chat</p>
-                            </>
+                            <p>No Archived Chat</p>
                         )}
                     </div>
                 </div>
