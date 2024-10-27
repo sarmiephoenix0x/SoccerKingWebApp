@@ -80,7 +80,7 @@ export default function ChatsLists() {
                                     hasNewMessage="false"
                                 />
 
-<ChatTile
+                                <ChatTile
                                     img={ProfileImg}
                                     name="Abubakar Abdul"
                                     content="We have lake-front vacation"
@@ -88,7 +88,7 @@ export default function ChatsLists() {
                                     hasNewMessage="false"
                                 />
 
-<ChatTile
+                                <ChatTile
                                     img={ProfileImg}
                                     name="Abubakar Abdul"
                                     content="We have lake-front vacation"
@@ -96,7 +96,7 @@ export default function ChatsLists() {
                                     hasNewMessage="false"
                                 />
 
-<ChatTile
+                                <ChatTile
                                     img={ProfileImg}
                                     name="Abubakar Abdul"
                                     content="We have lake-front vacation"

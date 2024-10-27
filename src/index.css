@@ -1987,10 +1987,10 @@ body {
 
   #ChatsMain {
     display: flex;
-    flex-direction: column;
-    row-gap: 120px;
+    flex-direction: row;
+    column-gap: 10px;
     background: #FFF;
-    height: 100%;
+    min-height: 100vh;
     padding-right: 20px;
     padding-left: 220px;
     padding-top: 20px;
@@ -2082,10 +2082,13 @@ body {
 
 /* Content styling */
 .tab-content {
-  overflow-y: scroll;
   text-align: center;
   padding: 20px;
-  border-top: 1px solid #ccc;
+  max-height: 400px; /* Set a height to make this area scrollable */
+    overflow-y: auto; /* Enable scrolling only in this area */
+    overflow-x: hidden;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 /* Main tile styling */
@@ -2096,6 +2099,11 @@ body {
   padding: 10px;
   border-bottom: 1px solid #ddd;
   width: 100%; /* Ensures the tile spans the container's width */
+}
+
+.chat-tile-main:hover {
+  cursor: pointer;
+  background: #F3BC1F80;
 }
 
 /* Profile image container with relative positioning */
@@ -2171,6 +2179,86 @@ body {
   white-space: nowrap;
 }
 
+
+
+
+/* Main container to make the ChatView responsive */
+.ChatViewContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-height: 100vh;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f9f9f9;
+}
+
+/* Header section with profile info */
+.ChatViewHeader {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.ProfileImg {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.UserInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.UserName {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.UserStatus {
+  font-size: 14px;
+  color: #d3f7d3; /* Light green for online status */
+}
+
+/* Chat messages area with scrolling */
+.ChatMessages {
+  flex-grow: 1;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.ChatBubble {
+  max-width: 60%;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 15px;
+  font-size: 14px;
+  word-wrap: break-word;
+  display: inline-block;
+}
+
+.ChatBubble.left {
+  background-color: #f0f0f0; /* Receiver bubble color */
+  text-align: left;
+  border-radius: 15px 15px 15px 5px;
+  align-self: flex-start;
+}
+
+.ChatBubble.right {
+  background-color: #4CAF50; /* Sender bubble color */
+  color: white;
+  text-align: right;
+  border-radius: 15px 15px 5px 15px;
+  align-self: flex-end;
+}
 
 
 

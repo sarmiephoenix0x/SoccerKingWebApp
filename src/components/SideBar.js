@@ -37,6 +37,7 @@ export default function SideBar() {
     const GoToChats = () => {
         navigate("/DashBoard/Chats");
         document.getElementById("DashboardTabHeader").innerHTML = "Chats";
+        document.body.style.overflowY = "hidden";
     }
     const GoToProducts = () => {
         navigate("/DashBoard/Products");
