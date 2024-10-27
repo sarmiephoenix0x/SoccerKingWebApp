@@ -1058,8 +1058,6 @@ body {
   #DashboardMain {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
     column-gap: 50px;
     background: #DED4D4;
     height: 100%;
@@ -1082,15 +1080,14 @@ body {
     align-items: center;
     justify-content: center;
     row-gap: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 20px 10px; /* Simplified padding */
     background: white;
     color: #000;
-    height: 100%;
+    height: auto; /* Change height to auto */
     border-radius: 25px;
-  }
+    width: max-content; /* Ensures it doesn't stretch beyond content */
+}
+
 
   #PlayerProfileImg {
     width: 30%;
@@ -1116,15 +1113,13 @@ body {
     flex-direction: column;
     align-items: center;
     row-gap: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 20px 10px; /* Simplified padding */
     background: white;
     color: #000;
-    height: 100%;
+    height: auto; /* Change height to auto */
     border-radius: 25px;
-  }
+    width: max-content; /* Ensures it doesn't stretch beyond content */
+}
 
   #UsersMain {
     display: flex;
@@ -1197,15 +1192,13 @@ body {
     align-items: center;
     justify-content: center;
     row-gap: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 20px 10px; /* Simplified padding */
     background: white;
     color: #000;
-    height: 100%;
+    height: auto; /* Change height to auto */
     border-radius: 25px;
-  }
+    width: max-content; /* Ensures it doesn't stretch beyond content */
+}
 
   #BalanceImg {
     width: 20%;
@@ -1252,15 +1245,13 @@ body {
     align-items: center;
     justify-content: center;
     row-gap: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 20px 10px; /* Simplified padding */
     background: white;
     color: #000;
-    height: 100%;
+    height: auto; /* Change height to auto */
     border-radius: 25px;
-  }
+    width: max-content; /* Ensures it doesn't stretch beyond content */
+}
 
   #TLMainSub {
     display: flex;
@@ -1338,59 +1329,79 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    row-gap: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
+    row-gap: 10px; /* Reduced row-gap */
+    padding: 10px 10px; /* Reduced padding */
     background: white;
     color: #000;
-    height: 100%;
-    border-radius: 25px;
-  }
+    height: auto;
+    border-radius: 15px; /* Reduced border radius */
+    width: 90%; /* Adjust width as needed */
+}
 
-  #TopNewsMainSub {
+#TopNewsMainSub {
     display: flex;
     align-self: flex-start;
     flex-direction: column;
     white-space: nowrap;
-  }
+}
 
-  #TopNewsText {
+#TopNewsText {
     display: flex;
     flex-direction: row;
     align-items: center;
-    column-gap: 20px;
+    column-gap: 10px; /* Reduced column gap */
     font-weight: bold;
-    font-size: 1.5vw;
-  }
+    font-size: 1.2vw; /* Reduced font size */
+}
 
-  .TopNewsImg {
-    height: 130px;
-    width: 40%;
-  }
+.TopNewsImg {
+    height: 80px; /* Reduced height of the image */
+}
 
-
-  .TopNewsCard {
+.TopNewsCard {
     display: flex;
     flex-direction: row;
-    column-gap: 20px;
-  }
+    column-gap: 10px; /* Reduced column gap */
+    width: 100%; 
+    max-width: 400px; /* Reduced max-width */
+    padding: 8px; /* Reduced padding */
+    background: white; 
+    border-radius: 8px; /* Reduced border radius */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Reduced shadow */
+}
 
-  .TNCardText {
+.TopNewsImg {
+    max-width: 120px; /* Reduced max width of the image */
+    height: auto; 
+    border-radius: 5px; 
+}
+
+.TNCardText {
     font-weight: bold;
-    font-size: 1vw;
-  }
+    font-size: 0.9vw; /* Reduced font size */
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
 
-  .TNCardText2 {
-    font-size: 0.9vw;
-  }
+.TNCardText2 {
+    font-size: 0.8vw; /* Reduced font size */
+    display: -webkit-box; 
+    -webkit-box-orient: vertical; 
+    line-clamp: 2; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    max-height: 3em; 
+    line-height: 1.5em; 
+    max-width: 100%; 
+    white-space: normal; 
+}
 
-  .TNCardSub {
+.TNCardSub {
     display: flex;
     flex-direction: column;
-    row-gap: 10px;
-  }
+    row-gap: 5px; /* Reduced row gap */
+}
+
 
 
   #Trivia {
@@ -1398,14 +1409,12 @@ body {
     flex-direction: column;
     align-items: center;
     row-gap: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 20px 10px;
     background: white;
     color: #000;
-    height: 100%;
+    height: auto;
     border-radius: 25px;
+    width: 80%;
   }
 
 
