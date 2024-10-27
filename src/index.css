@@ -2084,7 +2084,7 @@ body {
 .tab-content {
   text-align: center;
   padding: 20px;
-  max-height: 400px; /* Set a height to make this area scrollable */
+  max-height: 70vh; /* Set a height to make this area scrollable */
     overflow-y: auto; /* Enable scrolling only in this area */
     overflow-x: hidden;
     padding: 10px;
@@ -2143,6 +2143,7 @@ body {
   flex-direction: column;
   row-gap: 10px;
   overflow: hidden;
+  padding-right: 10px;
 }
 
 /* Header for name and timestamp */
@@ -2159,6 +2160,7 @@ body {
   white-space: nowrap; /* Prevents line breaks */
   overflow: hidden;
   text-overflow: ellipsis; /* Adds ellipses if name exceeds space */
+  max-width: 10vw;
 }
 
 /* Timestamp styling */
@@ -2177,6 +2179,7 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  max-width: 12vw;
 }
 
 
@@ -2186,12 +2189,10 @@ body {
 .ChatViewContainer {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  max-height: 100vh;
-  border: 1px solid #ccc;
+  width: 100%;
+  max-height: 80vh;
   border-radius: 10px;
-  overflow: hidden;
-  background: #f9f9f9;
+  overflow-y: scroll;
 }
 
 /* Header section with profile info */
@@ -2199,8 +2200,6 @@ body {
   display: flex;
   align-items: center;
   padding: 10px 15px;
-  background-color: #4CAF50;
-  color: white;
 }
 
 .ProfileImg {
@@ -2222,7 +2221,6 @@ body {
 
 .UserStatus {
   font-size: 14px;
-  color: #d3f7d3; /* Light green for online status */
 }
 
 /* Chat messages area with scrolling */
@@ -2253,14 +2251,101 @@ body {
 }
 
 .ChatBubble.right {
-  background-color: #4CAF50; /* Sender bubble color */
-  color: white;
+  background: #F3BC1F80;
   text-align: right;
   border-radius: 15px 15px 5px 15px;
   align-self: flex-end;
 }
 
+.CPProfileImg {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
 
+
+.ChatProfileContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  max-height: 80vh;
+  border-radius: 10px;
+  overflow-y: scroll;
+}
+
+.CPUserProfile{
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  align-items: center;
+  width: 100%;
+}
+
+.Bio{
+  font-weight: bold;
+  color: #00000080;
+}
+
+.tab-divider2 {
+  height: 2px;
+  width: 100%;
+  background-color: #ccc;
+}
+
+
+.CPContentView{
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  padding-top: 20px;
+  width: 100%;
+}
+
+.CPImg{
+  width: 40px;
+  height: 40px;
+}
+
+.CPContentHeaderText{
+  font-size: small;
+  color: #00000080;
+}
+
+.ChatProfileContent{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.CPContentSub{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 5px;
+}
+
+.CPContent{
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+
+.CPContentHeader{
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.CPContentSubHeader{ 
+  font-size: 10px;
+}
+
+.ViewMoreImg{
+  cursor: pointer;
+  height: 12px;
+}
 
 }
 

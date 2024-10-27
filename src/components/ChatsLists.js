@@ -40,41 +40,41 @@ export default function ChatsLists() {
                                 <ChatTile
                                     img={ProfileImg}
                                     name="Abubakar Abdul"
+                                    content="We have lake-front vacationnnnnnnnnnnnnnnnnnnnnnnnnn"
+                                    timestamp="11:26"
+                                    hasNewMessage="true"
+                                />
+                                <ChatTile
+                                    img={ProfileImg}
+                                    name="Abiola Makinde"
                                     content="We have lake-front vacation"
                                     timestamp="11:26"
                                     hasNewMessage="true"
                                 />
                                 <ChatTile
                                     img={ProfileImg}
-                                    name="Abubakar Abdul"
+                                    name="Dede Wilson"
                                     content="We have lake-front vacation"
                                     timestamp="11:26"
                                     hasNewMessage="true"
                                 />
                                 <ChatTile
                                     img={ProfileImg}
-                                    name="Abubakar Abdul"
+                                    name="Usman God’spower"
                                     content="We have lake-front vacation"
                                     timestamp="11:26"
                                     hasNewMessage="true"
                                 />
                                 <ChatTile
                                     img={ProfileImg}
-                                    name="Abubakar Abdul"
+                                    name="Benedict Onwubalili"
                                     content="We have lake-front vacation"
                                     timestamp="11:26"
                                     hasNewMessage="true"
                                 />
                                 <ChatTile
                                     img={ProfileImg}
-                                    name="Abubakar Abdul"
-                                    content="We have lake-front vacation"
-                                    timestamp="11:26"
-                                    hasNewMessage="true"
-                                />
-                                <ChatTile
-                                    img={ProfileImg}
-                                    name="Abubakar Abdul"
+                                    name="Emmanuel Strange"
                                     content="We have lake-front vacation"
                                     timestamp="11:26"
                                     hasNewMessage="false"
@@ -82,7 +82,7 @@ export default function ChatsLists() {
 
                                 <ChatTile
                                     img={ProfileImg}
-                                    name="Abubakar Abdul"
+                                    name="David Offset"
                                     content="We have lake-front vacation"
                                     timestamp="11:26"
                                     hasNewMessage="false"
@@ -90,7 +90,7 @@ export default function ChatsLists() {
 
                                 <ChatTile
                                     img={ProfileImg}
-                                    name="Abubakar Abdul"
+                                    name="Isaiah Takeoff"
                                     content="We have lake-front vacation"
                                     timestamp="11:26"
                                     hasNewMessage="false"
@@ -98,7 +98,7 @@ export default function ChatsLists() {
 
                                 <ChatTile
                                     img={ProfileImg}
-                                    name="Abubakar Abdul"
+                                    name="Philip Nzube"
                                     content="We have lake-front vacation"
                                     timestamp="11:26"
                                     hasNewMessage="false"
