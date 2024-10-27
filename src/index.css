@@ -2082,8 +2082,93 @@ body {
 
 /* Content styling */
 .tab-content {
+  overflow-y: scroll;
+  text-align: center;
   padding: 20px;
   border-top: 1px solid #ccc;
+}
+
+/* Main tile styling */
+.chat-tile-main {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  width: 100%; /* Ensures the tile spans the container's width */
+}
+
+/* Profile image container with relative positioning */
+.profile-img-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Profile image styling */
+.profile-img {
+  width: 12%;
+  min-width: 40px;
+  max-width: 60px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+/* Green dot for new message indicator */
+.new-message-dot {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  background-color: #28a745; /* Green color */
+  border: 2px solid white; /* Adds border to make it stand out */
+  border-radius: 50%;
+}
+
+
+/* Chat information styling */
+.chat-info {
+  flex: 1; /* Expands to fill available space */
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  overflow: hidden;
+}
+
+/* Header for name and timestamp */
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Name styling */
+.chat-name {
+  font-weight: bold;
+  font-size: 1rem;
+  white-space: nowrap; /* Prevents line breaks */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Adds ellipses if name exceeds space */
+}
+
+/* Timestamp styling */
+.chat-timestamp {
+  font-size: 0.85rem;
+  color: #888;
+  white-space: nowrap;
+}
+
+/* Content text with ellipses */
+.chat-content {
+  display: flex;
+  align-self: flex-start;
+  font-size: 0.9rem;
+  color: #666;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 

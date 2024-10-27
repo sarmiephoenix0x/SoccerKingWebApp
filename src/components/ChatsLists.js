@@ -1,5 +1,7 @@
 import SearchImg from '../images/Search.png'
 import React, { useState } from 'react';
+import ChatTile from './ChatTile';
+import ProfileImg from '../images/ProfileImg.png'
 
 export default function ChatsLists() {
     const [activeTab, setActiveTab] = useState('Team Chat');
@@ -35,12 +37,77 @@ export default function ChatsLists() {
                     <div className="tab-content">
                         {activeTab === 'Team Chat' ? (
                             <>
-                                <p>This is the Team Chat content.</p>
-                                </>
+                                <ChatTile
+                                    img={ProfileImg}
+                                    name="Abubakar Abdul"
+                                    content="We have lake-front vacation"
+                                    timestamp="11:26"
+                                    hasNewMessage="true"
+                                />
+                                <ChatTile
+                                    img={ProfileImg}
+                                    name="Abubakar Abdul"
+                                    content="We have lake-front vacation"
+                                    timestamp="11:26"
+                                    hasNewMessage="true"
+                                />
+                                <ChatTile
+                                    img={ProfileImg}
+                                    name="Abubakar Abdul"
+                                    content="We have lake-front vacation"
+                                    timestamp="11:26"
+                                    hasNewMessage="true"
+                                />
+                                <ChatTile
+                                    img={ProfileImg}
+                                    name="Abubakar Abdul"
+                                    content="We have lake-front vacation"
+                                    timestamp="11:26"
+                                    hasNewMessage="true"
+                                />
+                                <ChatTile
+                                    img={ProfileImg}
+                                    name="Abubakar Abdul"
+                                    content="We have lake-front vacation"
+                                    timestamp="11:26"
+                                    hasNewMessage="true"
+                                />
+                                <ChatTile
+                                    img={ProfileImg}
+                                    name="Abubakar Abdul"
+                                    content="We have lake-front vacation"
+                                    timestamp="11:26"
+                                    hasNewMessage="false"
+                                />
+
+<ChatTile
+                                    img={ProfileImg}
+                                    name="Abubakar Abdul"
+                                    content="We have lake-front vacation"
+                                    timestamp="11:26"
+                                    hasNewMessage="false"
+                                />
+
+<ChatTile
+                                    img={ProfileImg}
+                                    name="Abubakar Abdul"
+                                    content="We have lake-front vacation"
+                                    timestamp="11:26"
+                                    hasNewMessage="false"
+                                />
+
+<ChatTile
+                                    img={ProfileImg}
+                                    name="Abubakar Abdul"
+                                    content="We have lake-front vacation"
+                                    timestamp="11:26"
+                                    hasNewMessage="false"
+                                />
+                            </>
                         ) : (
-                                <>
-                                    <p>This is the Archived content.</p>
-                                    </>
+                            <>
+                                <p>No Archived Chat</p>
+                            </>
                         )}
                     </div>
                 </div>
