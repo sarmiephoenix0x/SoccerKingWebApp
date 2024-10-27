@@ -3,6 +3,7 @@ import HomeImg from '../images/Home.png';
 import ProfileImg from '../images/Profile.png';
 import CalendarImg from '../images/Calender.png';
 import NewsImg from '../images/News.png';
+import ChatsImg from '../images/Chats.png'
 import ProductsImg from '../images/Products.png';
 import OrdersImg from '../images/Orders.png';
 import PostsImg from '../images/Posts.png';
@@ -32,6 +33,10 @@ export default function SideBar() {
     const GoToNews = () => {
         navigate("/DashBoard/News");
         document.getElementById("DashboardTabHeader").innerHTML = "News";
+    }
+    const GoToChats = () => {
+        navigate("/DashBoard/Chats");
+        document.getElementById("DashboardTabHeader").innerHTML = "Chats";
     }
     const GoToProducts = () => {
         navigate("/DashBoard/Products");
@@ -128,6 +133,21 @@ export default function SideBar() {
                 </div>
                 <div className='SideBarSub'>
                     LISTS
+                    <div className="SideBarSubBut"
+                        style={{
+                            background: isActive('/DashBoard/Chats') ? '#F3BC1F' : '#f3bb1f00',
+                            borderTopRightRadius: isActive('/DashBoard/Chats') ? '8px' : '0px',
+                            borderBottomRightRadius: isActive('/DashBoard/Chats') ? '8px' : '0px',
+                            borderLeft: isActive('/DashBoard/Chats') ? '2px solid #000' : '2px solid #00000000'
+                        }}
+                        onClick={GoToChats}
+                    >
+                        <img className="SideBarSubButImg" src={ChatsImg} alt="Chats" />
+                        <div className='SideBarSubButText'>
+                            Chats
+                        </div>
+                    </div>
+
                     <div className="SideBarSubBut"
                         style={{
                             background: isActive('/DashBoard/Products') ? '#F3BC1F' : '#f3bb1f00',

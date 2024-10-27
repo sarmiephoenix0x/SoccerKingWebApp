@@ -14,6 +14,7 @@ import './fonts/fonts.css';
 import Profile from './dashboardPages/Profile.js';
 import Calendar from './dashboardPages/Calendar.js';
 import News from './dashboardPages/News.js';
+import Chats from './dashboardPages/Chats.js'
 import Products from './dashboardPages/Products.js';
 import Orders from './dashboardPages/Orders.js';
 import Posts from './dashboardPages/Posts.js';
@@ -79,6 +80,7 @@ function START() {
                 <Route path="/DashBoard/Profile" element={<Profile />} />
                 <Route path="/DashBoard/Calendar" element={<Calendar />} />
                 <Route path="/DashBoard/News" element={<News />} />
+                <Route path="/DashBoard/Chats" element={<Chats />} />
                 <Route path="/DashBoard/Products" element={<Products />} />
                 <Route path="/DashBoard/Orders" element={<Orders />} />
                 <Route path="/DashBoard/Posts" element={<Posts />} />
