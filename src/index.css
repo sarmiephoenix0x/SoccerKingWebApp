@@ -2232,6 +2232,43 @@ body {
   flex-direction: column;
 }
 
+.EmptyChatMessage {
+  text-align: center;
+  color: #999;
+  margin-top: 20px;
+  font-style: italic;
+}
+
+/* Message box at the bottom */
+.MessageBoxContainer {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: #fff;
+  border-top: 1px solid #ccc;
+  position: sticky;
+  bottom: 0;
+}
+
+.MessageBoxField {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  margin-right: 10px;
+  outline: none;
+  font-size: 16px;
+}
+
+.MessageBoxEmoji,
+.MessageBoxPin,
+.MessageBoxSendImg {
+  width: 24px;
+  height: 24px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
 
 .ChatBubble {
   max-width: 60%;

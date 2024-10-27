@@ -40,7 +40,7 @@ export default function ChatsLists() {
                                 <ChatTile
                                     img={ProfileImg}
                                     name="Abubakar Abdul"
-                                    content="We have lake-front vacationnnnnnnnnnnnnnnnnnnnnnnnnn"
+                                    content="We have lake-front vacation"
                                     timestamp="11:26"
                                     hasNewMessage="true"
                                 />
