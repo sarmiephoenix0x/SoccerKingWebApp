@@ -4,6 +4,7 @@ import ProfileImg from '../images/ProfileImg.png';
 import Emoji from '../images/Emoji.png';
 import Pin from '../images/Pin.png';
 import SendImg from '../images/SendImg.png';
+import BackButImg from '../images/BackButton.png'
 
 export default function ChatView(props) {
     const [messages, setMessages] = useState([]);
@@ -17,10 +18,26 @@ export default function ChatView(props) {
         }
     };
 
+    const GoToProfile = () => {
+        if (window.innerWidth <= 720) {
+            document.querySelector('.ChatViewContainer').style.display = "none";
+            document.querySelector('.ChatProfileContainer').style.display = "flex";
+        }
+    }
+
+
+    const GoToBack = () => {
+        if (window.innerWidth <= 720) {
+            document.querySelector('.ChatViewContainer').style.display = "none";
+            document.querySelector('.ChatsListsMain').style.display = "flex";
+        }
+    }
+
     return (
         <div className="ChatViewContainer">
+            <img className="BackBut" src={BackButImg} alt="Back" onClick={GoToBack}/>
             {/* Header with Profile Info */}
-            <div className="ChatViewHeader">
+            <div className="ChatViewHeader" onClick={GoToProfile}>
                 <img className="ProfileImg" src={ProfileImg} alt="Profile" />
                 <div className="UserInfo">
                     <span className="UserName">{props.name}</span>

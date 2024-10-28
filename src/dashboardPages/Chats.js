@@ -16,6 +16,10 @@ export default function Chats() {
     // Function to handle selecting a chat from the list
     const handleSelectChat = (chat) => {
         setSelectedChat(chat);
+        if (window.innerWidth <= 720) {
+            document.querySelector('.ChatsListsMain').style.display = "none";
+            document.querySelector('.ChatViewContainer').style.display = "flex";
+        }
     };
 
     return (

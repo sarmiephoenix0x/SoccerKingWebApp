@@ -10,6 +10,7 @@ export default function CreateAccount() {
     }, []);
 
     const GoToDashboard = () => {
+        localStorage.setItem("Username", document.getElementById("FullNameID").value);
         Navigate("/DashBoard")
     }
 

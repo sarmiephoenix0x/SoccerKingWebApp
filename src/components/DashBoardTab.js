@@ -8,26 +8,47 @@ export default function DashBoardTab() {
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
     useEffect(() => {
+        document.getElementById("Username2").innerHTML = localStorage.getItem("Username");
         window.addEventListener('resize', updateScreenWidth);
 
         // Clean up the event listener on component unmount
         return () => {
             window.removeEventListener('resize', updateScreenWidth);
         };
+
     }, []);
 
     useEffect(() => {
-        if(screenWidth <= 910) {
-        if (menuOpen) {
-            document.getElementById('SideBarBG').style.display = 'flex';
-        } else {
-            document.getElementById('SideBarBG').style.display = 'none';
+        if (screenWidth <= 910) {
+            if (menuOpen) {
+                document.getElementById('SideBarBG').style.display = 'flex';
+            } else {
+                document.getElementById('SideBarBG').style.display = 'none';
+            }
         }
-           } 
     }, [menuOpen]);
+
 
     const updateScreenWidth = () => {
         setScreenWidth(window.innerWidth);
+        if (window.innerWidth > 910) {
+            document.getElementById('SideBarBG').style.display = 'flex';
+        } else if (window.innerWidth <= 910) {
+            if (menuOpen) {
+                document.getElementById('SideBarBG').style.display = 'flex';
+            } else {
+                document.getElementById('SideBarBG').style.display = 'none';
+            }
+        }
+
+        if (window.innerWidth > 720) {
+            document.querySelector('.ChatViewContainer').style.display = "flex";
+            document.querySelector('.ChatsListsMain').style.display = "flex";
+            document.querySelector('.ChatProfileContainer').style.display = "flex";
+        } else {
+            document.querySelector('.ChatViewContainer').style.display = "none";
+            document.querySelector('.ChatProfileContainer').style.display = "none";
+        }
     };
 
     const toggleMenu = () => {
@@ -45,7 +66,7 @@ export default function DashBoardTab() {
     return (
         <>
             <div id="DashboardTab">
-            {screenWidth <= 910 && (
+                {screenWidth <= 910 && (
                     <>
                         {/* Hamburger menu (shown when the menu is closed) */}
                         <div
@@ -75,10 +96,10 @@ export default function DashBoardTab() {
                     <div id="ProfileBG">
                         <img id="ProfileImg" src={ProfileImg} alt="ProfileImg" />
                         <div id="ProfileName">
-                            Onwubalili Philip Nzube
+                            <span id="Username2">Onwubalili Philip Nzube</span>
                             <div id="ProfileRole">
-                            Admin
-                        </div>
+                                Admin
+                            </div>
                         </div>
                     </div>
                 </div>

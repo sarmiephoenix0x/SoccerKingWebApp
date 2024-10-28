@@ -6,13 +6,17 @@ import TopNewsCard from '../components/TopNewsCard'
 import InfoImg from '../images/ep_info-filled.png'
 import BalanceImg from '../images/BalanceImg.png'
 import BottomInfo from '../components/BottomInfo'
+import { useEffect, useState } from 'react';
 
 export default function DashBoardPage() {
+    useEffect(() => {
+        document.getElementById("Username").innerHTML = localStorage.getItem("Username");
+    }, []);
     return (
         <>
             <div id="Welcome">
                 <div id="DashboardWelcomeText">
-                    <span id="Greetings">Welcome,</span> User 1
+                    <span id="Greetings">Welcome,</span> <span id="Username">User 1</span>
                 </div>
                 <div id="WelcomeText2">
                     You can have a lot at the current stat
@@ -148,7 +152,8 @@ export default function DashBoardPage() {
                                 Balance
                                 <img id="InfoImg" src={InfoImg} alt="InfoImg" />
                             </div>
-                            <img id="BalanceImg" src={BalanceImg} alt="BalanceImg" />
+                            
+                                <img id="BalanceImg" src={BalanceImg} alt="BalanceImg" />
                         </div>
                         <div id="BalanceMainSub">
                             <div id="BalanceText2">

@@ -23,6 +23,14 @@ body {
 }
 
 
+.BackBut{
+  cursor: pointer;
+  display: flex;
+  align-self: flex-start;
+  width:50px
+}
+
+
 
 @media only screen and (min-width:974px) {
 
@@ -1080,13 +1088,16 @@ body {
     align-items: center;
     justify-content: center;
     row-gap: 20px;
-    padding: 20px 10px; /* Simplified padding */
+    padding: 20px 10px;
+    /* Simplified padding */
     background: white;
     color: #000;
-    height: auto; /* Change height to auto */
+    height: auto;
+    /* Change height to auto */
     border-radius: 25px;
-    width: max-content; /* Ensures it doesn't stretch beyond content */
-}
+    width: 90%;
+    /* Ensures it doesn't stretch beyond content */
+  }
 
 
   #PlayerProfileImg {
@@ -1100,7 +1111,7 @@ body {
 
   #POWText {
     font-weight: bold;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
   }
 
   #POWText2 {
@@ -1114,18 +1125,21 @@ body {
     flex-direction: column;
     align-items: center;
     row-gap: 20px;
-    padding: 20px 10px; /* Simplified padding */
+    padding: 20px 10px;
+    /* Simplified padding */
     background: white;
     color: #000;
-    height: auto; /* Change height to auto */
+    height: auto;
+    /* Change height to auto */
     border-radius: 25px;
-    width: max-content; /* Ensures it doesn't stretch beyond content */
-}
+    width: max-content;
+    /* Ensures it doesn't stretch beyond content */
+  }
 
   #UsersMain {
     display: flex;
     flex-direction: row;
-    column-gap: 70px;
+    column-gap: 5vw;
   }
 
 
@@ -1160,30 +1174,30 @@ body {
     align-items: center;
     column-gap: 20px;
     font-weight: bold;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
   }
 
   #UsersText2 {
     font-weight: bold;
-    font-size: 1.7vw;
+    font-size: 1.6vw;
   }
 
 
   #UsersText3 {
     color: #00000066;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
   }
 
 
   #UsersText4 {
     font-weight: bold;
-    font-size: 1.7vw;
+    font-size: 1.6vw;
   }
 
 
   #UsersText5 {
     color: #00000066;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
   }
 
 
@@ -1193,25 +1207,30 @@ body {
     align-items: center;
     justify-content: center;
     row-gap: 20px;
-    padding: 20px 10px; /* Simplified padding */
+    padding: 20px 10px;
     background: white;
     color: #000;
-    height: auto; /* Change height to auto */
+    height: auto;
     border-radius: 25px;
-    width: max-content; /* Ensures it doesn't stretch beyond content */
-}
-
-  #BalanceImg {
-    width: 20%;
+    width: 90%;
   }
 
   #BalanceMainSub1 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-self: flex-start;
+    align-items: center;
+    /* Center items vertically */
+    width: 100%;
+    /* Allow it to take the full width */
   }
 
+  #BalanceImg {
+    width: 15%;
+    /* Keep the image width */
+    align-self: flex-end;
+    /* Aligns the image to the end of the flex container */
+  }
 
   #BalanceText {
     display: flex;
@@ -1219,18 +1238,20 @@ body {
     align-items: center;
     column-gap: 20px;
     font-weight: bold;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
+    /* Adjust font size as needed */
   }
-
 
   #BalanceText2 {
     font-weight: bold;
-    font-size: 1.7vw;
+    font-size: 1.6vw;
+    /* Adjust font size as needed */
   }
 
   #BalanceText3 {
     color: #00000066;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
+    /* Adjust font size as needed */
   }
 
   #BalanceMainSub {
@@ -1240,19 +1261,23 @@ body {
   }
 
 
+
   #TopLeaders {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     row-gap: 20px;
-    padding: 20px 10px; /* Simplified padding */
+    padding: 20px 10px;
+    /* Simplified padding */
     background: white;
     color: #000;
-    height: auto; /* Change height to auto */
+    height: auto;
+    /* Change height to auto */
     border-radius: 25px;
-    width: max-content; /* Ensures it doesn't stretch beyond content */
-}
+    width: 90%;
+    /* Ensures it doesn't stretch beyond content */
+  }
 
   #TLMainSub {
     display: flex;
@@ -1268,7 +1293,7 @@ body {
     align-items: center;
     column-gap: 20px;
     font-weight: bold;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
   }
 
   #TLSubAlign {
@@ -1282,12 +1307,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 1.3vw;
   }
 
   #TLSub2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 1.2vw;
   }
 
   #TLSub3 {
@@ -1295,11 +1322,12 @@ body {
     flex-direction: column;
     align-items: center;
     color: #008000;
+    font-size: 1.2vw;
   }
 
   #SubHeader {
     font-weight: bold;
-    font-size: 1.3vw;
+    font-size: 1.2vw;
     color: #000;
   }
 
@@ -1330,78 +1358,94 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    row-gap: 10px; /* Reduced row-gap */
-    padding: 10px 10px; /* Reduced padding */
+    row-gap: 10px;
+    /* Reduced row-gap */
+    padding: 10px 10px;
+    /* Reduced padding */
     background: white;
     color: #000;
     height: auto;
-    border-radius: 15px; /* Reduced border radius */
-    width: 90%; /* Adjust width as needed */
-}
+    border-radius: 15px;
+    /* Reduced border radius */
+    width: 95%;
+    /* Adjust width as needed */
+  }
 
-#TopNewsMainSub {
+  #TopNewsMainSub {
     display: flex;
     align-self: flex-start;
     flex-direction: column;
     white-space: nowrap;
-}
+  }
 
-#TopNewsText {
+  #TopNewsText {
     display: flex;
     flex-direction: row;
     align-items: center;
-    column-gap: 10px; /* Reduced column gap */
+    column-gap: 10px;
+    /* Reduced column gap */
     font-weight: bold;
-    font-size: 1.2vw; /* Reduced font size */
-}
+    font-size: 1.2vw;
+    /* Reduced font size */
+  }
 
-.TopNewsImg {
-    height: 80px; /* Reduced height of the image */
-}
+  .TopNewsImg {
+    height: 80px;
+    /* Reduced height of the image */
+  }
 
-.TopNewsCard {
+  .TopNewsCard {
     display: flex;
     flex-direction: row;
-    column-gap: 10px; /* Reduced column gap */
-    width: 100%; 
-    max-width: 400px; /* Reduced max-width */
-    padding: 8px; /* Reduced padding */
-    background: white; 
-    border-radius: 8px; /* Reduced border radius */
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Reduced shadow */
-}
+    column-gap: 10px;
+    /* Reduced column gap */
+    width: 100%;
+    max-width: 400px;
+    /* Reduced max-width */
+    padding: 8px;
+    /* Reduced padding */
+    background: white;
+    border-radius: 8px;
+    /* Reduced border radius */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    /* Reduced shadow */
+  }
 
-.TopNewsImg {
-    max-width: 120px; /* Reduced max width of the image */
-    height: auto; 
-    border-radius: 5px; 
-}
+  .TopNewsImg {
+    max-width: 120px;
+    /* Reduced max width of the image */
+    height: auto;
+    border-radius: 5px;
+  }
 
-.TNCardText {
+  .TNCardText {
     font-weight: bold;
-    font-size: 0.9vw; /* Reduced font size */
-    overflow: hidden; 
-    text-overflow: ellipsis; 
-}
+    font-size: 0.9vw;
+    /* Reduced font size */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
-.TNCardText2 {
-    font-size: 0.8vw; /* Reduced font size */
-    display: -webkit-box; 
-    -webkit-box-orient: vertical; 
-    line-clamp: 2; 
-    overflow: hidden; 
-    text-overflow: ellipsis; 
-    max-height: 3em; 
-    line-height: 1.5em; 
-    max-width: 100%; 
-    white-space: normal; 
-}
+  .TNCardText2 {
+    font-size: 0.8vw;
+    /* Reduced font size */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 3em;
+    line-height: 1.5em;
+    max-width: 100%;
+    white-space: normal;
+  }
 
-.TNCardSub {
+  .TNCardSub {
     display: flex;
     flex-direction: column;
-    row-gap: 5px; /* Reduced row gap */
-}
+    row-gap: 5px;
+    /* Reduced row gap */
+  }
 
 
 
@@ -1415,7 +1459,7 @@ body {
     color: #000;
     height: auto;
     border-radius: 25px;
-    width: 80%;
+    width: 90%;
   }
 
 
@@ -1432,13 +1476,13 @@ body {
     align-items: center;
     column-gap: 20px;
     font-weight: bold;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
   }
 
 
   #TriviaText2 {
     font-weight: bold;
-    font-size: 1.2vw;
+    font-size: 1.1vw;
   }
 
 
@@ -1476,7 +1520,7 @@ body {
     background: #FFF;
     height: 100%;
     padding-right: 20px;
-    padding-left: 220px;
+    padding-left: 17vw;
     padding-top: 20px;
     padding-bottom: 20px;
   }
@@ -1503,6 +1547,11 @@ body {
     display: flex;
     flex-direction: row;
     column-gap: 30px;
+    overflow-x: scroll;
+  }
+
+  #NewsMainSub2::-webkit-scrollbar {
+    height: 5px;
   }
 
   #NewsMainSub3 {
@@ -1717,7 +1766,7 @@ body {
     background: #FFF;
     height: 100%;
     padding-right: 20px;
-    padding-left: 220px;
+    padding-left: 17vw;
     padding-top: 20px;
     padding-bottom: 20px;
   }
@@ -1856,7 +1905,7 @@ body {
     background: #FFF;
     height: 100%;
     padding-right: 20px;
-    padding-left: 220px;
+    padding-left: 17vw;
     padding-top: 20px;
     padding-bottom: 20px;
   }
@@ -1892,6 +1941,7 @@ body {
     padding-right: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
+    font-size: 1.4vw;
   }
 
   .Primary {
@@ -1915,6 +1965,7 @@ body {
     padding-right: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
+    font-size: 1.4vw;
   }
 
 
@@ -1998,16 +2049,16 @@ body {
   #ChatsMain {
     display: flex;
     flex-direction: row;
-    column-gap: 10px;
+    column-gap: 1vw;
     background: #FFF;
     min-height: 100vh;
     padding-right: 20px;
-    padding-left: 220px;
+    padding-left: 17vw;
     padding-top: 20px;
     padding-bottom: 20px;
   }
 
-  .ChatsListsMain{
+  .ChatsListsMain {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2018,387 +2069,414 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    column-gap: 10px; /* Reduced gap for a more compact look */
+    column-gap: 10px;
+    /* Reduced gap for a more compact look */
     color: #00000080;
     border: 2px solid #00000080;
-    padding: 8px 12px; /* Adds internal spacing */
-    border-radius: 15px; /* Optional: Rounds the corners */
-    width: 100%; /* Limits width to container */
-    max-width: 500px; /* Prevents it from stretching too wide */
-    height: auto; /* Adjusts height to fit content */
-    background-color: white; /* Optional: Adds background */
+    padding: 8px 12px;
+    /* Adds internal spacing */
+    border-radius: 15px;
+    /* Optional: Rounds the corners */
+    width: 100%;
+    /* Limits width to container */
+    max-width: 500px;
+    /* Prevents it from stretching too wide */
+    height: auto;
+    /* Adjusts height to fit content */
+    background-color: white;
+    /* Optional: Adds background */
     box-sizing: border-box;
-}
+  }
 
-.CLTextField {
-    flex: 1; /* Fills remaining space in the container */
+  .CLTextField {
+    flex: 1;
+    /* Fills remaining space in the container */
     outline: none;
     border: none;
-    font-size: 16px; /* Adjust font size if needed */
-    color: #000; /* Text color */
-}
+    font-size: 16px;
+    /* Adjust font size if needed */
+    color: #000;
+    /* Text color */
+  }
 
-.CLTextField::placeholder {
-  text-align: center;
-}
+  .CLTextField::placeholder {
+    text-align: center;
+  }
 
-.CLSearchImg {
+  .CLSearchImg {
     height: 18px;
-    width: auto; /* Keeps aspect ratio */
-}
+    width: auto;
+    /* Keeps aspect ratio */
+  }
 
-.CLPlusText {
+  .CLPlusText {
     font-size: 26px;
     font-weight: 200;
-    line-height: 1; /* Matches the font size */
-}
+    line-height: 1;
+    /* Matches the font size */
+  }
 
 
 
-/* Main container styling */
-.tab-container {
-  width: 100%;
-  max-width: 600px; /* Optional: Set max-width to control the container's width */
-  margin: 0 auto; /* Centers the tab component */
-  font-family: Arial, sans-serif;
-}
+  /* Main container styling */
+  .tab-container {
+    width: 100%;
+    max-width: 600px;
+    /* Optional: Set max-width to control the container's width */
+    margin: 0 auto;
+    /* Centers the tab component */
+    font-family: Arial, sans-serif;
+  }
 
-/* Tab header styling */
-.tab-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 0;
-}
+  /* Tab header styling */
+  .tab-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
 
-.tab-item {
-  flex: 1; /* Evenly distributes the tabs */
-  text-align: center;
-  padding: 10px 0;
-  cursor: pointer;
-  font-weight: bold;
-  color: #00000080;
-}
+  .tab-item {
+    flex: 1;
+    /* Evenly distributes the tabs */
+    text-align: center;
+    padding: 10px 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #00000080;
+  }
 
-.tab-item.active {
-  color: #000;
-  border-bottom: 2px solid #000;
-}
+  .tab-item.active {
+    color: #000;
+    border-bottom: 2px solid #000;
+  }
 
-/* Divider styling */
-.tab-divider {
-  height: 2px;
-  background-color: #ccc;
-}
+  /* Divider styling */
+  .tab-divider {
+    height: 2px;
+    background-color: #ccc;
+  }
 
-/* Content styling */
-.tab-content {
-  text-align: center;
-  padding: 20px;
-  max-height: 70vh; /* Set a height to make this area scrollable */
-    overflow-y: auto; /* Enable scrolling only in this area */
+  /* Content styling */
+  .tab-content {
+    text-align: center;
+    padding: 20px;
+    max-height: 70vh;
+    /* Set a height to make this area scrollable */
+    overflow-y: auto;
+    /* Enable scrolling only in this area */
     overflow-x: hidden;
     padding: 10px;
     box-sizing: border-box;
-}
+  }
 
-/* Main tile styling */
-.chat-tile-main {
-  display: flex;
-  align-items: center;
-  column-gap: 20px;
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-  width: 100%; /* Ensures the tile spans the container's width */
-}
+  /* Main tile styling */
+  .chat-tile-main {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    /* Ensures the tile spans the container's width */
+  }
 
-.chat-tile-main:hover {
-  cursor: pointer;
-  background: #F3BC1F80;
-}
+  .chat-tile-main:hover {
+    cursor: pointer;
+    background: #F3BC1F80;
+  }
 
-/* Profile image container with relative positioning */
-.profile-img-container {
-  position: relative;
-  display: inline-block;
-}
+  /* Profile image container with relative positioning */
+  .profile-img-container {
+    position: relative;
+    display: inline-block;
+  }
 
-/* Profile image styling */
-.profile-img {
-  width: 12%;
-  min-width: 40px;
-  max-width: 60px;
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-right: 10px;
-}
+  /* Profile image styling */
+  .profile-img {
+    width: 12%;
+    min-width: 40px;
+    max-width: 60px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+  }
 
-/* Green dot for new message indicator */
-.new-message-dot {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 12px;
-  height: 12px;
-  background-color: #28a745; /* Green color */
-  border: 2px solid white; /* Adds border to make it stand out */
-  border-radius: 50%;
-}
-
-
-/* Chat information styling */
-.chat-info {
-  flex: 1; /* Expands to fill available space */
-  display: flex;
-  flex-direction: column;
-  row-gap: 10px;
-  overflow: hidden;
-  padding-right: 10px;
-}
-
-/* Header for name and timestamp */
-.chat-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Name styling */
-.chat-name {
-  font-weight: bold;
-  font-size: 1rem;
-  white-space: nowrap; /* Prevents line breaks */
-  overflow: hidden;
-  text-overflow: ellipsis; /* Adds ellipses if name exceeds space */
-  max-width: 10vw;
-}
-
-/* Timestamp styling */
-.chat-timestamp {
-  font-size: 0.85rem;
-  color: #888;
-  white-space: nowrap;
-}
-
-/* Content text with ellipses */
-.chat-content {
-  display: flex;
-  align-self: flex-start;
-  font-size: 0.9rem;
-  color: #666;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  max-width: 12vw;
-}
+  /* Green dot for new message indicator */
+  .new-message-dot {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    background-color: #28a745;
+    /* Green color */
+    border: 2px solid white;
+    /* Adds border to make it stand out */
+    border-radius: 50%;
+  }
 
 
+  /* Chat information styling */
+  .chat-info {
+    flex: 1;
+    /* Expands to fill available space */
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    overflow: hidden;
+    padding-right: 10px;
+  }
+
+  /* Header for name and timestamp */
+  .chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Name styling */
+  .chat-name {
+    font-weight: bold;
+    font-size: 1rem;
+    white-space: nowrap;
+    /* Prevents line breaks */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* Adds ellipses if name exceeds space */
+    max-width: 10vw;
+  }
+
+  /* Timestamp styling */
+  .chat-timestamp {
+    font-size: 0.85rem;
+    color: #888;
+    white-space: nowrap;
+  }
+
+  /* Content text with ellipses */
+  .chat-content {
+    display: flex;
+    align-self: flex-start;
+    font-size: 0.9rem;
+    color: #666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 12vw;
+  }
 
 
-/* Main container to make the ChatView responsive */
-.ChatViewContainer {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-height: 80vh;
-  border-radius: 10px;
-  overflow-y: scroll;
-}
-
-/* Header section with profile info */
-.ChatViewHeader {
-  display: flex;
-  align-items: center;
-  padding: 10px 15px;
-}
-
-.ProfileImg {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  margin-right: 15px;
-}
-
-.UserInfo {
-  display: flex;
-  flex-direction: column;
-}
-
-.UserName {
-  font-weight: bold;
-  font-size: 16px;
-}
-
-.UserStatus {
-  font-size: 14px;
-}
-
-/* Chat messages area with scrolling */
-.ChatMessages {
-  flex-grow: 1;
-  padding: 15px;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-}
-
-.EmptyChatMessage {
-  text-align: center;
-  color: #999;
-  margin-top: 20px;
-  font-style: italic;
-}
-
-/* Message box at the bottom */
-.MessageBoxContainer {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  background: #fff;
-  border-top: 1px solid #ccc;
-  position: sticky;
-  bottom: 0;
-}
-
-.MessageBoxField {
-  flex-grow: 1;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  margin-right: 10px;
-  outline: none;
-  font-size: 16px;
-}
-
-.MessageBoxEmoji,
-.MessageBoxPin{
-  width: 22px;
-  height: 22px;
-  margin: 0 5px;
-  cursor: pointer;
-}
 
 
-.MessageBoxSendImg {
-  height: 25px;
-  margin: 0 5px;
-  cursor: pointer;
-}
+  /* Main container to make the ChatView responsive */
+  .ChatViewContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-height: 80vh;
+    border-radius: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  /* Header section with profile info */
+  .ChatViewHeader {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+  }
+
+  .ProfileImg {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+
+  .UserInfo {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .UserName {
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .UserStatus {
+    font-size: 14px;
+  }
+
+  /* Chat messages area with scrolling */
+  .ChatMessages {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .EmptyChatMessage {
+    text-align: center;
+    color: #999;
+    margin-top: 20px;
+    font-style: italic;
+  }
+
+  /* Message box at the bottom */
+  .MessageBoxContainer {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: #fff;
+    border-top: 1px solid #ccc;
+    position: sticky;
+    bottom: 0;
+  }
+
+  .MessageBoxField {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin-right: 10px;
+    outline: none;
+    font-size: 1.5vw;
+  }
+
+  .MessageBoxEmoji,
+  .MessageBoxPin {
+    width: 22px;
+    height: 22px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
 
 
-.ChatBubble {
-  max-width: 60%;
-  padding: 10px 15px;
-  margin: 5px;
-  border-radius: 15px;
-  font-size: 14px;
-  word-wrap: break-word;
-  display: inline-block;
-}
-
-.ChatBubble.left {
-  background-color: #f0f0f0; /* Receiver bubble color */
-  text-align: left;
-  border-radius: 15px 15px 15px 5px;
-  align-self: flex-start;
-}
-
-.ChatBubble.right {
-  background: #F3BC1F80;
-  text-align: right;
-  border-radius: 15px 15px 5px 15px;
-  align-self: flex-end;
-}
-
-.CPProfileImg {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-}
+  .MessageBoxSendImg {
+    height: 25px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
 
 
-.ChatProfileContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 50%;
-  max-height: 80vh;
-  border-radius: 10px;
-  overflow-y: scroll;
-}
+  .ChatBubble {
+    max-width: 60%;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 15px;
+    font-size: 14px;
+    word-wrap: break-word;
+    display: inline-block;
+  }
 
-.CPUserProfile{
-  display: flex;
-  flex-direction: column;
-  row-gap: 10px;
-  align-items: center;
-  width: 100%;
-}
+  .ChatBubble.left {
+    background-color: #f0f0f0;
+    /* Receiver bubble color */
+    text-align: left;
+    border-radius: 15px 15px 15px 5px;
+    align-self: flex-start;
+  }
 
-.Bio{
-  font-weight: bold;
-  color: #00000080;
-}
+  .ChatBubble.right {
+    background: #F3BC1F80;
+    text-align: right;
+    border-radius: 15px 15px 5px 15px;
+    align-self: flex-end;
+  }
 
-.tab-divider2 {
-  height: 2px;
-  width: 100%;
-  background-color: #ccc;
-}
-
-
-.CPContentView{
-  display: flex;
-  flex-direction: column;
-  row-gap: 30px;
-  padding-top: 20px;
-  width: 100%;
-}
-
-.CPImg{
-  width: 40px;
-  height: 40px;
-}
-
-.CPContentHeaderText{
-  font-size: small;
-  color: #00000080;
-}
-
-.ChatProfileContent{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.CPContentSub{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  column-gap: 5px;
-}
-
-.CPContent{
-  display: flex;
-  flex-direction: column;
-  row-gap: 5px;
-}
+  .CPProfileImg {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+  }
 
 
-.CPContentHeader{
-  font-weight: bold;
-  font-size: 16px;
-}
+  .ChatProfileContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    max-height: 80vh;
+    border-radius: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
 
-.CPContentSubHeader{ 
-  font-size: 10px;
-}
+  .CPUserProfile {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: center;
+    width: 100%;
+  }
 
-.ViewMoreImg{
-  cursor: pointer;
-  height: 12px;
-}
+  .Bio {
+    font-weight: bold;
+    color: #00000080;
+  }
+
+  .tab-divider2 {
+    height: 2px;
+    width: 100%;
+    background-color: #ccc;
+  }
+
+
+  .CPContentView {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    padding-top: 20px;
+    width: 100%;
+  }
+
+  .CPImg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .CPContentHeaderText {
+    font-size: small;
+    color: #00000080;
+  }
+
+  .ChatProfileContent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .CPContentSub {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 5px;
+  }
+
+  .CPContent {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+
+
+  .CPContentHeader {
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .CPContentSubHeader {
+    font-size: 10px;
+  }
+
+  .ViewMoreImg {
+    cursor: pointer;
+    height: 12px;
+  }
 
 }
 
@@ -3389,7 +3467,7 @@ body {
     padding-top: 20px;
     padding-bottom: 20px;
     padding-right: 20px;
-    padding-left: 220px;
+    padding-left: 17vw;
   }
 
   #DashboardTabHeader {
@@ -3439,6 +3517,1424 @@ body {
     cursor: pointer;
     height: 30px;
     border-radius: 50px;
+  }
+
+
+
+  #DashboardMain {
+    display: flex;
+    flex-direction: row;
+    column-gap: 4vw;
+    background: #DED4D4;
+    height: 100%;
+    padding-right: 20px;
+    padding-left: 17vw;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  #DashboardMainSub {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+  }
+
+
+  #PlayerOfTheWeek {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+    padding: 20px 10px;
+    /* Simplified padding */
+    background: white;
+    color: #000;
+    height: auto;
+    /* Change height to auto */
+    border-radius: 25px;
+    width: 90%;
+    /* Ensures it doesn't stretch beyond content */
+  }
+
+
+  #PlayerProfileImg {
+    width: 30%;
+  }
+
+  #StarImg {
+    width: 15%;
+  }
+
+
+  #POWText {
+    font-weight: bold;
+    font-size: 1.4vw;
+  }
+
+  #POWText2 {
+    color: #00000066;
+    font-size: 1.4vw;
+  }
+
+
+  #Users {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    padding: 20px 10px;
+    /* Simplified padding */
+    background: white;
+    color: #000;
+    height: auto;
+    /* Change height to auto */
+    border-radius: 25px;
+    width: max-content;
+    /* Ensures it doesn't stretch beyond content */
+  }
+
+  #UsersMain {
+    display: flex;
+    flex-direction: row;
+    column-gap: 5vw;
+  }
+
+
+  #UsersMainSub1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #UsersMainSub {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+  }
+
+
+
+  #UsersImg {
+    width: 20%;
+  }
+
+  #InfoImg {
+    height: 15px;
+    width: 16%;
+  }
+
+  #UsersText {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 20px;
+    font-weight: bold;
+    font-size: 1.4vw;
+  }
+
+  #UsersText2 {
+    font-weight: bold;
+    font-size: 1.8vw;
+  }
+
+
+  #UsersText3 {
+    color: #00000066;
+    font-size: 1.4vw;
+  }
+
+
+  #UsersText4 {
+    font-weight: bold;
+    font-size: 1.8vw;
+  }
+
+
+  #UsersText5 {
+    color: #00000066;
+    font-size: 1.4vw;
+  }
+
+
+  #Balance {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+    padding: 20px 10px;
+    background: white;
+    color: #000;
+    height: auto;
+    border-radius: 25px;
+    width: 90%;
+  }
+
+  #BalanceMainSub1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* Center items vertically */
+    width: 100%;
+    /* Allow it to take the full width */
+  }
+
+  #BalanceImg {
+    width: 15%;
+    /* Keep the image width */
+    align-self: flex-end;
+    /* Aligns the image to the end of the flex container */
+  }
+
+  #BalanceText {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 20px;
+    font-weight: bold;
+    font-size: 1.4vw;
+    /* Adjust font size as needed */
+  }
+
+  #BalanceText2 {
+    font-weight: bold;
+    font-size: 1.8vw;
+    /* Adjust font size as needed */
+  }
+
+  #BalanceText3 {
+    color: #00000066;
+    font-size: 1.4vw;
+    /* Adjust font size as needed */
+  }
+
+  #BalanceMainSub {
+    display: flex;
+    align-self: flex-start;
+    flex-direction: column;
+  }
+
+
+
+  #TopLeaders {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+    padding: 20px 10px;
+    /* Simplified padding */
+    background: white;
+    color: #000;
+    height: auto;
+    /* Change height to auto */
+    border-radius: 25px;
+    width: 90%;
+    /* Ensures it doesn't stretch beyond content */
+  }
+
+  #TLMainSub {
+    display: flex;
+    align-self: flex-start;
+    flex-direction: column;
+    white-space: nowrap;
+  }
+
+
+  #TLText {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 20px;
+    font-weight: bold;
+    font-size: 1.4vw;
+  }
+
+  #TLSubAlign {
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+  }
+
+
+  #TLSub {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5vw;
+  }
+
+  #TLSub2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.4vw;
+  }
+
+  #TLSub3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #008000;
+    font-size: 1.4vw;
+  }
+
+  #SubHeader {
+    font-weight: bold;
+    font-size: 1.4vw;
+    color: #000;
+  }
+
+
+  #Welcome {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding-right: 20px;
+    padding-left: 17vw;
+  }
+
+  #DashboardWelcomeText {
+    font-weight: bold;
+    font-size: 1.7vw;
+    color: #F3BC1F;
+  }
+
+
+  #Greetings {
+    font-weight: bold;
+    font-size: 1.7vw;
+    color: #000;
+  }
+
+  #TopNews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+    /* Reduced row-gap */
+    padding: 10px 10px;
+    /* Reduced padding */
+    background: white;
+    color: #000;
+    height: auto;
+    border-radius: 15px;
+    /* Reduced border radius */
+    width: 95%;
+    /* Adjust width as needed */
+  }
+
+  #TopNewsMainSub {
+    display: flex;
+    align-self: flex-start;
+    flex-direction: column;
+    white-space: nowrap;
+  }
+
+  #TopNewsText {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 10px;
+    /* Reduced column gap */
+    font-weight: bold;
+    font-size: 1.4vw;
+    /* Reduced font size */
+  }
+
+  .TopNewsImg {
+    height: 80px;
+    /* Reduced height of the image */
+  }
+
+  .TopNewsCard {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    /* Reduced column gap */
+    width: 100%;
+    max-width: 400px;
+    /* Reduced max-width */
+    padding: 8px;
+    /* Reduced padding */
+    background: white;
+    border-radius: 8px;
+    /* Reduced border radius */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    /* Reduced shadow */
+  }
+
+  .TopNewsImg {
+    max-width: 120px;
+    /* Reduced max width of the image */
+    height: auto;
+    border-radius: 5px;
+  }
+
+  .TNCardText {
+    font-weight: bold;
+    font-size: 1.2vw;
+    /* Reduced font size */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .TNCardText2 {
+    font-size: 1vw;
+    /* Reduced font size */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 3em;
+    line-height: 1.5em;
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  .TNCardSub {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    /* Reduced row gap */
+  }
+
+
+
+  #Trivia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    padding: 20px 10px;
+    background: white;
+    color: #000;
+    height: auto;
+    border-radius: 25px;
+    width: 90%;
+  }
+
+
+  #TriviaMainSub {
+    display: flex;
+    align-self: flex-start;
+    flex-direction: column;
+  }
+
+
+  #TriviaText {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 20px;
+    font-weight: bold;
+    font-size: 1.4vw;
+  }
+
+
+  #TriviaText2 {
+    font-weight: bold;
+    font-size: 1.3vw;
+  }
+
+
+  .BottomInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border: 2px solid black;
+    border-radius: 50px;
+    font-size: 1vw;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  .greencontent {
+    color: #008000;
+  }
+
+
+  .ArrowImg {
+    width: 8%;
+  }
+
+
+  #NewsMain {
+    display: flex;
+    flex-direction: column;
+    row-gap: 70px;
+    background: #FFF;
+    height: 100%;
+    padding-right: 20px;
+    padding-left: 17vw;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .NewsCard {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+
+  .NewsCardText {
+    font-weight: bold;
+    font-size: 1.2vw;
+  }
+
+  #NewsMainSub {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  #NewsMainSub2 {
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+    overflow-x: scroll;
+  }
+
+  #NewsMainSub2::-webkit-scrollbar {
+    height: 5px;
+  }
+
+  #NewsMainSub3 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 30px;
+  }
+
+  #NewsMainSubText {
+    font-weight: bold;
+    font-size: 1.5vw;
+  }
+
+  .NewsCardSub {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+  }
+
+
+  .NewsCardSub2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+
+  #NewsSubAlign {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #NewsSubAlign2 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+
+  .NewsImg {
+    width: 200px;
+    border-radius: 5px;
+  }
+
+  .NewsTag {
+    color: #FFF;
+    text-align: center;
+    padding: 5px;
+    background: #FF0000C4;
+    border-radius: 8px;
+    white-space: nowrap;
+    font-size: 1.2vw;
+    font-weight: bold;
+  }
+
+  .Time {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 5px;
+    font-weight: bold;
+    font-size: 1.2vw;
+    white-space: nowrap;
+  }
+
+  .ClockImg {
+    width: 20%;
+  }
+
+
+  #TopLeadersNews {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    color: #000;
+    border-radius: 25px;
+  }
+
+
+  #TLMainSubNews {
+    display: flex;
+    align-self: flex-start;
+    flex-direction: column;
+    white-space: nowrap;
+  }
+
+
+  #TLText {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 20px;
+    font-weight: bold;
+    font-size: 1.7vw;
+  }
+
+  #TLSubAlignNews {
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+  }
+
+
+  #TLSubNews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 50px;
+  }
+
+  #TLSub2News {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 50px;
+  }
+
+  #TLSub3News {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #008000;
+    row-gap: 50px;
+  }
+
+
+  #FireImg {
+    height: 18px;
+    width: 19px;
+  }
+
+  #FireImg2 {
+    width: 19px;
+  }
+
+
+  .HeadlineImg {
+    width: 40%;
+    border-radius: 5px;
+  }
+
+  .HeadlineCard {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+  }
+
+  .HeadlineCardText {
+    font-weight: bold;
+    font-size: 1.4vw;
+  }
+
+  .HeadlineTag {
+    color: #FFF;
+    text-align: center;
+    padding: 5px;
+    background: #FF0000C4;
+    border-radius: 8px;
+    white-space: nowrap;
+    font-size: 1.2vw;
+    font-weight: bold;
+  }
+
+  .HeadlineCardSub {
+    width: 24%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 20px;
+  }
+
+  .HeadlineCardSub2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .HeadlineCardSub3 {
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+  }
+
+  .LikeImg {
+    height: auto;
+    width: 60%;
+  }
+
+  .CommentImg {
+    height: auto;
+    width: 60%;
+  }
+
+  .IconsAlign {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 10px;
+  }
+
+
+
+
+
+  #ProductsMain {
+    display: flex;
+    flex-direction: column;
+    row-gap: 70px;
+    background: #FFF;
+    height: 100%;
+    padding-right: 20px;
+    padding-left: 17vw;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .ProductsCard {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+
+  .ProductsCardContent {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 1.4vw;
+    white-space: nowrap;
+  }
+
+  .ProductsCardName {
+    display: flex;
+    flex-direction: row;
+    column-gap: 40px;
+    align-items: center;
+    font-weight: lighter;
+    font-size: 1.2vw;
+    white-space: nowrap;
+  }
+
+  .ProductsCardRating {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .ProductsCardTag {
+    font-weight: bold;
+    font-size: 1.7vw;
+  }
+
+  .ProductsCardImg {
+    width: 200px;
+    border-radius: 5px;
+  }
+
+  .StarImg {
+    width: 15px;
+  }
+
+  .ProductsMainSub {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  #AllProducts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 50px;
+    column-gap: 20px;
+  }
+
+  .ProductsMainSub2 {
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 20px;
+  }
+
+  .ProductsMainSub2::-webkit-scrollbar {
+    height: 5px;
+  }
+
+  #ProductsMainSub3 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 30px;
+  }
+
+  #ProductsMainSubText {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    font-weight: bold;
+    font-size: 1.7vw;
+  }
+
+  .ProductsCardSub {
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+
+  .ProductsCardSub2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+
+  #ProductsSubAlign {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #ProductsSubAlign2 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  .ProductsCardViewItem {
+    cursor: pointer;
+    color: #FFF;
+    text-align: center;
+    padding: 5px;
+    background: #FF0000C4;
+    border-radius: 8px;
+    white-space: nowrap;
+    font-size: 1.2vw;
+    font-weight: bold;
+  }
+
+
+  #SettingsMain {
+    display: flex;
+    flex-direction: column;
+    row-gap: 120px;
+    background: #FFF;
+    height: 100%;
+    padding-right: 20px;
+    padding-left: 17vw;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+
+  .SettingsHeader {
+    font-weight: bold;
+    font-size: 1.7vw;
+  }
+
+
+  .SettingsBodyText {
+    font-weight: bold;
+    font-size: 1.4vw;
+  }
+
+
+  .SettingsAshText {
+    font-weight: bold;
+    font-size: 1.4vw;
+    color: #00000066;
+  }
+
+  .SettingsCurvedColoredItem {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #F4B40080;
+    border-radius: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1.4vw;
+  }
+
+  .Primary {
+    color: #A73829;
+  }
+
+  .ReduceSize {
+    width: 50px;
+  }
+
+  .SettingsCurvedTransparentItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #000;
+    border-radius: 15px;
+    border-radius: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1.4vw;
+  }
+
+
+  #PlayerProfileImg2 {
+    width: 100px;
+  }
+
+  #EditImg {
+    height: 18px;
+  }
+
+  .VertDots {
+    cursor: pointer;
+    height: 18px;
+  }
+
+  .MoreDown {
+    cursor: pointer;
+    height: 18px;
+  }
+
+  .SettingsSpacer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+  .SettingsSpacer2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 20px;
+  }
+
+  .SettingsColumnizer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  #ProfileSettings {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+
+  #EmailSettings {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+
+
+  #PhoneNumberSettings {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+
+
+  #AddressSettings {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+
+  #AccountOptionsSettings {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+
+
+  #ChatsMain {
+    display: flex;
+    flex-direction: row;
+    column-gap:1vw;
+    background: #FFF;
+    min-height: 100vh;
+    padding-right: 20px;
+    padding-left: 17vw;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .ChatsListsMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .CLSearchInput {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    /* Reduced gap for a more compact look */
+    color: #00000080;
+    border: 2px solid #00000080;
+    padding: 8px 12px;
+    /* Adds internal spacing */
+    border-radius: 15px;
+    /* Optional: Rounds the corners */
+    width: 100%;
+    /* Limits width to container */
+    max-width: 500px;
+    /* Prevents it from stretching too wide */
+    height: auto;
+    /* Adjusts height to fit content */
+    background-color: white;
+    /* Optional: Adds background */
+    box-sizing: border-box;
+  }
+
+  .CLTextField {
+    flex: 1;
+    /* Fills remaining space in the container */
+    outline: none;
+    border: none;
+    font-size: 16px;
+    /* Adjust font size if needed */
+    color: #000;
+    /* Text color */
+  }
+
+  .CLTextField::placeholder {
+    text-align: center;
+  }
+
+  .CLSearchImg {
+    height: 18px;
+    width: auto;
+    /* Keeps aspect ratio */
+  }
+
+  .CLPlusText {
+    font-size: 26px;
+    font-weight: 200;
+    line-height: 1;
+    /* Matches the font size */
+  }
+
+
+
+  /* Main container styling */
+  .tab-container {
+    width: 100%;
+    max-width: 600px;
+    /* Optional: Set max-width to control the container's width */
+    margin: 0 auto;
+    /* Centers the tab component */
+    font-family: Arial, sans-serif;
+  }
+
+  /* Tab header styling */
+  .tab-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+
+  .tab-item {
+    flex: 1;
+    /* Evenly distributes the tabs */
+    text-align: center;
+    padding: 10px 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #00000080;
+  }
+
+  .tab-item.active {
+    color: #000;
+    border-bottom: 2px solid #000;
+  }
+
+  /* Divider styling */
+  .tab-divider {
+    height: 2px;
+    background-color: #ccc;
+  }
+
+  /* Content styling */
+  .tab-content {
+    text-align: center;
+    padding: 20px;
+    max-height: 70vh;
+    /* Set a height to make this area scrollable */
+    overflow-y: auto;
+    /* Enable scrolling only in this area */
+    overflow-x: hidden;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  /* Main tile styling */
+  .chat-tile-main {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    /* Ensures the tile spans the container's width */
+  }
+
+  .chat-tile-main:hover {
+    cursor: pointer;
+    background: #F3BC1F80;
+  }
+
+  /* Profile image container with relative positioning */
+  .profile-img-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  /* Profile image styling */
+  .profile-img {
+    width: 12%;
+    min-width: 40px;
+    max-width: 60px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+
+  /* Green dot for new message indicator */
+  .new-message-dot {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    background-color: #28a745;
+    /* Green color */
+    border: 2px solid white;
+    /* Adds border to make it stand out */
+    border-radius: 50%;
+  }
+
+
+  /* Chat information styling */
+  .chat-info {
+    flex: 1;
+    /* Expands to fill available space */
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    overflow: hidden;
+    padding-right: 10px;
+  }
+
+  /* Header for name and timestamp */
+  .chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Name styling */
+  .chat-name {
+    font-weight: bold;
+    font-size: 1rem;
+    white-space: nowrap;
+    /* Prevents line breaks */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* Adds ellipses if name exceeds space */
+    max-width: 10vw;
+  }
+
+  /* Timestamp styling */
+  .chat-timestamp {
+    font-size: 0.85rem;
+    color: #888;
+    white-space: nowrap;
+  }
+
+  /* Content text with ellipses */
+  .chat-content {
+    display: flex;
+    align-self: flex-start;
+    font-size: 0.9rem;
+    color: #666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 12vw;
+  }
+
+
+
+
+  /* Main container to make the ChatView responsive */
+  .ChatViewContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-height: 80vh;
+    border-radius: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  /* Header section with profile info */
+  .ChatViewHeader {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+  }
+
+  .ProfileImg {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+
+  .UserInfo {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .UserName {
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .UserStatus {
+    font-size: 14px;
+  }
+
+  /* Chat messages area with scrolling */
+  .ChatMessages {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .EmptyChatMessage {
+    text-align: center;
+    color: #999;
+    margin-top: 20px;
+    font-style: italic;
+  }
+
+  /* Message box at the bottom */
+  .MessageBoxContainer {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: #fff;
+    border-top: 1px solid #ccc;
+    position: sticky;
+    bottom: 0;
+  }
+
+  .MessageBoxField {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin-right: 1vw;
+    outline: none;
+    font-size: 1.3vw;
+  }
+
+  .MessageBoxEmoji,
+  .MessageBoxPin {
+    width: 22px;
+    height: 22px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+
+
+  .MessageBoxSendImg {
+    height: 25px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+
+
+  .ChatBubble {
+    max-width: 60%;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 15px;
+    font-size: 14px;
+    word-wrap: break-word;
+    display: inline-block;
+  }
+
+  .ChatBubble.left {
+    background-color: #f0f0f0;
+    /* Receiver bubble color */
+    text-align: left;
+    border-radius: 15px 15px 15px 5px;
+    align-self: flex-start;
+  }
+
+  .ChatBubble.right {
+    background: #F3BC1F80;
+    text-align: right;
+    border-radius: 15px 15px 5px 15px;
+    align-self: flex-end;
+  }
+
+  .CPProfileImg {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+  }
+
+
+  .ChatProfileContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    max-height: 80vh;
+    border-radius: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  .CPUserProfile {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: center;
+    width: 100%;
+  }
+
+  .Bio {
+    font-weight: bold;
+    color: #00000080;
+  }
+
+  .tab-divider2 {
+    height: 2px;
+    width: 100%;
+    background-color: #ccc;
+  }
+
+
+  .CPContentView {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    padding-top: 20px;
+    width: 100%;
+  }
+
+  .CPImg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .CPContentHeaderText {
+    font-size: small;
+    color: #00000080;
+  }
+
+  .ChatProfileContent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .CPContentSub {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 5px;
+  }
+
+  .CPContent {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+
+
+  .CPContentHeader {
+    font-weight: bold;
+    font-size: 1.4vw;
+  }
+
+  .CPContentSubHeader {
+    font-size: 1vw;
+  }
+
+  .ViewMoreImg {
+    cursor: pointer;
+    height: 12px;
   }
 
 }
@@ -3584,6 +5080,255 @@ body {
   #ProfileRole {
     font-size: 1.5vw;
   }
+
+
+  #DashboardMain {
+    padding-left: 20px;
+  }
+
+
+  #NewsMain {
+    padding-left: 20px;
+  }
+
+  #ProductsMain {
+    padding-left: 20px;
+  }
+
+
+  #SettingsMain {
+    padding-left: 20px;
+  }
+
+
+  .SettingsCurvedColoredItem {
+    font-size: 2.4vw;
+  }
+
+  .SettingsCurvedTransparentItem {
+    font-size: 2.4vw;
+  }
+
+
+  #ChatsMain {
+    padding-left: 20px;
+  }
+
+}
+
+
+@media only screen and (max-width:720px) {
+  #DashboardMain {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 40px;
+  }
+
+  #DashboardMainSub {
+    align-items: center;
+    width: 100%;
+  }
+
+  #PlayerOfTheWeek {
+    width: 100%;
+  }
+
+
+  #POWText {
+    font-weight: bold;
+    font-size: 3.2vw;
+  }
+
+  #POWText2 {
+    color: #00000066;
+    font-size: 3.2vw;
+  }
+
+  #Users {
+    width: 100%;
+  }
+
+  #UsersText {
+    font-size: 3.2vw;
+  }
+
+  #UsersText2 {
+    font-size: 3.6vw;
+  }
+
+
+  #UsersText3 {
+    font-size: 3.2vw;
+  }
+
+
+  #UsersText4 {
+    font-size: 3.6vw;
+  }
+
+
+  #UsersText5 {
+    font-size: 3.2vw;
+  }
+
+
+  #Balance {
+    width: 100%;
+  }
+
+  #BalanceText {
+    font-size: 3.2vw;
+  }
+
+  #BalanceText2 {
+    font-size: 3.6vw;
+  }
+
+  #BalanceText3 {
+    font-size: 3.2vw;
+  }
+
+  #TopNews{
+    width: 100%;
+  }
+
+  #TopNewsText {
+    font-size: 3.2vw;
+  }
+
+
+  .TNCardText {
+    font-size: 2.9vw;
+  }
+
+  .TNCardText2 {
+    font-size: 2.8vw;
+  }
+
+  #TLSub {
+    font-size: 3.3vw;
+  }
+
+  #TLSub2 {
+    font-size: 3.2vw;
+  }
+
+  #TLSub3 {
+    font-size: 1.2vw;
+  }
+
+  #SubHeader {
+    font-size: 3.2vw;
+  }
+
+
+  #TopLeaders {
+    width: 100%;
+  }
+
+  #TLText {
+    font-size: 3.2vw;
+  }
+
+
+  #TLSub {
+    font-size: 3.3vw;
+  }
+
+  #TLSub2 {
+    font-size: 3.2vw;
+  }
+
+  #TLSub3 {
+    font-size: 3.2vw;
+  }
+
+  #SubHeader {
+    font-size: 3.2vw;
+  }
+
+
+  #DashboardWelcomeText {
+    font-size: 3.5vw;
+  }
+
+
+  #Greetings {
+    font-size: 3.5vw;
+  }
+
+
+  #Trivia {
+    width: 100%;
+  }
+
+
+  #TriviaText {
+    font-size: 3.2vw;
+  }
+
+
+  #TriviaText2 {
+    font-size: 3.1vw;
+  }
+
+
+  .BottomInfo {
+    font-size: 2.8vw;
+  }
+
+  #NewsSubAlign {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  #ChatsMain {
+    display: flex;
+    flex-direction:inherit;
+    justify-content: center;
+  }
+
+  .ChatsListsMain {
+    width: 100%;
+  }
+
+  .ChatViewContainer {
+    display: none;
+  }
+
+
+  .ChatProfileContainer {
+    display: none;
+    width: 100%;
+  }
+
+
+  .CPContentHeader {
+    font-size: 16px;
+  }
+
+  .CPContentSubHeader {
+    font-size: 10px;
+  }
+
+
+  /* Name styling */
+  .chat-name {
+    max-width: 100%;
+  }
+
+  /* Content text with ellipses */
+  .chat-content {
+    max-width: 100%;
+  }
+
+
+  .MessageBoxField {
+    font-size: 2.5vw;
+  }
+
+  
 }
 
 
@@ -3740,20 +5485,73 @@ body {
     font-size: 3.2vw;
   }
 
-  #FooterAlign {
-    display: flex;
-    flex-direction: column;
-    row-gap: 50px;
-    justify-content: space-between;
+
+  .NewsCardText {
+    font-size: 2.2vw;
+  }
+
+  #NewsMainSubText {
+    font-size: 2.5vw;
+  }
+
+  .NewsTag {
+    height: max-content;
+    font-size: 2vw;
+  }
+
+  .Time {
+    font-size: 2vw;
   }
 
 
-  #SubscribeInputBG {
-    flex-direction: column;
+  .HeadlineCardSub2 {
+    column-gap: 20px;
   }
 
-  #SubscribeInput {
-    padding: 10px;
+
+  .HeadlineCardText {
+    font-weight: bold;
+    font-size: 2.2vw;
+  }
+
+
+
+  .ProductsCardContent {
+    font-size: 2.2vw;
+  }
+
+  .ProductsCardName {
+    font-size: 2vw;
+  }
+
+  .ProductsCardTag {
+    font-size: 2.5vw;
+  }
+
+
+  #ProductsMainSubText {
+    font-size: 2.5vw;
+  }
+
+
+  .ProductsCardViewItem {
+    font-size: 2vw;
+  }
+
+
+
+  .SettingsHeader {
+    font-size: 2.5vw;
+  }
+
+
+  .SettingsBodyText {
+    font-size: 2.2vw;
+  }
+
+
+  .SettingsAshText {
+    font-size: 2.2vw;
   }
 }
 

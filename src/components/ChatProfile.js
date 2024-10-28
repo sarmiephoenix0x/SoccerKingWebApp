@@ -4,11 +4,19 @@ import Documents from '../images/Documents.png'
 import Photos from '../images/Photos.png'
 import Videos from '../images/Videos.png'
 import Links from '../images/Links.png'
+import BackButImg from '../images/BackButton.png'
 
 export default function ChatProfile(props) {
+    const GoToBack = () => {
+        if (window.innerWidth <= 720) {
+            document.querySelector('.ChatProfileContainer').style.display = "none";
+            document.querySelector('.ChatViewContainer').style.display = "flex";
+        }
+    }
     return (
         <>
             <div className="ChatProfileContainer">
+                <img className="BackBut" src={BackButImg} alt="Back" onClick={GoToBack} />
                 <div className='CPUserProfile'>
                     <img className="CPProfileImg" src={ProfileImg} alt="Profile" />
                     <div className="UserName">{props.name}</div>
