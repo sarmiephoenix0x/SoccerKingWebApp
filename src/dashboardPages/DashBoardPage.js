@@ -6,7 +6,7 @@ import TopNewsCard from '../components/TopNewsCard'
 import InfoImg from '../images/ep_info-filled.png'
 import BalanceImg from '../images/BalanceImg.png'
 import BottomInfo from '../components/BottomInfo'
-import { useEffect, useState } from 'react';
+import { useEffect} from 'react';
 
 export default function DashBoardPage() {
     useEffect(() => {
