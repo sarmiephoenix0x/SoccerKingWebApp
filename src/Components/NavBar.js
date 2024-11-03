@@ -68,7 +68,7 @@ export default function NavBar({ onTabChange }) {
         onTabChange(); // Call the loader on tab change
         navigate("/DashBoard/DepositHistory");
         document.getElementById("DashBoardText2").innerHTML = "Deposit History";
-        document.getElementById("CurrentNavText2").innerHTML = "Home - Deposit History";
+        document.getElementById("CurrentNavText2").innerHTML = "Home - Deposit - Deposit History";
     };
 
     const GoToPackage = () => {
@@ -80,6 +80,35 @@ export default function NavBar({ onTabChange }) {
         document.getElementById("CurrentNavText2").innerHTML = "Home - Packages";
     };
 
+    const GoToCrypto = () => {
+        document.body.style.overflowY = 'auto';
+        toggleMenu();
+        onTabChange(); // Call the loader on tab change
+        navigate("/DashBoard/Crypto");
+        document.getElementById("DashBoardText2").innerHTML = "Crypto";
+        document.getElementById("CurrentNavText2").innerHTML = "Home - Signal - Crypto";
+    };
+
+
+    const GoToForex = () => {
+        document.body.style.overflowY = 'auto';
+        toggleMenu();
+        onTabChange(); // Call the loader on tab change
+        navigate("/DashBoard/Forex");
+        document.getElementById("DashBoardText2").innerHTML = "Forex";
+        document.getElementById("CurrentNavText2").innerHTML = "Home - Signal - Forex";
+    };
+
+
+    const GoToStocks = () => {
+        document.body.style.overflowY = 'auto';
+        toggleMenu();
+        onTabChange(); // Call the loader on tab change
+        navigate("/DashBoard/Stocks");
+        document.getElementById("DashBoardText2").innerHTML = "Stocks";
+        document.getElementById("CurrentNavText2").innerHTML = "Home - Signal - Stocks";
+    };
+
     const GoToReferral = () => {
         document.body.style.overflowY = 'auto';
         toggleMenu();
@@ -87,6 +116,16 @@ export default function NavBar({ onTabChange }) {
         navigate("/DashBoard/Referral");
         document.getElementById("DashBoardText2").innerHTML = "Referrals";
         document.getElementById("CurrentNavText2").innerHTML = "Home - Referrals";
+    };
+
+
+    const GoToCourse = () => {
+        document.body.style.overflowY = 'auto';
+        toggleMenu();
+        onTabChange(); // Call the loader on tab change
+        navigate("/DashBoard/Course");
+        document.getElementById("DashBoardText2").innerHTML = "Course";
+        document.getElementById("CurrentNavText2").innerHTML = "Home - Course";
     };
 
     const GoToProfileSettings = () => {
@@ -144,11 +183,24 @@ export default function NavBar({ onTabChange }) {
                                 Package
                             </div>
                         </div>
-                        <div className="menu-item">
-                            <div id="SignalsText" style={{ color: isActive('/DashBoard/Signals') ? '#FCE74F' : 'white' }}>Signals</div>
+                        <div className="menu-item" onClick={toggleDepositMenu}>
+                            <div id="SignalsText"  style={{ color: isActive('/DashBoard/Crypto') || isActive('/DashBoard/DepositNow') || isActive('/DashBoard/Stocks') ? '#FCE74F' : 'white' }}>Signals</div>
+                            <div className="submenu" style={{ display: depositMenuOpen ? 'flex' : 'none' }}>
+                                <a href="#" onClick={GoToCrypto} style={{ color: isActive('/DashBoard/Crypto') ? '#FCE74F' : 'black' }}>Crypto</a>
+                                <a href="#" onClick={GoToForex} style={{ color: isActive('/DashBoard/Forex') ? '#FCE74F' : 'black' }}>
+                                    Forex
+                                </a>
+                                <a href="#" onClick={GoToStocks} style={{ color: isActive('/DashBoard/Stocks') ? '#FCE74F' : 'black' }}>
+                                    Stocks
+                                </a>
+                            </div>
                         </div>
                         <div className="menu-item" onClick={GoToReferral}>
                             <div id="ReferralsText" style={{ color: isActive('/DashBoard/Referrals') ? '#FCE74F' : 'white' }}>Referrals</div>
+                        </div>
+
+                        <div className="menu-item" onClick={GoToCourse}>
+                            <div id="CourseText" style={{ color: isActive('/DashBoard/Course') ? '#FCE74F' : 'white' }}>Course</div>
                         </div>
 
                         <div className="menu-item" onClick={toggleSupportMenu}>
@@ -232,8 +284,22 @@ export default function NavBar({ onTabChange }) {
                             </div>
 
                             <div id="PackageText" style={{ color: isActive('/DashBoard/Packages') ? '#FCE74F' : 'white' }} onClick={GoToPackage}>Package</div>
-                            <div id="SignalsText" style={{ color: isActive('/DashBoard/Signals') ? '#FCE74F' : 'white' }}>Signals</div>
+                            <div className="dropdown">
+                                <div id="SignalsText" style={{ color: isActive('/DashBoard/Crypto') || isActive('/DashBoard/DepositNow') || isActive('/DashBoard/Stocks') ? '#FCE74F' : 'white' }}>Signals</div>
+                                <div className="dropdown-content">
+                                <a href="#" onClick={GoToCrypto} style={{ color: isActive('/DashBoard/Crypto') ? '#FCE74F' : 'black' }}>Crypto</a>
+                                <a href="#" onClick={GoToForex} style={{ color: isActive('/DashBoard/Forex') ? '#FCE74F' : 'black' }}>
+                                    Forex
+                                </a>
+                                <a href="#" onClick={GoToStocks} style={{ color: isActive('/DashBoard/Stocks') ? '#FCE74F' : 'black' }}>
+                                    Stocks
+                                </a>
+                                </div>
+                                </div>
                             <div id="ReferralsText" style={{ color: isActive('/DashBoard/Referral') ? '#FCE74F' : 'white' }} onClick={GoToReferral}>Referrals</div>
+
+
+                            <div id="CourseText" style={{ color: isActive('/DashBoard/Course') ? '#FCE74F' : 'white' }}  onClick={GoToCourse}>Course</div>
 
                             <div className="dropdown">
                                 <div id="SupportText" style={{ color: isActive('/DashBoard/Support') ? '#FCE74F' : 'white' }}>
@@ -246,7 +312,7 @@ export default function NavBar({ onTabChange }) {
                             </div>
 
                             <div className="dropdown">
-                            <div id="AccountText" style={{ color: isActive('/DashBoard/ProfileSettings') || isActive('/DashBoard/ChangePassword') || isActive('/DashBoard/Transaction') || isActive('/DashBoard/Logout') ? '#FCE74F' : 'white' }}>
+                                <div id="AccountText" style={{ color: isActive('/DashBoard/ProfileSettings') || isActive('/DashBoard/ChangePassword') || isActive('/DashBoard/Transaction') || isActive('/DashBoard/Logout') ? '#FCE74F' : 'white' }}>
                                     Account
                                 </div>
                                 <div className="dropdown-content">

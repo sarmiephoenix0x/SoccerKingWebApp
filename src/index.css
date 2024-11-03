@@ -19,7 +19,7 @@ body::-webkit-scrollbar-thumb {
 
 @media (min-width: 1080px) {
 
-  #AuthPageBG{
+  #AuthPageBG {
     display: flex;
     min-height: 100vh;
     width: 100vw;
@@ -56,19 +56,19 @@ body::-webkit-scrollbar-thumb {
     background-color: #0D222B;
   }
 
-  #AltAuthBut{
+  #AltAuthBut {
     display: flex;
     flex-direction: row;
     column-gap: 20px;
   }
 
-  #FbBut{
+  #FbBut {
     cursor: pointer;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    color:white;
+    color: white;
     column-gap: 10px;
     padding-left: 15px;
     padding-right: 15px;
@@ -78,23 +78,23 @@ body::-webkit-scrollbar-thumb {
     border-radius: 10px;
   }
 
-  #FbBut:hover{
+  #FbBut:hover {
     background-color: white;
     color: #0D222B;
   }
 
-  #FbImg{
+  #FbImg {
     width: 15%;
   }
 
 
-  #GoogleBut{
+  #GoogleBut {
     cursor: pointer;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    color:white;
+    color: white;
     column-gap: 10px;
     padding-left: 15px;
     padding-right: 15px;
@@ -104,27 +104,27 @@ body::-webkit-scrollbar-thumb {
     border-radius: 10px;
   }
 
-  #GoogleBut:hover{
+  #GoogleBut:hover {
     background-color: white;
     color: #0D222B;
   }
 
 
-  #GoogleImg{
+  #GoogleImg {
     width: 15%;
   }
 
-  #ORText{
-    color:white;
+  #ORText {
+    color: white;
   }
 
-  #InputFieldLabel{
+  #InputFieldLabel {
     display: flex;
     align-self: flex-start;
-    color:white;
+    color: white;
   }
 
-  #InputFieldBG{
+  #InputFieldBG {
     display: flex;
     flex-direction: column;
     row-gap: 10px;
@@ -132,7 +132,7 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
   }
 
-  #InputField{
+  #InputField {
     height: 40px;
     width: 92%;
     border: 1px solid #4A5A60;
@@ -141,14 +141,14 @@ body::-webkit-scrollbar-thumb {
     padding-left: 15px;
     padding-right: 15px;
     outline-color: white;
-    color:white;
+    color: white;
   }
 
   #InputField::placeholder {
     font-family: 'Inconsolata', sans-serif;
   }
 
-  #RememberAndForget{
+  #RememberAndForget {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -158,33 +158,35 @@ body::-webkit-scrollbar-thumb {
   .remember-me {
     display: flex;
     align-self: flex-start;
-    margin-bottom: 10px; 
-    color:white;
-  }
-  
-  .remember-me input {
-    margin-right: 5px; /* Add space between the checkbox and the text */
-  }
-  
-  .remember-me label {
-    cursor: pointer; /* Allows clicking on the label to check the box */
+    margin-bottom: 10px;
+    color: white;
   }
 
-  #ForgotPassword{
+  .remember-me input {
+    margin-right: 5px;
+    /* Add space between the checkbox and the text */
+  }
+
+  .remember-me label {
+    cursor: pointer;
+    /* Allows clicking on the label to check the box */
+  }
+
+  #ForgotPassword {
     color: #FCE74F;
     cursor: pointer;
   }
 
-  #CreateAccount{
+  #CreateAccount {
     display: flex;
     flex-direction: row;
     justify-content: center;
     column-gap: 10px;
     width: 100%;
-    color:white;
+    color: white;
   }
 
-  #CreateAccountText{
+  #CreateAccountText {
     color: #FCE74F;
     cursor: pointer;
   }
@@ -229,11 +231,12 @@ body::-webkit-scrollbar-thumb {
     cursor: pointer;
     background-color: #fce84f88;
   }
-  
+
 
   #MenuToggle {
     display: none;
   }
+
   #MenuToggle2 {
     display: none;
   }
@@ -271,6 +274,7 @@ body::-webkit-scrollbar-thumb {
   /* General text styles with cursor and position for the "+" or "-" symbol */
   #DepositText,
   #SupportText,
+  #SignalsText,
   #AccountText {
     cursor: pointer;
     color: white;
@@ -280,6 +284,7 @@ body::-webkit-scrollbar-thumb {
   /* Default "+" sign after the text */
   #DepositText::after,
   #SupportText::after,
+  #SignalsText::after,
   #AccountText::after {
     content: " +";
     position: absolute;
@@ -289,6 +294,7 @@ body::-webkit-scrollbar-thumb {
   /* Hover over the text to change "+" to "-" */
   #DepositText:hover::after,
   #SupportText:hover::after,
+  #SignalsText:hover::after,
   #AccountText:hover::after {
     content: " -";
   }
@@ -296,6 +302,7 @@ body::-webkit-scrollbar-thumb {
   /* Keep "-" sign when hovering over the dropdown content */
   .dropdown:hover #DepositText::after,
   .dropdown:hover #SupportText::after,
+  .dropdown:hover #SignalsText::after,
   .dropdown:hover #AccountText::after {
     content: " -";
   }
@@ -360,6 +367,7 @@ body::-webkit-scrollbar-thumb {
   #PackageText,
   #SignalsText,
   #ReferralsText,
+  #CourseText,
   #SupportText,
   #AccountText {
     cursor: pointer;
@@ -378,6 +386,7 @@ body::-webkit-scrollbar-thumb {
   #PackageText:hover,
   #SignalsText:hover,
   #ReferralsText:hover,
+  #CourseText:hover,
   #SupportText:hover,
   #AccountText:hover {
     color: #FCE74F;
@@ -622,29 +631,49 @@ body::-webkit-scrollbar-thumb {
     padding-top: 50px;
   }
 
-  #LatestTransactionViewTab {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-weight: bold;
-    font-size: 20px;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    background-color: #FCE74F;
+  #LatestTransactionViewBG {
+    height: auto;
+    /* Allow height to adjust based on content */
+    padding: 20px;
+    background-color: #0D222B;
     border-radius: 5px;
+    overflow-x: auto;
+    /* Enable horizontal scroll on small screens */
   }
 
-  #LatestTransactionViewBG {
-    height: 500px;
+  #LatestTransactionViewTable {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    min-width: 600px;
+    /* Minimum width to prevent content squishing */
   }
+
+  thead {
+    background-color: #FCE74F;
+  }
+
+  th {
+    text-align: center;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #333;
+  }
+
+  tbody td {
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+    padding: 20px;
+  }
+
 
   #LatestTransactionViewBGText {
     text-align: center;
-    padding: 100px;
     color: white;
     background-color: #0D222B;
+    padding: 20px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
   }
@@ -850,7 +879,7 @@ body::-webkit-scrollbar-thumb {
     color: black;
   }
 
-  #FormTitle{
+  #FormTitle {
     font-size: 30px;
     font-weight: bold;
     color: white;
@@ -871,7 +900,7 @@ body::-webkit-scrollbar-thumb {
     width: 30%;
   }
 
-  #ChangePasswordAuthPageBG{
+  #ChangePasswordAuthPageBG {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -894,7 +923,7 @@ body::-webkit-scrollbar-thumb {
     width: 50%;
   }
 
-  #ProfileSettingsAuthPageBG{
+  #ProfileSettingsAuthPageBG {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -902,13 +931,13 @@ body::-webkit-scrollbar-thumb {
     padding-top: 50px;
   }
 
-  #ProfileSettingsInputFieldLabel{
+  #ProfileSettingsInputFieldLabel {
     display: flex;
     align-self: flex-start;
-    color:white;
+    color: white;
   }
 
-  #ProfileSettingsInputFieldBG{
+  #ProfileSettingsInputFieldBG {
     display: flex;
     flex-direction: column;
     row-gap: 10px;
@@ -918,7 +947,7 @@ body::-webkit-scrollbar-thumb {
     padding-right: 15px;
   }
 
-  #ProfileSettingsInputField{
+  #ProfileSettingsInputField {
     height: 40px;
     border: 1px solid #4A5A60;
     border-radius: 5px;
@@ -926,7 +955,7 @@ body::-webkit-scrollbar-thumb {
     padding-left: 15px;
     padding-right: 15px;
     outline-color: white;
-    color:white;
+    color: white;
     width: 90%;
   }
 
@@ -934,13 +963,205 @@ body::-webkit-scrollbar-thumb {
     font-family: 'Inconsolata', sans-serif;
   }
 
-  #Row{
+  #Row {
     display: flex;
     flex-direction: row;
     align-self: flex-start;
     justify-content: space-between;
     width: 100%;
   }
+
+  #SignalContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+    padding-top: 70px;
+  }
+
+
+  .SignalsAnalysisContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
+  }
+
+  .SignalsAnalysis {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    row-gap: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #0D222B;
+    border-radius: 10px;
+    width: 70%;
+    position: relative;
+  }
+
+  .SASub {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .dotted-divider {
+    border: none;
+    border-top: 1px dotted #ccc;
+    /* Dotted line */
+    margin: 0;
+    /* Remove default margins */
+    width: 100vw;
+    /* Full viewport width */
+    position: relative;
+    left: calc(-50vw + 50%);
+    /* Center alignment */
+  }
+
+
+  .SignalsCardContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
+  }
+
+  .SignalsCard {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    row-gap: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #0D222B;
+    border-radius: 10px;
+    width: 70%;
+    position: relative;
+  }
+
+  .SCSub {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .SCSub2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: #314852;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 5px;
+  }
+
+  .CoinDets {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 20px;
+  }
+
+  .CoinProgress {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+    background-color: #000000;
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  .CoinImg {
+    width: 25%;
+    border-radius: 55px;
+    height: auto;
+  }
+
+  .CoinTrend {
+    font-weight: bold;
+    background-color: #000000;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    height: min-content;
+  }
+
+  .CoinName {
+    font-weight: bold;
+    padding-left: 15px;
+    text-align: center;
+    border-left: 1px solid white;
+    height: min-content;
+  }
+
+  .ProgressImg {
+    width: 10%;
+    height: auto;
+  }
+
+  .DropDownImg {
+    width: 25%;
+    height: auto;
+  }
+
+  .SCSubText3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 10px;
+    width: min-content;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #FF0000;
+  }
+
+
+  .SCSubText4 {
+    cursor: pointer;
+    justify-content: space-between;
+    background: #314852;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 5px;
+  }
+
+
+  .SCSubText5 {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 10px;
+    background: #314852;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 5px;
+  }
+
+  .ChartImg {
+    width: 10%;
+    height: auto;
+  }
+
 }
 
 @media (max-width: 1080px) {
@@ -954,7 +1175,7 @@ body::-webkit-scrollbar-thumb {
     display: none;
   } */
 
-  #AuthPageBG{
+  #AuthPageBG {
     display: flex;
     min-height: 100vh;
     width: 100vw;
@@ -991,19 +1212,19 @@ body::-webkit-scrollbar-thumb {
     background-color: #0D222B;
   }
 
-  #AltAuthBut{
+  #AltAuthBut {
     display: flex;
     flex-direction: row;
     column-gap: 20px;
   }
 
-  #FbBut{
+  #FbBut {
     cursor: pointer;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    color:white;
+    color: white;
     column-gap: 10px;
     padding-left: 15px;
     padding-right: 15px;
@@ -1013,23 +1234,23 @@ body::-webkit-scrollbar-thumb {
     border-radius: 10px;
   }
 
-  #FbBut:hover{
+  #FbBut:hover {
     background-color: white;
     color: #0D222B;
   }
 
-  #FbImg{
+  #FbImg {
     width: 15%;
   }
 
 
-  #GoogleBut{
+  #GoogleBut {
     cursor: pointer;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    color:white;
+    color: white;
     column-gap: 10px;
     padding-left: 15px;
     padding-right: 15px;
@@ -1039,27 +1260,27 @@ body::-webkit-scrollbar-thumb {
     border-radius: 10px;
   }
 
-  #GoogleBut:hover{
+  #GoogleBut:hover {
     background-color: white;
     color: #0D222B;
   }
 
 
-  #GoogleImg{
+  #GoogleImg {
     width: 15%;
   }
 
-  #ORText{
-    color:white;
+  #ORText {
+    color: white;
   }
 
-  #InputFieldLabel{
+  #InputFieldLabel {
     display: flex;
     align-self: flex-start;
-    color:white;
+    color: white;
   }
 
-  #InputFieldBG{
+  #InputFieldBG {
     display: flex;
     flex-direction: column;
     row-gap: 10px;
@@ -1067,7 +1288,7 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
   }
 
-  #InputField{
+  #InputField {
     height: 40px;
     width: 92%;
     border: 1px solid #4A5A60;
@@ -1076,14 +1297,14 @@ body::-webkit-scrollbar-thumb {
     padding-left: 15px;
     padding-right: 15px;
     outline-color: white;
-    color:white;
+    color: white;
   }
 
   #InputField::placeholder {
     font-family: 'Inconsolata', sans-serif;
   }
 
-  #RememberAndForget{
+  #RememberAndForget {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -1093,34 +1314,36 @@ body::-webkit-scrollbar-thumb {
   .remember-me {
     display: flex;
     align-self: flex-start;
-    margin-bottom: 10px; 
-    color:white;
-  }
-  
-  .remember-me input {
-    margin-right: 5px; /* Add space between the checkbox and the text */
-  }
-  
-  .remember-me label {
-    cursor: pointer; /* Allows clicking on the label to check the box */
+    margin-bottom: 10px;
+    color: white;
   }
 
-  #ForgotPassword{
+  .remember-me input {
+    margin-right: 5px;
+    /* Add space between the checkbox and the text */
+  }
+
+  .remember-me label {
+    cursor: pointer;
+    /* Allows clicking on the label to check the box */
+  }
+
+  #ForgotPassword {
     color: #FCE74F;
     cursor: pointer;
   }
 
-  #CreateAccount{
+  #CreateAccount {
     white-space: nowrap;
     display: flex;
     flex-direction: row;
     justify-content: center;
     column-gap: 10px;
     width: 100%;
-    color:white;
+    color: white;
   }
 
-  #CreateAccountText{
+  #CreateAccountText {
     color: #FCE74F;
     cursor: pointer;
   }
@@ -1204,13 +1427,16 @@ body::-webkit-scrollbar-thumb {
     z-index: 1;
     overflow-y: auto;
 
-}
+  }
 
-.submenu {
-    display: none; /* Initially hidden */
-    flex-direction: column; /* Stack submenu items vertically */
+  .submenu {
+    display: none;
+    /* Initially hidden */
+    flex-direction: column;
+    /* Stack submenu items vertically */
     align-items: center;
-    row-gap: 10px; /* Space between submenu items */
+    row-gap: 10px;
+    /* Space between submenu items */
     background-color: #132D39;
     /* Background color */
     min-width: 160px;
@@ -1219,55 +1445,59 @@ body::-webkit-scrollbar-thumb {
     /* On top of other content */
     top: 100%;
     left: 0;
-}
+  }
 
-.submenu a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  border-bottom: 1px dotted #ccc;
-  width: 80%;
-  text-align: center;
-}
+  .submenu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px dotted #ccc;
+    width: 80%;
+    text-align: center;
+  }
 
-/* Remove dotted divider for the last dropdown item */
-.submenu a:last-child {
-  border-bottom: none;
-  /* No border for the last item */
-}
+  /* Remove dotted divider for the last dropdown item */
+  .submenu a:last-child {
+    border-bottom: none;
+    /* No border for the last item */
+  }
 
-/* Hover styles for dropdown items */
-.submenu a:hover {
-  background-color: #ddd;
-  /* Change background on hover */
-}
+  /* Hover styles for dropdown items */
+  .submenu a:hover {
+    background-color: #ddd;
+    /* Change background on hover */
+  }
 
-.menu-item {
-    position: relative; /* Positioning the menu item relative to its container */
-}
+  .menu-item {
+    position: relative;
+    /* Positioning the menu item relative to its container */
+  }
 
-.menu-item:hover .submenu {
-    display: flex; /* Show the submenu on hover */
-}
+  .menu-item:hover .submenu {
+    display: flex;
+    /* Show the submenu on hover */
+  }
 
-@keyframes OverlaySlideIn {
+  @keyframes OverlaySlideIn {
     0% {
-        transform: translateX(-100%);
+      transform: translateX(-100%);
     }
-    100% {
-        transform: translateX(0%);
-    }
-}
 
-@keyframes OverlaySlideOut {
-    0% {
-        transform: translateX(0%);
-    }
     100% {
-        transform: translateX(-100%);
+      transform: translateX(0%);
     }
-}
+  }
+
+  @keyframes OverlaySlideOut {
+    0% {
+      transform: translateX(0%);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
 
 
 
@@ -1301,6 +1531,7 @@ body::-webkit-scrollbar-thumb {
   /* General text styles with cursor and position for the "+" or "-" symbol */
   #DepositText,
   #SupportText,
+  #SignalsText,
   #AccountText {
     cursor: pointer;
     color: white;
@@ -1310,6 +1541,7 @@ body::-webkit-scrollbar-thumb {
   /* Default "+" sign after the text */
   #DepositText::after,
   #SupportText::after,
+  #SignalsText::after,
   #AccountText::after {
     content: " +";
     position: absolute;
@@ -1319,6 +1551,7 @@ body::-webkit-scrollbar-thumb {
   /* Hover over the text to change "+" to "-" */
   #DepositText:hover::after,
   #SupportText:hover::after,
+  #SignalsText:hover::after,
   #AccountText:hover::after {
     content: " -";
   }
@@ -1326,6 +1559,7 @@ body::-webkit-scrollbar-thumb {
   /* Keep "-" sign when hovering over the dropdown content */
   .dropdown:hover #DepositText::after,
   .dropdown:hover #SupportText::after,
+  .dropdown:hover #SignalsText::after,
   .dropdown:hover #AccountText::after {
     content: " -";
   }
@@ -1390,6 +1624,7 @@ body::-webkit-scrollbar-thumb {
   #PackageText,
   #SignalsText,
   #ReferralsText,
+  #CourseText,
   #SupportText,
   #AccountText {
     cursor: pointer;
@@ -1408,6 +1643,7 @@ body::-webkit-scrollbar-thumb {
   #PackageText:hover,
   #SignalsText:hover,
   #ReferralsText:hover,
+  #CourseText:hover,
   #SupportText:hover,
   #AccountText:hover {
     color: #FCE74F;
@@ -1652,29 +1888,46 @@ body::-webkit-scrollbar-thumb {
     padding-top: 50px;
   }
 
-  #LatestTransactionViewTab {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-weight: bold;
-    font-size: 20px;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    background-color: #FCE74F;
+  #LatestTransactionViewBG {
+    height: auto;
+    /* Allow height to adjust based on content */
+    padding: 20px;
+    background-color: #0D222B;
     border-radius: 5px;
+    overflow-x: auto;
+    /* Enable horizontal scroll on small screens */
   }
 
-  #LatestTransactionViewBG {
-    height: 500px;
+  #LatestTransactionViewTable {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    min-width: 600px;
+    /* Minimum width to prevent content squishing */
+  }
+
+  thead {
+    background-color: #FCE74F;
+  }
+
+  th {
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #333;
+  }
+
+  tbody td {
+    text-align: center;
+    color: white;
+    padding: 20px;
   }
 
   #LatestTransactionViewBGText {
     text-align: center;
-    padding: 100px;
     color: white;
     background-color: #0D222B;
+    padding: 20px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
   }
@@ -1880,7 +2133,7 @@ body::-webkit-scrollbar-thumb {
     color: black;
   }
 
-  #FormTitle{
+  #FormTitle {
     font-size: 30px;
     font-weight: bold;
     color: white;
@@ -1901,7 +2154,7 @@ body::-webkit-scrollbar-thumb {
     width: 30%;
   }
 
-  #ChangePasswordAuthPageBG{
+  #ChangePasswordAuthPageBG {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1924,7 +2177,7 @@ body::-webkit-scrollbar-thumb {
     width: 50%;
   }
 
-  #ProfileSettingsAuthPageBG{
+  #ProfileSettingsAuthPageBG {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1932,14 +2185,14 @@ body::-webkit-scrollbar-thumb {
     padding-top: 50px;
   }
 
-  #ProfileSettingsInputFieldLabel{
+  #ProfileSettingsInputFieldLabel {
     white-space: nowrap;
     display: flex;
     align-self: flex-start;
-    color:white;
+    color: white;
   }
 
-  #ProfileSettingsInputFieldBG{
+  #ProfileSettingsInputFieldBG {
     display: flex;
     flex-direction: column;
     row-gap: 10px;
@@ -1949,7 +2202,7 @@ body::-webkit-scrollbar-thumb {
     padding-right: 15px;
   }
 
-  #ProfileSettingsInputField{
+  #ProfileSettingsInputField {
     height: 40px;
     border: 1px solid #4A5A60;
     border-radius: 5px;
@@ -1957,7 +2210,7 @@ body::-webkit-scrollbar-thumb {
     padding-left: 15px;
     padding-right: 15px;
     outline-color: white;
-    color:white;
+    color: white;
     width: 90%;
   }
 
@@ -1965,7 +2218,7 @@ body::-webkit-scrollbar-thumb {
     font-family: 'Inconsolata', sans-serif;
   }
 
-  #Row{
+  #Row {
     display: flex;
     flex-direction: row;
     align-self: flex-start;
@@ -1975,39 +2228,40 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media (max-width: 670px) {
-#LatestTransactionViewTab{
-  font-size: 3vw;
-  padding-left: 10px;
+  #LatestTransactionViewTab {
+    font-size: 3vw;
+    padding-left: 10px;
     padding-right: 10px;
-}
+  }
 
-#LatestTransactionViewBGText{
-  font-size: 3vw;
-}
+  #LatestTransactionViewBGText {
+    font-size: 3vw;
+  }
 
-#LatestTransaction2ViewTab{
-  font-size: 3vw;
-  padding-left: 10px;
+  #LatestTransaction2ViewTab {
+    font-size: 3vw;
+    padding-left: 10px;
     padding-right: 10px;
-}
+  }
 
-#LatestTransaction2ViewBGText{
-  font-size: 3vw;
-}
+  #LatestTransaction2ViewBGText {
+    font-size: 3vw;
+  }
 }
 
 @media (max-width: 500px) {
-#NotificationText{
-  font-size: 5vw;
-}
+  #NotificationText {
+    font-size: 5vw;
+  }
 
-#NotificationText2{
-  font-size: 4vw;
-}
-
-  #StatText{
+  #NotificationText2 {
     font-size: 4vw;
   }
+
+  #StatText {
+    font-size: 4vw;
+  }
+
   #StatText2 {
     font-size: 8vw;
   }
@@ -2016,7 +2270,7 @@ body::-webkit-scrollbar-thumb {
     font-size: 5vw;
   }
 
-  #ReferralCopyText{
+  #ReferralCopyText {
     font-size: 4vw;
   }
 
@@ -2033,20 +2287,20 @@ body::-webkit-scrollbar-thumb {
     font-size: 4vw;
   }
 
-  #Overlay{
+  #Overlay {
     overflow-y: auto;
   }
 
-  #PackagesHeaderText2{
+  #PackagesHeaderText2 {
     text-align: center;
     font-size: 7vw;
   }
 
-  #DashBoardText2{
+  #DashBoardText2 {
     font-size: 6vw;
   }
 
-  #CurrentNavText2{
+  #CurrentNavText2 {
     font-size: 4vw;
   }
 
@@ -2064,7 +2318,7 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
   }
 
-  #ProfileSettingsAuthPageBG{
+  #ProfileSettingsAuthPageBG {
     width: 100%;
   }
 
@@ -2075,7 +2329,7 @@ body::-webkit-scrollbar-thumb {
     padding-right: 0px;
   }
 
-  #ChangePasswordAuthPageBG{
+  #ChangePasswordAuthPageBG {
     width: 100%;
   }
 }

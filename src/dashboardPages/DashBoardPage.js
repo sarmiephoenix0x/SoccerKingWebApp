@@ -35,16 +35,22 @@ export default function DashBoardPage() {
                         Latest Transaction
                     </div>
                     <div id="LatestTransactionViewBG">
-                        <div id="LatestTransactionViewTab">
-                            <div id="TRXText">TRX</div>
-                            <div id="TransactedText">TRANSACTED</div>
-                            <div id="AmountText">AMOUNT</div>
-                            <div id="PostBalanceText">POST BALANCE</div>
-                            <div id="DetailsText">DETAILS</div>
-                        </div>
-                        <div id="LatestTransactionViewBGText">
-                        Data not found
-                        </div>
+                        <table id="LatestTransactionViewTable">
+                            <thead>
+                                <tr>
+                                    <th id="TRXText">TRX</th>
+                                    <th id="TransactedText">TRANSACTED</th>
+                                    <th id="AmountText">AMOUNT</th>
+                                    <th id="PostBalanceText">POST BALANCE</th>
+                                    <th id="DetailsText">DETAILS</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colSpan="5" id="LatestTransactionViewBGText">Data not found</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>

@@ -7,10 +7,14 @@ import AuthenticationPage from './Pages/AuthenticationPage';
 import LogIn from './authenticationPages/LogIn.js';
 import Register from './authenticationPages/Register';
 import DashBoardPage from './dashboardPages/DashBoardPage';
-import Packages from './Pages/Packages.js';
-import DepositHistory from './Pages/DepositHistory.js';
-import Referral from './Pages/Referral.js'
-import ProfileSettings from './Pages/ProfileSettings.js'
+import Packages from './dashboardPages/Packages.js';
+import Crypto from './dashboardPages/Crypto.js';
+import Forex from './dashboardPages/Forex.js';
+import Stocks from './dashboardPages/Stocks.js';
+import DepositHistory from './dashboardPages/DepositHistory.js';
+import Referral from './dashboardPages/Referral.js'
+import Course from './dashboardPages/Course.js';
+import ProfileSettings from './dashboardPages/ProfileSettings.js'
 import ChangePassword from './Pages/ChangePassword.js'
 import SplashScreen from './Components/SplashScreen.js';
 import './index.css';
@@ -70,8 +74,12 @@ function START() {
                         <Route path="/DashBoard" element={<DashBoard />} >
                             <Route path="/DashBoard" element={<DashBoardPage />} />
                             <Route path="/DashBoard/Packages" element={<Packages />} />
+                            <Route path="/DashBoard/Crypto" element={<Crypto />} />
+                            <Route path="/DashBoard/Forex" element={<Forex />} />
+                            <Route path="/DashBoard/Stocks" element={<Stocks />} />
                             <Route path="/DashBoard/DepositHistory" element={<DepositHistory />} />
                             <Route path="/DashBoard/Referral" element={<Referral />} />
+                            <Route path="/DashBoard/Course" element={<Course />} />
                             <Route path="/DashBoard/ProfileSettings" element={<ProfileSettings />} />
                             <Route path="/DashBoard/ChangePassword" element={<ChangePassword />} />
                         </Route>
