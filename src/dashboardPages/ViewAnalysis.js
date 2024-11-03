@@ -25,6 +25,26 @@ export default function ViewAnalysis() {
                     </div>
                     
                 </div>
+
+                <div id="VASub2">
+                    <div id="VASub2Text">
+                    Predicted Price Movement:
+                        </div>
+                        
+                    <div id="VAPriceText">
+                    BTC: $30,000  
+                        </div>
+                </div>
+                
+                <div id="VASub2">
+                    <div id="VASub2Text2">
+                    Analysis:
+                        </div>
+                        
+                    <div id="VAAnalysisText">
+                    Bitcoin (BTC) enters this week with strong momentum after hitting a new high of $32,000 in the past month. However, it has been experiencing increased volatility, pulling back slightly to the $30,000 level due to recent regulatory concerns. Despite, the pullback, the coin remains resilient, holding strong above key support levels.  
+                        </div>
+                    </div>
             </div>
         </>
     )
