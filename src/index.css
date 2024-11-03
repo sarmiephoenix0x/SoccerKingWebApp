@@ -1164,9 +1164,10 @@ body::-webkit-scrollbar-thumb {
 
   #VASub {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
     color: white;
-    row-gap: 20px;
+    column-gap: 20px;
     padding-top: 50px;
     padding-bottom: 50px;
     padding-left: 40px;
@@ -1175,6 +1176,38 @@ body::-webkit-scrollbar-thumb {
     border-radius: 10px;
     width: 70%;
     position: relative;
+  }
+
+  .CoinImg2 {
+    width: 8%;
+    border-radius: 55px;
+    height: auto;
+  }
+
+  .DotImg {
+    height: 12px;
+  }
+
+  #VAVert{
+    display: flex;
+    flex-direction: column;
+  }
+
+  #VAHorizon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 10px;
+  }
+
+  #VACoinName{
+    font-weight: bold;
+    font-size: 30px;
+  }
+
+  #VAAuthorName{
+    font-size: small;
+    color: #FFFFFF80;
   }
 
 }

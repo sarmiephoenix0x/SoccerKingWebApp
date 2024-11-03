@@ -26,7 +26,7 @@ export default function DepositHistory() {
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td colSpan="5" id="LatestTransactionViewBGText">Data not found</td>
+                                    <td colSpan="6" id="LatestTransactionViewBGText">Data not found</td>
                                 </tr>
                             </tbody>
                         </table>
