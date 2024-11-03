@@ -11,6 +11,8 @@ import Packages from './dashboardPages/Packages.js';
 import Crypto from './dashboardPages/Crypto.js';
 import Forex from './dashboardPages/Forex.js';
 import Stocks from './dashboardPages/Stocks.js';
+import ViewAnalysis from './dashboardPages/ViewAnalysis.js';
+import SignalAuthor from './dashboardPages/SignalAuthor.js';
 import DepositHistory from './dashboardPages/DepositHistory.js';
 import Referral from './dashboardPages/Referral.js'
 import Course from './dashboardPages/Course.js';
@@ -77,6 +79,8 @@ function START() {
                             <Route path="/DashBoard/Crypto" element={<Crypto />} />
                             <Route path="/DashBoard/Forex" element={<Forex />} />
                             <Route path="/DashBoard/Stocks" element={<Stocks />} />
+                            <Route path="/DashBoard/ViewAnalysis" element={<ViewAnalysis />} />
+                            <Route path="/DashBoard/SignalAuthor" element={<SignalAuthor />} />
                             <Route path="/DashBoard/DepositHistory" element={<DepositHistory />} />
                             <Route path="/DashBoard/Referral" element={<Referral />} />
                             <Route path="/DashBoard/Course" element={<Course />} />

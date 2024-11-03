@@ -1162,6 +1162,21 @@ body::-webkit-scrollbar-thumb {
     height: auto;
   }
 
+  #VASub {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    row-gap: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #0D222B;
+    border-radius: 10px;
+    width: 70%;
+    position: relative;
+  }
+
 }
 
 @media (max-width: 1080px) {

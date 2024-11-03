@@ -2,8 +2,17 @@ import CoinImg from "../images/cryptocurrency-color_usdt.png"
 import ProgressImg from "../images/carbon_in-progress.png"
 import DropDownImg from "../images/gridicons_dropdown.png"
 import ChartImg from "../images/material-symbols_pie-chart.png"
+import { useNavigate, useLocation } from 'react-router-dom';
 
 export default function SignalCard() {
+    const navigate = useNavigate();
+
+
+    const GoToViewAnalysis = () => {
+        document.body.style.overflowY = 'auto';
+        navigate("/DashBoard/ViewAnalysis");
+        document.getElementById("DashBoardText2").innerHTML = "View Analysis";
+    };
     return (
         <>
             <div className="SignalsCardContainer">
@@ -66,7 +75,7 @@ export default function SignalCard() {
                         </div>
                     </div>
                     <div className="SCSub">
-                        <div className="SCSubText4">
+                        <div className="SCSubText4" onClick={GoToViewAnalysis}>
                             View Analysis
                         </div>
                         <div className="SCSubText5">
