@@ -12,16 +12,54 @@ export default function NavBar({ onTabChange }) {
     const [overlayAnimation, setOverlayAnimation] = useState(''); // For controlling animations
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     const [depositMenuOpen, setDepositMenuOpen] = useState(false);
+    const [signalMenuOpen, setSignalMenuOpen] = useState(false);
     const [supportMenuOpen, setSupportMenuOpen] = useState(false);
     const [accountMenuOpen, setAccountMenuOpen] = useState(false);
 
+    const isActive = (path) => location.pathname === path;
+    const [dashboardText, setDashboardText] = useState("");
+    const [currentNavText, setCurrentNavText] = useState("");
+
+    const determineRouteText = (path) => {
+        switch (path) {
+            case "/DashBoard":
+                return { dashboard: "Dashboard", nav: "Home - Dashboard" };
+            case "/DashBoard/DepositHistory":
+                return { dashboard: "Deposit History", nav: "Home - Deposit - Deposit History" };
+            case "/DashBoard/Packages":
+                return { dashboard: "Packages", nav: "Home - Packages" };
+            case "/DashBoard/Crypto":
+                return { dashboard: "Crypto", nav: "Home - Signal - Crypto" };
+            case "/DashBoard/Forex":
+                return { dashboard: "Forex", nav: "Home - Signal - Forex" };
+            case "/DashBoard/Stocks":
+                return { dashboard: "Stocks", nav: "Home - Signal - Stocks" };
+            case "/DashBoard/Referral":
+                return { dashboard: "Referrals", nav: "Home - Referrals" };
+            case "/DashBoard/Course":
+                return { dashboard: "Course", nav: "Home - Course" };
+            case "/DashBoard/ProfileSettings":
+                return { dashboard: "Profile Settings", nav: "Home - Profile Settings" };
+            case "/DashBoard/ChangePassword":
+                return { dashboard: "Change Password", nav: "Home - Change Password" };
+            case "/DashBoard/ViewAnalysis":
+                return { dashboard: "View Analysis", nav: "" };
+            case "/DashBoard/SignalAuthor":
+                return { dashboard: "Signal Author", nav: "" };
+            default:
+                return { dashboard: "Dashboard", nav: "Home - Dashboard" };
+        }
+    };
+
     const toggleDepositMenu = () => setDepositMenuOpen(prev => !prev);
+    const toggleSignalMenu = () => setSignalMenuOpen(prev => !prev);
     const toggleSupportMenu = () => setSupportMenuOpen(prev => !prev);
     const toggleAccountMenu = () => setAccountMenuOpen(prev => !prev);
 
     // Ensure to close other menus when one is opened
     const handleMenuToggle = (menu) => {
         setDepositMenuOpen(menu === 'deposit' ? !depositMenuOpen : false);
+        setSignalMenuOpen(menu === 'signal' ? !signalMenuOpen : false);
         setSupportMenuOpen(menu === 'support' ? !supportMenuOpen : false);
         setAccountMenuOpen(menu === 'account' ? !accountMenuOpen : false);
     };
@@ -53,43 +91,14 @@ export default function NavBar({ onTabChange }) {
     }, [menuOpen]);
 
     useEffect(() => {
-        if (isActive == "/DashBoard") {
-            document.getElementById("DashBoardText2").innerHTML = "Dashboard";
-            document.getElementById("CurrentNavText2").innerHTML = "Home - Dashboard";
-        } else if (isActive == "/DashBoard/DepositHistory") {
-            document.getElementById("DashBoardText2").innerHTML = "Deposit History";
-            document.getElementById("CurrentNavText2").innerHTML = "Home - Deposit - Deposit History";
-        } else if (isActive == "/DashBoard/Packages") {
-            document.getElementById("DashBoardText2").innerHTML = "Packages";
-            document.getElementById("CurrentNavText2").innerHTML = "Home - Packages";
-        } else if (isActive == "/DashBoard/Crypto") {
-            document.getElementById("DashBoardText2").innerHTML = "Crypto";
-            document.getElementById("CurrentNavText2").innerHTML = "Home - Signal - Crypto";
-        } else if (isActive == "/DashBoard/Forex") {
-            document.getElementById("DashBoardText2").innerHTML = "Forex";
-            document.getElementById("CurrentNavText2").innerHTML = "Home - Signal - Forex";
-        } else if (isActive == "/DashBoard/Stocks") {
-            document.getElementById("DashBoardText2").innerHTML = "Stocks";
-            document.getElementById("CurrentNavText2").innerHTML = "Home - Signal - Stocks";
-        } else if (isActive == "/DashBoard/Referral") {
-            document.getElementById("DashBoardText2").innerHTML = "Referrals";
-            document.getElementById("CurrentNavText2").innerHTML = "Home - Referrals";
-        } else if (isActive == "/DashBoard/Course") {
-            document.getElementById("DashBoardText2").innerHTML = "Course";
-            document.getElementById("CurrentNavText2").innerHTML = "Home - Course";
-        } else if (isActive == "/DashBoard/ProfileSettings") {
-            document.getElementById("DashBoardText2").innerHTML = "Profile Settings";
-            document.getElementById("CurrentNavText2").innerHTML = "Home - Profile Settings";
-        } else if (isActive == "/DashBoard/ChangePassword") {
-            document.getElementById("DashBoardText2").innerHTML = "Change Password";
-            document.getElementById("CurrentNavText2").innerHTML = "Home - Change Password";
-        } else if (isActive == "/DashBoard/ViewAnalysis") {
-            document.getElementById("DashBoardText2").innerHTML = "View Analysis";
-            // document.getElementById("CurrentNavText2").innerHTML = "Home - Change Password";
-        } else if (isActive == "/DashBoard/SignalAuthor") {
-            document.getElementById("DashBoardText2").innerHTML = "Signal Author";
-            // document.getElementById("CurrentNavText2").innerHTML = "Home - Change Password";
-        }
+        document.body.style.overflowY = 'auto';
+        const currentPath = window.location.pathname; // Use window.location.pathname to get the current path
+        const { dashboard, nav } = determineRouteText(currentPath);
+        setDashboardText(dashboard);
+        setCurrentNavText(nav);
+    }, []);
+
+    useEffect(() => {
         window.addEventListener('resize', updateScreenWidth);
 
         // Clean up the event listener on component unmount
@@ -196,8 +205,6 @@ export default function NavBar({ onTabChange }) {
         navigate("/");
     };
 
-    const isActive = (path) => location.pathname === path;
-
     return (
         <>
             <div id="Overlay" style={{ display: menuOpen ? 'block' : 'none' }}>
@@ -220,9 +227,9 @@ export default function NavBar({ onTabChange }) {
                                 Package
                             </div>
                         </div>
-                        <div className="menu-item" onClick={toggleDepositMenu}>
+                        <div className="menu-item" onClick={toggleSignalMenu}>
                             <div id="SignalsText" style={{ color: isActive('/DashBoard/Crypto') || isActive('/DashBoard/DepositNow') || isActive('/DashBoard/Stocks') ? '#FCE74F' : 'white' }}>Signals</div>
-                            <div className="submenu" style={{ display: depositMenuOpen ? 'flex' : 'none' }}>
+                            <div className="submenu" style={{ display: signalMenuOpen ? 'flex' : 'none' }}>
                                 <a href="#" onClick={GoToCrypto} style={{ color: isActive('/DashBoard/Crypto') ? '#FCE74F' : 'black' }}>Crypto</a>
                                 <a href="#" onClick={GoToForex} style={{ color: isActive('/DashBoard/Forex') ? '#FCE74F' : 'black' }}>
                                     Forex
@@ -376,10 +383,10 @@ export default function NavBar({ onTabChange }) {
                 </div>
                 <hr id="Divider" />
                 <div id="CurrentNav">
-                    <div id="DashBoardText2">Dashboard</div>
+                    <div id="DashBoardText2">{dashboardText}</div>
                     <div id="CurrentNavText">
                         <img id="HomeImg" src={HomeImg} alt="Home" />
-                        <span id="CurrentNavText2">Home - Dashboard</span>
+                        <span id="CurrentNavText2">{currentNavText}</span>
                     </div>
                 </div>
             </div>

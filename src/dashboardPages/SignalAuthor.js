@@ -50,14 +50,14 @@ export default function SignalAuthor() {
                                 <FollowButton/>
                                 </div>
                             <div id="SARanking">
-                                <div id="SATimeStamp">
-                                    20.10.2024 (2:00 PM)
+                                
+                                    5 Reviews
                                 </div>
 
                                 <div id="SABio">
                                     Normal target for traded asset is (100 pips), N.B - (25 pips) can be profitable in zero spread acc. (50 pips) is assured per-trade.
                                 </div>
-                            </div>
+                        
                             <div id="SAHorizon3">
                     <ReusableItem content="Forex" />
                     <ReusableItem content="Crypto" />
