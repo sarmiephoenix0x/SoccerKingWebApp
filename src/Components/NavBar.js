@@ -53,6 +53,43 @@ export default function NavBar({ onTabChange }) {
     }, [menuOpen]);
 
     useEffect(() => {
+        if (isActive == "/DashBoard") {
+            document.getElementById("DashBoardText2").innerHTML = "Dashboard";
+            document.getElementById("CurrentNavText2").innerHTML = "Home - Dashboard";
+        } else if (isActive == "/DashBoard/DepositHistory") {
+            document.getElementById("DashBoardText2").innerHTML = "Deposit History";
+            document.getElementById("CurrentNavText2").innerHTML = "Home - Deposit - Deposit History";
+        } else if (isActive == "/DashBoard/Packages") {
+            document.getElementById("DashBoardText2").innerHTML = "Packages";
+            document.getElementById("CurrentNavText2").innerHTML = "Home - Packages";
+        } else if (isActive == "/DashBoard/Crypto") {
+            document.getElementById("DashBoardText2").innerHTML = "Crypto";
+            document.getElementById("CurrentNavText2").innerHTML = "Home - Signal - Crypto";
+        } else if (isActive == "/DashBoard/Forex") {
+            document.getElementById("DashBoardText2").innerHTML = "Forex";
+            document.getElementById("CurrentNavText2").innerHTML = "Home - Signal - Forex";
+        } else if (isActive == "/DashBoard/Stocks") {
+            document.getElementById("DashBoardText2").innerHTML = "Stocks";
+            document.getElementById("CurrentNavText2").innerHTML = "Home - Signal - Stocks";
+        } else if (isActive == "/DashBoard/Referral") {
+            document.getElementById("DashBoardText2").innerHTML = "Referrals";
+            document.getElementById("CurrentNavText2").innerHTML = "Home - Referrals";
+        } else if (isActive == "/DashBoard/Course") {
+            document.getElementById("DashBoardText2").innerHTML = "Course";
+            document.getElementById("CurrentNavText2").innerHTML = "Home - Course";
+        } else if (isActive == "/DashBoard/ProfileSettings") {
+            document.getElementById("DashBoardText2").innerHTML = "Profile Settings";
+            document.getElementById("CurrentNavText2").innerHTML = "Home - Profile Settings";
+        } else if (isActive == "/DashBoard/ChangePassword") {
+            document.getElementById("DashBoardText2").innerHTML = "Change Password";
+            document.getElementById("CurrentNavText2").innerHTML = "Home - Change Password";
+        } else if (isActive == "/DashBoard/ViewAnalysis") {
+            document.getElementById("DashBoardText2").innerHTML = "View Analysis";
+            // document.getElementById("CurrentNavText2").innerHTML = "Home - Change Password";
+        } else if (isActive == "/DashBoard/SignalAuthor") {
+            document.getElementById("DashBoardText2").innerHTML = "Signal Author";
+            // document.getElementById("CurrentNavText2").innerHTML = "Home - Change Password";
+        }
         window.addEventListener('resize', updateScreenWidth);
 
         // Clean up the event listener on component unmount
@@ -184,7 +221,7 @@ export default function NavBar({ onTabChange }) {
                             </div>
                         </div>
                         <div className="menu-item" onClick={toggleDepositMenu}>
-                            <div id="SignalsText"  style={{ color: isActive('/DashBoard/Crypto') || isActive('/DashBoard/DepositNow') || isActive('/DashBoard/Stocks') ? '#FCE74F' : 'white' }}>Signals</div>
+                            <div id="SignalsText" style={{ color: isActive('/DashBoard/Crypto') || isActive('/DashBoard/DepositNow') || isActive('/DashBoard/Stocks') ? '#FCE74F' : 'white' }}>Signals</div>
                             <div className="submenu" style={{ display: depositMenuOpen ? 'flex' : 'none' }}>
                                 <a href="#" onClick={GoToCrypto} style={{ color: isActive('/DashBoard/Crypto') ? '#FCE74F' : 'black' }}>Crypto</a>
                                 <a href="#" onClick={GoToForex} style={{ color: isActive('/DashBoard/Forex') ? '#FCE74F' : 'black' }}>
@@ -287,19 +324,19 @@ export default function NavBar({ onTabChange }) {
                             <div className="dropdown">
                                 <div id="SignalsText" style={{ color: isActive('/DashBoard/Crypto') || isActive('/DashBoard/DepositNow') || isActive('/DashBoard/Stocks') ? '#FCE74F' : 'white' }}>Signals</div>
                                 <div className="dropdown-content">
-                                <a href="#" onClick={GoToCrypto} style={{ color: isActive('/DashBoard/Crypto') ? '#FCE74F' : 'black' }}>Crypto</a>
-                                <a href="#" onClick={GoToForex} style={{ color: isActive('/DashBoard/Forex') ? '#FCE74F' : 'black' }}>
-                                    Forex
-                                </a>
-                                <a href="#" onClick={GoToStocks} style={{ color: isActive('/DashBoard/Stocks') ? '#FCE74F' : 'black' }}>
-                                    Stocks
-                                </a>
+                                    <a href="#" onClick={GoToCrypto} style={{ color: isActive('/DashBoard/Crypto') ? '#FCE74F' : 'black' }}>Crypto</a>
+                                    <a href="#" onClick={GoToForex} style={{ color: isActive('/DashBoard/Forex') ? '#FCE74F' : 'black' }}>
+                                        Forex
+                                    </a>
+                                    <a href="#" onClick={GoToStocks} style={{ color: isActive('/DashBoard/Stocks') ? '#FCE74F' : 'black' }}>
+                                        Stocks
+                                    </a>
                                 </div>
-                                </div>
+                            </div>
                             <div id="ReferralsText" style={{ color: isActive('/DashBoard/Referral') ? '#FCE74F' : 'white' }} onClick={GoToReferral}>Referrals</div>
 
 
-                            <div id="CourseText" style={{ color: isActive('/DashBoard/Course') ? '#FCE74F' : 'white' }}  onClick={GoToCourse}>Course</div>
+                            <div id="CourseText" style={{ color: isActive('/DashBoard/Course') ? '#FCE74F' : 'white' }} onClick={GoToCourse}>Course</div>
 
                             <div className="dropdown">
                                 <div id="SupportText" style={{ color: isActive('/DashBoard/Support') ? '#FCE74F' : 'white' }}>

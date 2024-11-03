@@ -1,7 +1,15 @@
 import CoinImg from '../images/logos_bitcoin.png'
 import DotImg from '../images/Dot.png'
+import { useNavigate} from 'react-router-dom';
 
 export default function ViewAnalysis() {
+    const navigate = useNavigate();
+    
+    const GoToSignalAnalysis = () => {
+        document.body.style.overflowY = 'auto';
+        navigate("/DashBoard/SignalAuthor");
+        document.getElementById("DashBoardText2").innerHTML = "Signal Author";
+    };
     return (
         <>
         <div id="SignalContainer">
@@ -18,7 +26,7 @@ export default function ViewAnalysis() {
                         </div>
                         
                     <img className="DotImg" src={DotImg} alt="Dot" />
-                    <div id="VAAuthorName">
+                    <div id="VAAuthorName" onClick={GoToSignalAnalysis}>
                     By Jasmine 
                         </div>
                         </div>

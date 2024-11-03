@@ -1222,6 +1222,7 @@ body::-webkit-scrollbar-thumb {
   }
 
   #VAAuthorName{
+    cursor: pointer;
     font-size: small;
     color: #FFFFFF80;
   }
@@ -1237,6 +1238,223 @@ body::-webkit-scrollbar-thumb {
     font-weight: bold;
     font-size: 20px;
   }
+
+  .donut-chart {
+    position: relative;
+    width: 150px; /* Adjust size as needed */
+    height: 150px;
+    border-radius: 50%;
+    background: conic-gradient(green 0% 75%, red 75% 100%); /* 75% green, 25% red */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.donut-hole {
+    width: 75%; /* Adjust to control size of inner hole */
+    height: 75%;
+    background-color: #132D39;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.percentage {
+    color: green;
+}
+
+
+#SAVert{
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  align-items: center;
+}
+
+#SAHorizon{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+  width: 100%;
+}
+
+#SAHorizon2{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 20px;
+  width: 100%;
+}
+
+#SAHorizon3{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  column-gap: 20px;
+  width: 100%;
+}
+
+#percentageText{
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+
+.bar-chart {
+  display: flex;
+  align-self: flex-start;
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background-color: red; /* Background red for the remaining part */
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.bar-green {
+  height: 100%;
+  background-color: green;
+  width: 75%; /* Default percentage, dynamically updated by JavaScript */
+  transition: width 0.5s ease; /* Smooth transition when percentage changes */
+}
+
+.label-green, .label-red {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+  color: white;
+  font-size: 12px;
+}
+
+.label-green {
+  left: 10px; /* Position label at the left side of the bar */
+}
+
+.label-red {
+  right: 10px; /* Position label at the right side of the bar */
+}
+
+.follow-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  outline: none;
+}
+
+.follow-button {
+  background: #314852;
+}
+
+.follow-button.following {
+  background-color: #28a745; /* Green color for "Following" */
+}
+
+.follow-button:hover {
+  opacity: 0.9;
+}
+
+
+#SASub {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  row-gap: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: #0D222B;
+  border-radius: 10px;
+  width: 70%;
+  position: relative;
+}
+
+.ProfileImg{
+  width: 100%;
+  border-radius: 55px;
+  height: auto;
+}
+
+
+#SAName{
+  display: flex;
+  align-self: flex-start;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+#SAPips{
+  text-align: center;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+#PipsProfitText{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#ProfitStat{
+  display: flex;
+  align-self: flex-start;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+
+.reusableItem {
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  background: #314852;
+  outline: none;
+}
+
+#SignalViewBG {
+  height: auto;
+  width: 100%;
+  padding: 20px;
+  background-color: #0D222B;
+  border-radius: 5px;
+  overflow-x: auto;
+  /* Enable horizontal scroll on small screens */
+}
+
+#SignalViewTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  min-width: 600px;
+  /* Minimum width to prevent content squishing */
+}
+
+
+#SignalAuthorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 30px;
+  padding-top: 70px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
 
 }
 

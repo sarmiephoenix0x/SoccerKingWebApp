@@ -2,7 +2,7 @@ import CoinImg from "../images/cryptocurrency-color_usdt.png"
 import ProgressImg from "../images/carbon_in-progress.png"
 import DropDownImg from "../images/gridicons_dropdown.png"
 import ChartImg from "../images/material-symbols_pie-chart.png"
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 
 export default function SignalCard() {
     const navigate = useNavigate();
