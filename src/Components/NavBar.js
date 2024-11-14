@@ -20,6 +20,57 @@ export default function NavBar({ onTabChange }) {
     const [dashboardText, setDashboardText] = useState("");
     const [currentNavText, setCurrentNavText] = useState("");
 
+    const [isLoading, setIsLoading] = useState(false);
+    const [errorMessage, setErrorMessage] = useState('');
+
+    const handleLogout = async () => {
+        const accessToken = localStorage.getItem('accessToken');
+
+        if (!accessToken) {
+            setErrorMessage('You are not logged in.');
+            return;
+        }
+
+        setIsLoading(true);
+        setErrorMessage('');
+
+        try {
+            const response = await fetch('https://signal.payguru.com.ng/api/logout', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${accessToken}`,
+                },
+            });
+
+            const responseData = await response.json();
+
+            if (response.ok) {
+                // Handle successful logout
+                localStorage.removeItem('accessToken');
+                localStorage.removeItem('user'); // Assuming you have user data in local storage
+                alert('Logged out successfully!'); // Replace with your snackbar or notification method
+                navigate('/'); // Navigate to the intro page or login page
+            } else if (response.status === 401) {
+                const message = responseData.message || 'Unauthorized';
+                setErrorMessage(`Error: ${message}`);
+            } else {
+                setErrorMessage('An unexpected error occurred. Please try again.');
+            }
+        } catch (error) {
+            setErrorMessage('Failed to connect to the server. Please check your internet connection.');
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
+    const showLogoutConfirmationDialog = () => {
+        const confirmLogout = window.confirm('Are you sure you want to log out?');
+        if (confirmLogout) {
+            handleLogout();
+        }
+    };
+
     const determineRouteText = (path) => {
         switch (path) {
             case "/DashBoard":
@@ -265,14 +316,19 @@ export default function NavBar({ onTabChange }) {
                                 <a href="#" style={{ color: isActive('/DashBoard/ProfileSettings') ? '#FCE74F' : 'black' }} onClick={GoToProfileSettings}>Profile</a>
                                 <a href="#" style={{ color: isActive('/DashBoard/ChangePassword') ? '#FCE74F' : 'black' }} onClick={GoToChangePassword}>Change Password</a>
                                 <a href="#" style={{ color: isActive('/DashBoard/Transaction') ? '#FCE74F' : 'black' }}>Transaction</a>
-                                <a href="#" style={{ color: isActive('/DashBoard/Logout') ? '#FCE74F' : 'black' }} onClick={GoToLogin}>Log Out</a>
+                                <a href="#" style={{ color: isActive('/DashBoard/Logout') ? '#FCE74F' : 'black' }} onClick={showLogoutConfirmationDialog}>Log Out</a>
                             </div>
                         </div>
 
                         <div id="SubNav">
-                            <div id="LogoutText" onClick={GoToLogin}>
-                                <img id="LogoutImg" src={LogoutImg} alt="Logout" />
-                                <span>Logout</span>
+                            <div id="LogoutText" onClick={showLogoutConfirmationDialog}>
+                                {!isLoading && <img id="LogoutImg" src={LogoutImg} alt="Logout" />} {/* Show image only when not loading */}
+                                {isLoading ? (
+                                    <span>Loading...</span> // Show loading text when isLoading is true
+                                ) : (
+                                    <span>Logout</span> // Show Logout text when isLoading is false
+                                )}
+                                {errorMessage && <div className="error-message">{errorMessage}</div>} {/* Display error messages */}
                             </div>
                             <div id="EnglishText">
                                 <img id="LanguageImg" src={LanguageImg} alt="Language" />
@@ -363,14 +419,19 @@ export default function NavBar({ onTabChange }) {
                                     <a href="#" style={{ color: isActive('/DashBoard/ProfileSettings') ? '#FCE74F' : 'black' }} onClick={GoToProfileSettings}>Profile</a>
                                     <a href="#" style={{ color: isActive('/DashBoard/ChangePassword') ? '#FCE74F' : 'black' }} onClick={GoToChangePassword}>Change Password</a>
                                     <a href="#" style={{ color: isActive('/DashBoard/Transaction') ? '#FCE74F' : 'black' }}>Transaction</a>
-                                    <a href="#" style={{ color: isActive('/DashBoard/Logout') ? '#FCE74F' : 'black' }} onClick={GoToLogin}>Log Out</a>
+                                    <a href="#" style={{ color: isActive('/DashBoard/Logout') ? '#FCE74F' : 'black' }} onClick={showLogoutConfirmationDialog}>Log Out</a>
                                 </div>
                             </div>
 
                             <div id="SubNav">
-                                <div id="LogoutText" onClick={GoToLogin}>
-                                    <img id="LogoutImg" src={LogoutImg} alt="Logout" />
-                                    <span>Logout</span>
+                                <div id="LogoutText" onClick={showLogoutConfirmationDialog}>
+                                    {!isLoading && <img id="LogoutImg" src={LogoutImg} alt="Logout" />} {/* Show image only when not loading */}
+                                    {isLoading ? (
+                                        <span>Loading...</span> // Show loading text when isLoading is true
+                                    ) : (
+                                        <span>Logout</span> // Show Logout text when isLoading is false
+                                    )}
+                                    {errorMessage && <div className="error-message">{errorMessage}</div>} {/* Display error messages */}
                                 </div>
                                 <div id="EnglishText">
                                     <img id="LanguageImg" src={LanguageImg} alt="Language" />

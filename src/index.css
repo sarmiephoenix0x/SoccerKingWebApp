@@ -1115,7 +1115,8 @@ body::-webkit-scrollbar-thumb {
   }
 
   .DropDownImg {
-    width: 25%;
+    cursor: pointer;
+    width: 2%;
     height: auto;
   }
 
@@ -1204,35 +1205,35 @@ body::-webkit-scrollbar-thumb {
     height: 12px;
   }
 
-  #VAVert{
+  #VAVert {
     display: flex;
     flex-direction: column;
   }
 
-  #VAHorizon{
+  #VAHorizon {
     display: flex;
     flex-direction: row;
     align-items: center;
     column-gap: 10px;
   }
 
-  #VACoinName{
+  #VACoinName {
     font-weight: bold;
     font-size: 30px;
   }
 
-  #VAAuthorName{
+  #VAAuthorName {
     cursor: pointer;
     font-size: small;
     color: #FFFFFF80;
   }
 
-  #VAPriceText{
+  #VAPriceText {
     font-weight: bold;
     font-size: 30px;
   }
 
-  #VASub2Text2{
+  #VASub2Text2 {
     display: flex;
     align-self: flex-start;
     font-weight: bold;
@@ -1241,17 +1242,20 @@ body::-webkit-scrollbar-thumb {
 
   .donut-chart {
     position: relative;
-    width: 150px; /* Adjust size as needed */
+    width: 150px;
+    /* Adjust size as needed */
     height: 150px;
     border-radius: 50%;
-    background: conic-gradient(green 0% 75%, red 75% 100%); /* 75% green, 25% red */
+    background: conic-gradient(green 0% 75%, red 75% 100%);
+    /* 75% green, 25% red */
     display: flex;
     align-items: center;
     justify-content: center;
-}
+  }
 
-.donut-hole {
-    width: 75%; /* Adjust to control size of inner hole */
+  .donut-hole {
+    width: 75%;
+    /* Adjust to control size of inner hole */
     height: 75%;
     background-color: #132D39;
     border-radius: 50%;
@@ -1261,205 +1265,307 @@ body::-webkit-scrollbar-thumb {
     color: white;
     font-size: 24px;
     font-weight: bold;
-}
+  }
 
-.percentage {
+  .percentage {
     color: green;
-}
+  }
 
 
-#SAVert{
-  display: flex;
-  flex-direction: column;
-  row-gap: 10px;
-  align-items: center;
-}
+  #SAVert {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: center;
+  }
 
-#SAHorizon{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  column-gap: 20px;
-  width: 100%;
-}
+  #SAHorizon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+    width: 100%;
+  }
 
-#SAHorizon2{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  column-gap: 20px;
-  width: 100%;
-}
+  #SAHorizon2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 20px;
+    width: 100%;
+  }
 
-#SAHorizon3{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  column-gap: 20px;
-  width: 100%;
-}
+  #SAHorizon3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    column-gap: 20px;
+    width: 100%;
+  }
 
-#SARanking{
-  display: flex;
-  align-self: flex-start;
-}
+  #SARanking {
+    display: flex;
+    align-self: flex-start;
+  }
 
-#percentageText{
-  font-size: 12px;
-  white-space: nowrap;
-}
-
-
-.bar-chart {
-  display: flex;
-  align-self: flex-start;
-  position: relative;
-  width: 100%;
-  height: 10px;
-  background-color: red; /* Background red for the remaining part */
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.bar-green {
-  height: 100%;
-  background-color: green;
-  width: 75%; /* Default percentage, dynamically updated by JavaScript */
-  transition: width 0.5s ease; /* Smooth transition when percentage changes */
-}
-
-.label-green, .label-red {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-weight: bold;
-  color: white;
-  font-size: 12px;
-}
-
-.label-green {
-  left: 10px; /* Position label at the left side of the bar */
-}
-
-.label-red {
-  right: 10px; /* Position label at the right side of the bar */
-}
-
-.follow-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  outline: none;
-}
-
-.follow-button {
-  background: #314852;
-}
-
-.follow-button.following {
-  background-color: #28a745; /* Green color for "Following" */
-}
-
-.follow-button:hover {
-  opacity: 0.9;
-}
+  #percentageText {
+    font-size: 12px;
+    white-space: nowrap;
+  }
 
 
-#SASub {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: white;
-  row-gap: 20px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  padding-left: 40px;
-  padding-right: 40px;
-  background-color: #0D222B;
-  border-radius: 10px;
-  width: 70%;
-  position: relative;
-}
+  .bar-chart {
+    display: flex;
+    align-self: flex-start;
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background-color: red;
+    /* Background red for the remaining part */
+    border-radius: 5px;
+    overflow: hidden;
+  }
 
-.ProfileImg{
-  width: 100%;
-  border-radius: 55px;
-  height: auto;
-}
+  .bar-green {
+    height: 100%;
+    background-color: green;
+    width: 75%;
+    /* Default percentage, dynamically updated by JavaScript */
+    transition: width 0.5s ease;
+    /* Smooth transition when percentage changes */
+  }
 
+  .label-green,
+  .label-red {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    color: white;
+    font-size: 12px;
+  }
 
-#SAName{
-  display: flex;
-  align-self: flex-start;
-  font-weight: bold;
-  font-size: 40px;
-}
+  .label-green {
+    left: 10px;
+    /* Position label at the left side of the bar */
+  }
 
-#SAPips{
-  text-align: center;
-  white-space: nowrap;
-  font-size: 14px;
-}
+  .label-red {
+    right: 10px;
+    /* Position label at the right side of the bar */
+  }
 
-#PipsProfitText{
-  font-weight: bold;
-  font-size: 20px;
-}
+  .follow-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    outline: none;
+  }
 
-#ProfitStat{
-  display: flex;
-  align-self: flex-start;
-  font-weight: bold;
-  font-size: 20px;
-}
+  .follow-button {
+    background: #314852;
+  }
 
+  .follow-button.following {
+    background-color: #28a745;
+    /* Green color for "Following" */
+  }
 
-.reusableItem {
-  padding: 10px 20px;
-  font-size: 13px;
-  font-weight: bold;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  background: #314852;
-  outline: none;
-}
-
-#SignalViewBG {
-  height: auto;
-  width: 100%;
-  padding: 20px;
-  background-color: #0D222B;
-  border-radius: 5px;
-  overflow-x: auto;
-  /* Enable horizontal scroll on small screens */
-}
-
-#SignalViewTable {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: left;
-  min-width: 600px;
-  /* Minimum width to prevent content squishing */
-}
+  .follow-button:hover {
+    opacity: 0.9;
+  }
 
 
-#SignalAuthorContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 30px;
-  padding-top: 70px;
-  padding-left: 50px;
-  padding-right: 50px;
-}
+  #SASub {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    row-gap: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #0D222B;
+    border-radius: 10px;
+    width: 70%;
+    position: relative;
+  }
+
+  .ProfileImg {
+    width: 100%;
+    border-radius: 55px;
+    height: auto;
+  }
+
+
+  #SAName {
+    display: flex;
+    align-self: flex-start;
+    font-weight: bold;
+    font-size: 40px;
+  }
+
+  #SAPips {
+    text-align: center;
+    white-space: nowrap;
+    font-size: 14px;
+  }
+
+  #PipsProfitText {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  #ProfitStat {
+    display: flex;
+    align-self: flex-start;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+
+  .reusableItem {
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background: #314852;
+    outline: none;
+  }
+
+  #SignalViewBG {
+    height: auto;
+    width: 100%;
+    padding: 20px;
+    background-color: #0D222B;
+    border-radius: 5px;
+    overflow-x: auto;
+    /* Enable horizontal scroll on small screens */
+  }
+
+  #SignalViewTable {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    min-width: 600px;
+    /* Minimum width to prevent content squishing */
+  }
+
+
+  #SignalAuthorContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+    padding-top: 70px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .loadMoreButton {
+    background-color: #0D222B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+
+  .loadMoreButton:hover {
+    background-color: #050b0e;
+  }
+
+  .CurrentPriceDetails {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #050b0e;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+
+  .Target {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #050b0e;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+
+  .Target {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+
+  .trading-view-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #1e1e2f;
+    /* Dark background for a professional look */
+    color: white;
+    /* White text for better contrast */
+  }
+
+  .trading-view-header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #444;
+    /* Subtle border for separation */
+  }
+
+  .trading-view-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .refresh-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    /* Bootstrap primary color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+  }
+
+  .refresh-button:hover {
+    background-color: #0056b3;
+    /* Darker shade on hover */
+  }
+
+  .refresh-button.loading {
+    background-color: #6c757d;
+    /* Grey color when loading */
+    cursor: not-allowed;
+    /* Change cursor to indicate loading */
+  }
+
+  .trading-view-chart {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 
 }
 
@@ -2672,7 +2778,8 @@ body::-webkit-scrollbar-thumb {
   }
 
   .DropDownImg {
-    width: 25%;
+    cursor: pointer;
+    width: 2%;
     height: auto;
   }
 
@@ -2761,35 +2868,35 @@ body::-webkit-scrollbar-thumb {
     height: 12px;
   }
 
-  #VAVert{
+  #VAVert {
     display: flex;
     flex-direction: column;
   }
 
-  #VAHorizon{
+  #VAHorizon {
     display: flex;
     flex-direction: row;
     align-items: center;
     column-gap: 10px;
   }
 
-  #VACoinName{
+  #VACoinName {
     font-weight: bold;
     font-size: 30px;
   }
 
-  #VAAuthorName{
+  #VAAuthorName {
     cursor: pointer;
     font-size: small;
     color: #FFFFFF80;
   }
 
-  #VAPriceText{
+  #VAPriceText {
     font-weight: bold;
     font-size: 30px;
   }
 
-  #VASub2Text2{
+  #VASub2Text2 {
     display: flex;
     align-self: flex-start;
     font-weight: bold;
@@ -2798,17 +2905,20 @@ body::-webkit-scrollbar-thumb {
 
   .donut-chart {
     position: relative;
-    width: 150px; /* Adjust size as needed */
+    width: 150px;
+    /* Adjust size as needed */
     height: 150px;
     border-radius: 50%;
-    background: conic-gradient(green 0% 75%, red 75% 100%); /* 75% green, 25% red */
+    background: conic-gradient(green 0% 75%, red 75% 100%);
+    /* 75% green, 25% red */
     display: flex;
     align-items: center;
     justify-content: center;
-}
+  }
 
-.donut-hole {
-    width: 75%; /* Adjust to control size of inner hole */
+  .donut-hole {
+    width: 75%;
+    /* Adjust to control size of inner hole */
     height: 75%;
     background-color: #132D39;
     border-radius: 50%;
@@ -2818,205 +2928,212 @@ body::-webkit-scrollbar-thumb {
     color: white;
     font-size: 24px;
     font-weight: bold;
-}
+  }
 
-.percentage {
+  .percentage {
     color: green;
-}
+  }
 
 
-#SAVert{
-  display: flex;
-  flex-direction: column;
-  row-gap: 10px;
-  align-items: center;
-}
+  #SAVert {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: center;
+  }
 
-#SAHorizon{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  column-gap: 20px;
-  width: 100%;
-}
+  #SAHorizon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+    width: 100%;
+  }
 
-#SAHorizon2{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  column-gap: 20px;
-  width: 100%;
-}
+  #SAHorizon2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 20px;
+    width: 100%;
+  }
 
-#SAHorizon3{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  column-gap: 20px;
-  width: 100%;
-}
+  #SAHorizon3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    column-gap: 20px;
+    width: 100%;
+  }
 
-#SARanking{
-  display: flex;
-  align-self: flex-start;
-}
+  #SARanking {
+    display: flex;
+    align-self: flex-start;
+  }
 
-#percentageText{
-  font-size: 12px;
-  white-space: nowrap;
-}
-
-
-.bar-chart {
-  display: flex;
-  align-self: flex-start;
-  position: relative;
-  width: 100%;
-  height: 10px;
-  background-color: red; /* Background red for the remaining part */
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.bar-green {
-  height: 100%;
-  background-color: green;
-  width: 75%; /* Default percentage, dynamically updated by JavaScript */
-  transition: width 0.5s ease; /* Smooth transition when percentage changes */
-}
-
-.label-green, .label-red {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-weight: bold;
-  color: white;
-  font-size: 12px;
-}
-
-.label-green {
-  left: 10px; /* Position label at the left side of the bar */
-}
-
-.label-red {
-  right: 10px; /* Position label at the right side of the bar */
-}
-
-.follow-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  outline: none;
-}
-
-.follow-button {
-  background: #314852;
-}
-
-.follow-button.following {
-  background-color: #28a745; /* Green color for "Following" */
-}
-
-.follow-button:hover {
-  opacity: 0.9;
-}
+  #percentageText {
+    font-size: 12px;
+    white-space: nowrap;
+  }
 
 
-#SASub {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: white;
-  row-gap: 20px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  padding-left: 40px;
-  padding-right: 40px;
-  background-color: #0D222B;
-  border-radius: 10px;
-  width: 70%;
-  position: relative;
-}
+  .bar-chart {
+    display: flex;
+    align-self: flex-start;
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background-color: red;
+    /* Background red for the remaining part */
+    border-radius: 5px;
+    overflow: hidden;
+  }
 
-.ProfileImg{
-  width: 100%;
-  border-radius: 55px;
-  height: auto;
-}
+  .bar-green {
+    height: 100%;
+    background-color: green;
+    width: 75%;
+    /* Default percentage, dynamically updated by JavaScript */
+    transition: width 0.5s ease;
+    /* Smooth transition when percentage changes */
+  }
 
+  .label-green,
+  .label-red {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    color: white;
+    font-size: 12px;
+  }
 
-#SAName{
-  display: flex;
-  align-self: flex-start;
-  font-weight: bold;
-  font-size: 40px;
-}
+  .label-green {
+    left: 10px;
+    /* Position label at the left side of the bar */
+  }
 
-#SAPips{
-  text-align: center;
-  white-space: nowrap;
-  font-size: 14px;
-}
+  .label-red {
+    right: 10px;
+    /* Position label at the right side of the bar */
+  }
 
-#PipsProfitText{
-  font-weight: bold;
-  font-size: 20px;
-}
+  .follow-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    outline: none;
+  }
 
-#ProfitStat{
-  display: flex;
-  align-self: flex-start;
-  font-weight: bold;
-  font-size: 20px;
-}
+  .follow-button {
+    background: #314852;
+  }
 
+  .follow-button.following {
+    background-color: #28a745;
+    /* Green color for "Following" */
+  }
 
-.reusableItem {
-  padding: 10px 20px;
-  font-size: 13px;
-  font-weight: bold;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  background: #314852;
-  outline: none;
-}
-
-#SignalViewBG {
-  height: auto;
-  width: 100%;
-  padding: 20px;
-  background-color: #0D222B;
-  border-radius: 5px;
-  overflow-x: auto;
-  /* Enable horizontal scroll on small screens */
-}
-
-#SignalViewTable {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: left;
-  min-width: 600px;
-  /* Minimum width to prevent content squishing */
-}
+  .follow-button:hover {
+    opacity: 0.9;
+  }
 
 
-#SignalAuthorContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 30px;
-  padding-top: 70px;
-  padding-left: 50px;
-  padding-right: 50px;
-}
+  #SASub {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    row-gap: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #0D222B;
+    border-radius: 10px;
+    width: 70%;
+    position: relative;
+  }
+
+  .ProfileImg {
+    width: 100%;
+    border-radius: 55px;
+    height: auto;
+  }
+
+
+  #SAName {
+    display: flex;
+    align-self: flex-start;
+    font-weight: bold;
+    font-size: 40px;
+  }
+
+  #SAPips {
+    text-align: center;
+    white-space: nowrap;
+    font-size: 14px;
+  }
+
+  #PipsProfitText {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  #ProfitStat {
+    display: flex;
+    align-self: flex-start;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+
+  .reusableItem {
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background: #314852;
+    outline: none;
+  }
+
+  #SignalViewBG {
+    height: auto;
+    width: 100%;
+    padding: 20px;
+    background-color: #0D222B;
+    border-radius: 5px;
+    overflow-x: auto;
+    /* Enable horizontal scroll on small screens */
+  }
+
+  #SignalViewTable {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    min-width: 600px;
+    /* Minimum width to prevent content squishing */
+  }
+
+
+  #SignalAuthorContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+    padding-top: 70px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }
 
 @media (max-width: 670px) {
@@ -3044,39 +3161,39 @@ body::-webkit-scrollbar-thumb {
     width: 15%;
   }
 
-  #SASub{
+  #SASub {
     width: 100%;
   }
 
-  #SAPips{
+  #SAPips {
     font-size: 2.2vw;
   }
 
-  #PipsProfitText{
+  #PipsProfitText {
     font-size: 2.8vw;
   }
 
-  #SAName{
+  #SAName {
     font-size: 4.5vw;
   }
 
-  #SARanking{
+  #SARanking {
     font-size: 2.8vw;
   }
 
-  #SABio{
+  #SABio {
     font-size: 2.5vw;
   }
 
-  #ProfitStat{
+  #ProfitStat {
     font-size: 2.8vw;
   }
 
-  #percentageText{
+  #percentageText {
     font-size: 2vw;
   }
 
-  #percentage{
+  #percentage {
     font-size: 2.5vw;
   }
 
@@ -3085,15 +3202,15 @@ body::-webkit-scrollbar-thumb {
     white-space: nowrap;
   }
 
-  .reusableItem{
+  .reusableItem {
     font-size: 2.5vw;
   }
 
-  .follow-button{
+  .follow-button {
     font-size: 2.5vw;
   }
 
-  #SignalViewBG{
+  #SignalViewBG {
     width: 100%;
   }
 }
@@ -3183,33 +3300,38 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
   }
 
-  .SASubText{
-    font-size: 3.2vw;
-    white-space: nowrap;
-  }
-  .SASubText2{
+  .SASubText {
     font-size: 3.2vw;
     white-space: nowrap;
   }
 
-  .SCSubText{
+  .SASubText2 {
     font-size: 3.2vw;
     white-space: nowrap;
   }
-  .SCSubText2{
+
+  .SCSubText {
+    font-size: 3.2vw;
+    white-space: nowrap;
+  }
+
+  .SCSubText2 {
     font-size: 3.2vw;
     white-space: nowrap;
     width: min-content;
   }
-  .SCSubText3{
+
+  .SCSubText3 {
     font-size: 3.2vw;
     white-space: nowrap;
   }
-  .SCSubText4{
+
+  .SCSubText4 {
     font-size: 3.2vw;
     white-space: nowrap;
   }
-  .SCSubText5{
+
+  .SCSubText5 {
     display: flex;
     align-items: center;
     width: min-content;
@@ -3217,41 +3339,41 @@ body::-webkit-scrollbar-thumb {
     white-space: nowrap;
   }
 
-  .ChartImg{
+  .ChartImg {
     width: 20%;
   }
 
-  #VACoinName{
+  #VACoinName {
     font-size: 4.8vw;
   }
 
-  #VATimeStamp{
+  #VATimeStamp {
     font-size: 3.2vw;
     white-space: nowrap;
   }
 
-  #VAAuthorName{
+  #VAAuthorName {
     font-size: 2.6vw;
     white-space: nowrap;
   }
 
-  #VASub2Text{
+  #VASub2Text {
     font-size: 3.2vw;
     white-space: nowrap;
   }
 
 
-  #VASub2Text2{
+  #VASub2Text2 {
     font-size: 3.8vw;
     white-space: nowrap;
   }
 
-  #VAPriceText{
+  #VAPriceText {
     font-size: 4.8vw;
     white-space: nowrap;
   }
 
-  #VAAnalysisText{
+  #VAAnalysisText {
     font-size: 3.2vw;
   }
 }

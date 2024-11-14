@@ -6,8 +6,7 @@ export default function Forex() {
         <>
             <div id="SignalContainer">
                 <SignalsAnalysis />
-                <SignalCard/>
-                
+                <SignalCard type="forex" />
             </div>
         </>
     )

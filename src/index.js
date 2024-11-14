@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import DashBoard from './Pages/DashBoard.js';
 import AuthenticationPage from './Pages/AuthenticationPage';
-import LogIn from './authenticationPages/LogIn.js';
+import LogIn from './authenticationPages/logIn.js';
 import Register from './authenticationPages/Register';
 import DashBoardPage from './dashboardPages/DashBoardPage';
 import Packages from './dashboardPages/Packages.js';
@@ -19,6 +19,7 @@ import Course from './dashboardPages/Course.js';
 import ProfileSettings from './dashboardPages/ProfileSettings.js'
 import ChangePassword from './Pages/ChangePassword.js'
 import SplashScreen from './Components/SplashScreen.js';
+import TradingViewPage from './dashboardPages/TradingViewPage.js';
 import './index.css';
 import './fonts/fonts.css';
 import swDev from './swDev.js';
@@ -86,6 +87,7 @@ function START() {
                             <Route path="/DashBoard/Course" element={<Course />} />
                             <Route path="/DashBoard/ProfileSettings" element={<ProfileSettings />} />
                             <Route path="/DashBoard/ChangePassword" element={<ChangePassword />} />
+                            <Route path="/DashBoard/TradingViewPage" element={<TradingViewPage />} />
                         </Route>
                     </Routes>
                 </BrowserRouter>

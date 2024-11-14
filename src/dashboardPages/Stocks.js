@@ -6,8 +6,7 @@ export default function Stocks() {
         <>
         <div id="SignalContainer">
                 <SignalsAnalysis />
-                <SignalCard/>
-                
+                <SignalCard type="stocks" />
             </div>
         </>
     )

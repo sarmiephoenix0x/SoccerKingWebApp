@@ -6,8 +6,7 @@ export default function Crypto() {
         <>
             <div id="SignalContainer">
                 <SignalsAnalysis />
-                <SignalCard/>
-                
+                <SignalCard type="crypto" />
             </div>
         </>
     )
