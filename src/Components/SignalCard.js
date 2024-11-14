@@ -13,7 +13,7 @@ export default function SignalCard({ type }) {
     const [loading, setLoading] = useState(true);
     const [page, setPage] = useState(1);
     const [hasMore, setHasMore] = useState(true);
-    const [expandedSignalIndex, setExpandedSignalIndex] = useState(null); 
+    const [expandedSignalIndex, setExpandedSignalIndex] = useState(null);
     const { enqueueSnackbar } = useSnackbar();
 
     useEffect(() => {
@@ -35,10 +35,10 @@ export default function SignalCard({ type }) {
         loadSignals();
     }, [type, page]);
 
-    const GoToViewAnalysis = (signalId) => {
-        document.body.style.overflowY = 'auto';
-        navigate("/DashBoard/ViewAnalysis", { state: { signalId } });
+    const GoToViewAnalysis = (signal) => {
         document.getElementById("DashBoardText2").innerHTML = "View Analysis";
+        document.body.style.overflowY = 'auto';
+        navigate("/DashBoard/ViewAnalysis", { state: { signal } }); // Pass the entire signal object
     };
 
     const toggleExpand = (index) => {
@@ -46,7 +46,7 @@ export default function SignalCard({ type }) {
     };
 
     const GoToLiveChart = () => {
-       navigate("/DashBoard/TradingViewPage"); 
+        navigate("/DashBoard/TradingViewPage");
     }
 
     return (
@@ -66,9 +66,13 @@ export default function SignalCard({ type }) {
                             <div className="SCSub">
                                 <div className="SCSubText">
                                     <div className="CoinDets">
-                                        <img className="CoinImg" src={CoinImg} alt="CoinImage" />
-                                        <div className="CoinTrend">{signal.trend}</div>
-                                        <div className="CoinName">{signal.coin}</div> {/* Use signal.coin instead of coinName */}
+                                        <img
+                                            className="CoinImg"
+                                            src={signal.coin_image || CoinImg}
+                                            alt="CoinImage"
+                                        />
+                                        <div className="CoinTrend">{signal.trend ? `${signal.trend}` : `No Trend`}</div>
+                                        <div className="CoinName">{signal.coin} {signal.pair ? `(${signal.pair})` : ''}</div> {/* Use signal.coin instead of coinName */}
                                     </div>
                                 </div>
                             </div>
@@ -85,7 +89,7 @@ export default function SignalCard({ type }) {
                                 <div className="SCSubText2" onClick={() => toggleExpand(index)}>
                                     {signal.current_price}
                                 </div>
-                                <img className="DropDownImg" src ={DropDownImg} alt="DropDown" onClick={() => toggleExpand(index)} />
+                                <img className="DropDownImg" src={DropDownImg} alt="DropDown" onClick={() => toggleExpand(index)} />
                             </div>
                             {expandedSignalIndex === index && (
                                 <div className="CurrentPriceDetails">
@@ -98,7 +102,7 @@ export default function SignalCard({ type }) {
                                 </div>
                             )}
                             <div className="SCSub">
-                                <div className="SCSubText4" onClick={() => GoToViewAnalysis(signal.id)}>View Analysis</div>
+                                <div className="SCSubText4" onClick={() => GoToViewAnalysis(signal)}>View Analysis</div>
                                 <div className="SCSubText5" onClick={GoToLiveChart}>
                                     Live Chart
                                     <img className="ChartImg" src={ChartImg} alt="Chart" />
