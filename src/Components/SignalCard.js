@@ -79,7 +79,7 @@ export default function SignalCard({ type }) {
                             </div>
                             <div className="SCSub2">
                                 <div className="SCSubText">Current Price</div>
-                                <div className="SCSubText3" onClick={() => toggleExpand(index)}>
+                                <div className="SCSubText2" onClick={() => toggleExpand(index)}>
                                     {signal.current_price}
                                 </div>
                                 <img className="DropDownImg" src ={DropDownImg} alt="DropDown" onClick={() => toggleExpand(index)} />
