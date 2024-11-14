@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import DashBoard from './Pages/DashBoard.js';
 import AuthenticationPage from './Pages/AuthenticationPage';
-import LogIn from './authenticationPages/logIn.js';
+import SignIn from './authenticationPages/SignIn.js';
 import Register from './authenticationPages/Register';
 import DashBoardPage from './dashboardPages/DashBoardPage';
 import Packages from './dashboardPages/Packages.js';
@@ -71,7 +71,7 @@ function START() {
                 <BrowserRouter>
                     <Routes>
                         <Route path="/" element={<AuthenticationPage />}>
-                            <Route index element={<LogIn />} />
+                            <Route index element={<SignIn />} />
                             <Route path="/Register" element={<Register />} />
                         </Route>
                         <Route path="/DashBoard" element={<DashBoard />} >

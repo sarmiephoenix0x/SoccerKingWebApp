@@ -3,7 +3,7 @@ import FbImg from "../images/FacebookIcon.png";
 import GoogleImg from "../images/GoogleIcon.png";
 import { useNavigate } from 'react-router-dom';
 
-export default function LogIn() {
+export default function SignIn() {
     const navigate = useNavigate();
     const [emailOrPhoneNumber, setEmailOrPhoneNumber] = useState('');
     const [password, setPassword] = useState('');
