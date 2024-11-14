@@ -1060,6 +1060,7 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     background: #314852;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -2640,7 +2641,7 @@ body::-webkit-scrollbar-thumb {
     padding-right: 15px;
     outline-color: white;
     color: white;
-    width: 95%;
+    width: 93%;
   }
 
   #ProfileSettingsInputField::placeholder {
@@ -2747,6 +2748,7 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     background: #314852;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -2803,7 +2805,7 @@ body::-webkit-scrollbar-thumb {
 
   .DropDownImg {
     cursor: pointer;
-    width: 2%;
+    width: 7%;
     height: auto;
   }
 
