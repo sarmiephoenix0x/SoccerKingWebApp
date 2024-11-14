@@ -9,6 +9,7 @@ import StatImg3 from '../images/Deposit.png'
 import StatImg4 from '../images/Signals.png'
 import StatImg5 from '../images/Transaction.png'
 import StatImg6 from '../images/Referral.png'
+import { useSnackbar } from 'notistack';
 
 export default function DashBoardPage() {
     const [loading, setLoading] = useState(true);
@@ -16,6 +17,7 @@ export default function DashBoardPage() {
     const [totalSignals, setTotalSignals] = useState(0);
     const [balance, setBalance] = useState('$0.00');
     const [profilePhoto, setProfilePhoto] = useState('');
+    const { enqueueSnackbar } = useSnackbar();
 
     useEffect(() => {
         const fetchDetails = async () => {
@@ -38,10 +40,12 @@ export default function DashBoardPage() {
                     setBalance(userData.balance || '$0.00'); // Assuming userData has a balance field
                     setProfilePhoto(profilePhoto);
                 } else {
-                    setErrorMessage('Failed to load details');
+                    enqueueSnackbar('Failed to load details', { variant: 'error' });
+                    // setErrorMessage('Failed to load details');
                 }
             } catch (error) {
-                setErrorMessage('Failed to load data. Please check your network connection.');
+                enqueueSnackbar('Failed to load data. Please check your network connection.', { variant: 'error' });
+                // setErrorMessage('Failed to load data. Please check your network connection.');
                 console.error('Exception caught:', error);
             } finally {
                 setLoading(false);

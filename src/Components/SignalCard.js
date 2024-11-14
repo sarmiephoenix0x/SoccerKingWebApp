@@ -5,6 +5,7 @@ import ProgressImg from "../images/carbon_in-progress.png";
 import DropDownImg from "../images/gridicons_dropdown.png";
 import ChartImg from "../images/material-symbols_pie-chart.png";
 import { useNavigate } from 'react-router-dom';
+import { useSnackbar } from 'notistack';
 
 export default function SignalCard({ type }) {
     const navigate = useNavigate();
@@ -12,7 +13,8 @@ export default function SignalCard({ type }) {
     const [loading, setLoading] = useState(true);
     const [page, setPage] = useState(1);
     const [hasMore, setHasMore] = useState(true);
-    const [expandedSignalIndex, setExpandedSignalIndex] = useState(null); // For dropdown functionality
+    const [expandedSignalIndex, setExpandedSignalIndex] = useState(null); 
+    const { enqueueSnackbar } = useSnackbar();
 
     useEffect(() => {
         const loadSignals = async () => {
@@ -23,6 +25,7 @@ export default function SignalCard({ type }) {
                 setHasMore(result.pagination.next_page_url !== null);
                 document.body.style.overflowY = 'auto';
             } catch (error) {
+                enqueueSnackbar('Error fetching signals:', error, { variant: 'error' });
                 console.error('Error fetching signals:', error);
             } finally {
                 setLoading(false);

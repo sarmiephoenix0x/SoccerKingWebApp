@@ -956,7 +956,7 @@ body::-webkit-scrollbar-thumb {
     padding-right: 15px;
     outline-color: white;
     color: white;
-    width: 90%;
+    width: 95%;
   }
 
   #ProfileSettingsInputField::placeholder {
@@ -1566,6 +1566,30 @@ body::-webkit-scrollbar-thumb {
     align-items: center;
   }
 
+
+  #CountryInputField {
+    width: 100%;
+    /* Make the input field take full width */
+    padding: 10px;
+    /* Add some padding for better appearance */
+    border: 1px solid #ccc;
+    /* Add a border */
+    border-radius: 5px;
+    /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Add a subtle shadow */
+    font-size: 16px;
+    /* Increase font size */
+  }
+
+  #CountryInputField:focus {
+    border-color: #007bff;
+    /* Change border color on focus */
+    outline: none;
+    /* Remove default outline */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    /* Add a shadow on focus */
+  }
 
 }
 
@@ -2616,7 +2640,7 @@ body::-webkit-scrollbar-thumb {
     padding-right: 15px;
     outline-color: white;
     color: white;
-    width: 90%;
+    width: 95%;
   }
 
   #ProfileSettingsInputField::placeholder {
@@ -3134,6 +3158,116 @@ body::-webkit-scrollbar-thumb {
     padding-left: 50px;
     padding-right: 50px;
   }
+
+  .loadMoreButton {
+    background-color: #0D222B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+
+  .loadMoreButton:hover {
+    background-color: #050b0e;
+  }
+
+  .CurrentPriceDetails {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #050b0e;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+
+  .Target {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #050b0e;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+
+  .Target {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+
+  .trading-view-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #1e1e2f;
+    /* Dark background for a professional look */
+    color: white;
+    /* White text for better contrast */
+  }
+
+  .trading-view-header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #444;
+    /* Subtle border for separation */
+  }
+
+  .trading-view-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .refresh-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    /* Bootstrap primary color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+  }
+
+  .refresh-button:hover {
+    background-color: #0056b3;
+    /* Darker shade on hover */
+  }
+
+  .refresh-button.loading {
+    background-color: #6c757d;
+    /* Grey color when loading */
+    cursor: not-allowed;
+    /* Change cursor to indicate loading */
+  }
+
+  .trading-view-chart {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  #CountryInputField {
+    width: 100%; /* Make the input field take full width */
+    padding: 10px; /* Add some padding for better appearance */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    font-size: 16px; /* Increase font size */
+}
+
+#CountryInputField:focus {
+    border-color: #007bff; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a shadow on focus */
+}
 }
 
 @media (max-width: 670px) {

@@ -23,6 +23,7 @@ import TradingViewPage from './dashboardPages/TradingViewPage.js';
 import './index.css';
 import './fonts/fonts.css';
 import swDev from './swDev.js';
+import { SnackbarProvider } from 'notistack';
 
 function START() {
     const [loading, setLoading] = useState(true);
@@ -97,4 +98,6 @@ function START() {
 }
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<START />);
+root.render(<SnackbarProvider maxSnack={3}>
+    <START />
+</SnackbarProvider>);

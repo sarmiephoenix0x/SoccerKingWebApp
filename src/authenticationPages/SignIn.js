@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import FbImg from "../images/FacebookIcon.png";
 import GoogleImg from "../images/GoogleIcon.png";
 import { useNavigate } from 'react-router-dom';
+import { useSnackbar } from 'notistack';
 
 export default function SignIn() {
     const navigate = useNavigate();
@@ -11,6 +12,8 @@ export default function SignIn() {
     const [emailOrPhoneNumberError, setEmailOrPhoneNumberError] = useState('');
     const [passwordError, setPasswordError] = useState('');
     const [generalError, setGeneralError] = useState('');
+
+    const { enqueueSnackbar } = useSnackbar();
 
     const GoToDashBoard = () => {
         navigate("/DashBoard");
@@ -82,10 +85,12 @@ export default function SignIn() {
             } else {
                 const error = responseData.error;
                 const data = responseData.data || [];
-                setGeneralError(`Error: ${error} - ${data.join(', ')}`);
+                enqueueSnackbar(`Error: ${error} - ${data.join(', ')}`, { variant: 'error' });
+                // setGeneralError(`Error: ${error} - ${data.join(', ')}`);
             }
         } catch (error) {
-            setGeneralError('An unexpected error occurred.');
+            enqueueSnackbar('An unexpected error occurred.', { variant: 'error' });
+            // setGeneralError('An unexpected error occurred.');
         } finally {
             setIsLoading(false);
         }

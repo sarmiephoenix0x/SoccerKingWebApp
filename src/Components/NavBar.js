@@ -4,6 +4,7 @@ import DropDownImg from '../images/gravity-ui_chevron-down.png';
 import HomeImg from '../images/tabler_home-filled.png';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { useSnackbar } from 'notistack';
 
 export default function NavBar({ onTabChange }) {
     const navigate = useNavigate();
@@ -22,6 +23,8 @@ export default function NavBar({ onTabChange }) {
 
     const [isLoading, setIsLoading] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
+
+    const { enqueueSnackbar } = useSnackbar();
 
     const handleLogout = async () => {
         const accessToken = localStorage.getItem('accessToken');
@@ -48,17 +51,21 @@ export default function NavBar({ onTabChange }) {
             if (response.ok) {
                 // Handle successful logout
                 localStorage.removeItem('accessToken');
-                localStorage.removeItem('user'); // Assuming you have user data in local storage
-                alert('Logged out successfully!'); // Replace with your snackbar or notification method
+                localStorage.removeItem('user'); 
+                enqueueSnackbar('Logged out successfully!', { variant: 'success' });
+                // alert('Logged out successfully!'); // Replace with your snackbar or notification method
                 navigate('/'); // Navigate to the intro page or login page
             } else if (response.status === 401) {
                 const message = responseData.message || 'Unauthorized';
-                setErrorMessage(`Error: ${message}`);
+                enqueueSnackbar(`Error: ${message}`, { variant: 'error' });
+                // setErrorMessage(`Error: ${message}`);
             } else {
-                setErrorMessage('An unexpected error occurred. Please try again.');
+                enqueueSnackbar('An unexpected error occurred. Please try again.', { variant: 'error' });
+                // setErrorMessage('An unexpected error occurred. Please try again.');
             }
         } catch (error) {
-            setErrorMessage('Failed to connect to the server. Please check your internet connection.');
+            enqueueSnackbar('Failed to connect to the server. Please check your internet connection.', { variant: 'error' });
+            // setErrorMessage('Failed to connect to the server. Please check your internet connection.');
         } finally {
             setIsLoading(false);
         }
@@ -132,6 +139,16 @@ export default function NavBar({ onTabChange }) {
             }, 300); // Match this with the animation duration
         }
     };
+
+    useEffect(() => {
+        // Check for access token
+        const accessToken = localStorage.getItem('accessToken');
+        if (!accessToken) {
+            enqueueSnackbar('You have been logged out. Please log in again to continue.', { variant: 'warning' });
+            // If token does not exist, log the user out and redirect to "/"
+            navigate("/");
+        }
+    }, [navigate]);
 
     useEffect(() => {
         if (menuOpen) {

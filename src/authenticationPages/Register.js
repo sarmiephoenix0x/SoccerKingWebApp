@@ -4,6 +4,7 @@ import GoogleImg from "../images/GoogleIcon.png"
 import { useNavigate } from 'react-router-dom';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
+import { useSnackbar } from 'notistack';
 
 export default function Register() {
 
@@ -22,6 +23,8 @@ export default function Register() {
     const [passwordError, setPasswordError] = useState('');
     const [passwordConfirmationError, setPasswordConfirmationError] = useState('');
     const [generalError, setGeneralError] = useState('');
+
+    const { enqueueSnackbar } = useSnackbar();
 
     const GoToDashBoard = () => {
         navigate("/DashBoard");
@@ -115,10 +118,12 @@ export default function Register() {
             } else {
                 const error = responseData .error;
                 const data = responseData.data?.email || [];
-                setGeneralError(`Error: ${error} - ${data.join(', ')}`);
+                enqueueSnackbar(`Error: ${error} - ${data.join(', ')}`, { variant: 'error' });
+                // setGeneralError(`Error: ${error} - ${data.join(', ')}`);
             }
         } catch (error) {
-            setGeneralError('An unexpected error occurred.');
+            enqueueSnackbar('An unexpected error occurred.', { variant: 'error' });
+            // setGeneralError('An unexpected error occurred.');
         } finally {
             setIsLoading(false);
         }
