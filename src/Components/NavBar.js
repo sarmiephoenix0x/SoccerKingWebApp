@@ -26,6 +26,8 @@ export default function NavBar({ onTabChange }) {
 
     const { enqueueSnackbar } = useSnackbar();
 
+    const [prevPath, setPrevPath] = useState('');
+
     const handleLogout = async () => {
         const accessToken = localStorage.getItem('accessToken');
 
@@ -51,7 +53,7 @@ export default function NavBar({ onTabChange }) {
             if (response.ok) {
                 // Handle successful logout
                 localStorage.removeItem('accessToken');
-                localStorage.removeItem('user'); 
+                localStorage.removeItem('user');
                 enqueueSnackbar('Logged out successfully!', { variant: 'success' });
                 // alert('Logged out successfully!'); // Replace with your snackbar or notification method
                 navigate('/'); // Navigate to the intro page or login page
@@ -79,6 +81,9 @@ export default function NavBar({ onTabChange }) {
     };
 
     const determineRouteText = (path) => {
+        const pathSegments = path.split('/'); // Split the path by '/'
+        const lastSegment = pathSegments[pathSegments.length - 1]; // Get the last segment
+
         switch (path) {
             case "/DashBoard":
                 return { dashboard: "Dashboard", nav: "Home - Dashboard" };
@@ -101,9 +106,10 @@ export default function NavBar({ onTabChange }) {
             case "/DashBoard/ChangePassword":
                 return { dashboard: "Change Password", nav: "Home - Change Password" };
             case "/DashBoard/ViewAnalysis":
-                return { dashboard: "View Analysis", nav: "" };
+                return { dashboard: "View Analysis", nav: prevPath ? `Signal - ${prevPath} - View Analysis` : "Signal - View Analysis" };
             case "/DashBoard/SignalAuthor":
-                return { dashboard: "Signal Author", nav: "" };
+                return { dashboard: "Signal Author", nav: prevPath ? `Signal - ${prevPath} - Signal Author` : "Signal - Signal Author" };
+
             default:
                 return { dashboard: "Dashboard", nav: "Home - Dashboard" };
         }
@@ -164,7 +170,8 @@ export default function NavBar({ onTabChange }) {
         const { dashboard, nav } = determineRouteText(currentPath);
         setDashboardText(dashboard);
         setCurrentNavText(nav);
-    }, []);
+        setPrevPath(location.pathname.split('/').pop());
+    }, [location.pathname]);
 
     useEffect(() => {
         window.addEventListener('resize', updateScreenWidth);
