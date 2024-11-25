@@ -109,6 +109,8 @@ export default function NavBar({ onTabChange }) {
                 return { dashboard: "Change Password", nav: "Home - Change Password" };
             case "/DashBoard/ViewAnalysis":
                 return { dashboard: "View Analysis", nav: prevPath ? `Signal - ${prevPath} - View Analysis` : "Signal - View Analysis" };
+            case "/DashBoard/TradingViewPage":
+                return { dashboard: "Live Chart", nav: prevPath ? `Signal - ${prevPath} - Live Chart` : "Signal - Live Chart" };
             case "/DashBoard/SignalAuthor":
                 return { dashboard: "Signal Author", nav: prevPath ? `Signal - ${prevPath} - Signal Author` : "Signal - Signal Author" };
 
