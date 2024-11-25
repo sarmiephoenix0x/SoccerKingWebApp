@@ -1609,6 +1609,122 @@ body::-webkit-scrollbar-thumb {
     /* Add a shadow on focus */
   }
 
+
+
+  .course-card {
+    cursor: pointer;
+    background-color: #314852;
+    border-radius: 8px;
+    overflow: hidden;
+    color: white;
+    margin: 16px;
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+}
+
+.course-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.course-content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.course-title {
+  font-size: 1.5em;
+  display: -webkit-box; /* Use flexbox for the box model */
+  margin: 4px 0;
+  -webkit-box-orient: vertical; /* Set the box orientation to vertical */
+  -webkit-line-clamp: 2; /* Limit to two lines */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Show ellipsis for overflowed text */
+  line-height: 1.2; /* Optional: Set line height for better spacing */
+  max-height: 2.4em; /* Optional: Set max height based on line height and number of lines */
+}
+
+.course-description {
+    margin: 4px 0;
+    max-height: 3em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; /* Limit to 3 lines */
+}
+
+.course-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+.course-author, .course-time {
+    font-size: 0.8em;
+}
+
+  .course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px; /* Space between cards */
+    padding: 16px;
+  }
+
+
+  .author-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .author-image {
+    width: 30px; /* Set width for author image */
+    height: 30px; /* Set height for author image */
+    border-radius: 50%; /* Make it circular */
+    margin-right: 8px; /* Space between image and text */
+  }
+
+
+  .course-details {
+    background-color: #314852;
+    color: white;
+    padding: 16px;
+  }
+  
+  .details-image {
+    width: 100%;
+    height: 300px; /* Set height for the image */
+    border-top-left-radius: 16px; /* Curved top left corner */
+    border-top-right-radius: 16px; /* Curved top right corner */
+  }
+  
+  .details-content {
+    background-color: #314852;
+    padding: 16px;
+    border: 1px solid white; /* Non-curved border below the image */
+    margin-top: 13px; /* Overlap with image border */
+  }
+  
+  .details-title {
+    font-size: 1.8em;
+    margin: 0;
+  }
+  
+  .details-footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+  }
+  
+  .details-date, .details-author {
+    font-size: 0.9em;
+  }
+
 }
 
 @media (max-width: 1080px) {

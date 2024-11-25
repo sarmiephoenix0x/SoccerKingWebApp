@@ -101,6 +101,8 @@ export default function NavBar({ onTabChange }) {
                 return { dashboard: "Referrals", nav: "Home - Referrals" };
             case "/DashBoard/Course":
                 return { dashboard: "Course", nav: "Home - Course" };
+            case "/DashBoard/Course/Details":
+                return { dashboard: "Course", nav: "Home - Course" };
             case "/DashBoard/ProfileSettings":
                 return { dashboard: "Profile Settings", nav: "Home - Profile Settings" };
             case "/DashBoard/ChangePassword":

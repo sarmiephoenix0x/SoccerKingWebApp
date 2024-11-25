@@ -15,7 +15,9 @@ import ViewAnalysis from './dashboardPages/ViewAnalysis.js';
 import SignalAuthor from './dashboardPages/SignalAuthor.js';
 import DepositHistory from './dashboardPages/DepositHistory.js';
 import Referral from './dashboardPages/Referral.js'
-import Course from './dashboardPages/Course.js';
+import Course from './Pages/Course.js';
+import CoursePage from './dashboardPages/CoursePage.js';
+import CourseDetails from './dashboardPages/CourseDetails.js';
 import ProfileSettings from './dashboardPages/ProfileSettings.js'
 import ChangePassword from './Pages/ChangePassword.js'
 import SplashScreen from './Components/SplashScreen.js';
@@ -85,7 +87,10 @@ function START() {
                             <Route path="/DashBoard/SignalAuthor" element={<SignalAuthor />} />
                             <Route path="/DashBoard/DepositHistory" element={<DepositHistory />} />
                             <Route path="/DashBoard/Referral" element={<Referral />} />
-                            <Route path="/DashBoard/Course" element={<Course />} />
+                            <Route path="/DashBoard/Course" element={<Course />} >
+                                    <Route path="/DashBoard/Course" element={<CoursePage />} />
+                                    <Route path="/DashBoard/Course/Details" element={<CourseDetails />} />
+                            </Route>
                             <Route path="/DashBoard/ProfileSettings" element={<ProfileSettings />} />
                             <Route path="/DashBoard/ChangePassword" element={<ChangePassword />} />
                             <Route path="/DashBoard/TradingViewPage" element={<TradingViewPage />} />
