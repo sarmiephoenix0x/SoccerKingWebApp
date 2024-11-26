@@ -68,7 +68,7 @@ const CoursePage = () => {
         <div className="course-page">
         
             {loadingCourse ? (
-                <div>Loading...</div>
+                <div id ="CourseLoading">Loading...</div>
             ) : errorMessage ? (
                 <div>
                     <p>{errorMessage}</p>

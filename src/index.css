@@ -17,6 +17,11 @@ body::-webkit-scrollbar-thumb {
   border-radius: 5px;
 }
 
+#CourseLoading {
+  margin: 20px auto;
+  color: white
+}
+
 @media (min-width: 1080px) {
 
   #AuthPageBG {
