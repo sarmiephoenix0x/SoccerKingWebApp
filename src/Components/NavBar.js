@@ -253,6 +253,16 @@ export default function NavBar({ onTabChange }) {
         document.getElementById("CurrentNavText2").innerHTML = "Home - Course";
     };
 
+
+    const GoToEvents = () => {
+        document.body.style.overflowY = 'auto';
+        toggleMenu();
+        onTabChange(); // Call the loader on tab change
+        navigate("/DashBoard/Events");
+        document.getElementById("DashBoardText2").innerHTML = "Events";
+        document.getElementById("CurrentNavText2").innerHTML = "Home - Events";
+    };
+
     const GoToProfileSettings = () => {
         document.body.style.overflowY = 'auto';
         toggleMenu();
@@ -324,6 +334,10 @@ export default function NavBar({ onTabChange }) {
 
                         <div className="menu-item" onClick={GoToCourse}>
                             <div id="CourseText" style={{ color: isActive('/DashBoard/Course') ? '#FCE74F' : 'white' }}>Course</div>
+                        </div>
+
+                        <div className="menu-item" onClick={GoToEvents}>
+                            <div id="EventsText" style={{ color: isActive('/DashBoard/Events') ? '#FCE74F' : 'white' }}>Events</div>
                         </div>
 
                         <div className="menu-item" onClick={toggleSupportMenu}>
@@ -428,6 +442,8 @@ export default function NavBar({ onTabChange }) {
 
 
                             <div id="CourseText" style={{ color: isActive('/DashBoard/Course') ? '#FCE74F' : 'white' }} onClick={GoToCourse}>Course</div>
+
+                            <div id="EventsText" style={{ color: isActive('/DashBoard/Events') ? '#FCE74F' : 'white' }} onClick={GoToEvents}>Events</div>
 
                             <div className="dropdown">
                                 <div id="SupportText" style={{ color: isActive('/DashBoard/Support') ? '#FCE74F' : 'white' }}>
