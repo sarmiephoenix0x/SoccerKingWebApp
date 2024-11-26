@@ -267,9 +267,9 @@ const EventsPage = () => {
                 </div>
             )}
 
-            {dialogMessage && (
+            {/* {dialogMessage && (
                 <CustomDialog message={dialogMessage} onClose={() => setDialogMessage(null)} />
-            )}
+            )} */}
 
             {/* Popup for adding an event */}
             <Modal
