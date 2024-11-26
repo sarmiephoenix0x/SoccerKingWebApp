@@ -4137,6 +4137,31 @@ body::-webkit-scrollbar-thumb {
     font-size: 3.2vw;
   }
 
+
+  .course-title {
+    font-size: 3.5vw;
+  }
+
+  .course-description {
+    font-size: 2.833vw;
+  }
+
+  .course-author,
+  .course-time {
+    font-size: 2.625vw;
+  }
+
+  .author-image {
+    width: 20px;
+    /* Set width for author image */
+    height: 20px;
+    /* Set height for author image */
+  }
+
+  .details-title {
+    font-size: 3.5vw;
+  }
+
   .event-card-image img {
     width: 60px;
     height: 60px;
