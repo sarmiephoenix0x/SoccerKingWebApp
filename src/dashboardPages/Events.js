@@ -21,7 +21,7 @@ const EventsPage = () => {
     const [searchLoading, setSearchLoading] = useState(false);
     const [dialogMessage, setDialogMessage] = useState(null);
     const [tabIndex, setTabIndex] = useState(0);
-    const [popupOpen, setPopupOpen] = useState(false); 
+    const [popupOpen, setPopupOpen] = useState(false);
     const [eventTitle, setEventTitle] = useState('');
     const [eventDate, setEventDate] = useState('');
     const [selectedCoin, setSelectedCoin] = useState('');
@@ -221,7 +221,7 @@ const EventsPage = () => {
     return (
         <div className="events-page">
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <SearchBar onSearch={performSearch} style={{ flexGrow: 1, marginRight: '10px' }}  />
+                <SearchBar onSearch={performSearch} style={{ flexGrow: 1, marginRight: '10px' }} />
                 <div>
                     <img
                         src={plusImg}
@@ -278,7 +278,7 @@ const EventsPage = () => {
                 aria-labelledby="add-event-title"
                 aria-describedby="add-event-description"
             >
-                <Box sx={{ padding: 2, backgroundColor: 'white', borderRadius: 2, boxShadow: 3 }}>
+                <Box sx={{ padding: 2, backgroundColor: '#0D222B', color: 'white', borderRadius: 2, boxShadow: 3 }}>
                     <h2 id="add-event-title">Add Event</h2>
                     <TextField
                         label="Event Title"
@@ -286,6 +286,22 @@ const EventsPage = () => {
                         onChange={(e) => setEventTitle(e.target.value)}
                         fullWidth
                         margin="normal"
+                        InputProps={{
+                            style: { color: 'white' }, // Set text color to white
+                        }}
+                        sx={{
+                            '& .MuiOutlinedInput-root': {
+                                '& fieldset': {
+                                    borderColor: 'white', // Set outline color to white
+                                },
+                                '&:hover fieldset': {
+                                    borderColor: 'white', // Set outline color on hover to white
+                                },
+                                '&.Mui-focused fieldset': {
+                                    borderColor: 'white', // Set outline color when focused to white
+                                },
+                            },
+                        }}
                     />
                     <TextField
                         label="Date"
@@ -294,6 +310,22 @@ const EventsPage = () => {
                         onChange={(e) => setEventDate(e.target.value)}
                         fullWidth
                         margin="normal"
+                        InputProps={{
+                            style: { color: 'white' },
+                        }}
+                        sx={{
+                            '& .MuiOutlinedInput-root': {
+                                '& fieldset': {
+                                    borderColor: 'white',
+                                },
+                                '&:hover fieldset': {
+                                    borderColor: 'white',
+                                },
+                                '&.Mui-focused fieldset': {
+                                    borderColor: 'white',
+                                },
+                            },
+                        }}
                     />
                     <Select
                         value={selectedCoin}
@@ -301,6 +333,22 @@ const EventsPage = () => {
                         displayEmpty
                         fullWidth
                         margin="normal"
+                        sx={{
+                            '& .MuiSelect-select': {
+                                color: 'white', // Set text color to white
+                            },
+                            '& .MuiOutlinedInput-root': {
+                                '& fieldset': {
+                                    borderColor: 'white', // Set outline color to white
+                                },
+                                '&:hover fieldset': {
+                                    borderColor: 'white',
+                                },
+                                '&.Mui-focused fieldset': {
+                                    borderColor: 'white',
+                                },
+                            },
+                        }}
                     >
                         <MenuItem value="" disabled>Select Coin</MenuItem>
                         <MenuItem value="coin1">Coin 1</MenuItem>
@@ -313,6 +361,22 @@ const EventsPage = () => {
                         displayEmpty
                         fullWidth
                         margin="normal"
+                        sx={{
+                            '& .MuiSelect-select': {
+                                color: 'white', // Set text color to white
+                            },
+                            '& .MuiOutlinedInput-root': {
+                                '& fieldset': {
+                                    borderColor: 'white', // Set outline color to white
+                                },
+                                '&:hover fieldset': {
+                                    borderColor: 'white',
+                                },
+                                '&.Mui-focused fieldset': {
+                                    borderColor: 'white',
+                                },
+                            },
+                        }}
                     >
                         <MenuItem value="" disabled>Select Category</MenuItem>
                         <MenuItem value="category1">Category 1</MenuItem>
@@ -327,6 +391,22 @@ const EventsPage = () => {
                         margin="normal"
                         multiline
                         rows={4}
+                        InputProps={{
+                            style: { color: 'white' },
+                        }}
+                        sx={{
+                            '& .MuiOutlinedInput-root': {
+                                '& fieldset': {
+                                    borderColor: 'white',
+                                },
+                                '&:hover fieldset': {
+                                    borderColor: 'white',
+                                },
+                                '&.Mui-focused fieldset': {
+                                    borderColor: 'white',
+                                },
+                            },
+                        }}
                     />
                     <TextField
                         label="Source URL"
@@ -334,8 +414,35 @@ const EventsPage = () => {
                         onChange={(e) => setSourceUrl(e.target.value)}
                         fullWidth
                         margin="normal"
+                        InputProps={{
+                            style: { color: 'white' },
+                        }}
+                        sx={{
+                            '& .MuiOutlinedInput-root': {
+                                '& fieldset': {
+                                    borderColor: 'white',
+                                },
+                                '&:hover fieldset': {
+                                    borderColor: 'white',
+                                },
+                                '&.Mui-focused fieldset': {
+                                    borderColor: 'white',
+                                },
+                            },
+                        }}
                     />
-                    <Button variant="contained" color="primary" onClick={handleSubmit} fullWidth>
+                    <Button
+                        variant="contained"
+                        onClick={handleSubmit}
+                        fullWidth
+                        sx={{
+                            backgroundColor: '#1A1A1A', // Darker background color
+                            color: 'white', // White text color
+                            '&:hover': {
+                                backgroundColor: '#333333', // Darker shade on hover
+                            },
+                        }}
+                    >
                         Submit
                     </Button>
                 </Box>
