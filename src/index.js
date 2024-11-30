@@ -19,6 +19,7 @@ import Course from './Pages/Course.js';
 import CoursePage from './dashboardPages/CoursePage.js';
 import CourseDetails from './dashboardPages/CourseDetails.js';
 import EventsPage from './dashboardPages/Events.js';
+import Sentiments from './dashboardPages/Sentiments.js'
 import ProfileSettings from './dashboardPages/ProfileSettings.js'
 import ChangePassword from './Pages/ChangePassword.js'
 import SplashScreen from './Components/SplashScreen.js';
@@ -93,6 +94,7 @@ function START() {
                                 <Route path="/DashBoard/Course/Details" element={<CourseDetails />} />
                             </Route>
                             <Route path="/DashBoard/Events" element={<EventsPage />} />
+                            <Route path="/DashBoard/Sentiments" element={<Sentiments />} />
                             <Route path="/DashBoard/ProfileSettings" element={<ProfileSettings />} />
                             <Route path="/DashBoard/ChangePassword" element={<ChangePassword />} />
                             <Route path="/DashBoard/TradingViewPage" element={<TradingViewPage />} />

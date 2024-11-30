@@ -374,6 +374,7 @@ body::-webkit-scrollbar-thumb {
   #ReferralsText,
   #CourseText,
   #EventsText,
+  #SentimentsText,
   #SupportText,
   #AccountText {
     cursor: pointer;
@@ -394,6 +395,7 @@ body::-webkit-scrollbar-thumb {
   #ReferralsText:hover,
   #CourseText:hover,
   #EventsText:hover,
+  #SentimentsText:hover,
   #SupportText:hover,
   #AccountText:hover {
     color: #FCE74F;
@@ -1903,6 +1905,90 @@ body::-webkit-scrollbar-thumb {
     z-index: 1000;
   }
 
+  .news-card {
+    padding: 16px;
+    background-color: #314852;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    margin: 16px;
+    cursor: pointer;
+}
+
+.media-section {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.news-image {
+    width: 100%;
+    height: auto;
+    max-height: 100px;
+    object-fit: cover;
+}
+
+.news-content {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-date {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 8px;
+}
+
+.news-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 8px;
+}
+
+.news-description {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.tag {
+    padding: 6px 12px;
+    background-color: blue;
+    border-radius: 30px;
+    color: white;
+    font-size: 12px;
+}
+
+.news-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+}
+
+.author-image {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.news-author {
+    font-size: 14px;
+    color: #333;
+}
+
 }
 
 @media (max-width: 1080px) {
@@ -2368,6 +2454,7 @@ body::-webkit-scrollbar-thumb {
   #ReferralsText,
   #CourseText,
   #EventsText,
+  #SentimentsText,
   #SupportText,
   #AccountText {
     cursor: pointer;
@@ -2388,6 +2475,7 @@ body::-webkit-scrollbar-thumb {
   #ReferralsText:hover,
   #CourseText:hover,
   #EventsText:hover,
+  #SentimentsText:hover,
   #SupportText:hover,
   #AccountText:hover {
     color: #FCE74F;
@@ -4014,6 +4102,7 @@ body::-webkit-scrollbar-thumb {
   #ReferralsText,
   #CourseText,
   #EventsText,
+  #SentimentsText,
   #SupportText,
   #AccountText {
     font-size: 4vw;

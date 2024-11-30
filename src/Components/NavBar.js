@@ -100,11 +100,13 @@ export default function NavBar({ onTabChange }) {
             case "/DashBoard/Referral":
                 return { dashboard: "Referrals", nav: "Home - Referrals" };
             case "/DashBoard/Course":
-                return { dashboard: "Course", nav: "Home - Course" };
+                return { dashboard: "Course", nav: "Home - Articles" };
             case "/DashBoard/Course/Details":
-                return { dashboard: "Course", nav: "Home - Course" };
+                return { dashboard: "Course", nav: "Home - Articles" };
             case "/DashBoard/Events":
                 return { dashboard: "Events", nav: "Home - Events" };
+            case "/DashBoard/Sentiments":
+                return { dashboard: "Sentiments", nav: "Home - Sentiments" };
             case "/DashBoard/ProfileSettings":
                 return { dashboard: "Profile Settings", nav: "Home - Profile Settings" };
             case "/DashBoard/ChangePassword":
@@ -252,7 +254,7 @@ export default function NavBar({ onTabChange }) {
         onTabChange(); // Call the loader on tab change
         navigate("/DashBoard/Course");
         document.getElementById("DashBoardText2").innerHTML = "Course";
-        document.getElementById("CurrentNavText2").innerHTML = "Home - Course";
+        document.getElementById("CurrentNavText2").innerHTML = "Home - Articles";
     };
 
 
@@ -263,6 +265,16 @@ export default function NavBar({ onTabChange }) {
         navigate("/DashBoard/Events");
         document.getElementById("DashBoardText2").innerHTML = "Events";
         document.getElementById("CurrentNavText2").innerHTML = "Home - Events";
+    };
+
+
+    const GoToSentiments = () => {
+        document.body.style.overflowY = 'auto';
+        toggleMenu();
+        onTabChange(); // Call the loader on tab change
+        navigate("/DashBoard/Sentiments");
+        document.getElementById("DashBoardText2").innerHTML = "Sentiments";
+        document.getElementById("CurrentNavText2").innerHTML = "Home - Sentiments";
     };
 
     const GoToProfileSettings = () => {
@@ -330,17 +342,21 @@ export default function NavBar({ onTabChange }) {
                                 </a>
                             </div>
                         </div>
-                        <div className="menu-item" onClick={GoToReferral}>
+                        {/* <div className="menu-item" onClick={GoToReferral}>
                             <div id="ReferralsText" style={{ color: isActive('/DashBoard/Referrals') ? '#FCE74F' : 'white' }}>Referrals</div>
-                        </div>
+                        </div> */}
 
-                        <div className="menu-item" onClick={GoToCourse}>
-                            <div id="CourseText" style={{ color: isActive('/DashBoard/Course') ? '#FCE74F' : 'white' }}>Course</div>
-                        </div>
+                        {/* <div className="menu-item" onClick={GoToCourse}>
+                            <div id="CourseText" style={{ color: isActive('/DashBoard/Course') ? '#FCE74F' : 'white' }}>Articles</div>
+                        </div> */}
 
-                        <div className="menu-item" onClick={GoToEvents}>
+                        {/* <div className="menu-item" onClick={GoToEvents}>
                             <div id="EventsText" style={{ color: isActive('/DashBoard/Events') ? '#FCE74F' : 'white' }}>Events</div>
-                        </div>
+                        </div> */}
+
+                        {/* <div className="menu-item" onClick={GoToSentiments}>
+                            <div id="SentimentsText" style={{ color: isActive('/DashBoard/Sentiments') ? '#FCE74F' : 'white' }}>Sentiments</div>
+                        </div> */}
 
                         <div className="menu-item" onClick={toggleSupportMenu}>
                             <div id="SupportText" style={{ color: isActive('/DashBoard/Support') ? '#FCE74F' : 'white' }}>
@@ -361,6 +377,18 @@ export default function NavBar({ onTabChange }) {
                                 <a href="#" style={{ color: isActive('/DashBoard/ChangePassword') ? '#FCE74F' : 'black' }} onClick={GoToChangePassword}>Change Password</a>
                                 <a href="#" style={{ color: isActive('/DashBoard/Transaction') ? '#FCE74F' : 'black' }}>Transaction</a>
                                 <a href="#" style={{ color: isActive('/DashBoard/Logout') ? '#FCE74F' : 'black' }} onClick={showLogoutConfirmationDialog}>Log Out</a>
+                            </div>
+                        </div>
+
+                        <div className="menu-item" onClick={toggleAccountMenu}>
+                            <div id="AccountText" style={{ color: isActive('/DashBoard/Referrals') || isActive('/DashBoard/Course') || isActive('/DashBoard/Events') || isActive('/DashBoard/Sentiments') ? '#FCE74F' : 'white' }}>
+                                More
+                            </div>
+                            <div className="submenu" style={{ display: accountMenuOpen ? 'flex' : 'none' }}>
+                                <a href="#" style={{ color: isActive('/DashBoard/Referrals') ? '#FCE74F' : 'black' }} onClick={GoToReferral}>Referrals</a>
+                                <a href="#" style={{ color: isActive('/DashBoard/Course') ? '#FCE74F' : 'black' }} onClick={GoToCourse}>Articles</a>
+                                <a href="#" style={{ color: isActive('/DashBoard/Events') ? '#FCE74F' : 'black' }} onClick={GoToEvents}>Events</a>
+                                <a href="#" style={{ color: isActive('/DashBoard/Sentiments') ? '#FCE74F' : 'black' }} onClick={GoToSentiments}>Sentiments</a>
                             </div>
                         </div>
 
@@ -440,12 +468,15 @@ export default function NavBar({ onTabChange }) {
                                     </a>
                                 </div>
                             </div>
-                            <div id="ReferralsText" style={{ color: isActive('/DashBoard/Referral') ? '#FCE74F' : 'white' }} onClick={GoToReferral}>Referrals</div>
+                            {/* <div id="ReferralsText" style={{ color: isActive('/DashBoard/Referral') ? '#FCE74F' : 'white' }} onClick={GoToReferral}>Referrals</div>
 
 
                             <div id="CourseText" style={{ color: isActive('/DashBoard/Course') ? '#FCE74F' : 'white' }} onClick={GoToCourse}>Course</div>
 
                             <div id="EventsText" style={{ color: isActive('/DashBoard/Events') ? '#FCE74F' : 'white' }} onClick={GoToEvents}>Events</div>
+
+
+                            <div id="SentimentsText" style={{ color: isActive('/DashBoard/Sentiments') ? '#FCE74F' : 'white' }} onClick={GoToSentiments}>Sentiments</div> */}
 
                             <div className="dropdown">
                                 <div id="SupportText" style={{ color: isActive('/DashBoard/Support') ? '#FCE74F' : 'white' }}>
@@ -468,6 +499,18 @@ export default function NavBar({ onTabChange }) {
                                     <a href="#" style={{ color: isActive('/DashBoard/Logout') ? '#FCE74F' : 'black' }} onClick={showLogoutConfirmationDialog}>Log Out</a>
                                 </div>
                             </div>
+
+                            <div className="dropdown">
+                            <div id="AccountText" style={{ color: isActive('/DashBoard/Referrals') || isActive('/DashBoard/Course') || isActive('/DashBoard/Events') || isActive('/DashBoard/Sentiments') ? '#FCE74F' : 'white' }}>
+                                More
+                            </div>
+                            <div className="dropdown-content">
+                                <a href="#" style={{ color: isActive('/DashBoard/Referrals') ? '#FCE74F' : 'black' }} onClick={GoToReferral}>Referrals</a>
+                                <a href="#" style={{ color: isActive('/DashBoard/Course') ? '#FCE74F' : 'black' }} onClick={GoToCourse}>Articles</a>
+                                <a href="#" style={{ color: isActive('/DashBoard/Events') ? '#FCE74F' : 'black' }} onClick={GoToEvents}>Events</a>
+                                <a href="#" style={{ color: isActive('/DashBoard/Sentiments') ? '#FCE74F' : 'black' }} onClick={GoToSentiments}>Sentiments</a>
+                            </div>
+                        </div>
 
                             <div id="SubNav">
                                 <div id="LogoutText" onClick={showLogoutConfirmationDialog}>

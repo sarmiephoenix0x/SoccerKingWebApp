@@ -1,18 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import CourseCard from "../Components/CourseCard";
+import NewsCard from "../Components/NewsCard";
+import { Tab, Tabs, Box, CircularProgress, Button, Typography } from '@mui/material';
 
 const CoursePage = () => {
     const [courses, setCourses] = useState([]);
-    const [loadingCourse, setLoadingCourse] = useState(false);
+    const [news, setNews] = useState([]);
+    const [loadingCourses, setLoadingCourses] = useState(false);
+    const [loadingNews, setLoadingNews] = useState(false);
     const [errorMessage, setErrorMessage] = useState(null);
-    const [isLoadingMoreCourses, setIsLoadingMoreCourses] = useState(false);
+    const [tabIndex, setTabIndex] = useState(0);
     const [currentCoursePage, setCurrentCoursePage] = useState(1);
+    const [currentNewsPage, setCurrentNewsPage] = useState(1);
     const [hasMoreCourses, setHasMoreCourses] = useState(true);
-    const navigate = useNavigate();
+    const [hasMoreNews, setHasMoreNews] = useState(true);
 
     useEffect(() => {
-        fetchCourses(true);
+        fetchCourses();
+        fetchNews();
         window.addEventListener('scroll', handleScroll);
         return () => {
             window.removeEventListener('scroll', handleScroll);
@@ -24,11 +30,12 @@ const CoursePage = () => {
     };
 
     const fetchCourses = async (isRefresh = false) => {
-        if (loadingCourse || !hasMoreCourses) return;
+        if (loadingCourses || !hasMoreCourses) return;
 
+        setLoadingCourses(true);
         if (isRefresh) {
-            setLoadingCourse(true);
-            setErrorMessage(null);
+            setCurrentCoursePage(1);
+            setCourses([]);
         }
 
         try {
@@ -40,56 +47,132 @@ const CoursePage = () => {
                 },
             });
 
-            const data = await response.json();
-            console.log(data); // Log the response body
-
             if (response.ok) {
-                setCourses(prevCourses => isRefresh ? data.data : [...prevCourses, ...data.data]);
+                const data = await response.json();
+                setCourses(prevCourses => [...prevCourses, ...data.data]);
                 setHasMoreCourses(data.pagination.next_page_url !== null);
                 setCurrentCoursePage(prevPage => prevPage + 1);
             } else {
-                const message = data.message;
+                const message = await response.json().then(data => data.message);
                 setErrorMessage(message);
             }
         } catch (error) {
-            setErrorMessage('Failed to load data. Please check your network connection.');
+            setErrorMessage('Failed to load courses. Please check your network connection.');
         } finally {
-            setLoadingCourse(false);
+            setLoadingCourses(false);
+        }
+    };
+
+    const fetchNews = async (isRefresh = false) => {
+        if (loadingNews || !hasMoreNews) return;
+
+        setLoadingNews(true);
+        if (isRefresh) {
+            setCurrentNewsPage(1);
+            setNews([]);
+        }
+
+        try {
+            const accessToken = await fetchAccessToken();
+            const response = await fetch(`https://signal.payguru.com.ng/api/news?page=${currentNewsPage}`, {
+                headers: {
+                    'Authorization': `Bearer ${accessToken}`,
+                    'Content-Type': 'application/json',
+                },
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                setNews(prevNews => [...prevNews, ...data.data]);
+                setHasMoreNews(data.pagination.next_page_url !== null);
+                setCurrentNewsPage(prevPage => prevPage + 1);
+            } else {
+                const message = await response.json().then(data => data.message);
+                setErrorMessage(message);
+            }
+        } catch (error) {
+            setErrorMessage('Failed to load news. Please check your network connection.');
+        } finally {
+            setLoadingNews(false);
         }
     };
 
     const handleScroll = () => {
-        if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 200 && !isLoadingMoreCourses) setIsLoadingMoreCourses(true);
-            fetchCourses();
-            setIsLoadingMoreCourses(false);
+        if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 200) {
+            if (tabIndex === 0) {
+                fetchNews(); // Load more news
+            } else {
+                fetchCourses(); // Load more courses
+            }
         }
+    };
+
+    const handleTabChange = (event, newValue) => {
+        setTabIndex(newValue);
+        if (newValue === 0) {
+            fetchNews(true); // Refresh news when switching to news tab
+        } else {
+            fetchCourses(true); // Refresh courses when switching to courses tab
+        }
+    }
 
     return (
         <div className="course-page">
-        
-            {loadingCourse ? (
-                <div id ="CourseLoading">Loading...</div>
-            ) : errorMessage ? (
+            <Box sx={{ width: '100%', marginBottom: 2 }}>
+                <Tabs value={tabIndex} onChange={handleTabChange} centered>
+                    <Tab label="News" sx={{ color: tabIndex === 0 ? 'white' : 'grey.500' }} />
+                    <Tab label="Courses" sx={{ color: tabIndex === 1 ? 'white' : 'grey.500' }} />
+                </Tabs>
+            </Box>
+            {tabIndex === 0 ? (
                 <div>
-                    <p>{errorMessage}</p>
-                    <button onClick={() => fetchCourses(true)}>Retry</button>
+                    {loadingNews ? (
+                        <CircularProgress />
+                    ) : errorMessage ? (
+                        <div>
+                            <Typography color="error">{errorMessage}</Typography>
+                            <Button onClick={fetchNews}>Retry</Button>
+                        </div>
+                    ) : (
+                        news.map((newsItem, index) => (
+                            <NewsCard
+                                key={index}
+                                image={newsItem.images}
+                                title={newsItem.title}
+                                description={newsItem.article}
+                                author={newsItem.username}
+                                time={newsItem.created_at}
+                                authorImage={newsItem.user_profile_image}
+                            />
+                        ))
+                    )}
+                    {loadingNews && <CircularProgress />}
                 </div>
             ) : (
-                <div className="course-grid">
-                    {courses.map((course, index) => (
-                        <CourseCard
-                            key={index}
-                            image={course.images} // Use the images property from the API response
-                            title={course.title}
-                            description={course.article} // Use the article property for description
-                            author={course.username} // Use the username for author
-                            time={course.created_at} // Use created_at for time
-                            authorImage={course.user_profile_image} // Use user_profile_image for author image
-                            course={course} // Pass the entire course object
-                            videoUrl={course.videos} // Use the videos property for video URL
-                        />
-                    ))}
-                    {isLoadingMoreCourses && <div>Loading more courses...</div>}
+                <div>
+                    {loadingCourses ? (
+                        <CircularProgress />
+                    ) : errorMessage ? (
+                        <div>
+                            <Typography color="error">{errorMessage}</Typography>
+                            <Button onClick={fetchCourses}>Retry</Button>
+                        </div>
+                    ) : (
+                        courses.map((course, index) => (
+                            <CourseCard
+                                key={index}
+                                image={course.images}
+                                title={course.title}
+                                description={course.article}
+                                author={course.username}
+                                time={course.created_at}
+                                authorImage={course.user_profile_image}
+                                course={course}
+                                videoUrl={course.videos}
+                            />
+                        ))
+                    )}
+                    {loadingCourses && <CircularProgress />}
                 </div>
             )}
         </div>
