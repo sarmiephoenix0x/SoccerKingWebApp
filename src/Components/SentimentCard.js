@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 
-const SentimentCard = ({ sentiment }) => {
+const SentimentCard = ({ sentiment, onClick }) => {
     const upvotes = parseInt(sentiment.upvotes, 10);
     const downvotes = parseInt(sentiment.downvotes, 10);
     const totalVotes = upvotes + downvotes;
@@ -15,8 +15,10 @@ const SentimentCard = ({ sentiment }) => {
             borderRadius: 2,
             boxShadow: 1,
             marginBottom: 2,
-            color: 'white'
-        }}>
+            color: 'white',
+            cursor: 'pointer',
+        }}
+            onClick={onClick}>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <Typography variant="h6" fontWeight="bold">
                     {sentiment.title}

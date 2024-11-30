@@ -16,6 +16,7 @@ export default function NavBar({ onTabChange }) {
     const [signalMenuOpen, setSignalMenuOpen] = useState(false);
     const [supportMenuOpen, setSupportMenuOpen] = useState(false);
     const [accountMenuOpen, setAccountMenuOpen] = useState(false);
+    const [moreMenuOpen, setMoreMenuOpen] = useState(false);
 
     const isActive = (path) => location.pathname === path;
     const [dashboardText, setDashboardText] = useState("");
@@ -109,6 +110,8 @@ export default function NavBar({ onTabChange }) {
                 return { dashboard: "BITCOIN", nav: "Home - Events" };
             case "/DashBoard/Sentiments":
                 return { dashboard: "Sentiments", nav: "Home - Sentiments" };
+            case "/DashBoard/SentimentDetails":
+                return { dashboard: "BITCOIN", nav: "Home - Sentiments" };
             case "/DashBoard/ProfileSettings":
                 return { dashboard: "Profile Settings", nav: "Home - Profile Settings" };
             case "/DashBoard/ChangePassword":
@@ -129,6 +132,7 @@ export default function NavBar({ onTabChange }) {
     const toggleSignalMenu = () => setSignalMenuOpen(prev => !prev);
     const toggleSupportMenu = () => setSupportMenuOpen(prev => !prev);
     const toggleAccountMenu = () => setAccountMenuOpen(prev => !prev);
+    const toggleMoreMenu = () => setMoreMenuOpen(prev => !prev);
 
     // Ensure to close other menus when one is opened
     const handleMenuToggle = (menu) => {
@@ -136,6 +140,7 @@ export default function NavBar({ onTabChange }) {
         setSignalMenuOpen(menu === 'signal' ? !signalMenuOpen : false);
         setSupportMenuOpen(menu === 'support' ? !supportMenuOpen : false);
         setAccountMenuOpen(menu === 'account' ? !accountMenuOpen : false);
+        setMoreMenuOpen(menu === 'more' ? !moreMenuOpen : false);
     };
     const updateScreenWidth = () => {
         setScreenWidth(window.innerWidth);
@@ -345,7 +350,7 @@ export default function NavBar({ onTabChange }) {
                             </div>
                         </div>
                         {/* <div className="menu-item" onClick={GoToReferral}>
-                            <div id="ReferralsText" style={{ color: isActive('/DashBoard/Referrals') ? '#FCE74F' : 'white' }}>Referrals</div>
+                            <div id="ReferralsText" style={{ color: isActive('/DashBoard/Referral') ? '#FCE74F' : 'white' }}>Referrals</div>
                         </div> */}
 
                         {/* <div className="menu-item" onClick={GoToCourse}>
@@ -382,12 +387,12 @@ export default function NavBar({ onTabChange }) {
                             </div>
                         </div>
 
-                        <div className="menu-item" onClick={toggleAccountMenu}>
-                            <div id="AccountText" style={{ color: isActive('/DashBoard/Referrals') || isActive('/DashBoard/Course') || isActive('/DashBoard/Events') || isActive('/DashBoard/Sentiments') ? '#FCE74F' : 'white' }}>
+                        <div className="menu-item" onClick={toggleMoreMenu}>
+                            <div id="MoreText" style={{ color: isActive('/DashBoard/Referral') || isActive('/DashBoard/Course') || isActive('/DashBoard/Events') || isActive('/DashBoard/Sentiments') ? '#FCE74F' : 'white' }}>
                                 More
                             </div>
-                            <div className="submenu" style={{ display: accountMenuOpen ? 'flex' : 'none' }}>
-                                <a href="#" style={{ color: isActive('/DashBoard/Referrals') ? '#FCE74F' : 'black' }} onClick={GoToReferral}>Referrals</a>
+                            <div className="submenu" style={{ display: moreMenuOpen ? 'flex' : 'none' }}>
+                                <a href="#" style={{ color: isActive('/DashBoard/Referral') ? '#FCE74F' : 'black' }} onClick={GoToReferral}>Referrals</a>
                                 <a href="#" style={{ color: isActive('/DashBoard/Course') ? '#FCE74F' : 'black' }} onClick={GoToCourse}>Articles</a>
                                 <a href="#" style={{ color: isActive('/DashBoard/Events') ? '#FCE74F' : 'black' }} onClick={GoToEvents}>Events</a>
                                 <a href="#" style={{ color: isActive('/DashBoard/Sentiments') ? '#FCE74F' : 'black' }} onClick={GoToSentiments}>Sentiments</a>
@@ -503,11 +508,11 @@ export default function NavBar({ onTabChange }) {
                             </div>
 
                             <div className="dropdown">
-                                <div id="AccountText" style={{ color: isActive('/DashBoard/Referrals') || isActive('/DashBoard/Course') || isActive('/DashBoard/Events') || isActive('/DashBoard/Sentiments') ? '#FCE74F' : 'white' }}>
+                                <div id="MoreText" style={{ color: isActive('/DashBoard/Referral') || isActive('/DashBoard/Course') || isActive('/DashBoard/Events') || isActive('/DashBoard/Sentiments') ? '#FCE74F' : 'white' }}>
                                     More
                                 </div>
                                 <div className="dropdown-content">
-                                    <a href="#" style={{ color: isActive('/DashBoard/Referrals') ? '#FCE74F' : 'black' }} onClick={GoToReferral}>Referrals</a>
+                                    <a href="#" style={{ color: isActive('/DashBoard/Referral') ? '#FCE74F' : 'black' }} onClick={GoToReferral}>Referrals</a>
                                     <a href="#" style={{ color: isActive('/DashBoard/Course') ? '#FCE74F' : 'black' }} onClick={GoToCourse}>Articles</a>
                                     <a href="#" style={{ color: isActive('/DashBoard/Events') ? '#FCE74F' : 'black' }} onClick={GoToEvents}>Events</a>
                                     <a href="#" style={{ color: isActive('/DashBoard/Sentiments') ? '#FCE74F' : 'black' }} onClick={GoToSentiments}>Sentiments</a>

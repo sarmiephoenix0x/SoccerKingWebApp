@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const TradingViewPage = () => {
+const TradingViewPage = ({ isHeaderActive = true }) => {
     const coinSymbol = "BINANCE:BTCUSDT"; // Example coin symbol
     const [isRefreshing, setIsRefreshing] = useState(false);
     const [refreshKey, setRefreshKey] = useState(0); // Key to force re-render of iframe
@@ -18,12 +18,14 @@ const TradingViewPage = () => {
 
     return (
         <div className="trading-view-container">
-            <header className="trading-view-header">
-                <h1 className="trading-view-title">Live Crypto, Forex, and Stocks</h1>
-                <button className={`refresh-button ${isRefreshing ? 'loading' : ''}`} onClick={handleRefresh}>
-                    {isRefreshing ? 'Refreshing...' : 'Refresh'}
-                </button>
-            </header>
+            {isHeaderActive ?
+                <header className="trading-view-header">
+                    <h1 className="trading-view-title">Live Crypto, Forex, and Stocks</h1>
+                    <button className={`refresh-button ${isRefreshing ? 'loading' : ''}`} onClick={handleRefresh}>
+                        {isRefreshing ? 'Refreshing...' : 'Refresh'}
+                    </button>
+                </header>
+                : <header></header>}
             <div className="trading-view-chart">
                 <iframe
                     key={refreshKey} // Use key to force reload

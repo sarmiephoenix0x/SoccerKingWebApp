@@ -5,8 +5,10 @@ import SentimentCard from '../Components/SentimentCard';
 import { useSnackbar } from 'notistack';
 import { Tab, Tabs, Modal, Button, TextField, Select, MenuItem, Box, CircularProgress, Typography } from '@mui/material';
 import filterImg from "../images/FilterButton.png";
+import { useNavigate} from 'react-router-dom';
 
 const Sentiments = () => {
+    const navigate = useNavigate();
     const [sentiments, setSentiments] = useState([]);
     const [loading, setLoading] = useState(false);
     const [isLastPage, setIsLastPage] = useState(false);
@@ -130,6 +132,13 @@ const Sentiments = () => {
         };
     }, [loading, sentiments]);
 
+    const GoToSentimentDetails = (sentiment) => {
+        document.body.style.overflowY = 'auto';
+        navigate("/DashBoard/SentimentDetails", { state: { sentiment } });
+        document.getElementById("DashBoardText2").innerHTML = "BITCOIN";
+        document.getElementById("CurrentNavText2").innerHTML = "Home - Sentiments";
+    };
+
     return (
         <div className="sentiments-page">
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -158,7 +167,8 @@ const Sentiments = () => {
                                 const isLastSentiment = index === sentiments.length - 1;
                                 return (
                                     <div ref={isLastSentiment ? lastSentimentElementRef : null} key={sentiment.id}>
-                                        <SentimentCard sentiment={sentiment} />
+                                        <SentimentCard sentiment={sentiment} 
+                                        onClick={() => GoToSentimentDetails(sentiment)}/>
                                     </div>
                                 );
                             })

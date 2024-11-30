@@ -280,7 +280,8 @@ body::-webkit-scrollbar-thumb {
   #DepositText,
   #SupportText,
   #SignalsText,
-  #AccountText {
+  #AccountText,
+  #MoreText {
     cursor: pointer;
     color: white;
     position: relative;
@@ -290,7 +291,8 @@ body::-webkit-scrollbar-thumb {
   #DepositText::after,
   #SupportText::after,
   #SignalsText::after,
-  #AccountText::after {
+  #AccountText::after,
+  #MoreText::after {
     content: " +";
     position: absolute;
     right: -15px;
@@ -300,7 +302,8 @@ body::-webkit-scrollbar-thumb {
   #DepositText:hover::after,
   #SupportText:hover::after,
   #SignalsText:hover::after,
-  #AccountText:hover::after {
+  #AccountText:hover::after,
+  #MoreText:hover::after {
     content: " -";
   }
 
@@ -308,7 +311,8 @@ body::-webkit-scrollbar-thumb {
   .dropdown:hover #DepositText::after,
   .dropdown:hover #SupportText::after,
   .dropdown:hover #SignalsText::after,
-  .dropdown:hover #AccountText::after {
+  .dropdown:hover #AccountText::after,
+  .dropdown:hover #MoreText::after {
     content: " -";
   }
 
@@ -376,7 +380,8 @@ body::-webkit-scrollbar-thumb {
   #EventsText,
   #SentimentsText,
   #SupportText,
-  #AccountText {
+  #AccountText,
+  #MoreText {
     cursor: pointer;
   }
 
@@ -397,7 +402,8 @@ body::-webkit-scrollbar-thumb {
   #EventsText:hover,
   #SentimentsText:hover,
   #SupportText:hover,
-  #AccountText:hover {
+  #AccountText:hover,
+  #MoreText:hover {
     color: #FCE74F;
   }
 
@@ -2361,7 +2367,8 @@ body::-webkit-scrollbar-thumb {
   #DepositText,
   #SupportText,
   #SignalsText,
-  #AccountText {
+  #AccountText,
+  #MoreText {
     cursor: pointer;
     color: white;
     position: relative;
@@ -2371,7 +2378,8 @@ body::-webkit-scrollbar-thumb {
   #DepositText::after,
   #SupportText::after,
   #SignalsText::after,
-  #AccountText::after {
+  #AccountText::after,
+  #MoreText::after {
     content: " +";
     position: absolute;
     right: -15px;
@@ -2381,7 +2389,8 @@ body::-webkit-scrollbar-thumb {
   #DepositText:hover::after,
   #SupportText:hover::after,
   #SignalsText:hover::after,
-  #AccountText:hover::after {
+  #AccountText:hover::after,
+  #MoreText:hover::after {
     content: " -";
   }
 
@@ -2389,7 +2398,8 @@ body::-webkit-scrollbar-thumb {
   .dropdown:hover #DepositText::after,
   .dropdown:hover #SupportText::after,
   .dropdown:hover #SignalsText::after,
-  .dropdown:hover #AccountText::after {
+  .dropdown:hover #AccountText::after,
+  .dropdown:hover #MoreText::after {
     content: " -";
   }
 
@@ -2457,7 +2467,8 @@ body::-webkit-scrollbar-thumb {
   #EventsText,
   #SentimentsText,
   #SupportText,
-  #AccountText {
+  #AccountText,
+  #MoreText {
     cursor: pointer;
   }
 
@@ -2478,7 +2489,8 @@ body::-webkit-scrollbar-thumb {
   #EventsText:hover,
   #SentimentsText:hover,
   #SupportText:hover,
-  #AccountText:hover {
+  #AccountText:hover,
+  #MoreText:hover {
     color: #FCE74F;
   }
 
@@ -4105,7 +4117,8 @@ body::-webkit-scrollbar-thumb {
   #EventsText,
   #SentimentsText,
   #SupportText,
-  #AccountText {
+  #AccountText,
+  #MoreText {
     font-size: 4vw;
   }
 
