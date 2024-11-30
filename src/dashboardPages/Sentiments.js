@@ -3,7 +3,7 @@ import axios from 'axios';
 import SearchBar from '../Components/SearchBar';
 import SentimentCard from '../Components/SentimentCard';
 import { useSnackbar } from 'notistack';
-import { Tab, Tabs, Box, CircularProgress, Typography } from '@mui/material';
+import { Tab, Tabs, Modal, Button, TextField, Select, MenuItem, Box, CircularProgress, Typography } from '@mui/material';
 import filterImg from "../images/FilterButton.png";
 
 const Sentiments = () => {
@@ -14,6 +14,13 @@ const Sentiments = () => {
     const [errorMessage, setErrorMessage] = useState(null);
     const { enqueueSnackbar } = useSnackbar();
     const [tabIndex, setTabIndex] = useState(0);
+    const [popupOpen, setPopupOpen] = useState(false);
+    const [eventTitle, setEventTitle] = useState('');
+    const [eventDate, setEventDate] = useState('');
+    const [selectedCoin, setSelectedCoin] = useState('');
+    const [eventCategory, setEventCategory] = useState('');
+    const [eventDescription, setEventDescription] = useState('');
+    const [sourceUrl, setSourceUrl] = useState('');
     const observer = useRef();
 
     useEffect(() => {
@@ -59,7 +66,33 @@ const Sentiments = () => {
     };
 
     const handleOpenPopup = () => {
-        // Logic for opening a popup to add sentiment
+        setPopupOpen(true);
+    };
+
+
+    const handleClosePopup = () => {
+        setPopupOpen(false);
+        setEventTitle('');
+        setEventDate('');
+        setSelectedCoin('');
+        setEventCategory('');
+        setEventDescription('');
+        setSourceUrl('');
+    };
+
+    const handleSubmit = async () => {
+        // Handle form submission to add an event
+        // Here you would typically send the data to your backend
+        console.log({
+            eventTitle,
+            eventDate,
+            selectedCoin,
+            eventCategory,
+            eventDescription,
+            sourceUrl,
+        });
+        enqueueSnackbar('Filter added successfully!', { variant: 'success' });
+        handleClosePopup();
     };
 
     const handleTabChange = (event, newValue) => {
@@ -143,6 +176,248 @@ const Sentiments = () => {
                     {errorMessage}
                 </Typography>
             )}
+
+<Modal
+                open={popupOpen}
+                onClose={handleClosePopup}
+                aria-labelledby="add-event-title"
+                aria-describedby="add-event-description"
+            >
+                <Box sx={{ padding: 2, backgroundColor: '#0D222B', color: 'white', borderRadius: 2, boxShadow: 3 }}>
+                    <h2 id="add-event-title">Filter</h2>
+                    <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <TextField
+                        label="Date"
+                        type="date"
+                        value={eventDate}
+                        onChange={(e) => setEventDate(e.target.value)}
+                        fullWidth
+                        margin="normal"
+                        InputProps={{
+                            style: { color: 'white' },
+                        }}
+                        sx={{
+                            '& .MuiOutlinedInput-root': {
+                                '& fieldset': {
+                                    borderColor: 'white',
+                                },
+                                '&:hover fieldset': {
+                                    borderColor: 'white',
+                                },
+                                '&.Mui-focused fieldset': {
+                                    borderColor: 'white',
+                                },
+                            },
+                        }}
+                    /><TextField
+                    label="Date"
+                    type="date"
+                    value={eventDate}
+                    onChange={(e) => setEventDate(e.target.value)}
+                    fullWidth
+                    margin="normal"
+                    InputProps={{
+                        style: { color: 'white' },
+                    }}
+                    sx={{
+                        '& .MuiOutlinedInput-root': {
+                            '& fieldset': {
+                                borderColor: 'white',
+                            },
+                            '&:hover fieldset': {
+                                borderColor: 'white',
+                            },
+                            '&.Mui-focused fieldset': {
+                                borderColor: 'white',
+                            },
+                        },
+                    }}
+                />
+                    </Box>
+                    <Select
+                        value={selectedCoin}
+                        onChange={(e) => setSelectedCoin(e.target.value)}
+                        displayEmpty
+                        fullWidth
+                        margin="normal"
+                        sx={{
+                            '& .MuiSelect-select': {
+                                color: 'white', // Set text color to white
+                            },
+                            '& .MuiOutlinedInput-root': {
+                                '& fieldset': {
+                                    borderColor: 'white', // Set outline color to white
+                                },
+                                '&:hover fieldset': {
+                                    borderColor: 'white',
+                                },
+                                '&.Mui-focused fieldset': {
+                                    borderColor: 'white',
+                                },
+                            },
+                        }}
+                    >
+                        <MenuItem value="" disabled>Keywords</MenuItem>
+                        <MenuItem value="coin1">Keyword 1</MenuItem>
+                        <MenuItem value="coin2">Keyword 2</MenuItem>
+                        {/* Add more coins as needed */}
+                    </Select>
+                    <Select
+                        value={selectedCoin}
+                        onChange={(e) => setSelectedCoin(e.target.value)}
+                        displayEmpty
+                        fullWidth
+                        margin="normal"
+                        sx={{
+                            '& .MuiSelect-select': {
+                                color: 'white', // Set text color to white
+                            },
+                            '& .MuiOutlinedInput-root': {
+                                '& fieldset': {
+                                    borderColor: 'white', // Set outline color to white
+                                },
+                                '&:hover fieldset': {
+                                    borderColor: 'white',
+                                },
+                                '&.Mui-focused fieldset': {
+                                    borderColor: 'white',
+                                },
+                            },
+                        }}
+                    >
+                        <MenuItem value="" disabled>Select Coin</MenuItem>
+                        <MenuItem value="coin1">Coin 1</MenuItem>
+                        <MenuItem value="coin2">Coin 2</MenuItem>
+                        {/* Add more coins as needed */}
+                    </Select>
+                    <Select
+                        value={eventCategory}
+                        onChange={(e) => setEventCategory(e.target.value)}
+                        displayEmpty
+                        fullWidth
+                        margin="normal"
+                        sx={{
+                            '& .MuiSelect-select': {
+                                color: 'white', // Set text color to white
+                            },
+                            '& .MuiOutlinedInput-root': {
+                                '& fieldset': {
+                                    borderColor: 'white', // Set outline color to white
+                                },
+                                '&:hover fieldset': {
+                                    borderColor: 'white',
+                                },
+                                '&.Mui-focused fieldset': {
+                                    borderColor: 'white',
+                                },
+                            },
+                        }}
+                    >
+                        <MenuItem value="" disabled>Exchange - All</MenuItem>
+                        <MenuItem value="category1">Exchange 1</MenuItem>
+                        <MenuItem value="category2">Exchange 2</MenuItem>
+                        {/* Add more categories as needed */}
+                    </Select>
+                    <Select
+                        value={selectedCoin}
+                        onChange={(e) => setSelectedCoin(e.target.value)}
+                        displayEmpty
+                        fullWidth
+                        margin="normal"
+                        sx={{
+                            '& .MuiSelect-select': {
+                                color: 'white', // Set text color to white
+                            },
+                            '& .MuiOutlinedInput-root': {
+                                '& fieldset': {
+                                    borderColor: 'white', // Set outline color to white
+                                },
+                                '&:hover fieldset': {
+                                    borderColor: 'white',
+                                },
+                                '&.Mui-focused fieldset': {
+                                    borderColor: 'white',
+                                },
+                            },
+                        }}
+                    >
+                        <MenuItem value="" disabled>Categories - All</MenuItem>
+                        <MenuItem value="coin1">Category 1</MenuItem>
+                        <MenuItem value="coin2">Category 2</MenuItem>
+                        {/* Add more coins as needed */}
+                    </Select>
+                    <Select
+                        value={selectedCoin}
+                        onChange={(e) => setSelectedCoin(e.target.value)}
+                        displayEmpty
+                        fullWidth
+                        margin="normal"
+                        sx={{
+                            '& .MuiSelect-select': {
+                                color: 'white', // Set text color to white
+                            },
+                            '& .MuiOutlinedInput-root': {
+                                '& fieldset': {
+                                    borderColor: 'white', // Set outline color to white
+                                },
+                                '&:hover fieldset': {
+                                    borderColor: 'white',
+                                },
+                                '&.Mui-focused fieldset': {
+                                    borderColor: 'white',
+                                },
+                            },
+                        }}
+                    >
+                        <MenuItem value="" disabled>Sort by</MenuItem>
+                        <MenuItem value="coin1">Sort 1</MenuItem>
+                        <MenuItem value="coin2">Sort 2</MenuItem>
+                        {/* Add more coins as needed */}
+                    </Select>
+                    <Select
+                        value={selectedCoin}
+                        onChange={(e) => setSelectedCoin(e.target.value)}
+                        displayEmpty
+                        fullWidth
+                        margin="normal"
+                        sx={{
+                            '& .MuiSelect-select': {
+                                color: 'white', // Set text color to white
+                            },
+                            '& .MuiOutlinedInput-root': {
+                                '& fieldset': {
+                                    borderColor: 'white', // Set outline color to white
+                                },
+                                '&:hover fieldset': {
+                                    borderColor: 'white',
+                                },
+                                '&.Mui-focused fieldset': {
+                                    borderColor: 'white',
+                                },
+                            },
+                        }}
+                    >
+                        <MenuItem value="" disabled>Show only</MenuItem>
+                        <MenuItem value="coin1">Show 1</MenuItem>
+                        <MenuItem value="coin2">Show 2</MenuItem>
+                        {/* Add more coins as needed */}
+                    </Select>
+                    <Button
+                        variant="contained"
+                        onClick={handleSubmit}
+                        fullWidth
+                        sx={{
+                            backgroundColor: '#1A1A1A', // Darker background color
+                            color: 'white', // White text color
+                            '&:hover': {
+                                backgroundColor: '#333333', // Darker shade on hover
+                            },
+                        }}
+                    >
+                        Proceed
+                    </Button>
+                </Box>
+            </Modal>
         </div>
     );
 };

@@ -105,6 +105,8 @@ export default function NavBar({ onTabChange }) {
                 return { dashboard: "Course", nav: "Home - Articles" };
             case "/DashBoard/Events":
                 return { dashboard: "Events", nav: "Home - Events" };
+            case "/DashBoard/EventDetails":
+                return { dashboard: "BITCOIN", nav: "Home - Events" };
             case "/DashBoard/Sentiments":
                 return { dashboard: "Sentiments", nav: "Home - Sentiments" };
             case "/DashBoard/ProfileSettings":
@@ -501,16 +503,16 @@ export default function NavBar({ onTabChange }) {
                             </div>
 
                             <div className="dropdown">
-                            <div id="AccountText" style={{ color: isActive('/DashBoard/Referrals') || isActive('/DashBoard/Course') || isActive('/DashBoard/Events') || isActive('/DashBoard/Sentiments') ? '#FCE74F' : 'white' }}>
-                                More
+                                <div id="AccountText" style={{ color: isActive('/DashBoard/Referrals') || isActive('/DashBoard/Course') || isActive('/DashBoard/Events') || isActive('/DashBoard/Sentiments') ? '#FCE74F' : 'white' }}>
+                                    More
+                                </div>
+                                <div className="dropdown-content">
+                                    <a href="#" style={{ color: isActive('/DashBoard/Referrals') ? '#FCE74F' : 'black' }} onClick={GoToReferral}>Referrals</a>
+                                    <a href="#" style={{ color: isActive('/DashBoard/Course') ? '#FCE74F' : 'black' }} onClick={GoToCourse}>Articles</a>
+                                    <a href="#" style={{ color: isActive('/DashBoard/Events') ? '#FCE74F' : 'black' }} onClick={GoToEvents}>Events</a>
+                                    <a href="#" style={{ color: isActive('/DashBoard/Sentiments') ? '#FCE74F' : 'black' }} onClick={GoToSentiments}>Sentiments</a>
+                                </div>
                             </div>
-                            <div className="dropdown-content">
-                                <a href="#" style={{ color: isActive('/DashBoard/Referrals') ? '#FCE74F' : 'black' }} onClick={GoToReferral}>Referrals</a>
-                                <a href="#" style={{ color: isActive('/DashBoard/Course') ? '#FCE74F' : 'black' }} onClick={GoToCourse}>Articles</a>
-                                <a href="#" style={{ color: isActive('/DashBoard/Events') ? '#FCE74F' : 'black' }} onClick={GoToEvents}>Events</a>
-                                <a href="#" style={{ color: isActive('/DashBoard/Sentiments') ? '#FCE74F' : 'black' }} onClick={GoToSentiments}>Sentiments</a>
-                            </div>
-                        </div>
 
                             <div id="SubNav">
                                 <div id="LogoutText" onClick={showLogoutConfirmationDialog}>

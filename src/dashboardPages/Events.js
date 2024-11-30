@@ -6,8 +6,11 @@ import CustomDialog from '../Components/CustomDialog';
 import { useSnackbar } from 'notistack';
 import { Tab, Tabs, Modal, Button, TextField, Select, MenuItem, Box } from '@mui/material';
 import plusImg from "../images/PlusButton.png";
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const EventsPage = () => {
+    const navigate = useNavigate();
+    const location = useLocation();
     const [events, setEvents] = useState([]);
     const [airdrops, setAirdrops] = useState([]);
     const [loadingEvents, setLoadingEvents] = useState(false);
@@ -47,6 +50,7 @@ const EventsPage = () => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, [loadingEvents, isLastPageEvents]);
+
 
     const fetchAirdrops = async (type) => {
         setLoadingAirdrops(true);
@@ -218,6 +222,13 @@ const EventsPage = () => {
         handleClosePopup();
     };
 
+    const GoToEventDetails = (event) => {
+        document.body.style.overflowY = 'auto';
+        navigate("/DashBoard/EventDetails", { state: { event } });
+        document.getElementById("DashBoardText2").innerHTML = "BITCOIN";
+        document.getElementById("CurrentNavText2").innerHTML = "Home - Events";
+    };
+
     return (
         <div className="events-page">
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -248,7 +259,7 @@ const EventsPage = () => {
                         <EventCard
                             key={airdrop.id}
                             event={airdrop}
-                            onClick={() => setDialogMessage(airdrop.title)}
+                            onClick={() => GoToEventDetails(airdrop)}
                             onVote={handleVote}
                         />
                     ))}
@@ -259,7 +270,7 @@ const EventsPage = () => {
                             <EventCard
                                 key={event.id}
                                 event={event}
-                                onClick={() => setDialogMessage(event.title)}
+                                onClick={() => GoToEventDetails(event)}
                                 onVote={handleVote}
                             />
                         ))
