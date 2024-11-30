@@ -27,8 +27,7 @@ export default function EventDetails() {
                 boxShadow: 1,
                 marginTop: 5,
                 marginBottom: 5,
-                marginRight: 10,
-                marginLeft: 10,
+                marginX: { xs: 2, sm: 10 },
                 color: 'white'
             }}>
                 <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -107,8 +106,7 @@ export default function EventDetails() {
                 boxShadow: 1,
                 marginTop: 2,
                 marginBottom: 2,
-                marginRight: 10,
-                marginLeft: 10,
+                marginX: { xs: 2, sm: 10 },
                 color: 'white'
             }}>
                 <Box sx={{ display: 'flex', justifyContent: 'center', marginBottom: 10 }}>
@@ -155,8 +153,7 @@ export default function EventDetails() {
                 boxShadow: 1,
                 marginTop: 2,
                 marginBottom: 2,
-                marginRight: 10,
-                marginLeft: 10,
+                marginX: { xs: 2, sm: 10 },
                 color: 'white'
             }}>
                 <Box sx={{ display: 'flex', justifyContent: 'center', marginBottom: 10 }}>
