@@ -17,8 +17,11 @@ const CoursePage = () => {
     const [hasMoreNews, setHasMoreNews] = useState(true);
 
     useEffect(() => {
-        fetchCourses();
-        fetchNews();
+        if (tabIndex === 0) {
+            fetchNews(true); // Load more news
+        } else {
+            fetchCourses(true); // Load more courses
+        }
         window.addEventListener('scroll', handleScroll);
         return () => {
             window.removeEventListener('scroll', handleScroll);
@@ -126,12 +129,12 @@ const CoursePage = () => {
             </Box>
             {tabIndex === 0 ? (
                 <div>
-                    {loadingNews ? (
+                    {loadingNews && news.length === 0 ? (
                         <CircularProgress />
                     ) : errorMessage ? (
                         <div>
                             <Typography color="error">{errorMessage}</Typography>
-                            <Button onClick={fetchNews}>Retry</Button>
+                            <Button onClick={() => fetchNews(true)}>Retry</Button>
                         </div>
                     ) : (
                         news.map((newsItem, index) => (
@@ -146,16 +149,16 @@ const CoursePage = () => {
                             />
                         ))
                     )}
-                    {loadingNews && <CircularProgress />}
+                    {loadingNews && news.length > 0 && <CircularProgress />}
                 </div>
             ) : (
                 <div>
-                    {loadingCourses ? (
+                    {loadingCourses && courses.length === 0 ? (
                         <CircularProgress />
                     ) : errorMessage ? (
                         <div>
                             <Typography color="error">{errorMessage}</Typography>
-                            <Button onClick={fetchCourses}>Retry</Button>
+                            <Button onClick={() => fetchCourses(true)}>Retry</Button>
                         </div>
                     ) : (
                         courses.map((course, index) => (
@@ -172,7 +175,7 @@ const CoursePage = () => {
                             />
                         ))
                     )}
-                    {loadingCourses && <CircularProgress />}
+                    {loadingCourses && courses.length > 0 && <CircularProgress />}
                 </div>
             )}
         </div>

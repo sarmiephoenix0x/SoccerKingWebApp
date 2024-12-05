@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { Switch, Box, Typography, Tabs, Tab } from '@mui/material';
+import { Button, Switch, Box, Typography, Tabs, Tab } from '@mui/material';
 import TradingViewPage from './TradingViewPage'; // Adjust the import based on your project structure
 
 export default function SentimentDetails() {
@@ -96,7 +96,25 @@ export default function SentimentDetails() {
                             },
                         }}
                     />
-                </Box>
+                    </Box>
+                    <Box sx={{ display: 'flex', alignItems: 'center', marginTop: 6, width: '100%' }}>
+                    <Button
+      variant="contained"
+                            sx={{
+                                marginX: 50,
+        backgroundColor: '#FCE74F', // Custom background color
+          color: '#000', 
+        '&:hover': {
+            backgroundColor: '#FFD700', 
+            boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.3)',
+                                },
+                                boxShadow: 'none',
+                            }}
+                            fullWidth
+    >
+      Share
+    </Button>
+                    </Box>
                 {/* Add more sentiment details here */}
                 </Box>
                 </Box>
