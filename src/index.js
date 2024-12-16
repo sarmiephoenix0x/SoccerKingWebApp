@@ -6,6 +6,7 @@ import DashBoard from './Pages/DashBoard.js';
 import AuthenticationPage from './Pages/AuthenticationPage';
 import SignIn from './authenticationPages/SignIn.js';
 import Register from './authenticationPages/Register';
+import ForgotPassword from './authenticationPages/ForgotPassword.js';
 import DashBoardPage from './dashboardPages/DashBoardPage';
 import Packages from './dashboardPages/Packages.js';
 import Crypto from './dashboardPages/Crypto.js';
@@ -79,7 +80,8 @@ function START() {
                     <Routes>
                         <Route path="/" element={<AuthenticationPage />}>
                             <Route index element={<SignIn />} />
-                            <Route path="/Register" element={<Register />} />
+                                <Route path="/Register" element={<Register />} />
+                                <Route path="/ForgotPassword" element={<ForgotPassword />} />
                         </Route>
                         <Route path="/DashBoard" element={<DashBoard />} >
                             <Route path="/DashBoard" element={<DashBoardPage />} />

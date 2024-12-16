@@ -16,11 +16,16 @@ export default function SignIn() {
     const { enqueueSnackbar } = useSnackbar();
 
     const GoToDashBoard = () => {
-        navigate("/DashBoard");
+        // navigate("/DashBoard");
+        navigate("/DashBoard/Crypto");
     };
 
     const GoToRegister = () => {
         navigate("/Register");
+    };
+
+    const GoToForgotPassword = () => {
+        navigate("/ForgotPassword");
     };
 
     const handleLogin = async () => {
@@ -138,7 +143,7 @@ export default function SignIn() {
                         <input type="checkbox" id="rememberMe" />
                         <label htmlFor="rememberMe">Remember me</label>
                     </div>
-                    <div id="ForgotPassword">Forgot Password?</div>
+                    <div id="ForgotPassword" onClick={GoToForgotPassword}>Forgot Password?</div>
                 </div>
                 <div id="LogInText" onClick={handleLogin}>
                     <span>{isLoading ? 'Logging in...' : 'Login'}</span>
