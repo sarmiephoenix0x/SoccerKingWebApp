@@ -8,11 +8,11 @@ body {
   padding: 0;
 }
 
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 5px;
 }
 
-body::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background-color: #FCE74F;
   border-radius: 5px;
 }

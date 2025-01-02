@@ -16,8 +16,8 @@ export default function SignIn() {
     const { enqueueSnackbar } = useSnackbar();
 
     const GoToDashBoard = () => {
-        // navigate("/DashBoard");
-        navigate("/DashBoard/Crypto");
+        navigate("/DashBoard");
+        // navigate("/DashBoard/Crypto");
     };
 
     const GoToRegister = () => {
