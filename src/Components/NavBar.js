@@ -381,10 +381,11 @@ export default function NavBar({ onTabChange }) {
             role="presentation"
             onClick={toggleDrawer(false)}
             onKeyDown={toggleDrawer(false)}
+            style={{ height: '100%' }}
         >
             <List>
                 {/* Dashboard */}
-                <ListItem button onClick={() => navigate("/DashBoard")}>
+                <ListItem button onClick={() => navigate("/DashBoard")} style={{ cursor: 'pointer' }}>
                     <ListItemIcon><HomeIcon /></ListItemIcon>
                     <ListItemText primary="Dashboard" />
                 </ListItem>
@@ -407,7 +408,7 @@ export default function NavBar({ onTabChange }) {
                 </Collapse>
 
                 {/* Packages */}
-                <ListItem button onClick={GoToPackage}>
+                <ListItem button onClick={GoToPackage} style={{ cursor: 'pointer' }}>
                     <ListItemIcon><PackageIcon /></ListItemIcon>
                     <ListItemText primary="Packages" />
                 </ListItem>
@@ -497,7 +498,7 @@ export default function NavBar({ onTabChange }) {
 
                 {/* Logout */}
                 <Divider />
-                <ListItem button onClick={showLogoutConfirmationDialog}>
+                <ListItem button onClick={showLogoutConfirmationDialog} style={{ cursor: 'pointer' }}>
                     <ListItemIcon><LogoutIcon /></ListItemIcon>
                     <ListItemText primary="Logout" />
                 </ListItem>
@@ -507,152 +508,57 @@ export default function NavBar({ onTabChange }) {
 
     return (
         <>
+            <Drawer
+                anchor="left"
+                open={drawerOpen}
+                onClose={toggleDrawer(false)}
+                sx={{
+                    '& .MuiDrawer-paper': {
+                        backgroundColor: '#132D39', // Change the sidebar background color
+                        color: '#FFFFFF', // Change the text color
+                        height: '100vh',
+                        overflowY: 'auto',
+                        width: '250px', // Adjust the width of the sidebar
+                        paddingTop: '60px',
+                    },
+                }}
+            >
+                {/* Close Button Anchored at the Far Left Top Corner */}
+                <IconButton
+                    onClick={toggleDrawer(false)}
+                    sx={{
+                        position: 'absolute',
+                        top: '10px',
+                        left: '10px',
+                        color: '#FFFFFF', // Change the close button color
+                        zIndex: 1, // Ensure the button is above other elements
+                    }}
+                >
+                    <CloseIcon />
+                </IconButton>
+
+                {/* Render the Drawer List */}
+                {renderDrawerList()}
+            </Drawer>
             {/* <div id="Overlay" style={{ display: menuOpen ? 'block' : 'none' }}> */}
-                {screenWidth <= 1080 && (
-                    <>
 
-
-<Drawer
-    anchor="left"
-    open={drawerOpen}
-    onClose={toggleDrawer(false)}
-    sx={{
-        '& .MuiDrawer-paper': {
-            backgroundColor: '#132D39', // Change the sidebar background color
-            color: '#FFFFFF', // Change the text color
-            width: '250px', // Adjust the width of the sidebar
-            paddingTop: '60px',
-        },
-    }}
->
-    {/* Close Button Anchored at the Far Left Top Corner */}
-    <IconButton
-        onClick={toggleDrawer(false)}
-        sx={{
-            position: 'absolute',
-            top: '10px',
-            left: '10px',
-            color: '#FFFFFF', // Change the close button color
-            zIndex: 1, // Ensure the button is above other elements
-        }}
-    >
-        <CloseIcon />
-    </IconButton>
-
-    {/* Render the Drawer List */}
-    {renderDrawerList()}
-</Drawer>
-
-                    </>
-                )}
             {/* </div> */}
 
             <div id="NavBarBG">
                 <div id="NavBar">
-                    {screenWidth <= 1080 && (
-                        <>
 
-                            <IconButton onClick={toggleDrawer(true)} edge="start" color="inherit" aria-label="menu">
-                                <MenuIcon />
-                            </IconButton>
+                    <IconButton onClick={toggleDrawer(true)} edge="start" color="inherit" aria-label="menu">
+                        <MenuIcon />
+                    </IconButton>
 
-                        </>
-                    )}
+
                     <div
                         id="DashBoardText"
                         onClick={GoToDashBoard}
                     >
-                        Dashboard
+                        Signal Lab
                     </div>
-                    {screenWidth > 1080 && (
-                        <>
-                            <div className="dropdown">
-                                <div id="DepositText" style={{ color: isActive('/DashBoard/DepositHistory') || isActive('/DashBoard/DepositNow') ? '#FCE74F' : 'white' }}>
-                                    Deposit
-                                </div>
-                                <div className="dropdown-content">
-                                    <a href="#" style={{ color: isActive('/DashBoard/DepositNow') ? '#FCE74F' : 'black' }}>Deposit Now</a>
-                                    <a href="#" onClick={GoToDepositHistory} style={{ color: isActive('/DashBoard/DepositHistory') ? '#FCE74F' : 'black' }}>
-                                        Deposit History
-                                    </a>
-                                </div>
-                            </div>
 
-                            <div id="PackageText" style={{ color: isActive('/DashBoard/Packages') ? '#FCE74F' : 'white' }} onClick={GoToPackage}>Package</div>
-                            <div className="dropdown">
-                                <div id="SignalsText" style={{ color: isActive('/DashBoard/Crypto') || isActive('/DashBoard/DepositNow') || isActive('/DashBoard/Stocks') ? '#FCE74F' : 'white' }}>Signals</div>
-                                <div className="dropdown-content">
-                                    <a href="#" onClick={GoToCrypto} style={{ color: isActive('/DashBoard/Crypto') ? '#FCE74F' : 'black' }}>Crypto</a>
-                                    <a href="#" onClick={GoToForex} style={{ color: isActive('/DashBoard/Forex') ? '#FCE74F' : 'black' }}>
-                                        Forex
-                                    </a>
-                                    <a href="#" onClick={GoToStocks} style={{ color: isActive('/DashBoard/Stocks') ? '#FCE74F' : 'black' }}>
-                                        Stocks
-                                    </a>
-                                </div>
-                            </div>
-                            {/* <div id="ReferralsText" style={{ color: isActive('/DashBoard/Referral') ? '#FCE74F' : 'white' }} onClick={GoToReferral}>Referrals</div>
-
-
-                            <div id="CourseText" style={{ color: isActive('/DashBoard/Course') ? '#FCE74F' : 'white' }} onClick={GoToCourse}>Course</div>
-
-                            <div id="EventsText" style={{ color: isActive('/DashBoard/Events') ? '#FCE74F' : 'white' }} onClick={GoToEvents}>Events</div>
-
-
-                            <div id="SentimentsText" style={{ color: isActive('/DashBoard/Sentiments') ? '#FCE74F' : 'white' }} onClick={GoToSentiments}>Sentiments</div> */}
-
-                            <div className="dropdown">
-                                <div id="SupportText" style={{ color: isActive('/DashBoard/Support') ? '#FCE74F' : 'white' }}>
-                                    Support
-                                </div>
-                                <div className="dropdown-content">
-                                    <a href="#" style={{ color: isActive('/DashBoard/Support/NewTicket') ? '#FCE74F' : 'black' }}>New Ticket</a>
-                                    <a href="#" style={{ color: isActive('/DashBoard/Support/MyTicket') ? '#FCE74F' : 'black' }}>My Ticket</a>
-                                </div>
-                            </div>
-
-                            <div className="dropdown">
-                                <div id="AccountText" style={{ color: isActive('/DashBoard/ProfileSettings') || isActive('/DashBoard/ChangePassword') || isActive('/DashBoard/Transaction') || isActive('/DashBoard/Logout') ? '#FCE74F' : 'white' }}>
-                                    Account
-                                </div>
-                                <div className="dropdown-content">
-                                    <a href="#" style={{ color: isActive('/DashBoard/ProfileSettings') ? '#FCE74F' : 'black' }} onClick={GoToProfileSettings}>Profile</a>
-                                    <a href="#" style={{ color: isActive('/DashBoard/ChangePassword') ? '#FCE74F' : 'black' }} onClick={GoToChangePassword}>Change Password</a>
-                                    <a href="#" style={{ color: isActive('/DashBoard/Transaction') ? '#FCE74F' : 'black' }}>Transaction</a>
-                                    <a href="#" style={{ color: isActive('/DashBoard/Logout') ? '#FCE74F' : 'black' }} onClick={showLogoutConfirmationDialog}>Log Out</a>
-                                </div>
-                            </div>
-
-                            <div className="dropdown">
-                                <div id="MoreText" style={{ color: isActive('/DashBoard/Referral') || isActive('/DashBoard/Course') || isActive('/DashBoard/Events') || isActive('/DashBoard/Sentiments') ? '#FCE74F' : 'white' }}>
-                                    More
-                                </div>
-                                <div className="dropdown-content">
-                                    <a href="#" style={{ color: isActive('/DashBoard/Referral') ? '#FCE74F' : 'black' }} onClick={GoToReferral}>Referrals</a>
-                                    <a href="#" style={{ color: isActive('/DashBoard/Course') ? '#FCE74F' : 'black' }} onClick={GoToCourse}>Articles</a>
-                                    <a href="#" style={{ color: isActive('/DashBoard/Events') ? '#FCE74F' : 'black' }} onClick={GoToEvents}>Events</a>
-                                    <a href="#" style={{ color: isActive('/DashBoard/Sentiments') ? '#FCE74F' : 'black' }} onClick={GoToSentiments}>Sentiments</a>
-                                </div>
-                            </div>
-
-                            <div id="SubNav">
-                                <div id="LogoutText" onClick={showLogoutConfirmationDialog}>
-                                    {!isLoading && <img id="LogoutImg" src={LogoutImg} alt="Logout" />} {/* Show image only when not loading */}
-                                    {isLoading ? (
-                                        <span>Loading...</span> // Show loading text when isLoading is true
-                                    ) : (
-                                        <span>Logout</span> // Show Logout text when isLoading is false
-                                    )}
-                                    {errorMessage && <div className="error-message">{errorMessage}</div>} {/* Display error messages */}
-                                </div>
-                                <div id="EnglishText">
-                                    <img id="LanguageImg" src={LanguageImg} alt="Language" />
-                                    <span>English</span>
-                                    <img id="DropDownImg" src={DropDownImg} alt="DropDown" />
-                                </div>
-                            </div>
-                        </>
-                    )}
                 </div>
                 <hr id="Divider" />
                 <div id="CurrentNav">

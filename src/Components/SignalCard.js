@@ -1,11 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import { fetchSignals } from '../Components/signalService'; // Adjust the import path as necessary
-import CoinImg from "../images/cryptocurrency-color_usdt.png";
-import ProgressImg from "../images/carbon_in-progress.png";
-import DropDownImg from "../images/gridicons_dropdown.png";
-import ChartImg from "../images/material-symbols_pie-chart.png";
 import { useNavigate } from 'react-router-dom';
 import { useSnackbar } from 'notistack';
+import {
+    Box,
+    Typography,
+    Card,
+    CardContent,
+    CardActions,
+    Button,
+    Collapse,
+    IconButton,
+    Divider,
+    Paper,
+    styled,
+} from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import TrendingUpIcon from '@mui/icons-material/TrendingUp';
+import TrendingDownIcon from '@mui/icons-material/TrendingDown';
+import PieChartIcon from '@mui/icons-material/PieChart';
 
 export default function SignalCard({ type }) {
     const navigate = useNavigate();
@@ -20,12 +33,10 @@ export default function SignalCard({ type }) {
         const loadSignals = async () => {
             try {
                 const result = await fetchSignals(type, page);
-                console.log('Fetched Signals:', result); // Log the fetched signals
-                setSignals(prevSignals => [...prevSignals, ...result.data]);
+                setSignals((prevSignals) => [...prevSignals, ...result.data]);
                 setHasMore(result.pagination.next_page_url !== null);
-                document.body.style.overflowY = 'auto';
             } catch (error) {
-                enqueueSnackbar('Error fetching signals:', error, { variant: 'error' });
+                enqueueSnackbar('Error fetching signals:', { variant: 'error' });
                 console.error('Error fetching signals:', error);
             } finally {
                 setLoading(false);
@@ -33,12 +44,10 @@ export default function SignalCard({ type }) {
         };
 
         loadSignals();
-    }, [type, page]);
+    }, [type, page, enqueueSnackbar]);
 
     const GoToViewAnalysis = (signal) => {
-        document.getElementById("DashBoardText2").innerHTML = "View Analysis";
-        document.body.style.overflowY = 'auto';
-        navigate("/DashBoard/ViewAnalysis", { state: { signal } }); // Pass the entire signal object
+        navigate('/DashBoard/ViewAnalysis', { state: { signal } });
     };
 
     const toggleExpand = (index) => {
@@ -46,76 +55,97 @@ export default function SignalCard({ type }) {
     };
 
     const GoToLiveChart = () => {
-        navigate("/DashBoard/TradingViewPage");
-    }
+        navigate('/DashBoard/TradingViewPage');
+    };
 
     return (
-        <div className="SignalsCardContainer">
+        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3, width: '100%' }}>
             {loading ? (
-                <p>Loading...</p>
+                <Typography>Loading...</Typography>
             ) : (
                 signals.map((signal, index) => {
-                    // Parse the targets JSON string
                     const targets = JSON.parse(signal.targets);
                     return (
-                        <div className="SignalsCard" key={signal.id}>
-                            <div className="SCSub">
-                                <div className="SCSubText">Opened</div>
-                                <div className="SCSubText2">{signal.created_at || 'Unknown Date'}</div>
-                            </div>
-                            <div className="SCSub">
-                                <div className="SCSubText">
-                                    <div className="CoinDets">
-                                        <img
-                                            className="CoinImg"
-                                            src={signal.coin_image || CoinImg}
-                                            alt="CoinImage"
-                                        />
-                                        <div className="CoinTrend">{signal.trend ? `${signal.trend}` : `No Trend`}</div>
-                                        <div className="CoinName">{signal.coin} {signal.pair ? `(${signal.pair})` : ''}</div> {/* Use signal.coin instead of coinName */}
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="SCSub">
-                                <div className="SCSubText">Entry Price:</div>
-                                <div className="SCSubText2">{signal.entry_price}</div> {/* Use entry_price */}
-                            </div>
-                            <div className="SCSub">
-                                <div className="SCSubText">Stop Loss:</div>
-                                <div className="SCSubText2">{signal.stop_loss}</div> {/* Use stop_loss */}
-                            </div>
-                            <div className="SCSub2">
-                                <div className="SCSubText">Current Price</div>
-                                <div className="SCSubText2" onClick={() => toggleExpand(index)}>
-                                    {signal.current_price}
-                                </div>
-                                <img className="DropDownImg" src={DropDownImg} alt="DropDown" onClick={() => toggleExpand(index)} />
-                            </div>
-                            {expandedSignalIndex === index && (
-                                <div className="CurrentPriceDetails">
-                                    {Object.entries(targets).map(([key, value]) => (
-                                        <div key={key} className="Target">
-                                            <div className="SCSubText">{key.replace(/_/g, ' ').toUpperCase()}</div>
-                                            <div className="SCSubText">{value}</div>
-                                        </div>
-                                    ))}
-                                </div>
-                            )}
-                            <div className="SCSub">
-                                <div className="SCSubText4" onClick={() => GoToViewAnalysis(signal)}>View Analysis</div>
-                                <div className="SCSubText5" onClick={GoToLiveChart}>
+                        <Card key={signal.id} sx={{ borderRadius: 2, backgroundColor: '#0D222B', color: 'white' }}>
+                            <CardContent>
+                                <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                    <Typography variant="body2" color="textSecondary">
+                                        Opened
+                                    </Typography>
+                                    <Typography variant="body2">{signal.created_at || 'Unknown Date'}</Typography>
+                                </Box>
+
+                                <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mt: 2 }}>
+                                    <Box
+                                        component="img"
+                                        src={signal.coin_image || '/default-coin.png'}
+                                        alt="Coin"
+                                        sx={{ width: 40, height: 40, borderRadius: '50%' }}
+                                    />
+                                    <Box>
+                                        <Typography variant="h6">
+                                            {signal.coin} {signal.pair ? `(${signal.pair})` : ''}
+                                        </Typography>
+                                        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                                            {signal.trend === 'Up' ? (
+                                                <TrendingUpIcon sx={{ color: 'green' }} />
+                                            ) : (
+                                                <TrendingDownIcon sx={{ color: 'red' }} />
+                                            )}
+                                            <Typography variant="body2">{signal.trend || 'No Trend'}</Typography>
+                                        </Box>
+                                    </Box>
+                                </Box>
+
+                                <Box sx={{ mt: 2 }}>
+                                    <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
+                                        <Typography variant="body2">Entry Price:</Typography>
+                                        <Typography variant="body2">{signal.entry_price}</Typography>
+                                    </Box>
+                                    <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
+                                        <Typography variant="body2">Stop Loss:</Typography>
+                                        <Typography variant="body2">{ signal.stop_loss}</Typography>
+                                    </Box>
+                                    <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                        <Typography variant="body2">Current Price:</Typography>
+                                        <IconButton onClick={() => toggleExpand(index)}>
+                                            <Typography variant="body2">{signal.current_price}</Typography>
+                                            <ExpandMoreIcon />
+                                        </IconButton>
+                                    </Box>
+                                </Box>
+
+                                <Collapse in={expandedSignalIndex === index} timeout="auto" unmountOnExit>
+                                    <Box sx={{ mt: 2 }}>
+                                        {Object.entries(targets).map(([key, value]) => (
+                                            <Box key={key} sx={{ display: 'flex', justifyContent: 'space-between' }}>
+                                                <Typography variant="body2">{key.replace(/_/g, ' ').toUpperCase()}</Typography>
+                                                <Typography variant="body2">{value}</Typography>
+                                            </Box>
+                                        ))}
+                                    </Box>
+                                </Collapse>
+                            </CardContent>
+
+                            <Divider />
+
+                            <CardActions sx={{ justifyContent: 'space-between' }}>
+                                <Button size="small" onClick={() => GoToViewAnalysis(signal)} variant="outlined" color="primary">
+                                    View Analysis
+                                </Button>
+                                <Button size="small" onClick={GoToLiveChart} variant="outlined" color="primary" endIcon={<PieChartIcon />}>
                                     Live Chart
-                                    <img className="ChartImg" src={ChartImg} alt="Chart" />
-                                </div>
-                            </div>
-                        </div>
+                                </Button>
+                            </CardActions>
+                        </Card>
                     );
                 })
             )}
             {hasMore && !loading && (
-                <button className="loadMoreButton" onClick={() => setPage(prevPage => prevPage + 1)}>Load More</button>
+                <Button variant="contained" onClick={() => setPage((prevPage) => prevPage + 1)} sx={{ mt: 2 }}>
+                    Load More
+                </Button>
             )}
-            <hr className="dotted-divider" />
-        </div>
+        </Box>
     );
-} 
+}

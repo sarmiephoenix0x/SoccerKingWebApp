@@ -262,7 +262,7 @@ body {
     flex-direction: row;
     align-items: center;
     column-gap: 10px;
-    justify-content: space-between;
+    justify-content: left;
     padding-left: 50px;
     padding-right: 50px;
   }
@@ -992,6 +992,8 @@ body {
     align-items: center;
     row-gap: 30px;
     padding-top: 70px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
 
@@ -3079,6 +3081,8 @@ body {
     align-items: center;
     row-gap: 30px;
     padding-top: 70px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
 
