@@ -188,3 +188,33 @@
                             </div>
                         </>
                     )}
+
+
+ <div id="NavBarBG">
+                <div id="NavBar">
+                    {screenWidth <= 1080 && (
+                        <>
+
+                            <IconButton onClick={toggleDrawer(true)} edge="start" color="inherit" aria-label="menu">
+                                <MenuIcon />
+                            </IconButton>
+
+                        </>
+                    )}
+                    <div
+                        id="DashBoardText"
+                        onClick={GoToDashBoard}
+                    >
+                        Dashboard
+                    </div>
+                    
+                </div>
+                <hr id="Divider" />
+                <div id="CurrentNav">
+                    <div id="DashBoardText2">{dashboardText}</div>
+                    <div id="CurrentNavText">
+                        <img id="HomeImg" src={HomeImg} alt="Home" />
+                        <span id="CurrentNavText2">{currentNavText}</span>
+                    </div>
+                </div>
+            </div>
